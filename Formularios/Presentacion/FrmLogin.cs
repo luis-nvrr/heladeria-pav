@@ -14,9 +14,8 @@ namespace Practico.Formularios
     public partial class FrmLogin : Form
     {
         string usuario = "";
-        string contraseña = "";
+
         public string Usuario { get => usuario; set => usuario = value; }
-        public string Contraseña { get => contraseña; set => contraseña = value; }
 
         // Login
         public FrmLogin()
@@ -40,7 +39,7 @@ namespace Practico.Formularios
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (this.txtUsuario.Text == "")
+            if (this.txtUsuario.Text == "")   // nombre de usuario vacio
             {
                 MessageBox.Show("Ingrese usuario");
                 LimpiarCampos();
@@ -50,25 +49,27 @@ namespace Practico.Formularios
 
             if (this.txtContraseña.Text == "")
             {
-                MessageBox.Show("Ingrese contraseña");
+                MessageBox.Show("Ingrese contraseña");  // contraseña vacia
                 LimpiarCampos();
                 txtContraseña.Focus();
                 return;
             }
 
-            NgUsuarios usr = new NgUsuarios();
+            NgUsuarios user = new NgUsuarios();  // crea objeto usuario del negocio para validar
 
-            if (usr.ValidarUsuario(txtUsuario.Text,txtContraseña.Text) == NgUsuarios.Respuesta.validacionCorrecta)
-            {   this.usuario = txtUsuario.Text;
+            if (user.ValidarUsuario(txtUsuario.Text,txtContraseña.Text) == NgUsuarios.Respuesta.validacionCorrecta)
+            {   this.usuario = txtUsuario.Text;  // usuario validado, guada el nombre en la propiedad del formulario
                 this.Close();
             }
-            else
+            else   // datos incorrectos
             {
                 MessageBox.Show("Datos Incorrectos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txtUsuario.Focus();
                 LimpiarCampos();
                 return;
             }
         }
+
         // Limpia todos los campos
         private void LimpiarCampos()
         {

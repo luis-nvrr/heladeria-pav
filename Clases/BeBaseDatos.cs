@@ -19,7 +19,7 @@ namespace Practico.Clases
         // metodo para conectar
         private void Conectar()
         {
-            conexion.ConnectionString = "";
+            conexion.ConnectionString = "Data Source=DESKTOP-U030ECN\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True";
             conexion.Open();
             cmd.Connection = conexion;
             cmd.CommandType = System.Data.CommandType.Text;

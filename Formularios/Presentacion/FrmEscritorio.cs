@@ -14,7 +14,6 @@ namespace Practico
     public partial class FrmEscritorio : Form
     {
         private string usuario = "";
-        private string contraseña = "";
 
         public FrmEscritorio()
         {
@@ -36,7 +35,7 @@ namespace Practico
                 Application.Exit();   // cierra la aplicacion 
             }
             this.usuario = login.Usuario;     // si se logeo
-            this.contraseña = login.Contraseña;
+            MessageBox.Show("Bienvenido: " + this.usuario);
             login.Dispose();
 
             // Configura labels

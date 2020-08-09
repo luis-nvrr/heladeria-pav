@@ -10,19 +10,18 @@ namespace Practico.Negocios
 {
     class NgUsuarios
     {
-        BeBaseDatos _baseDatos = new BeBaseDatos();  // creacion de la base de datos
-
+        BeBaseDatos baseDatos = new BeBaseDatos();  // creacion de la base de datos
 
         public enum Respuesta {validacionCorrecta, validacionIncorrecta};
 
         // para el login
         public Respuesta ValidarUsuario(string usuario, string password)
         {
-            string sql = "SELECT * FROM usuarios WHERE nombreUsuario = '"+usuario+"' AND contrasenia= '"+password+"'";
+            string sql = "SELECT * FROM Usuarios WHERE nombreUsuario = '"+usuario+"' AND contrasenia= '"+password+"'";
             DataTable tabla = new DataTable();
-            tabla = _baseDatos.Consulta(sql);
+            tabla = baseDatos.Consulta(sql);
 
-            if (tabla.Rows.Count == 0)
+            if (tabla.Rows.Count == 1)
             {
                 return Respuesta.validacionCorrecta;
             }
