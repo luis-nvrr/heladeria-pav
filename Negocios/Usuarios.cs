@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Practico.Negocios
 {
-    class NgUsuarios
+    class Usuarios
     {
-        BeBaseDatos baseDatos = new BeBaseDatos();  // creacion de la base de datos
+        BaseDatos baseDatos = new BaseDatos();  // creacion de la base de datos
 
         public enum Respuesta {validacionCorrecta, validacionIncorrecta};
 

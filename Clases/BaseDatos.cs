@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Practico.Clases
 {
-    class BeBaseDatos
+    class BaseDatos
     {
         // armar conexion 
         SqlConnection conexion = new SqlConnection();

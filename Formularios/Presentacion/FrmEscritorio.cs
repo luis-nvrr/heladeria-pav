@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +14,10 @@ namespace Practico
 {
     public partial class FrmEscritorio : Form
     {
-        private string usuario = "";
+        public string Usuario { get; set; }
+        public string Password { get; set; }
+        public string Id { get; set; }
+
 
         public FrmEscritorio()
         {
@@ -28,19 +32,17 @@ namespace Practico
             // Verifica que se logeo
             FrmLogin login = new FrmLogin();
             login.ShowDialog();
-            if(login.Usuario == "")   // no se logeo
+            if(login.Usuario == "" || login.Password == "")   // no se logeo
             {
-                MessageBox.Show("No se validó ningun usuario");
-                login.Dispose();
-                Application.Exit();   // cierra la aplicacion 
+                MessageBox.Show("Acceso Bloqueado", "Importante", MessageBoxButtons.OK);
+                this.Close();   // cierra la aplicacion 
             }
-            this.usuario = login.Usuario;     // si se logeo
-            MessageBox.Show("Bienvenido: " + this.usuario);
-            login.Dispose();
-
-            // Configura labels
-            lblUsuario.Text = usuario;
-
+            else
+            {
+                MessageBox.Show("Bienvenido: " + login.Usuario);  // si se logeo
+                lblUsuario.Text = login.Usuario;  // Configura labels
+                login.Dispose();
+            }
         }
 
         // usar metodo para abrir CUALQUIER FORMULARIO

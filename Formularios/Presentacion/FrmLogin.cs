@@ -13,9 +13,11 @@ namespace Practico.Formularios
 {
     public partial class FrmLogin : Form
     {
-        string usuario = "";
+        private string usuario = "";
+        string password = ""; 
 
         public string Usuario { get => usuario; set => usuario = value; }
+        public string Password { get => password; set => password = value; }
 
         // Login
         public FrmLogin()
@@ -53,9 +55,9 @@ namespace Practico.Formularios
                 return;
             }
 
-            NgUsuarios user = new NgUsuarios();  // crea objeto usuario del negocio para validar
+            Usuarios user = new Usuarios();  // crea objeto usuario del negocio para validar
 
-            if (user.ValidarUsuario(txtUsuario.Text,txtContraseña.Text) == NgUsuarios.Respuesta.validacionCorrecta)
+            if (user.ValidarUsuario(txtUsuario.Text,txtContraseña.Text) == Usuarios.Respuesta.validacionCorrecta)
             {   this.usuario = txtUsuario.Text;  // usuario validado, guada el nombre en la propiedad del formulario
                 this.Close();
             }
