@@ -25,6 +25,11 @@ namespace Practico.Clases
             cmd.CommandType = System.Data.CommandType.Text;
         }
 
+        private void Desconectar()
+        {
+            conexion.Close();
+        }
+
         public DataTable Consulta (string sql)  //devuelve tabla
         {
             Conectar();
