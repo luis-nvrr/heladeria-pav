@@ -49,14 +49,13 @@
             this.btnConsulta = new System.Windows.Forms.Button();
             this.btnProcesos = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.btnVerConsultas = new System.Windows.Forms.Button();
             this.btnVerVacunas = new System.Windows.Forms.Button();
             this.pnlBarra = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlEscritorio = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.lblUsuario = new System.Windows.Forms.Label();
+            this.pnlEscritorio = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.pnlListados.SuspendLayout();
             this.pnlEstadisticas.SuspendLayout();
@@ -399,7 +398,7 @@
             this.btnConsulta.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnConsulta.Size = new System.Drawing.Size(183, 40);
             this.btnConsulta.TabIndex = 10;
-            this.btnConsulta.Text = "Consulta";
+            this.btnConsulta.Text = "Venta";
             this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsulta.UseVisualStyleBackColor = false;
             // 
@@ -434,6 +433,22 @@
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(183, 62);
             this.pnlLogo.TabIndex = 0;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblUsuario.Image = global::Practico.Properties.Resources.usuarioMini;
+            this.lblUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUsuario.Location = new System.Drawing.Point(35, 9);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(130, 44);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnVerConsultas
             // 
@@ -476,7 +491,6 @@
             this.pnlBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.pnlBarra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlBarra.Controls.Add(this.label2);
-            this.pnlBarra.Controls.Add(this.label1);
             this.pnlBarra.Controls.Add(this.btnSalir);
             this.pnlBarra.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBarra.Location = new System.Drawing.Point(200, 0);
@@ -488,31 +502,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(253, 11);
+            this.label2.Location = new System.Drawing.Point(16, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 19);
+            this.label2.Size = new System.Drawing.Size(142, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Fecha y Hora";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(25, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Sucursal: ";
-            // 
-            // pnlEscritorio
-            // 
-            this.pnlEscritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.pnlEscritorio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlEscritorio.Location = new System.Drawing.Point(200, 40);
-            this.pnlEscritorio.Name = "pnlEscritorio";
-            this.pnlEscritorio.Size = new System.Drawing.Size(621, 467);
-            this.pnlEscritorio.TabIndex = 10;
             // 
             // btnSalir
             // 
@@ -536,21 +532,14 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // lblUsuario
+            // pnlEscritorio
             // 
-            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblUsuario.Image = global::Practico.Properties.Resources.usuarioMini;
-            this.lblUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblUsuario.Location = new System.Drawing.Point(35, 9);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(112, 44);
-            this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "Usuario";
-            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlEscritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.pnlEscritorio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlEscritorio.Location = new System.Drawing.Point(200, 40);
+            this.pnlEscritorio.Name = "pnlEscritorio";
+            this.pnlEscritorio.Size = new System.Drawing.Size(621, 467);
+            this.pnlEscritorio.TabIndex = 10;
             // 
             // FrmEscritorio
             // 
@@ -612,7 +601,6 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Panel pnlEscritorio;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
     }
 }
 

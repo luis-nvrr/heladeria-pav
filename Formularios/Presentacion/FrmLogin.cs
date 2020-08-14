@@ -42,7 +42,6 @@ namespace Practico.Formularios
             if (this.txtUsuario.Text == "")   // nombre de usuario vacio
             {
                 MessageBox.Show("Ingrese usuario");
-                LimpiarCampos();
                 txtUsuario.Focus();
                 return;
             }
@@ -50,7 +49,6 @@ namespace Practico.Formularios
             if (this.txtContraseña.Text == "")
             {
                 MessageBox.Show("Ingrese contraseña");  // contraseña vacia
-                LimpiarCampos();
                 txtContraseña.Focus();
                 return;
             }
@@ -77,6 +75,7 @@ namespace Practico.Formularios
             txtContraseña.Text = "";
         }
 
+        //
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
