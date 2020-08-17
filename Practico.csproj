@@ -46,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\BeBaseDatos.cs" />
+    <Compile Include="Clases\BaseDatos.cs" />
+    <Compile Include="Clases\ComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Formularios\Presentacion\FrmAdministracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,7 +68,7 @@
     <Compile Include="Formularios\Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Negocios\NgUsuarios.cs" />
+    <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Presentacion\FrmAdministracion.resx">
