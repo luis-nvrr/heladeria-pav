@@ -10,21 +10,21 @@ namespace Practico.Clases
 {
     class ComboBox : System.Windows.Forms.ComboBox
     {
-        public string ppTabla { get; set; }
-        public string ppDisplay { get; set; }
-        public string ppValue { get; set; }
+        public string PpTabla { get; set; }
+        public string PpDisplay { get; set; }
+        public string PpValue { get; set; }
 
-        public bool ppValidable { get; set; }
-        public string ppNombreCampo { get; set; }
-        public string ppNombreTabla { get; set; }
+        public bool PpValidable { get; set; }
+        public string PpNombreCampo { get; set; }
+        public string PpNombreTabla { get; set; }
 
 
         public void Cargar()  //cargar con consulta SELECT *
         {
             BaseDatos baseDatos = new BaseDatos();
-            string sql = "SELECT * FROM " + ppTabla;
-            this.DisplayMember = ppDisplay;
-            this.ValueMember = ppValue;
+            string sql = "SELECT * FROM " + PpTabla;
+            this.DisplayMember = PpDisplay;
+            this.ValueMember = PpValue;
             this.DataSource = baseDatos.Consulta(sql);
         }
 

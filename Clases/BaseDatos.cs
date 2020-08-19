@@ -10,32 +10,29 @@ namespace Practico.Clases
 {
     class BaseDatos
     {
-        // armar conexion 
-        SqlConnection conexion = new SqlConnection();
+        private SqlConnection conexion = new SqlConnection();   // armar conexion
+        private SqlCommand comando = new SqlCommand();    // transporte de la consulta
 
-        // transporte de la consulta
-        SqlCommand cmd = new SqlCommand();
 
-        // metodo para conectar
-        private void Conectar()
+        private void Conectar()  // metodo para conectar
         {
-            conexion.ConnectionString = "Data Source=DESKTOP-U030ECN\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True";
+            conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True";
             conexion.Open();
-            cmd.Connection = conexion;
-            cmd.CommandType = System.Data.CommandType.Text;
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
         }
 
-        private void Desconectar()
+        private void Desconectar()  // metodo para desconectar
         {
             conexion.Close();
         }
 
-        public DataTable Consulta (string sql)  //devuelve tabla
+        public DataTable Consulta (string sql)  // devuelve tabla
         {
             Conectar();
-            cmd.CommandText = sql;   //comando a ejecutar
+            comando.CommandText = sql;   // comando a ejecutar
             DataTable tabla = new DataTable();
-            tabla.Load(cmd.ExecuteReader());   //carga la tabla y ejecuta la consulta en el motor
+            tabla.Load(comando.ExecuteReader());   // carga la tabla y ejecuta la consulta en el motor
             return tabla;
         }
     }

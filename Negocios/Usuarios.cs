@@ -10,12 +10,12 @@ namespace Practico.Negocios
 {
     class Usuarios
     {
-        BaseDatos baseDatos = new BaseDatos();  // creacion de la base de datos
+        private BaseDatos baseDatos = new BaseDatos();  // creacion de la base de datos
 
         public enum Respuesta {validacionCorrecta, validacionIncorrecta};
 
-        // para el login
-        public Respuesta ValidarUsuario(string usuario, string password)
+
+        public Respuesta ValidarUsuario(string usuario, string password)  // valida si el usuario existe
         {
             string sql = "SELECT * FROM Usuarios WHERE nombreUsuario = '"+usuario+"' AND contrasenia= '"+password+"'";
             DataTable tabla = new DataTable();
@@ -28,6 +28,23 @@ namespace Practico.Negocios
             else
             {
                 return Respuesta.validacionIncorrecta;
+            }
+        }
+
+
+        public int RecuperarIdUsuario(string usuario, string password)
+        {
+            string sql = "SELECT * FROM Usuarios WHERE nombreUsuario = '" + usuario + "' AND contrasenia= '" + password + "'";
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+
+            if (tabla.Rows.Count == 1)
+            {
+                return int.Parse(tabla.Rows[0]["idUsuario"].ToString());    // retorna idUsuario
+            }
+            else
+            {
+                return 0;
             }
         }
     }

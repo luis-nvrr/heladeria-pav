@@ -9,14 +9,18 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Practico.Negocios;
 
 namespace Practico
 {
     public partial class FrmEscritorio : Form
     {
+        private string usuario = "";
+        private string password = "";
+        private int idUsuario;
         public string Usuario { get; set; }
         public string Password { get; set; }
-        public string Id { get; set; }
+        public string IdUsuario { get; set; }
 
 
         public FrmEscritorio()
@@ -25,29 +29,38 @@ namespace Practico
         }
 
         private void FrmEscritorio_Load(object sender, EventArgs e)
-        {            
-            // Prepara el menu
-            PersonalizarDiseño();
+        {
+            OcultarSubMenu(); // prepara el menu
 
-            // Verifica que se logeo
-            FrmLogin login = new FrmLogin();
+            FrmLogin login = new FrmLogin();  // crea login
             login.ShowDialog();
-            if(login.Usuario == "" || login.Password == "")   // no se logeo
+
+            if(login.Usuario == "" || login.Password == "")   // NO se logueo
             {
-                MessageBox.Show("Acceso Bloqueado", "Importante", MessageBoxButtons.OK);
+                MessageBox.Show("Acceso Bloqueado", "Error", 
+                    buttons:MessageBoxButtons.OK, icon:MessageBoxIcon.Stop);
+
                 this.Close();   // cierra la aplicacion 
             }
-            else
+            else  // SI se logueo
             {
-                MessageBox.Show("Bienvenido: " + login.Usuario);  // si se logeo
-                lblUsuario.Text = login.Usuario;  // Configura labels
+                MessageBox.Show("Bienvenid@: " + login.Usuario, "Bienvenid@", 
+                    buttons:MessageBoxButtons.OK, icon:MessageBoxIcon.Information);
+
+                this.usuario = login.Usuario;  // guarda datos 
+                this.password = login.Password;
+
+                Usuarios user = new Usuarios();
+                this.idUsuario = user.RecuperarIdUsuario(usuario, password);
+
+                lblUsuario.Text = usuario + " id:" + idUsuario;  // configura labels
                 login.Dispose();
             }
         }
 
-        // usar metodo para abrir CUALQUIER FORMULARIO
-        private Form formularioActivo = null;
-        private void abrirFormulario(Form formularioHijo)
+
+        private Form formularioActivo = null;     // usar metodo para abrir CUALQUIER FORMULARIO
+        private void AbrirFormulario(Form formularioHijo)
         {
             if (formularioActivo != null)
                 formularioActivo.Close();
@@ -61,28 +74,19 @@ namespace Practico
             formularioHijo.Show();
         }
 
-        // Control de Menu
-        // Presentacion de Menu
-        private void PersonalizarDiseño()
+        // Control del escritorio
+        private void OcultarSubMenu()             // Oculta los paneles del menu
         {
-            pnlProcesos.Visible = false;
-            pnlEstadisticas.Visible = false;
-            pnlListados.Visible = false;
-        }
-
-        //Oculta los paneles del Menu
-        private void OcultarSubMenu()
-        {
-            if (pnlProcesos.Visible == true)
+            if (pnlProcesos.Visible)
                 pnlProcesos.Visible = false;
-            if (pnlEstadisticas.Visible == true)
+            if (pnlEstadisticas.Visible)
                 pnlEstadisticas.Visible = false;
-            if (pnlListados.Visible == true)
+            if (pnlListados.Visible)
                 pnlListados.Visible = false;
         }
 
-        //Muestra el panel del Menu pasado como parametro
-        private void MostrarSubMenu(Panel subMenu)
+
+        private void MostrarSubMenu(Panel subMenu)   // Usar para abrir un submenu
         {
             if (subMenu.Visible == false)
             {
@@ -112,7 +116,7 @@ namespace Practico
         private void btnAdministracion_Click(object sender, EventArgs e)
         {
             //..
-            abrirFormulario(new FrmAdministracion());
+            AbrirFormulario(new FrmAdministracion());
             OcultarSubMenu();
         }
 
