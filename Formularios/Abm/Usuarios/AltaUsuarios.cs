@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Practico.Formularios.Abm
+namespace Practico.Formularios.Abm.Usuarios
 {
-    public partial class FrmUsuarios : Form
+    public partial class AltaUsuarios : Form
     {
-        public FrmUsuarios()
+        public AltaUsuarios()
         {
             InitializeComponent();
-        }
-
-        private void btnEscritorio_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

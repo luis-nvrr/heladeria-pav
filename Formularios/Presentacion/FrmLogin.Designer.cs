@@ -46,7 +46,7 @@
             this.pbxLogin.BackgroundImage = global::Practico.Properties.Resources.usuario;
             this.pbxLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxLogin.Location = new System.Drawing.Point(194, 32);
-            this.pbxLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.pbxLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbxLogin.Name = "pbxLogin";
             this.pbxLogin.Size = new System.Drawing.Size(140, 130);
             this.pbxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -72,7 +72,7 @@
             this.lblContraseña.BackColor = System.Drawing.Color.Transparent;
             this.lblContraseña.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblContraseña.Location = new System.Drawing.Point(101, 250);
+            this.lblContraseña.Location = new System.Drawing.Point(101, 247);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(88, 17);
@@ -83,7 +83,7 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(197, 213);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(137, 23);
             this.txtUsuario.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(197, 244);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(137, 23);
@@ -111,7 +111,7 @@
             this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.SystemColors.Info;
             this.btnIngresar.Location = new System.Drawing.Point(265, 287);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(103, 40);
             this.btnIngresar.TabIndex = 6;
@@ -130,7 +130,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Info;
             this.btnCancelar.Location = new System.Drawing.Point(154, 287);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 40);
             this.btnCancelar.TabIndex = 7;
@@ -153,10 +153,10 @@
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.pbxLogin);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";

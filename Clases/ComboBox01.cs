@@ -8,7 +8,7 @@ using System.Data;
 namespace Practico.Clases
 {
     [System.ComponentModel.DesignerCategory("")]
-    class ComboBox : System.Windows.Forms.ComboBox
+    class ComboBox01 : ComboBox
     {
         public string PpTabla { get; set; }
         public string PpDisplay { get; set; }

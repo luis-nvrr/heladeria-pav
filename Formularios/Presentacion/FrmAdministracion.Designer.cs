@@ -304,7 +304,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(807, 749);
+            this.ClientSize = new System.Drawing.Size(807, 606);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
@@ -319,7 +319,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnEscritorio);
             this.Controls.Add(this.btnIngresar);
-            this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.Name = "FrmAdministracion";
             this.Text = "Administracion ABM";
             this.ResumeLayout(false);

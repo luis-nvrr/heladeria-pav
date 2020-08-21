@@ -10,14 +10,19 @@ namespace Practico.Negocios
 {
     class Usuarios
     {
-        private BaseDatos baseDatos = new BaseDatos();  // creacion de la base de datos
+        private BaseDatos baseDatos = new BaseDatos(); // creacion de la base de datos
 
-        public enum Respuesta {validacionCorrecta, validacionIncorrecta};
-
-
-        public Respuesta ValidarUsuario(string usuario, string password)  // valida si el usuario existe
+        public enum Respuesta
         {
-            string sql = "SELECT * FROM Usuarios WHERE nombreUsuario = '"+usuario+"' AND contrasenia= '"+password+"'";
+            validacionCorrecta,
+            validacionIncorrecta
+        };
+
+
+        public Respuesta ValidarUsuario(string usuario, string password) // valida si el usuario existe
+        {
+            string sql = "SELECT * FROM Usuarios WHERE nombreUsuario = '" + usuario + "' AND contrasenia= '" +
+                         password + "'";
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
 
@@ -31,21 +36,42 @@ namespace Practico.Negocios
             }
         }
 
-
         public int RecuperarIdUsuario(string usuario, string password)
         {
-            string sql = "SELECT * FROM Usuarios WHERE nombreUsuario = '" + usuario + "' AND contrasenia= '" + password + "'";
+            string sql = "SELECT * FROM Usuarios WHERE nombreUsuario = '" + usuario + "' AND contrasenia= '" +
+                         password + "'";
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
 
             if (tabla.Rows.Count == 1)
             {
-                return int.Parse(tabla.Rows[0]["idUsuario"].ToString());    // retorna idUsuario
+                return int.Parse(tabla.Rows[0]["idUsuario"].ToString()); // retorna idUsuario
             }
             else
             {
                 return 0;
             }
         }
+
+        //public DataTable TodosLosUsuarios()
+        //{
+        //    string sql = "SELECT * FROM Usuarios ";
+        //    DataTable tabla = new DataTable();
+        //    tabla = baseDatos.Consulta(sql);
+
+        //    return tabla;
+        //}
+
+
+        //public DataTable Buscarusuario(string nombre)
+        //{
+        //    string sql = "";
+        //    DataTable tabla = new DataTable();
+        //    if (nombre == "")
+        //    {
+        //    }
+
+        //    return tabla;
+        //}
     }
 }
