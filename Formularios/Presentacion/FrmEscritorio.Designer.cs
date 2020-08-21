@@ -28,34 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEscritorio));
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnAdministracion = new System.Windows.Forms.Button();
             this.pnlListados = new System.Windows.Forms.Panel();
             this.btn11 = new System.Windows.Forms.Button();
             this.btn10 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
-            this.btnListados = new System.Windows.Forms.Button();
             this.pnlEstadisticas = new System.Windows.Forms.Panel();
             this.btn7 = new System.Windows.Forms.Button();
             this.btn6 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
-            this.btnEstadisticas = new System.Windows.Forms.Button();
             this.pnlProcesos = new System.Windows.Forms.Panel();
             this.btn3 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
-            this.btnProcesos = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.btnVerConsultas = new System.Windows.Forms.Button();
             this.btnVerVacunas = new System.Windows.Forms.Button();
             this.pnlBarra = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.pnlEscritorio = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnAdministracion = new System.Windows.Forms.Button();
+            this.btnListados = new System.Windows.Forms.Button();
+            this.btnEstadisticas = new System.Windows.Forms.Button();
+            this.btnProcesos = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblFechaHora = new System.Windows.Forms.Label();
+            this.tmrFechaHora = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             this.pnlListados.SuspendLayout();
             this.pnlEstadisticas.SuspendLayout();
@@ -84,26 +86,6 @@
             this.pnlMenu.Size = new System.Drawing.Size(200, 507);
             this.pnlMenu.TabIndex = 0;
             // 
-            // btnAdministracion
-            // 
-            this.btnAdministracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAdministracion.FlatAppearance.BorderSize = 0;
-            this.btnAdministracion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnAdministracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnAdministracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdministracion.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAdministracion.Location = new System.Drawing.Point(0, 660);
-            this.btnAdministracion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAdministracion.Name = "btnAdministracion";
-            this.btnAdministracion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAdministracion.Size = new System.Drawing.Size(183, 45);
-            this.btnAdministracion.TabIndex = 4;
-            this.btnAdministracion.Text = "Administracion";
-            this.btnAdministracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdministracion.UseVisualStyleBackColor = false;
-            this.btnAdministracion.Click += new System.EventHandler(this.btnAdministracion_Click);
-            // 
             // pnlListados
             // 
             this.pnlListados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -112,7 +94,7 @@
             this.pnlListados.Controls.Add(this.btn9);
             this.pnlListados.Controls.Add(this.btn8);
             this.pnlListados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlListados.Location = new System.Drawing.Point(0, 495);
+            this.pnlListados.Location = new System.Drawing.Point(0, 458);
             this.pnlListados.Name = "pnlListados";
             this.pnlListados.Size = new System.Drawing.Size(183, 165);
             this.pnlListados.TabIndex = 14;
@@ -197,27 +179,6 @@
             this.btn8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn8.UseVisualStyleBackColor = false;
             // 
-            // btnListados
-            // 
-            this.btnListados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnListados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListados.FlatAppearance.BorderSize = 0;
-            this.btnListados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnListados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnListados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListados.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnListados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListados.Location = new System.Drawing.Point(0, 450);
-            this.btnListados.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnListados.Name = "btnListados";
-            this.btnListados.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnListados.Size = new System.Drawing.Size(183, 45);
-            this.btnListados.TabIndex = 3;
-            this.btnListados.Text = "Listados";
-            this.btnListados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListados.UseVisualStyleBackColor = false;
-            this.btnListados.Click += new System.EventHandler(this.btnListados_Click);
-            // 
             // pnlEstadisticas
             // 
             this.pnlEstadisticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -226,7 +187,7 @@
             this.pnlEstadisticas.Controls.Add(this.btn5);
             this.pnlEstadisticas.Controls.Add(this.btn4);
             this.pnlEstadisticas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEstadisticas.Location = new System.Drawing.Point(0, 285);
+            this.pnlEstadisticas.Location = new System.Drawing.Point(0, 248);
             this.pnlEstadisticas.Name = "pnlEstadisticas";
             this.pnlEstadisticas.Size = new System.Drawing.Size(183, 165);
             this.pnlEstadisticas.TabIndex = 12;
@@ -310,37 +271,15 @@
             this.btn4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn4.UseVisualStyleBackColor = false;
             // 
-            // btnEstadisticas
-            // 
-            this.btnEstadisticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnEstadisticas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEstadisticas.FlatAppearance.BorderSize = 0;
-            this.btnEstadisticas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnEstadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnEstadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstadisticas.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEstadisticas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstadisticas.Location = new System.Drawing.Point(0, 240);
-            this.btnEstadisticas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEstadisticas.Name = "btnEstadisticas";
-            this.btnEstadisticas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEstadisticas.Size = new System.Drawing.Size(183, 45);
-            this.btnEstadisticas.TabIndex = 2;
-            this.btnEstadisticas.Text = "Estadisticas";
-            this.btnEstadisticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstadisticas.UseVisualStyleBackColor = false;
-            this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
-            // 
             // pnlProcesos
             // 
             this.pnlProcesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.pnlProcesos.Controls.Add(this.btn3);
-            this.pnlProcesos.Controls.Add(this.btn2);
             this.pnlProcesos.Controls.Add(this.btnConsulta);
             this.pnlProcesos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlProcesos.Location = new System.Drawing.Point(0, 107);
             this.pnlProcesos.Name = "pnlProcesos";
-            this.pnlProcesos.Size = new System.Drawing.Size(183, 133);
+            this.pnlProcesos.Size = new System.Drawing.Size(183, 96);
             this.pnlProcesos.TabIndex = 10;
             // 
             // btn3
@@ -353,7 +292,7 @@
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3.ForeColor = System.Drawing.SystemColors.Window;
             this.btn3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn3.Location = new System.Drawing.Point(0, 80);
+            this.btn3.Location = new System.Drawing.Point(0, 40);
             this.btn3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn3.Name = "btn3";
             this.btn3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -362,26 +301,6 @@
             this.btn3.Text = "Actualizar Stock";
             this.btn3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn3.UseVisualStyleBackColor = false;
-            // 
-            // btn2
-            // 
-            this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.btn2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn2.FlatAppearance.BorderSize = 0;
-            this.btn2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn2.Location = new System.Drawing.Point(0, 40);
-            this.btn2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn2.Name = "btn2";
-            this.btn2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn2.Size = new System.Drawing.Size(183, 40);
-            this.btn2.TabIndex = 11;
-            this.btn2.Text = "Dar de Alta";
-            this.btn2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn2.UseVisualStyleBackColor = false;
             // 
             // btnConsulta
             // 
@@ -402,28 +321,6 @@
             this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsulta.UseVisualStyleBackColor = false;
             // 
-            // btnProcesos
-            // 
-            this.btnProcesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnProcesos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProcesos.FlatAppearance.BorderSize = 0;
-            this.btnProcesos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnProcesos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnProcesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProcesos.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btnProcesos.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnProcesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProcesos.Location = new System.Drawing.Point(0, 62);
-            this.btnProcesos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnProcesos.Name = "btnProcesos";
-            this.btnProcesos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnProcesos.Size = new System.Drawing.Size(183, 45);
-            this.btnProcesos.TabIndex = 1;
-            this.btnProcesos.Text = "Procesos";
-            this.btnProcesos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProcesos.UseVisualStyleBackColor = false;
-            this.btnProcesos.Click += new System.EventHandler(this.btnProcesos_Click);
-            // 
             // pnlLogo
             // 
             this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -433,22 +330,6 @@
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(183, 62);
             this.pnlLogo.TabIndex = 0;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblUsuario.Image = global::Practico.Properties.Resources.usuarioMini;
-            this.lblUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblUsuario.Location = new System.Drawing.Point(35, 9);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(130, 44);
-            this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "Usuario";
-            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnVerConsultas
             // 
@@ -490,6 +371,7 @@
             // 
             this.pnlBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.pnlBarra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlBarra.Controls.Add(this.lblFechaHora);
             this.pnlBarra.Controls.Add(this.label2);
             this.pnlBarra.Controls.Add(this.btnSalir);
             this.pnlBarra.Dock = System.Windows.Forms.DockStyle.Top;
@@ -506,9 +388,18 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
             this.label2.Location = new System.Drawing.Point(16, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 23);
+            this.label2.Size = new System.Drawing.Size(147, 23);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Fecha y Hora";
+            this.label2.Text = "Fecha y Hora:";
+            // 
+            // pnlEscritorio
+            // 
+            this.pnlEscritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.pnlEscritorio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlEscritorio.Location = new System.Drawing.Point(200, 40);
+            this.pnlEscritorio.Name = "pnlEscritorio";
+            this.pnlEscritorio.Size = new System.Drawing.Size(621, 467);
+            this.pnlEscritorio.TabIndex = 10;
             // 
             // btnSalir
             // 
@@ -532,14 +423,129 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // pnlEscritorio
+            // btnAdministracion
             // 
-            this.pnlEscritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.pnlEscritorio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlEscritorio.Location = new System.Drawing.Point(200, 40);
-            this.pnlEscritorio.Name = "pnlEscritorio";
-            this.pnlEscritorio.Size = new System.Drawing.Size(621, 467);
-            this.pnlEscritorio.TabIndex = 10;
+            this.btnAdministracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdministracion.FlatAppearance.BorderSize = 0;
+            this.btnAdministracion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnAdministracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnAdministracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdministracion.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAdministracion.Image = global::Practico.Properties.Resources.btnConfiguracion;
+            this.btnAdministracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdministracion.Location = new System.Drawing.Point(0, 623);
+            this.btnAdministracion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAdministracion.Name = "btnAdministracion";
+            this.btnAdministracion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnAdministracion.Size = new System.Drawing.Size(183, 45);
+            this.btnAdministracion.TabIndex = 4;
+            this.btnAdministracion.Text = "Administracion";
+            this.btnAdministracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdministracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdministracion.UseVisualStyleBackColor = false;
+            this.btnAdministracion.Click += new System.EventHandler(this.btnAdministracion_Click);
+            // 
+            // btnListados
+            // 
+            this.btnListados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnListados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListados.FlatAppearance.BorderSize = 0;
+            this.btnListados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnListados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnListados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListados.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnListados.Image = global::Practico.Properties.Resources.btnListados;
+            this.btnListados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListados.Location = new System.Drawing.Point(0, 413);
+            this.btnListados.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnListados.Name = "btnListados";
+            this.btnListados.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnListados.Size = new System.Drawing.Size(183, 45);
+            this.btnListados.TabIndex = 3;
+            this.btnListados.Text = "Listados";
+            this.btnListados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnListados.UseVisualStyleBackColor = false;
+            this.btnListados.Click += new System.EventHandler(this.btnListados_Click);
+            // 
+            // btnEstadisticas
+            // 
+            this.btnEstadisticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnEstadisticas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEstadisticas.FlatAppearance.BorderSize = 0;
+            this.btnEstadisticas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnEstadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnEstadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstadisticas.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEstadisticas.Image = global::Practico.Properties.Resources.btnInformes;
+            this.btnEstadisticas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEstadisticas.Location = new System.Drawing.Point(0, 203);
+            this.btnEstadisticas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEstadisticas.Name = "btnEstadisticas";
+            this.btnEstadisticas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEstadisticas.Size = new System.Drawing.Size(183, 45);
+            this.btnEstadisticas.TabIndex = 2;
+            this.btnEstadisticas.Text = "Estadisticas";
+            this.btnEstadisticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEstadisticas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEstadisticas.UseVisualStyleBackColor = false;
+            this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
+            // 
+            // btnProcesos
+            // 
+            this.btnProcesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnProcesos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProcesos.FlatAppearance.BorderSize = 0;
+            this.btnProcesos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnProcesos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnProcesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProcesos.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnProcesos.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnProcesos.Image = global::Practico.Properties.Resources.cajaRegitradoraNueva;
+            this.btnProcesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProcesos.Location = new System.Drawing.Point(0, 62);
+            this.btnProcesos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnProcesos.Name = "btnProcesos";
+            this.btnProcesos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnProcesos.Size = new System.Drawing.Size(183, 45);
+            this.btnProcesos.TabIndex = 1;
+            this.btnProcesos.Text = "Procesos";
+            this.btnProcesos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProcesos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProcesos.UseVisualStyleBackColor = false;
+            this.btnProcesos.Click += new System.EventHandler(this.btnProcesos_Click);
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblUsuario.Image = global::Practico.Properties.Resources.usuarioMini;
+            this.lblUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUsuario.Location = new System.Drawing.Point(28, 9);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(137, 44);
+            this.lblUsuario.TabIndex = 2;
+            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFechaHora
+            // 
+            this.lblFechaHora.AutoSize = true;
+            this.lblFechaHora.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.lblFechaHora.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblFechaHora.Location = new System.Drawing.Point(164, 9);
+            this.lblFechaHora.Name = "lblFechaHora";
+            this.lblFechaHora.Size = new System.Drawing.Size(0, 23);
+            this.lblFechaHora.TabIndex = 7;
+            // 
+            // tmrFechaHora
+            // 
+            this.tmrFechaHora.Interval = 1000;
+            this.tmrFechaHora.Tick += new System.EventHandler(this.tmrFechaHora_Tick);
             // 
             // FrmEscritorio
             // 
@@ -581,7 +587,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel pnlBarra;
         private System.Windows.Forms.Panel pnlProcesos;
-        private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.Button btnProcesos;
         private System.Windows.Forms.Panel pnlLogo;
@@ -601,6 +606,8 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Panel pnlEscritorio;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblFechaHora;
+        private System.Windows.Forms.Timer tmrFechaHora;
     }
 }
 

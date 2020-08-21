@@ -28,19 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnEscritorio = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label2.ForeColor = System.Drawing.SystemColors.Info;
+            this.label2.Location = new System.Drawing.Point(110, 194);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 19);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Nombre";
+            // 
+            // btnEscritorio
+            // 
+            this.btnEscritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnEscritorio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEscritorio.FlatAppearance.BorderSize = 0;
+            this.btnEscritorio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnEscritorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
+            this.btnEscritorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEscritorio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEscritorio.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnEscritorio.Location = new System.Drawing.Point(616, 17);
+            this.btnEscritorio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnEscritorio.Name = "btnEscritorio";
+            this.btnEscritorio.Size = new System.Drawing.Size(166, 63);
+            this.btnEscritorio.TabIndex = 9;
+            this.btnEscritorio.Text = "Volver Al Escritorio";
+            this.btnEscritorio.UseVisualStyleBackColor = false;
+            this.btnEscritorio.Click += new System.EventHandler(this.btnEscritorio_Click);
             // 
             // FrmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.ClientSize = new System.Drawing.Size(807, 749);
+            this.Controls.Add(this.btnEscritorio);
+            this.Controls.Add(this.label2);
+            this.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmUsuarios";
-            this.Text = "Administracion de Usuarios";
+            this.Text = "Gestion de Usuarios";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnEscritorio;
     }
 }

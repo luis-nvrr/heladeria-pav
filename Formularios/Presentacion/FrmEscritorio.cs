@@ -31,6 +31,7 @@ namespace Practico
         private void FrmEscritorio_Load(object sender, EventArgs e)
         {
             OcultarSubMenu(); // prepara el menu
+            tmrFechaHora.Start();  // activa timer de fecha y hora
 
             FrmLogin login = new FrmLogin();  // crea login
             login.ShowDialog();
@@ -62,7 +63,7 @@ namespace Practico
         private Form formularioActivo = null;     // usar metodo para abrir CUALQUIER FORMULARIO
         private void AbrirFormulario(Form formularioHijo)
         {
-            if (formularioActivo != null)
+            if (formularioActivo != null)     // cierra algun formulario abierto
                 formularioActivo.Close();
             formularioActivo = formularioHijo;
             formularioActivo.TopLevel = false;
@@ -115,14 +116,22 @@ namespace Practico
 
         private void btnAdministracion_Click(object sender, EventArgs e)
         {
-            //..
             AbrirFormulario(new FrmAdministracion());
             OcultarSubMenu();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
+        { 
+            DialogResult opcion = MessageBox.Show(text: "¿Esta seguro que desea salir?", caption: "Atencion!",
+                buttons: MessageBoxButtons.YesNo, icon: MessageBoxIcon.Question);
+
+            if (opcion == DialogResult.Yes) { this.Close(); }
+            return;
+        }
+
+        private void tmrFechaHora_Tick(object sender, EventArgs e)
         {
-            Application.Restart();
+            lblFechaHora.Text = DateTime.Now.ToString();
         }
     }
 }

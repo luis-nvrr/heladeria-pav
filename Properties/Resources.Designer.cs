@@ -63,9 +63,49 @@ namespace Practico.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnConfiguracion {
+            get {
+                object obj = ResourceManager.GetObject("btnConfiguracion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnInformes {
+            get {
+                object obj = ResourceManager.GetObject("btnInformes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnListados {
+            get {
+                object obj = ResourceManager.GetObject("btnListados", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnSalir {
             get {
                 object obj = ResourceManager.GetObject("btnSalir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cajaRegitradoraNueva {
+            get {
+                object obj = ResourceManager.GetObject("cajaRegitradoraNueva", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

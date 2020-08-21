@@ -16,5 +16,10 @@ namespace Practico.Formularios.Abm
         {
             InitializeComponent();
         }
+
+        private void btnEscritorio_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

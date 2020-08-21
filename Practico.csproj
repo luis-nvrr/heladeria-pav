@@ -51,6 +51,12 @@
     <Compile Include="Clases\ComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Formularios\Abm\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Presentacion\FrmAdministracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Abm\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Presentacion\FrmAdministracion.resx">
       <DependentUpon>FrmAdministracion.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,10 +119,12 @@
     <None Include="Resources\usuarioMini.png" />
     <None Include="Resources\logoEscritorio.png" />
     <None Include="Resources\btnSalir.png" />
+    <None Include="Resources\btnInformes.png" />
+    <None Include="Resources\btnListados.png" />
+    <None Include="Resources\btnConfiguracion.png" />
+    <None Include="Resources\cajaRegitradoraNueva.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formularios\Abm\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

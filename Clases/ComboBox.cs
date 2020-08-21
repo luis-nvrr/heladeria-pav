@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
-
 namespace Practico.Clases
 {
+    [System.ComponentModel.DesignerCategory("")]
     class ComboBox : System.Windows.Forms.ComboBox
     {
         public string PpTabla { get; set; }
