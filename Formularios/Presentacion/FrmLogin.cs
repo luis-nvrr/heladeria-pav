@@ -16,9 +16,7 @@ namespace Practico.Formularios
         private string usuario = "";
         private string password = "";
         private int idUsuario;
-        /// <summary>
-        // hola
-        /// </summary>
+
         public string Usuario { get => usuario; set => usuario = value; }
         public string Password { get => password; set => password = value; }
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }

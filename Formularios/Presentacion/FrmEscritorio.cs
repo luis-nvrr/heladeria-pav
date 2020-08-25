@@ -22,7 +22,7 @@ namespace Practico
         public string Password { get; set; }
         public string IdUsuario { get; set; }
 
-        //
+        
         public FrmEscritorio()
         {
             InitializeComponent();
@@ -135,6 +135,3 @@ namespace Practico
         }
     }
 }
-
-
-// hola
