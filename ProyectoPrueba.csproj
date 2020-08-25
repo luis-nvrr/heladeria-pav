@@ -51,11 +51,11 @@
     <Compile Include="Clases\ComboBox01.cs" />
     <Compile Include="Clases\TextBox01.cs" />
     <Compile Include="Clases\TratamientosEspeciales.cs" />
-    <Compile Include="Formularios\Abm\Usuarios\AltaUsuarios.cs">
+    <Compile Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Abm\Usuarios\AltaUsuarios.Designer.cs">
-      <DependentUpon>AltaUsuarios.cs</DependentUpon>
+    <Compile Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.Designer.cs">
+      <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Abm\Usuarios\FrmUsuarios.cs">
       <SubType>Form</SubType>
@@ -84,8 +84,8 @@
     <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\Abm\Usuarios\AltaUsuarios.resx">
-      <DependentUpon>AltaUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.resx">
+      <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>

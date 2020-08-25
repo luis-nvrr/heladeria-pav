@@ -1,6 +1,6 @@
 ﻿namespace Practico.Formularios.Abm.Usuarios
 {
-    partial class AltaUsuarios
+    partial class FrmAltaUsuarios
     {
         /// <summary>
         /// Required designer variable.

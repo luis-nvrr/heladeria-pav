@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Practico.Formularios.Abm.Usuarios
 {
-    public partial class AltaUsuarios : Form
+    public partial class FrmAltaUsuarios : Form
     {
-        public AltaUsuarios()
+        public FrmAltaUsuarios()
         {
             InitializeComponent();
         }

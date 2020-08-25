@@ -16,7 +16,7 @@ namespace Practico.Clases
 
         private void Conectar()  // metodo para conectar
         {
-            conexion.ConnectionString = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];   // cadena para usar la variable del archivo .config 
+            conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True";   // cadena para usar la variable del archivo .config 
             conexion.Open();                                                                                 // se puede reemplazar con la cadena directamente
                                                                                                             // NO hacerlo
             comando.Connection = conexion;
