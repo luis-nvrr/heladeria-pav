@@ -53,25 +53,22 @@ namespace Practico.Negocios
             }
         }
 
-        //public DataTable TodosLosUsuarios()
-        //{
-        //    string sql = "SELECT * FROM Usuarios ";
-        //    DataTable tabla = new DataTable();
-        //    tabla = baseDatos.Consulta(sql);
+        public DataTable TodosLosUsuarios()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT * FROM Usuarios ";
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
 
-        //    return tabla;
-        //}
 
-
-        //public DataTable Buscarusuario(string nombre)
-        //{
-        //    string sql = "";
-        //    DataTable tabla = new DataTable();
-        //    if (nombre == "")
-        //    {
-        //    }
-
-        //    return tabla;
-        //}
+        public DataTable BuscarUsuario(string nombre)
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT * FROM Usuarios WHERE nombreUsuario LIKE '%" + nombre.Trim() + "%'";
+            DataTable tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
     }
 }

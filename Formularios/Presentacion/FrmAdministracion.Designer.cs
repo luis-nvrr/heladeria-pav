@@ -58,7 +58,7 @@
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(166, 63);
-            this.btnIngresar.TabIndex = 7;
+            this.btnIngresar.TabIndex = 10;
             this.btnIngresar.Text = "Helados Especiales";
             this.btnIngresar.UseVisualStyleBackColor = false;
             // 
@@ -76,7 +76,7 @@
             this.btnEscritorio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnEscritorio.Name = "btnEscritorio";
             this.btnEscritorio.Size = new System.Drawing.Size(166, 63);
-            this.btnEscritorio.TabIndex = 8;
+            this.btnEscritorio.TabIndex = 13;
             this.btnEscritorio.Text = "Volver Al Escritorio";
             this.btnEscritorio.UseVisualStyleBackColor = false;
             this.btnEscritorio.Click += new System.EventHandler(this.btnEscritorio_Click);
@@ -95,7 +95,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(166, 63);
-            this.button2.TabIndex = 9;
+            this.button2.TabIndex = 3;
             this.button2.Text = "Proveedores";
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -113,7 +113,7 @@
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(166, 63);
-            this.btnUsuarios.TabIndex = 10;
+            this.btnUsuarios.TabIndex = 2;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = false;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
@@ -132,7 +132,7 @@
             this.button4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(166, 63);
-            this.button4.TabIndex = 11;
+            this.button4.TabIndex = 7;
             this.button4.Text = "Turnos";
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -150,7 +150,7 @@
             this.button5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(166, 63);
-            this.button5.TabIndex = 12;
+            this.button5.TabIndex = 11;
             this.button5.Text = "Frutas";
             this.button5.UseVisualStyleBackColor = false;
             // 
@@ -168,7 +168,7 @@
             this.button6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(166, 63);
-            this.button6.TabIndex = 13;
+            this.button6.TabIndex = 1;
             this.button6.Text = "Telefonos de Empleados";
             this.button6.UseVisualStyleBackColor = false;
             // 
@@ -186,7 +186,7 @@
             this.button7.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(166, 63);
-            this.button7.TabIndex = 14;
+            this.button7.TabIndex = 0;
             this.button7.Text = "Empleados";
             this.button7.UseVisualStyleBackColor = false;
             // 
@@ -204,7 +204,7 @@
             this.button9.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(166, 63);
-            this.button9.TabIndex = 16;
+            this.button9.TabIndex = 12;
             this.button9.Text = "Frutas de Helados Especiales";
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -222,7 +222,7 @@
             this.button10.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(166, 63);
-            this.button10.TabIndex = 17;
+            this.button10.TabIndex = 6;
             this.button10.Text = "Barrios";
             this.button10.UseVisualStyleBackColor = false;
             // 
@@ -240,7 +240,7 @@
             this.button11.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(166, 63);
-            this.button11.TabIndex = 18;
+            this.button11.TabIndex = 9;
             this.button11.Text = "Helados";
             this.button11.UseVisualStyleBackColor = false;
             // 
@@ -258,7 +258,7 @@
             this.button12.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(166, 63);
-            this.button12.TabIndex = 19;
+            this.button12.TabIndex = 5;
             this.button12.Text = "Localidades";
             this.button12.UseVisualStyleBackColor = false;
             // 
@@ -276,7 +276,7 @@
             this.button13.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(166, 63);
-            this.button13.TabIndex = 20;
+            this.button13.TabIndex = 4;
             this.button13.Text = "Proveedores de Helados";
             this.button13.UseVisualStyleBackColor = false;
             // 
@@ -294,7 +294,7 @@
             this.button15.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(166, 63);
-            this.button15.TabIndex = 22;
+            this.button15.TabIndex = 8;
             this.button15.Text = "Tipos de Documento";
             this.button15.UseVisualStyleBackColor = false;
             // 
