@@ -34,7 +34,16 @@ namespace Practico.Clases
             comando.CommandText = sql;   // comando a ejecutar
             DataTable tabla = new DataTable();
             tabla.Load(comando.ExecuteReader());   // carga la tabla y ejecuta la consulta en el motor
+            Desconectar();
             return tabla;
+        }
+
+        public void Insertar(string sql)
+        {
+            Conectar();
+            comando.CommandText = sql;
+            comando.ExecuteReader();
+            Desconectar();
         }
     }
 }

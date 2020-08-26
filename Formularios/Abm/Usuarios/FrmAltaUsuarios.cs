@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Clases;
+using Practico.Negocios;
 
 namespace Practico.Formularios.Abm.Usuarios
 {
@@ -32,7 +33,73 @@ namespace Practico.Formularios.Abm.Usuarios
 
             if (tratamiento.Validar(this.Controls) == TratamientosEspeciales.Validacion.correcta)
             {
-                
+                if (txtContraseña.Text == txtRepetir.Text)
+                {
+                    Negocios.Usuarios usuario = new Negocios.Usuarios();
+                    if (usuario.IngresarUsuario(txtNombre.Text, txtContraseña.Text) ==
+                        Negocios.Usuarios.Respuesta.validacionCorrecta)
+                    {
+                        MessageBox.Show("Usuario ingresado correctamente", "Informacion",
+                            buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                        LimpiarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario repetido", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        LimpiarCampos();
+                    }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Datos Incorrectos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    LimpiarContraseñas();
+                    txtContraseña.Focus();
+                }
+            }
+        }
+
+        // limpiar textbox
+        private void LimpiarContraseñas()
+        {
+            txtContraseña.Text = "";
+            txtRepetir.Text = "";
+            txtContraseña.Focus();
+        }
+
+        private void LimpiarCampos()
+        {
+            LimpiarContraseñas();
+            txtNombre.Text = "";
+            txtNombre.Focus();
+        }
+
+
+        // ENTER funciona como TAB
+        private void txtNombre_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+        }
+
+        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+        }
+
+        private void txtRepetir_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
             }
         }
     }

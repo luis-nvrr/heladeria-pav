@@ -136,6 +136,7 @@
             this.txtRepetir.PpValidable = true;
             this.txtRepetir.Size = new System.Drawing.Size(124, 24);
             this.txtRepetir.TabIndex = 2;
+            this.txtRepetir.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRepetir_KeyDown);
             // 
             // txtContraseña
             // 
@@ -148,6 +149,7 @@
             this.txtContraseña.PpValidable = true;
             this.txtContraseña.Size = new System.Drawing.Size(124, 24);
             this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseña_KeyDown);
             // 
             // txtNombre
             // 
@@ -160,6 +162,7 @@
             this.txtNombre.PpValidable = true;
             this.txtNombre.Size = new System.Drawing.Size(124, 24);
             this.txtNombre.TabIndex = 0;
+            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
             // 
             // FrmAltaUsuarios
             // 

@@ -70,5 +70,23 @@ namespace Practico.Negocios
             DataTable tabla = baseDatos.Consulta(sql);
             return tabla;
         }
+
+        public Respuesta IngresarUsuario(string nombre, string contraseña)
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "INSERT INTO Usuarios VALUES "+"('"+nombre+"','"+contraseña+"')";
+
+
+            DataTable tabla = new DataTable();
+            tabla = BuscarUsuario(nombre);
+
+            if (tabla.Rows.Count == 0)
+            {
+                baseDatos.Insertar(sql);
+                return Respuesta.validacionCorrecta;
+            }
+
+            return Respuesta.validacionIncorrecta;
+        }
     }
 }
