@@ -42,6 +42,9 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
+            this.lblPersonas = new System.Windows.Forms.Label();
+            this.lblHelados = new System.Windows.Forms.Label();
+            this.lblOtros = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnIngresar
@@ -54,7 +57,7 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnIngresar.Location = new System.Drawing.Point(200, 409);
+            this.btnIngresar.Location = new System.Drawing.Point(220, 313);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(166, 63);
@@ -91,7 +94,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button2.Location = new System.Drawing.Point(17, 90);
+            this.button2.Location = new System.Drawing.Point(37, 169);
             this.button2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(166, 63);
@@ -109,7 +112,7 @@
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnUsuarios.Location = new System.Drawing.Point(376, 17);
+            this.btnUsuarios.Location = new System.Drawing.Point(396, 96);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(166, 63);
@@ -128,7 +131,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button4.Location = new System.Drawing.Point(17, 290);
+            this.button4.Location = new System.Drawing.Point(37, 603);
             this.button4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(166, 63);
@@ -146,7 +149,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button5.Location = new System.Drawing.Point(17, 482);
+            this.button5.Location = new System.Drawing.Point(37, 386);
             this.button5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(166, 63);
@@ -164,7 +167,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button6.Location = new System.Drawing.Point(200, 17);
+            this.button6.Location = new System.Drawing.Point(220, 96);
             this.button6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(166, 63);
@@ -182,7 +185,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button7.Location = new System.Drawing.Point(17, 17);
+            this.button7.Location = new System.Drawing.Point(37, 96);
             this.button7.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(166, 63);
@@ -200,7 +203,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button9.Location = new System.Drawing.Point(200, 482);
+            this.button9.Location = new System.Drawing.Point(220, 386);
             this.button9.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(166, 63);
@@ -218,7 +221,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button10.Location = new System.Drawing.Point(200, 218);
+            this.button10.Location = new System.Drawing.Point(220, 531);
             this.button10.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(166, 63);
@@ -236,7 +239,7 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button11.Location = new System.Drawing.Point(17, 409);
+            this.button11.Location = new System.Drawing.Point(37, 313);
             this.button11.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(166, 63);
@@ -254,7 +257,7 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button12.Location = new System.Drawing.Point(17, 218);
+            this.button12.Location = new System.Drawing.Point(37, 531);
             this.button12.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(166, 63);
@@ -272,7 +275,7 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button13.Location = new System.Drawing.Point(200, 90);
+            this.button13.Location = new System.Drawing.Point(220, 169);
             this.button13.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(166, 63);
@@ -290,13 +293,49 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button15.Location = new System.Drawing.Point(200, 290);
+            this.button15.Location = new System.Drawing.Point(220, 603);
             this.button15.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(166, 63);
             this.button15.TabIndex = 8;
             this.button15.Text = "Tipos de Documento";
             this.button15.UseVisualStyleBackColor = false;
+            // 
+            // lblPersonas
+            // 
+            this.lblPersonas.AutoSize = true;
+            this.lblPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPersonas.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.lblPersonas.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblPersonas.Location = new System.Drawing.Point(22, 57);
+            this.lblPersonas.Name = "lblPersonas";
+            this.lblPersonas.Size = new System.Drawing.Size(96, 23);
+            this.lblPersonas.TabIndex = 14;
+            this.lblPersonas.Text = "Personas";
+            // 
+            // lblHelados
+            // 
+            this.lblHelados.AutoSize = true;
+            this.lblHelados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHelados.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.lblHelados.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblHelados.Location = new System.Drawing.Point(22, 275);
+            this.lblHelados.Name = "lblHelados";
+            this.lblHelados.Size = new System.Drawing.Size(91, 23);
+            this.lblHelados.TabIndex = 14;
+            this.lblHelados.Text = "Helados";
+            // 
+            // lblOtros
+            // 
+            this.lblOtros.AutoSize = true;
+            this.lblOtros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblOtros.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.lblOtros.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblOtros.Location = new System.Drawing.Point(22, 493);
+            this.lblOtros.Name = "lblOtros";
+            this.lblOtros.Size = new System.Drawing.Size(61, 23);
+            this.lblOtros.TabIndex = 14;
+            this.lblOtros.Text = "Otros";
             // 
             // FrmAdministracion
             // 
@@ -305,6 +344,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(807, 606);
+            this.Controls.Add(this.lblOtros);
+            this.Controls.Add(this.lblHelados);
+            this.Controls.Add(this.lblPersonas);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
@@ -323,6 +365,7 @@
             this.Name = "FrmAdministracion";
             this.Text = "Administracion ABM";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -342,5 +385,8 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Label lblPersonas;
+        private System.Windows.Forms.Label lblHelados;
+        private System.Windows.Forms.Label lblOtros;
     }
 }

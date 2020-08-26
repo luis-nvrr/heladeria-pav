@@ -38,11 +38,11 @@
             this.grdUsuarios = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNombre = new Practico.Clases.TextBox01();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.txtNombre = new Practico.Clases.TextBox01();
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -118,9 +118,9 @@
             this.lblUsuarios.ForeColor = System.Drawing.SystemColors.Control;
             this.lblUsuarios.Location = new System.Drawing.Point(22, 34);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(157, 23);
+            this.lblUsuarios.Size = new System.Drawing.Size(199, 23);
             this.lblUsuarios.TabIndex = 6;
-            this.lblUsuarios.Text = "Buscar Usuarios";
+            this.lblUsuarios.Text = "Gestión de Usuarios";
             // 
             // grdUsuarios
             // 
@@ -172,19 +172,6 @@
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 150;
             // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(179, 112);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PpMensajeError = "No ingresó nombre!";
-            this.txtNombre.PpNombreCampo = null;
-            this.txtNombre.PpNombreTabla = null;
-            this.txtNombre.PpValidable = true;
-            this.txtNombre.Size = new System.Drawing.Size(124, 24);
-            this.txtNombre.TabIndex = 0;
-            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
-            // 
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -214,6 +201,24 @@
             this.panel1.Size = new System.Drawing.Size(191, 174);
             this.panel1.TabIndex = 3;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEliminar.Location = new System.Drawing.Point(24, 113);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(149, 40);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar Usuario";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -232,23 +237,18 @@
             this.btnModificar.Text = "Modificar Usuario";
             this.btnModificar.UseVisualStyleBackColor = false;
             // 
-            // btnEliminar
+            // txtNombre
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEliminar.Location = new System.Drawing.Point(24, 113);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 40);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar Usuario";
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.Location = new System.Drawing.Point(179, 112);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PpMensajeError = "No ingresó nombre!";
+            this.txtNombre.PpNombreCampo = null;
+            this.txtNombre.PpNombreTabla = null;
+            this.txtNombre.PpValidable = true;
+            this.txtNombre.Size = new System.Drawing.Size(124, 24);
+            this.txtNombre.TabIndex = 0;
+            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
             // 
             // FrmUsuarios
             // 

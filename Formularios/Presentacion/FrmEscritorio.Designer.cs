@@ -438,7 +438,7 @@
             this.lblUsuario.Size = new System.Drawing.Size(137, 44);
             this.lblUsuario.TabIndex = 2;
             this.lblUsuario.Text = "Usuario";
-            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnVerConsultas
             // 
@@ -535,6 +535,7 @@
             // 
             // pnlEscritorio
             // 
+            this.pnlEscritorio.AutoScroll = true;
             this.pnlEscritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.pnlEscritorio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlEscritorio.Location = new System.Drawing.Point(200, 40);
