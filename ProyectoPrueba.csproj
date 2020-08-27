@@ -132,6 +132,9 @@
     <None Include="Resources\btnListados.png" />
     <None Include="Resources\btnConfiguracion.png" />
     <None Include="Resources\cajaRegitradoraNueva.png" />
+    <None Include="Resources\team.png" />
+    <None Include="Resources\iceCream.png" />
+    <None Include="Resources\settings.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
   <ItemGroup />

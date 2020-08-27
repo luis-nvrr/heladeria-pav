@@ -118,7 +118,7 @@ namespace Practico.Formularios.Abm
             }
             else
             {
-                int indiceSeleccionado = grdUsuarios.SelectedCells[0].RowIndex;
+                int indiceSeleccionado = grdUsuarios.SelectedRows[0].Index;
                 int id = Convert.ToInt32(grdUsuarios[0, indiceSeleccionado].Value);
 
                 if (usuarios.EliminarUsuario(id) == Negocios.Usuarios.Respuesta.validacionCorrecta)
