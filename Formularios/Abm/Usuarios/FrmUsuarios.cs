@@ -102,10 +102,38 @@ namespace Practico.Formularios.Abm
             }
         }
 
+
+        // ESTO NO LO DIO EN CLASES  --LUIS
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             FrmAltaUsuarios altaUsuarios = new FrmAltaUsuarios();
             altaUsuarios.ShowDialog();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (grdUsuarios.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int indiceSeleccionado = grdUsuarios.SelectedCells[0].RowIndex;
+                int id = Convert.ToInt32(grdUsuarios[0, indiceSeleccionado].Value);
+
+                if (usuarios.EliminarUsuario(id) == Negocios.Usuarios.Respuesta.validacionCorrecta)
+                {
+                    MessageBox.Show("Usuario eliminado correctamente", "Informacion",
+                        buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                    DataTable tabla = usuarios.TodosLosUsuarios();
+                    CargarGrilla(tabla);
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido eliminar al usuario", "Importante", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

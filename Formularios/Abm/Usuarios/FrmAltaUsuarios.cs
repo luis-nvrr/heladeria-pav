@@ -45,14 +45,14 @@ namespace Practico.Formularios.Abm.Usuarios
                     }
                     else
                     {
-                        MessageBox.Show("Usuario repetido", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        MessageBox.Show("Usuario repetido", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         LimpiarCampos();
                     }
                     
                 }
                 else
                 {
-                    MessageBox.Show("Datos Incorrectos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Datos Incorrectos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     LimpiarContraseñas();
                     txtContraseña.Focus();
                 }

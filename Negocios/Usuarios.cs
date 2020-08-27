@@ -55,7 +55,6 @@ namespace Practico.Negocios
 
         public DataTable TodosLosUsuarios()
         {
-            BaseDatos baseDatos = new BaseDatos();
             string sql = "SELECT * FROM Usuarios ";
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
@@ -65,28 +64,56 @@ namespace Practico.Negocios
 
         public DataTable BuscarUsuario(string nombre)
         {
-            BaseDatos baseDatos = new BaseDatos();
             string sql = "SELECT * FROM Usuarios WHERE nombreUsuario LIKE '%" + nombre.Trim() + "%'";
             DataTable tabla = baseDatos.Consulta(sql);
             return tabla;
         }
 
+        // NO LO DIO EN CLASES
+        public Respuesta ValidarUsuario(string usuario) // valida si el nombre de usuario existe
+        {
+            string sql = "SELECT * FROM Usuarios WHERE nombreUsuario = '" + usuario + "'";
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+
+            if (tabla.Rows.Count == 1)
+            {
+                return Respuesta.validacionCorrecta;
+            }
+            else
+            {
+                return Respuesta.validacionIncorrecta;
+            }
+        }
+
+
         public Respuesta IngresarUsuario(string nombre, string contraseña)
         {
-            BaseDatos baseDatos = new BaseDatos();
             string sql = "INSERT INTO Usuarios VALUES "+"('"+nombre+"','"+contraseña+"')";
 
 
-            DataTable tabla = new DataTable();
-            tabla = BuscarUsuario(nombre);
-
-            if (tabla.Rows.Count == 0)
+            if (ValidarUsuario(nombre) == Respuesta.validacionIncorrecta)
             {
-                baseDatos.Insertar(sql);
+                baseDatos.Consulta(sql);
                 return Respuesta.validacionCorrecta;
             }
 
             return Respuesta.validacionIncorrecta;
+        }
+
+        public Respuesta EliminarUsuario(int id)
+        {
+            string sql = "DELETE FROM Usuarios WHERE idUsuario =" + id;
+
+            if (baseDatos.Consulta(sql).HasErrors == false)
+            {
+                return Respuesta.validacionCorrecta;
+            }
+            else
+            {
+                return Respuesta.validacionIncorrecta;
+            }
+
         }
     }
 }
