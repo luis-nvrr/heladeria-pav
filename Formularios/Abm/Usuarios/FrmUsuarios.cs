@@ -32,7 +32,7 @@ namespace Practico.Formularios.Abm
             lblNombre.TabStop = false;
             lblUsuarios.TabStop = false;
             grdUsuarios.TabStop = false;
-            // cargar combos
+            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -108,12 +108,11 @@ namespace Practico.Formularios.Abm
         {
             FrmAltaUsuarios altaUsuarios = new FrmAltaUsuarios();
             altaUsuarios.ShowDialog();
-            if (altaUsuarios.IsDisposed) //CUANDO SE CIERRA EL INSERTAR, SE RECARGA LA GRILLA
-            {
-                DataTable tabla = usuarios.TodosLosUsuarios();
-                CargarGrilla(tabla);
-                altaUsuarios.Close();
-            }
+
+            DataTable tabla = usuarios.TodosLosUsuarios();
+            CargarGrilla(tabla);
+            altaUsuarios.Close();
+        
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -132,7 +131,8 @@ namespace Practico.Formularios.Abm
                     usuarios.EliminarUsuario(id);
                     MessageBox.Show("Usuario eliminado correctamente", "Informacion",
                             buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-                    DataTable tabla = usuarios.TodosLosUsuarios();
+                    
+                    DataTable tabla = usuarios.TodosLosUsuarios(); //actualiza la grilla
                     CargarGrilla(tabla);
                 }
                 else
@@ -153,19 +153,16 @@ namespace Practico.Formularios.Abm
             {
                 if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    //int indiceFilaSeleccionada = grdUsuarios.SelectedRows[0].Index;
-                    //int id = Convert.ToInt32(grdUsuarios[0, indiceFilaSeleccionada].Value);
+                    int indiceFilaSeleccionada = grdUsuarios.SelectedRows[0].Index;
+                    string id = grdUsuarios[0, indiceFilaSeleccionada].Value.ToString();
 
-                    //DataTable tabla = usuarios.RecuperarUsuario(id);
-                    //FrmModificarUsuarios modificarUsuarios = new FrmModificarUsuarios(tabla);
-                    //modificarUsuarios.ShowDialog();
+                    FrmModificarUsuarios modificarUsuarios = new FrmModificarUsuarios();
+                    modificarUsuarios.id = id;
+                    modificarUsuarios.ShowDialog();
 
-                    //if (modificarUsuarios.IsDisposed)
-                    //{
-                    //    DataTable tablaNueva = usuarios.TodosLosUsuarios();
-                    //    CargarGrilla(tablaNueva);
-                    //    modificarUsuarios.Close();
-                    //}
+                    DataTable tabla = usuarios.TodosLosUsuarios();
+                    CargarGrilla(tabla);
+                    modificarUsuarios.Close();
                 }
                 else
                 {
