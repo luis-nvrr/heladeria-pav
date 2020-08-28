@@ -27,7 +27,7 @@ namespace Practico.Formularios.Abm.Usuarios
             lblNuevo.TabStop = false;
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e) //es boton aceptar
         {
             TratamientosEspeciales tratamiento = new TratamientosEspeciales();
 
@@ -52,7 +52,7 @@ namespace Practico.Formularios.Abm.Usuarios
                 }
                 else
                 {
-                    MessageBox.Show("Datos Incorrectos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Las contraseñas no coinciden!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     LimpiarContraseñas();
                     txtContraseña.Focus();
                 }
@@ -101,6 +101,11 @@ namespace Practico.Formularios.Abm.Usuarios
                 e.SuppressKeyPress = true;
                 SelectNextControl(ActiveControl, true, true, true, true);
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

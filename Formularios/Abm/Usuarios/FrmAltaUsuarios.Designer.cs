@@ -34,7 +34,7 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblRepetir = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.txtRepetir = new Practico.Clases.TextBox01();
             this.txtContraseña = new Practico.Clases.TextBox01();
             this.txtNombre = new Practico.Clases.TextBox01();
@@ -106,31 +106,33 @@
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnIngresar
+            // btnAceptar
             // 
-            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnIngresar.FlatAppearance.BorderSize = 0;
-            this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnIngresar.Location = new System.Drawing.Point(200, 219);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(103, 40);
-            this.btnIngresar.TabIndex = 3;
-            this.btnIngresar.Text = "Aceptar";
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAceptar.Location = new System.Drawing.Point(200, 219);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(103, 40);
+            this.btnAceptar.TabIndex = 3;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // txtRepetir
             // 
             this.txtRepetir.BackColor = System.Drawing.Color.White;
             this.txtRepetir.Location = new System.Drawing.Point(179, 172);
             this.txtRepetir.Name = "txtRepetir";
+            this.txtRepetir.PasswordChar = '*';
             this.txtRepetir.PpMensajeError = "No repitió contraseña!";
             this.txtRepetir.PpNombreCampo = null;
             this.txtRepetir.PpNombreTabla = null;
@@ -144,6 +146,7 @@
             this.txtContraseña.BackColor = System.Drawing.Color.White;
             this.txtContraseña.Location = new System.Drawing.Point(179, 142);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.PpMensajeError = "No ingresó contraseña!";
             this.txtContraseña.PpNombreCampo = null;
             this.txtContraseña.PpNombreTabla = null;
@@ -170,10 +173,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(388, 321);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnIngresar);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtRepetir);
             this.Controls.Add(this.lblRepetir);
             this.Controls.Add(this.txtContraseña);
@@ -205,6 +207,6 @@
         private Clases.TextBox01 txtRepetir;
         private System.Windows.Forms.Label lblRepetir;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnAceptar;
     }
 }

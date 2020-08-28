@@ -38,5 +38,21 @@ namespace Practico.Clases
             return tabla;
         }
 
+
+        public void Insertar(string sql)
+        {
+            Conectar();
+            comando.CommandText = sql;
+            comando.ExecuteNonQuery();
+            Desconectar();
+        }
+
+        public void Eliminar(string sql)
+        {
+            Conectar();
+            comando.CommandText = sql;
+            comando.ExecuteNonQuery();
+            Desconectar();
+        }
     }
 }

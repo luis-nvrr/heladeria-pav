@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Practico.Formularios.Abm.Usuarios;
 
 namespace Practico.Negocios
 {
@@ -94,26 +95,41 @@ namespace Practico.Negocios
 
             if (ValidarUsuario(nombre) == Respuesta.validacionIncorrecta)
             {
-                baseDatos.Consulta(sql);
+                baseDatos.Insertar(sql);
                 return Respuesta.validacionCorrecta;
             }
 
             return Respuesta.validacionIncorrecta;
         }
 
-        public Respuesta EliminarUsuario(int id)
+        public void EliminarUsuario(int id)
         {
             string sql = "DELETE FROM Usuarios WHERE idUsuario =" + id;
+            baseDatos.Eliminar(sql);
 
-            if (baseDatos.Consulta(sql).HasErrors == false)
-            {
-                return Respuesta.validacionCorrecta;
-            }
-            else
+        }
+
+        public DataTable RecuperarUsuario(int id)
+        {
+            string sql = "SELECT * FROM Usuarios WHERE idUsuario = " + id;
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
+
+        public Respuesta ModificarUsuario(int id, string nombre, string contraseña)
+        {
+            string sql = "UPDATE Usuarios" + " SET nombreUsuario = '" + nombre +
+                         "'," + "contrasenia ='" + contraseña + "' " +
+                         "WHERE idUsuario = " + id;
+            if (baseDatos.Consulta(sql).HasErrors)
             {
                 return Respuesta.validacionIncorrecta;
             }
-
+            else
+            {
+                return Respuesta.validacionCorrecta;
+            }
         }
     }
 }

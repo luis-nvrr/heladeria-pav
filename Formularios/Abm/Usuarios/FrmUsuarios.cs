@@ -108,6 +108,12 @@ namespace Practico.Formularios.Abm
         {
             FrmAltaUsuarios altaUsuarios = new FrmAltaUsuarios();
             altaUsuarios.ShowDialog();
+            if (altaUsuarios.IsDisposed) //CUANDO SE CIERRA EL INSERTAR, SE RECARGA LA GRILLA
+            {
+                DataTable tabla = usuarios.TodosLosUsuarios();
+                CargarGrilla(tabla);
+                altaUsuarios.Close();
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -118,21 +124,54 @@ namespace Practico.Formularios.Abm
             }
             else
             {
-                int indiceSeleccionado = grdUsuarios.SelectedRows[0].Index;
-                int id = Convert.ToInt32(grdUsuarios[0, indiceSeleccionado].Value);
-
-                if (usuarios.EliminarUsuario(id) == Negocios.Usuarios.Respuesta.validacionCorrecta)
+                if (MessageBox.Show("Seguro que desea continuar?","Importante",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
                 {
+                    int indiceFilaSeleccionada = grdUsuarios.SelectedRows[0].Index;
+                    int id = Convert.ToInt32(grdUsuarios[0, indiceFilaSeleccionada].Value);
+
+                    usuarios.EliminarUsuario(id);
                     MessageBox.Show("Usuario eliminado correctamente", "Informacion",
-                        buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                            buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     DataTable tabla = usuarios.TodosLosUsuarios();
                     CargarGrilla(tabla);
                 }
                 else
                 {
-                    MessageBox.Show("No se ha podido eliminar al usuario", "Importante", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+                
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (grdUsuarios.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //int indiceFilaSeleccionada = grdUsuarios.SelectedRows[0].Index;
+                    //int id = Convert.ToInt32(grdUsuarios[0, indiceFilaSeleccionada].Value);
+
+                    //DataTable tabla = usuarios.RecuperarUsuario(id);
+                    //FrmModificarUsuarios modificarUsuarios = new FrmModificarUsuarios(tabla);
+                    //modificarUsuarios.ShowDialog();
+
+                    //if (modificarUsuarios.IsDisposed)
+                    //{
+                    //    DataTable tablaNueva = usuarios.TodosLosUsuarios();
+                    //    CargarGrilla(tablaNueva);
+                    //    modificarUsuarios.Close();
+                    //}
+                }
+                else
+                {
+                    return;
+                }
+
             }
         }
     }
