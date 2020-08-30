@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Practico.Formularios.Abm.Usuarios;
 
 namespace Practico.Negocios
 {
@@ -53,25 +54,82 @@ namespace Practico.Negocios
             }
         }
 
-        //public DataTable TodosLosUsuarios()
-        //{
-        //    string sql = "SELECT * FROM Usuarios ";
-        //    DataTable tabla = new DataTable();
-        //    tabla = baseDatos.Consulta(sql);
+        public DataTable TodosLosUsuarios()
+        {
+            string sql = "SELECT * FROM Usuarios ";
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
 
-        //    return tabla;
-        //}
+
+        public DataTable BuscarUsuario(string nombre)
+        {
+            string sql = "SELECT * FROM Usuarios WHERE nombreUsuario LIKE '%" + nombre.Trim() + "%'";
+            DataTable tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
+
+        // NO LO DIO EN CLASES
+        public Respuesta ValidarUsuario(string usuario) // valida si el nombre de usuario existe
+        {
+            string sql = "SELECT * FROM Usuarios WHERE nombreUsuario = '" + usuario + "'";
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+
+            if (tabla.Rows.Count == 1)
+            {
+                return Respuesta.validacionCorrecta;
+            }
+            else
+            {
+                return Respuesta.validacionIncorrecta;
+            }
+        }
 
 
-        //public DataTable Buscarusuario(string nombre)
-        //{
-        //    string sql = "";
-        //    DataTable tabla = new DataTable();
-        //    if (nombre == "")
-        //    {
-        //    }
+        public Respuesta IngresarUsuario(string nombre, string contraseña)
+        {
+            string sql = "INSERT INTO Usuarios VALUES "+"('"+nombre+"','"+contraseña+"')";
 
-        //    return tabla;
-        //}
+
+            if (ValidarUsuario(nombre) == Respuesta.validacionIncorrecta)
+            {
+                baseDatos.Insertar(sql);
+                return Respuesta.validacionCorrecta;
+            }
+
+            return Respuesta.validacionIncorrecta;
+        }
+
+        public void EliminarUsuario(int id)
+        {
+            string sql = "DELETE FROM Usuarios WHERE idUsuario =" + id;
+            baseDatos.Eliminar(sql);
+
+        }
+
+        public DataTable RecuperarUsuario(int id)
+        {
+            string sql = "SELECT * FROM Usuarios WHERE idUsuario = " + id;
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
+
+        public Respuesta ModificarUsuario(int id, string nombre, string contraseña)
+        {
+            string sql = "UPDATE Usuarios" + " SET nombreUsuario = '" + nombre +
+                         "'," + "contrasenia ='" + contraseña + "' " +
+                         "WHERE idUsuario = " + id;
+            if (baseDatos.Consulta(sql).HasErrors)
+            {
+                return Respuesta.validacionIncorrecta;
+            }
+            else
+            {
+                return Respuesta.validacionCorrecta;
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Practico.Formularios.Abm.Usuarios
 {
-    partial class FrmAltaUsuarios
+    partial class FrmModificarUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAltaUsuarios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarUsuarios));
             this.lblNuevo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
@@ -38,6 +38,8 @@
             this.txtRepetir = new Practico.Clases.TextBox01();
             this.txtContraseña = new Practico.Clases.TextBox01();
             this.txtNombre = new Practico.Clases.TextBox01();
+            this.txtId = new Practico.Clases.TextBox01();
+            this.lblId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNuevo
@@ -48,9 +50,9 @@
             this.lblNuevo.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNuevo.Location = new System.Drawing.Point(22, 34);
             this.lblNuevo.Name = "lblNuevo";
-            this.lblNuevo.Size = new System.Drawing.Size(151, 23);
+            this.lblNuevo.Size = new System.Drawing.Size(174, 23);
             this.lblNuevo.TabIndex = 7;
-            this.lblNuevo.Text = "Nuevo Usuario";
+            this.lblNuevo.Text = "Modificar Usuario";
             // 
             // lblNombre
             // 
@@ -168,12 +170,39 @@
             this.txtNombre.TabIndex = 0;
             this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
             // 
-            // FrmAltaUsuarios
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.DarkGray;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(179, 82);
+            this.txtId.Name = "txtId";
+            this.txtId.PpMensajeError = "No ingresó nombre!";
+            this.txtId.PpNombreCampo = null;
+            this.txtId.PpNombreTabla = null;
+            this.txtId.PpValidable = true;
+            this.txtId.Size = new System.Drawing.Size(124, 24);
+            this.txtId.TabIndex = 14;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblId.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblId.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblId.Location = new System.Drawing.Point(147, 85);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(26, 19);
+            this.lblId.TabIndex = 15;
+            this.lblId.Text = "Id:";
+            // 
+            // FrmModificarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(388, 321);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtRepetir);
@@ -189,10 +218,10 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmAltaUsuarios";
+            this.Name = "FrmModificarUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Usuario";
-            this.Load += new System.EventHandler(this.FrmAltaUsuarios_Load);
+            this.Load += new System.EventHandler(this.FrmModificarUsuarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +237,7 @@
         private System.Windows.Forms.Label lblRepetir;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
+        private Clases.TextBox01 txtId;
+        private System.Windows.Forms.Label lblId;
     }
 }

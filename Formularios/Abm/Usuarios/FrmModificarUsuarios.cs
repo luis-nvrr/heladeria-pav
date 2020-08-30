@@ -12,19 +12,27 @@ using Practico.Negocios;
 
 namespace Practico.Formularios.Abm.Usuarios
 {
-    public partial class FrmAltaUsuarios : Form
+    public partial class FrmModificarUsuarios : Form
     {
-        public FrmAltaUsuarios()
+        public string id { get; set; }
+        public string nombre { get; set; }
+        public string contraseña { get; set; }
+
+
+        public FrmModificarUsuarios()
         {
             InitializeComponent();
         }
 
-        private void FrmAltaUsuarios_Load(object sender, EventArgs e)
+        private void FrmModificarUsuarios_Load(object sender, EventArgs e)
         {
+            lblId.TabStop = false;
             lblNombre.TabStop = false;
             lblContraseña.TabStop = false;
             lblRepetir.TabStop = false;
             lblNuevo.TabStop = false;
+            CargarCampos();
+            
         }
 
         private void btnIngresar_Click(object sender, EventArgs e) //es boton aceptar
@@ -35,20 +43,11 @@ namespace Practico.Formularios.Abm.Usuarios
             {
                 if (txtContraseña.Text == txtRepetir.Text)
                 {
-                    Negocios.Usuarios usuario = new Negocios.Usuarios();
-                    if (usuario.IngresarUsuario(txtNombre.Text, txtContraseña.Text) ==
-                        Negocios.Usuarios.Respuesta.validacionCorrecta)
-                    {
-                        MessageBox.Show("Usuario ingresado correctamente", "Informacion",
-                            buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-                        LimpiarCampos();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario repetido", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        LimpiarCampos();
-                    }
-                    
+                    Negocios.Usuarios usuarios = new Negocios.Usuarios();
+                    usuarios.ModificarUsuario(Int32.Parse(id), txtNombre.Text.Trim(), txtContraseña.Text.Trim());
+                    MessageBox.Show("Usuario modificado correctamente", "Informacion",
+                        buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                    CargarCampos();
                 }
                 else
                 {
@@ -106,6 +105,19 @@ namespace Practico.Formularios.Abm.Usuarios
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void CargarCampos()
+        {
+            Negocios.Usuarios usuario = new Negocios.Usuarios();
+            DataTable tabla = usuario.RecuperarUsuario(Int32.Parse(id));
+            id = tabla.Rows[0]["idUsuario"].ToString();
+            nombre = tabla.Rows[0]["nombreUsuario"].ToString();
+            contraseña = tabla.Rows[0]["contrasenia"].ToString();
+
+            txtId.Text = id;
+            txtNombre.Text = nombre;
+            txtContraseña.Text = contraseña;
         }
     }
 }

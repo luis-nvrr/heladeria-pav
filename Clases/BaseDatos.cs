@@ -16,11 +16,12 @@ namespace Practico.Clases
 
         private void Conectar()  // metodo para conectar
         {
-            conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True";   // cadena para usar la variable del archivo .config 
+            conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True";   // cadena para usar la variable del archivo .config 
             conexion.Open();                                                                                 // se puede reemplazar con la cadena directamente
                                                                                                             // NO hacerlo
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
+            
         }
 
         private void Desconectar()  // metodo para desconectar
@@ -34,7 +35,25 @@ namespace Practico.Clases
             comando.CommandText = sql;   // comando a ejecutar
             DataTable tabla = new DataTable();
             tabla.Load(comando.ExecuteReader());   // carga la tabla y ejecuta la consulta en el motor
+            Desconectar();
             return tabla;
+        }
+
+
+        public void Insertar(string sql)
+        {
+            Conectar();
+            comando.CommandText = sql;
+            comando.ExecuteNonQuery();
+            Desconectar();
+        }
+
+        public void Eliminar(string sql)
+        {
+            Conectar();
+            comando.CommandText = sql;
+            comando.ExecuteNonQuery();
+            Desconectar();
         }
     }
 }
