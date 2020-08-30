@@ -1,4 +1,6 @@
-﻿namespace Practico.Formularios
+﻿using System;
+
+namespace Practico.Formularios
 {
     partial class FrmAdministracion
     {
@@ -38,7 +40,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnHelados = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
@@ -70,6 +72,7 @@
             this.btnIngresar.TabIndex = 10;
             this.btnIngresar.Text = "Helados Especiales";
             this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // btnEscritorio
             // 
@@ -235,23 +238,24 @@
             this.button10.Text = "Barrios";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // btnHelados
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button11.Location = new System.Drawing.Point(37, 313);
-            this.button11.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(166, 63);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "Helados";
-            this.button11.UseVisualStyleBackColor = false;
+            this.btnHelados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnHelados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHelados.FlatAppearance.BorderSize = 0;
+            this.btnHelados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnHelados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnHelados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelados.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnHelados.Location = new System.Drawing.Point(37, 313);
+            this.btnHelados.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnHelados.Name = "btnHelados";
+            this.btnHelados.Size = new System.Drawing.Size(166, 63);
+            this.btnHelados.TabIndex = 9;
+            this.btnHelados.Text = "Helados";
+            this.btnHelados.UseVisualStyleBackColor = false;
+            this.btnHelados.Click += new System.EventHandler(this.btnHelados_Click);
             // 
             // button12
             // 
@@ -379,7 +383,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(807, 606);
+            this.ClientSize = new System.Drawing.Size(824, 606);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -389,7 +393,7 @@
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.btnHelados);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button7);
@@ -411,6 +415,11 @@
 
         }
 
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Button btnIngresar;
@@ -423,7 +432,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnHelados;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button15;

@@ -7,34 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Practico.Formularios.Abm;
-using Practico.Formularios.Abm.Helados;
 
-namespace Practico.Formularios
+namespace Practico.Formularios.Abm.Helados
 {
-    public partial class FrmAdministracion : Form
+    public partial class FrmHelados : Form
     {
-        public FrmAdministracion()
+        public FrmHelados()
         {
             InitializeComponent();
         }
 
+        private void lblUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkTodos_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
         private void btnEscritorio_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-            abrirFormulario(new FrmUsuarios());
-        }
-
-        private void btnHelados_Click(object sender, EventArgs e)
-        {
-            abrirFormulario(new FrmHelados());
-        }
-
         private void abrirFormulario(Form formulario)  // usar para abrir CUALQUIER FORMULARIO
         {
             Panel esteFormulario = this.Parent as Panel;
@@ -46,7 +41,5 @@ namespace Practico.Formularios
             this.Close();
 
         }
-
-
     }
 }
