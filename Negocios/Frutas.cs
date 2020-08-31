@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Practico.Formularios.Abm.Usuarios;
 
 
 namespace Practico.Negocios
@@ -13,7 +13,6 @@ namespace Practico.Negocios
 	class Frutas
 	{
 		private BaseDatos baseDatos = new BaseDatos();
-
 		public enum Respuesta
 		{   validacionCorrecta,
 			validacionIncorrecta
@@ -21,8 +20,8 @@ namespace Practico.Negocios
 
 		public Respuesta ValidarFruta(string nombreFruta)
         {
-			string sql = "SELECT * FROM Frutas WHERE nombre ='" + nombreFruta "'";
-			DataTable table = new DataTable();
+			string sql = "SELECT * FROM Frutas WHERE nombre ='" + nombreFruta +"'";
+			DataTable tabla = new DataTable();
 			tabla = baseDatos.Consulta(sql);
 
 			if (tabla.Rows.Count == 1)
@@ -37,7 +36,7 @@ namespace Practico.Negocios
 		
 		public int RecuperarIdFruta(string nombreFruta)
         {
-			string sql = "SELECT * FROM Frutas WHERE nombre = '" + nombreFruta "'";
+			string sql = "SELECT * FROM Frutas WHERE nombre = '" + nombreFruta +"'";
 			DataTable tabla = new DataTable();
 			tabla = baseDatos.Consulta(sql);
 
@@ -62,7 +61,7 @@ namespace Practico.Negocios
 
 		public DataTable BuscarFruta(string nombreFruta)
         {
-			string sql = "SELECT * FROM Frutas WHERE nombre LIKE '%" + nombreFruta.Trim() +"%'"
+			string sql = "SELECT * FROM Frutas WHERE nombre LIKE '%" + nombreFruta.Trim() + "%'"; 
 				DataTable tabla = baseDatos.Consulta(sql);
 			return tabla;
         }
