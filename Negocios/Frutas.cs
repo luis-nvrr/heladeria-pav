@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Practico.Negocios
 {
-	class Helados
+	class Frutas
 	{
 		private BaseDatos baseDatos = new BaseDatos();
 
