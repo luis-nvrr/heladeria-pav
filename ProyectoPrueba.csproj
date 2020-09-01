@@ -51,11 +51,17 @@
     <Compile Include="Clases\ComboBox01.cs" />
     <Compile Include="Clases\TextBox01.cs" />
     <Compile Include="Clases\TratamientosEspeciales.cs" />
-    <Compile Include="Formularios\Abm\Frutas\FrmFrutas.cs">
+    <Compile Include="Formularios\Abm\Helados\FrmAltaHelados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Abm\Frutas\FrmFrutas.Designer.cs">
-      <DependentUpon>FrmFrutas.cs</DependentUpon>
+    <Compile Include="Formularios\Abm\Helados\FrmAltaHelados.Designer.cs">
+      <DependentUpon>FrmAltaHelados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmHelados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmHelados.Designer.cs">
+      <DependentUpon>FrmHelados.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.cs">
       <SubType>Form</SubType>
@@ -94,11 +100,15 @@
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocios\Frutas.cs" />
+    <Compile Include="Negocios\Helados.cs" />
     <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\Abm\Frutas\FrmFrutas.resx">
-      <DependentUpon>FrmFrutas.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Abm\Helados\FrmAltaHelados.resx">
+      <DependentUpon>FrmAltaHelados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Helados\FrmHelados.resx">
+      <DependentUpon>FrmHelados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.resx">
       <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>
