@@ -1,6 +1,6 @@
 ﻿namespace Practico.Formularios.Abm.Helados
 {
-    partial class FrmAltaHelados
+    partial class FrmModificarHelados
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAltaHelados));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarHelados));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtCantidad = new Practico.Clases.TextBox01();
@@ -38,6 +38,8 @@
             this.txtNombre = new Practico.Clases.TextBox01();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNuevo = new System.Windows.Forms.Label();
+            this.txtId = new Practico.Clases.TextBox01();
+            this.lblId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -161,16 +163,43 @@
             this.lblNuevo.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNuevo.Location = new System.Drawing.Point(22, 34);
             this.lblNuevo.Name = "lblNuevo";
-            this.lblNuevo.Size = new System.Drawing.Size(155, 23);
+            this.lblNuevo.Size = new System.Drawing.Size(178, 23);
             this.lblNuevo.TabIndex = 19;
-            this.lblNuevo.Text = "Nuevo Helado";
+            this.lblNuevo.Text = "Modificar Helado";
             // 
-            // FrmAltaHelados
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.DarkGray;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(179, 82);
+            this.txtId.Name = "txtId";
+            this.txtId.PpMensajeError = "No ingresó nombre!";
+            this.txtId.PpNombreCampo = null;
+            this.txtId.PpNombreTabla = null;
+            this.txtId.PpValidable = true;
+            this.txtId.Size = new System.Drawing.Size(124, 24);
+            this.txtId.TabIndex = 23;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblId.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblId.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblId.Location = new System.Drawing.Point(144, 87);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(26, 19);
+            this.lblId.TabIndex = 24;
+            this.lblId.Text = "Id:";
+            // 
+            // FrmModificarHelados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(388, 321);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtCantidad);
@@ -186,10 +215,10 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmAltaHelados";
+            this.Name = "FrmModificarHelados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Helado";
-            this.Load += new System.EventHandler(this.FrmAltaHelados_Load);
+            this.Load += new System.EventHandler(this.FrmModificarHelados_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +235,7 @@
         private Clases.TextBox01 txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblNuevo;
+        private Clases.TextBox01 txtId;
+        private System.Windows.Forms.Label lblId;
     }
 }

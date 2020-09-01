@@ -171,5 +171,34 @@ namespace Practico.Formularios.Abm.Helados
 
             }
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (grdHelados.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int indiceFilaSeleccionada = grdHelados.SelectedRows[0].Index;
+                    string id = grdHelados[0, indiceFilaSeleccionada].Value.ToString();
+
+                    FrmModificarHelados modificarHelados = new FrmModificarHelados();
+                    modificarHelados.id = id;
+                    modificarHelados.ShowDialog();
+
+                    DataTable tabla = helados.TodosLosHelados();
+                    CargarGrilla(tabla);
+                    modificarHelados.Close();
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+        }
     }
 }

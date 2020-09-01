@@ -35,7 +35,7 @@ namespace Practico.Negocios
             return tabla;
         }
 
-        public Respuesta InsertarHelado(string nombre, int precio, int cantidad)
+        public Respuesta InsertarHelado(string nombre, float precio, int cantidad)
         {
             string sql = "INSERT INTO Helados VALUES " + "('" + nombre + "'," + precio + "," + cantidad +")";
 
@@ -66,6 +66,32 @@ namespace Practico.Negocios
                 return Respuesta.validacionIncorrecta;
             }
             
+        }
+
+        public Respuesta ModificarHelado(int id, string nombre, float precio, int cantidad)
+        {
+            string sql = "UPDATE Helados" + " SET nombre = '" + nombre +
+                         "'," + "precio =" + precio + ", cantidadStock = " + cantidad +
+                        "WHERE idHelado = " + id;
+
+            try
+            {
+                baseDatos.Actualizar(sql);
+                return Respuesta.validacionCorrecta;
+
+            }
+            catch (SqlException exception)
+            {
+                return Respuesta.validacionIncorrecta;
+            }
+        }
+
+        public DataTable RecuperarHelado(int id)
+        {
+            string sql = "SELECT * FROM Helados WHERE idHelado = " + id;
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
         }
     }
 }

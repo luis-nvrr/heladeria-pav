@@ -63,6 +63,12 @@
     <Compile Include="Formularios\Abm\Helados\FrmHelados.Designer.cs">
       <DependentUpon>FrmHelados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmModificarHelados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmModificarHelados.designer.cs">
+      <DependentUpon>FrmModificarHelados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Helados\FrmHelados.resx">
       <DependentUpon>FrmHelados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Helados\FrmModificarHelados.resx">
+      <DependentUpon>FrmModificarHelados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.resx">
       <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>
