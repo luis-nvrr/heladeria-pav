@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Formularios.Abm;
+using Practico.Formularios.Abm.Helados;
 
 namespace Practico.Formularios
 {
@@ -29,6 +30,10 @@ namespace Practico.Formularios
             abrirFormulario(new FrmUsuarios());
         }
 
+        private void btnHelados_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmHelados());
+        }
 
         private void abrirFormulario(Form formulario)  // usar para abrir CUALQUIER FORMULARIO
         {
@@ -41,6 +46,7 @@ namespace Practico.Formularios
             this.Close();
 
         }
+
 
     }
 }

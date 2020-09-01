@@ -276,7 +276,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmUsuarios";
-            this.Text = "Gestion de Usuarios";
+            this.Text = "Gestión de Usuarios";
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuarios)).EndInit();
             this.panel1.ResumeLayout(false);
