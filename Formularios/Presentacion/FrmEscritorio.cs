@@ -65,6 +65,8 @@ namespace Practico
         {
             if (formularioActivo != null)     // cierra algun formulario abierto
                 formularioActivo.Close();
+            
+            pnlEscritorio.Controls.Clear();
             formularioActivo = formularioHijo;
             formularioActivo.TopLevel = false;
             formularioActivo.FormBorderStyle = FormBorderStyle.None;
