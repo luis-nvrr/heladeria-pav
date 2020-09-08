@@ -51,10 +51,6 @@
     <Compile Include="Clases\ComboBox01.cs" />
     <Compile Include="Clases\TextBox01.cs" />
     <Compile Include="Clases\TratamientosEspeciales.cs" />
-    <Compile Include="Formularios\Abm\Frutas\FrmFrutas.cs" />
-    <Compile Include="Formularios\Abm\Frutas\FrmFrutas.Designer.cs">
-      <DependentUpon>FrmFrutas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Abm\Helados\FrmAltaHelados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,9 +110,6 @@
     <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\Abm\Frutas\FrmFrutas.resx">
-      <DependentUpon>FrmFrutas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Helados\FrmAltaHelados.resx">
       <DependentUpon>FrmAltaHelados.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +175,8 @@
     <None Include="Resources\settings.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Formularios\Abm\Frutas\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
