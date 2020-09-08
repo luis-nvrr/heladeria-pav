@@ -38,14 +38,13 @@ namespace Practico.Negocios
         public Respuesta InsertarHelado(string nombre, int precio, int cantidad)
         {
             string sql = "INSERT INTO Helados VALUES " + "('" + nombre + "'," + precio + "," + cantidad +")";
-
             try
             {
                 baseDatos.Insertar(sql);
                 return Respuesta.validacionCorrecta;
 
             }
-            catch (SqlException exception)
+            catch (SqlException)
             {
                 return Respuesta.validacionIncorrecta;
             }
