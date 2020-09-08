@@ -172,7 +172,6 @@
             // 
             // txtId
             // 
-            this.txtId.BackColor = System.Drawing.Color.DarkGray;
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(179, 82);
             this.txtId.Name = "txtId";

@@ -121,25 +121,18 @@ namespace Practico.Formularios.Abm
             {
                 MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
+            else  //IGUAL QUE CONSULTAR
             {
-                if (MessageBox.Show("Seguro que desea continuar?","Importante",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    int indiceFilaSeleccionada = grdUsuarios.SelectedRows[0].Index;
-                    int id = Convert.ToInt32(grdUsuarios[0, indiceFilaSeleccionada].Value);
+                int indiceFilaSeleccionada = grdUsuarios.SelectedRows[0].Index;
+                string id = grdUsuarios[0, indiceFilaSeleccionada].Value.ToString();
 
-                    usuarios.EliminarUsuario(id);
-                    MessageBox.Show("Usuario eliminado correctamente", "Informacion",
-                            buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-                    
-                    DataTable tabla = usuarios.TodosLosUsuarios(); //actualiza la grilla
-                    CargarGrilla(tabla);
-                }
-                else
-                {
-                    return;
-                }
-                
+                FrmEliminarUsuarios eliminarUsuarios = new FrmEliminarUsuarios();
+                eliminarUsuarios.id = id;
+                eliminarUsuarios.ShowDialog();
+
+                DataTable tabla = usuarios.TodosLosUsuarios(); //actualiza la grilla
+                CargarGrilla(tabla);
+                eliminarUsuarios.Close();
             }
         }
 
@@ -171,5 +164,34 @@ namespace Practico.Formularios.Abm
 
             }
         }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if (grdUsuarios.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int indiceFilaSeleccionada = grdUsuarios.SelectedRows[0].Index;
+                    string id = grdUsuarios[0, indiceFilaSeleccionada].Value.ToString();
+
+                    FrmConsultarUsuarios consultarUsuarios = new FrmConsultarUsuarios();
+                    consultarUsuarios.id = id;
+                    consultarUsuarios.ShowDialog();
+                    consultarUsuarios.Close();
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+
+        
+
     }
 }

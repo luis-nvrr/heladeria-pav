@@ -75,6 +75,18 @@
     <Compile Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.Designer.cs">
       <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\Usuarios\FrmConsultarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Usuarios\FrmConsultarUsuarios.designer.cs">
+      <DependentUpon>FrmConsultarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Usuarios\FrmEliminarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Usuarios\FrmEliminarUsuarios.designer.cs">
+      <DependentUpon>FrmEliminarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Usuarios\FrmModificarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.resx">
       <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmConsultarUsuarios.resx">
+      <DependentUpon>FrmConsultarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmEliminarUsuarios.resx">
+      <DependentUpon>FrmEliminarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmModificarUsuarios.resx">
       <DependentUpon>FrmModificarUsuarios.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace Practico.Formularios.Abm.Usuarios
 {
-    partial class FrmModificarUsuarios
+    partial class FrmConsultarUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarUsuarios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultarUsuarios));
             this.lblNuevo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
-            this.lblRepetir = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtRepetir = new Practico.Clases.TextBox01();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtId = new Practico.Clases.TextBox01();
             this.txtContraseña = new Practico.Clases.TextBox01();
             this.txtNombre = new Practico.Clases.TextBox01();
-            this.txtId = new Practico.Clases.TextBox01();
-            this.lblId = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNuevo
@@ -50,9 +48,9 @@
             this.lblNuevo.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNuevo.Location = new System.Drawing.Point(22, 34);
             this.lblNuevo.Name = "lblNuevo";
-            this.lblNuevo.Size = new System.Drawing.Size(174, 23);
+            this.lblNuevo.Size = new System.Drawing.Size(178, 23);
             this.lblNuevo.TabIndex = 7;
-            this.lblNuevo.Text = "Modificar Usuario";
+            this.lblNuevo.Text = "Consultar Usuario";
             // 
             // lblNombre
             // 
@@ -78,38 +76,6 @@
             this.lblContraseña.TabIndex = 11;
             this.lblContraseña.Text = "Contraseña:";
             // 
-            // lblRepetir
-            // 
-            this.lblRepetir.AutoSize = true;
-            this.lblRepetir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblRepetir.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblRepetir.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRepetir.Location = new System.Drawing.Point(26, 177);
-            this.lblRepetir.Name = "lblRepetir";
-            this.lblRepetir.Size = new System.Drawing.Size(147, 19);
-            this.lblRepetir.TabIndex = 13;
-            this.lblRepetir.Text = "Repetir Contraseña:";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(89, 219);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(103, 40);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -120,68 +86,14 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAceptar.Location = new System.Drawing.Point(200, 219);
+            this.btnAceptar.Location = new System.Drawing.Point(200, 198);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(103, 40);
             this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnIngresar_Click);
-            // 
-            // txtRepetir
-            // 
-            this.txtRepetir.BackColor = System.Drawing.Color.White;
-            this.txtRepetir.Location = new System.Drawing.Point(179, 172);
-            this.txtRepetir.Name = "txtRepetir";
-            this.txtRepetir.PasswordChar = '*';
-            this.txtRepetir.PpMensajeError = "No repitió contraseña!";
-            this.txtRepetir.PpNombreCampo = null;
-            this.txtRepetir.PpNombreTabla = null;
-            this.txtRepetir.PpValidable = true;
-            this.txtRepetir.Size = new System.Drawing.Size(124, 24);
-            this.txtRepetir.TabIndex = 2;
-            this.txtRepetir.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRepetir_KeyDown);
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.BackColor = System.Drawing.Color.White;
-            this.txtContraseña.Location = new System.Drawing.Point(179, 142);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.PpMensajeError = "No ingresó contraseña!";
-            this.txtContraseña.PpNombreCampo = null;
-            this.txtContraseña.PpNombreTabla = null;
-            this.txtContraseña.PpValidable = true;
-            this.txtContraseña.Size = new System.Drawing.Size(124, 24);
-            this.txtContraseña.TabIndex = 1;
-            this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseña_KeyDown);
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(179, 112);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PpMensajeError = "No ingresó nombre!";
-            this.txtNombre.PpNombreCampo = null;
-            this.txtNombre.PpNombreTabla = null;
-            this.txtNombre.PpValidable = true;
-            this.txtNombre.Size = new System.Drawing.Size(124, 24);
-            this.txtNombre.TabIndex = 0;
-            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.DarkGray;
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(179, 82);
-            this.txtId.Name = "txtId";
-            this.txtId.PpMensajeError = "No ingresó nombre!";
-            this.txtId.PpNombreCampo = null;
-            this.txtId.PpNombreTabla = null;
-            this.txtId.PpValidable = true;
-            this.txtId.Size = new System.Drawing.Size(124, 24);
-            this.txtId.TabIndex = 14;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblId
             // 
@@ -195,18 +107,74 @@
             this.lblId.TabIndex = 15;
             this.lblId.Text = "Id:";
             // 
-            // FrmModificarUsuarios
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(179, 82);
+            this.txtId.Name = "txtId";
+            this.txtId.PpMensajeError = "No ingresó nombre!";
+            this.txtId.PpNombreCampo = null;
+            this.txtId.PpNombreTabla = null;
+            this.txtId.PpValidable = true;
+            this.txtId.Size = new System.Drawing.Size(124, 24);
+            this.txtId.TabIndex = 14;
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Enabled = false;
+            this.txtContraseña.Location = new System.Drawing.Point(179, 142);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PpMensajeError = "No ingresó contraseña!";
+            this.txtContraseña.PpNombreCampo = null;
+            this.txtContraseña.PpNombreTabla = null;
+            this.txtContraseña.PpValidable = true;
+            this.txtContraseña.Size = new System.Drawing.Size(124, 24);
+            this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseña_KeyDown);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Location = new System.Drawing.Point(179, 112);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PpMensajeError = "No ingresó nombre!";
+            this.txtNombre.PpNombreCampo = null;
+            this.txtNombre.PpNombreTabla = null;
+            this.txtNombre.PpValidable = true;
+            this.txtNombre.Size = new System.Drawing.Size(124, 24);
+            this.txtNombre.TabIndex = 0;
+            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Location = new System.Drawing.Point(89, 198);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(103, 40);
+            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // FrmConsultarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(388, 321);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtRepetir);
-            this.Controls.Add(this.lblRepetir);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.txtNombre);
@@ -218,10 +186,10 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmModificarUsuarios";
+            this.Name = "FrmConsultarUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Usuario";
-            this.Load += new System.EventHandler(this.FrmModificarUsuarios_Load);
+            this.Load += new System.EventHandler(this.FrmConsultarUsuarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,11 +201,9 @@
         private System.Windows.Forms.Label lblNombre;
         private Clases.TextBox01 txtContraseña;
         private System.Windows.Forms.Label lblContraseña;
-        private Clases.TextBox01 txtRepetir;
-        private System.Windows.Forms.Label lblRepetir;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private Clases.TextBox01 txtId;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
