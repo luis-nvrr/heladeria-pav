@@ -57,17 +57,47 @@
     <Compile Include="Formularios\Abm\Helados\FrmAltaHelados.Designer.cs">
       <DependentUpon>FrmAltaHelados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmConsultarHelados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmConsultarHelados.designer.cs">
+      <DependentUpon>FrmConsultarHelados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmEliminarHelados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmEliminarHelados.designer.cs">
+      <DependentUpon>FrmEliminarHelados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Helados\FrmHelados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Abm\Helados\FrmHelados.Designer.cs">
       <DependentUpon>FrmHelados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmModificarHelados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmModificarHelados.designer.cs">
+      <DependentUpon>FrmModificarHelados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.Designer.cs">
       <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Usuarios\FrmConsultarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Usuarios\FrmConsultarUsuarios.designer.cs">
+      <DependentUpon>FrmConsultarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Usuarios\FrmEliminarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Usuarios\FrmEliminarUsuarios.designer.cs">
+      <DependentUpon>FrmEliminarUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Abm\Usuarios\FrmModificarUsuarios.cs">
       <SubType>Form</SubType>
@@ -107,11 +137,26 @@
     <EmbeddedResource Include="Formularios\Abm\Helados\FrmAltaHelados.resx">
       <DependentUpon>FrmAltaHelados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Helados\FrmConsultarHelados.resx">
+      <DependentUpon>FrmConsultarHelados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Helados\FrmEliminarHelados.resx">
+      <DependentUpon>FrmEliminarHelados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Helados\FrmHelados.resx">
       <DependentUpon>FrmHelados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Helados\FrmModificarHelados.resx">
+      <DependentUpon>FrmModificarHelados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.resx">
       <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmConsultarUsuarios.resx">
+      <DependentUpon>FrmConsultarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmEliminarUsuarios.resx">
+      <DependentUpon>FrmEliminarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmModificarUsuarios.resx">
       <DependentUpon>FrmModificarUsuarios.cs</DependentUpon>
@@ -166,6 +211,8 @@
     <None Include="Resources\settings.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Formularios\Abm\Frutas\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,52 +12,48 @@ using Practico.Clases;
 
 namespace Practico.Formularios.Abm.Helados
 {
-    public partial class FrmAltaHelados : Form
+    public partial class FrmConsultarHelados : Form
     {
-        public FrmAltaHelados()
+        public string id { get; set; }
+        public string nombre { get; set; }
+        public string precio { get; set; }
+        public string cantidad { get; set; }
+
+
+        public FrmConsultarHelados()
         {
             InitializeComponent();
         }
 
-        private void FrmAltaHelados_Load(object sender, EventArgs e)
+        private void FrmConsultarHelados_Load(object sender, EventArgs e)
         {
             lblNombre.TabStop = false;
             lblPrecio.TabStop = false;
             lblCantidad.TabStop = false;
             lblNuevo.TabStop = false;
+            lblId.TabStop = false;
+            CargarCampos();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            TratamientosEspeciales tratamiento = new TratamientosEspeciales();
-
-            if (tratamiento.Validar(this.Controls) == TratamientosEspeciales.Validacion.correcta)
-            { 
-                Negocios.Helados helados = new Negocios.Helados();
-                if (helados.InsertarHelado(txtNombre.Text, float.Parse(txtPrecio.Text, CultureInfo.InvariantCulture), Int32.Parse(txtCantidad.Text)) ==
-                    Negocios.Helados.Respuesta.validacionCorrecta)
-                {
-                    MessageBox.Show("Ingresado correctamente!", "Informacion",
-                            buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-                    LimpiarCampos();
-                }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido un error...", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    LimpiarCampos();
-                }
-
-            }
-
-            
+            this.Close();
         }
 
-        private void LimpiarCampos()
+
+        private void CargarCampos()
         {
-            txtNombre.Text = "";
-            txtPrecio.Text = "";
-            txtCantidad.Text = "";
-            txtNombre.Focus();
+            Negocios.Helados helados = new Negocios.Helados();
+            DataTable tabla = helados.RecuperarHelado(Int32.Parse(id));
+            id = tabla.Rows[0]["idHelado"].ToString();
+            nombre = tabla.Rows[0]["nombre"].ToString();
+            precio = tabla.Rows[0]["precio"].ToString();
+            cantidad = tabla.Rows[0]["cantidadStock"].ToString();
+
+            txtId.Text = id;
+            txtNombre.Text = nombre;
+            txtPrecio.Text = precio;
+            txtCantidad.Text = cantidad;
         }
 
         private void txtNombre_KeyDown(object sender, KeyEventArgs e)
@@ -85,6 +81,11 @@ namespace Practico.Formularios.Abm.Helados
                 e.SuppressKeyPress = true;
                 SelectNextControl(ActiveControl, true, true, true, true);
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

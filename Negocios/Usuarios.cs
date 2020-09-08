@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,41 +72,37 @@ namespace Practico.Negocios
         }
 
         // NO LO DIO EN CLASES
-        public Respuesta ValidarUsuario(string usuario) // valida si el nombre de usuario existe
+        
+        public Respuesta IngresarUsuario(string nombre, string contraseña)
         {
-            string sql = "SELECT * FROM Usuarios WHERE nombreUsuario = '" + usuario + "'";
-            DataTable tabla = new DataTable();
-            tabla = baseDatos.Consulta(sql);
+            string sql = "INSERT INTO Usuarios VALUES "+"('"+nombre+"','"+contraseña+"')";
 
-            if (tabla.Rows.Count == 1)
+            try
             {
+                baseDatos.Insertar(sql);
                 return Respuesta.validacionCorrecta;
+
             }
-            else
+            catch (SqlException exception)
             {
                 return Respuesta.validacionIncorrecta;
             }
         }
 
-
-        public Respuesta IngresarUsuario(string nombre, string contraseña)
-        {
-            string sql = "INSERT INTO Usuarios VALUES "+"('"+nombre+"','"+contraseña+"')";
-
-
-            if (ValidarUsuario(nombre) == Respuesta.validacionIncorrecta)
-            {
-                baseDatos.Insertar(sql);
-                return Respuesta.validacionCorrecta;
-            }
-
-            return Respuesta.validacionIncorrecta;
-        }
-
-        public void EliminarUsuario(int id)
+        public Respuesta EliminarUsuario(int id)
         {
             string sql = "DELETE FROM Usuarios WHERE idUsuario =" + id;
-            baseDatos.Eliminar(sql);
+
+            try
+            {
+                baseDatos.Eliminar(sql);
+                return Respuesta.validacionCorrecta;
+
+            }
+            catch (SqlException exception)
+            {
+                return Respuesta.validacionIncorrecta;
+            }
 
         }
 
@@ -117,18 +114,22 @@ namespace Practico.Negocios
             return tabla;
         }
 
+
         public Respuesta ModificarUsuario(int id, string nombre, string contraseña)
         {
             string sql = "UPDATE Usuarios" + " SET nombreUsuario = '" + nombre +
                          "'," + "contrasenia ='" + contraseña + "' " +
                          "WHERE idUsuario = " + id;
-            if (baseDatos.Consulta(sql).HasErrors)
+
+            try
+            {
+                baseDatos.Actualizar(sql);
+                return Respuesta.validacionCorrecta;
+
+            }
+            catch (SqlException exception)
             {
                 return Respuesta.validacionIncorrecta;
-            }
-            else
-            {
-                return Respuesta.validacionCorrecta;
             }
         }
     }

@@ -39,7 +39,7 @@ namespace Practico.Formularios.Abm.Usuarios
                     if (usuario.IngresarUsuario(txtNombre.Text, txtContraseña.Text) ==
                         Negocios.Usuarios.Respuesta.validacionCorrecta)
                     {
-                        MessageBox.Show("Usuario ingresado correctamente", "Informacion",
+                        MessageBox.Show("Ingresado correctamente!", "Informacion",
                             buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                         LimpiarCampos();
                     }

@@ -69,5 +69,20 @@ namespace Practico.Clases
             }
             Desconectar();
         }
+
+        public void Actualizar(string sql)
+        {
+            Conectar();
+            comando.CommandText = sql;
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (SqlException exception)
+            {
+                throw exception;
+            }
+            Desconectar();
+        }
     }
 }

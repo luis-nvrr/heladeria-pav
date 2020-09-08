@@ -89,6 +89,7 @@
             this.txtCantidad.PpValidable = true;
             this.txtCantidad.Size = new System.Drawing.Size(124, 24);
             this.txtCantidad.TabIndex = 16;
+            this.txtCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyDown);
             // 
             // lblCantidad
             // 
@@ -113,6 +114,7 @@
             this.txtPrecio.PpValidable = true;
             this.txtPrecio.Size = new System.Drawing.Size(124, 24);
             this.txtPrecio.TabIndex = 15;
+            this.txtPrecio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPrecio_KeyDown);
             // 
             // lblPrecio
             // 
@@ -137,6 +139,7 @@
             this.txtNombre.PpValidable = true;
             this.txtNombre.Size = new System.Drawing.Size(124, 24);
             this.txtNombre.TabIndex = 14;
+            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
             // 
             // lblNombre
             // 
@@ -180,7 +183,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAltaHelados";

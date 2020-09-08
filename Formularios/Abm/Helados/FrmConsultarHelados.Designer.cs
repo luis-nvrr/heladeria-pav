@@ -1,6 +1,6 @@
-﻿namespace Practico.Formularios.Abm.Usuarios
+﻿namespace Practico.Formularios.Abm.Helados
 {
-    partial class FrmModificarUsuarios
+    partial class FrmConsultarHelados
     {
         /// <summary>
         /// Required designer variable.
@@ -28,67 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarUsuarios));
-            this.lblNuevo = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblContraseña = new System.Windows.Forms.Label();
-            this.lblRepetir = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultarHelados));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtRepetir = new Practico.Clases.TextBox01();
-            this.txtContraseña = new Practico.Clases.TextBox01();
+            this.txtCantidad = new Practico.Clases.TextBox01();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.txtPrecio = new Practico.Clases.TextBox01();
+            this.lblPrecio = new System.Windows.Forms.Label();
             this.txtNombre = new Practico.Clases.TextBox01();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblNuevo = new System.Windows.Forms.Label();
             this.txtId = new Practico.Clases.TextBox01();
             this.lblId = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblNuevo
-            // 
-            this.lblNuevo.AutoSize = true;
-            this.lblNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNuevo.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.lblNuevo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNuevo.Location = new System.Drawing.Point(22, 34);
-            this.lblNuevo.Name = "lblNuevo";
-            this.lblNuevo.Size = new System.Drawing.Size(174, 23);
-            this.lblNuevo.TabIndex = 7;
-            this.lblNuevo.Text = "Modificar Usuario";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombre.Location = new System.Drawing.Point(105, 117);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(68, 19);
-            this.lblNombre.TabIndex = 9;
-            this.lblNombre.Text = "Nombre:";
-            // 
-            // lblContraseña
-            // 
-            this.lblContraseña.AutoSize = true;
-            this.lblContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContraseña.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblContraseña.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblContraseña.Location = new System.Drawing.Point(79, 147);
-            this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(94, 19);
-            this.lblContraseña.TabIndex = 11;
-            this.lblContraseña.Text = "Contraseña:";
-            // 
-            // lblRepetir
-            // 
-            this.lblRepetir.AutoSize = true;
-            this.lblRepetir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblRepetir.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblRepetir.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRepetir.Location = new System.Drawing.Point(26, 177);
-            this.lblRepetir.Name = "lblRepetir";
-            this.lblRepetir.Size = new System.Drawing.Size(147, 19);
-            this.lblRepetir.TabIndex = 13;
-            this.lblRepetir.Text = "Repetir Contraseña:";
             // 
             // btnCancelar
             // 
@@ -105,7 +57,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 40);
-            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -124,42 +76,67 @@
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(103, 40);
-            this.btnAceptar.TabIndex = 3;
+            this.btnAceptar.TabIndex = 17;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // txtRepetir
+            // txtCantidad
             // 
-            this.txtRepetir.BackColor = System.Drawing.Color.White;
-            this.txtRepetir.Location = new System.Drawing.Point(179, 172);
-            this.txtRepetir.Name = "txtRepetir";
-            this.txtRepetir.PasswordChar = '*';
-            this.txtRepetir.PpMensajeError = "No repitió contraseña!";
-            this.txtRepetir.PpNombreCampo = null;
-            this.txtRepetir.PpNombreTabla = null;
-            this.txtRepetir.PpValidable = true;
-            this.txtRepetir.Size = new System.Drawing.Size(124, 24);
-            this.txtRepetir.TabIndex = 2;
-            this.txtRepetir.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRepetir_KeyDown);
+            this.txtCantidad.BackColor = System.Drawing.Color.White;
+            this.txtCantidad.Enabled = false;
+            this.txtCantidad.Location = new System.Drawing.Point(179, 172);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.PpMensajeError = "No se ingresó cantidad en stock!";
+            this.txtCantidad.PpNombreCampo = null;
+            this.txtCantidad.PpNombreTabla = null;
+            this.txtCantidad.PpValidable = true;
+            this.txtCantidad.Size = new System.Drawing.Size(124, 24);
+            this.txtCantidad.TabIndex = 16;
+            this.txtCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyDown);
             // 
-            // txtContraseña
+            // lblCantidad
             // 
-            this.txtContraseña.BackColor = System.Drawing.Color.White;
-            this.txtContraseña.Location = new System.Drawing.Point(179, 142);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.PpMensajeError = "No ingresó contraseña!";
-            this.txtContraseña.PpNombreCampo = null;
-            this.txtContraseña.PpNombreTabla = null;
-            this.txtContraseña.PpValidable = true;
-            this.txtContraseña.Size = new System.Drawing.Size(124, 24);
-            this.txtContraseña.TabIndex = 1;
-            this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseña_KeyDown);
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblCantidad.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblCantidad.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCantidad.Location = new System.Drawing.Point(26, 177);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(144, 19);
+            this.lblCantidad.TabIndex = 22;
+            this.lblCantidad.Text = "Cantidad en Stock:";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.BackColor = System.Drawing.Color.White;
+            this.txtPrecio.Enabled = false;
+            this.txtPrecio.Location = new System.Drawing.Point(179, 142);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.PpMensajeError = "No ingresó Precio!";
+            this.txtPrecio.PpNombreCampo = null;
+            this.txtPrecio.PpNombreTabla = null;
+            this.txtPrecio.PpValidable = true;
+            this.txtPrecio.Size = new System.Drawing.Size(124, 24);
+            this.txtPrecio.TabIndex = 15;
+            this.txtPrecio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPrecio_KeyDown);
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblPrecio.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblPrecio.Location = new System.Drawing.Point(115, 147);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(55, 19);
+            this.lblPrecio.TabIndex = 21;
+            this.lblPrecio.Text = "Precio:";
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(179, 112);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PpMensajeError = "No ingresó nombre!";
@@ -167,8 +144,32 @@
             this.txtNombre.PpNombreTabla = null;
             this.txtNombre.PpValidable = true;
             this.txtNombre.Size = new System.Drawing.Size(124, 24);
-            this.txtNombre.TabIndex = 0;
+            this.txtNombre.TabIndex = 14;
             this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombre.Location = new System.Drawing.Point(105, 117);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(68, 19);
+            this.lblNombre.TabIndex = 20;
+            this.lblNombre.Text = "Nombre:";
+            // 
+            // lblNuevo
+            // 
+            this.lblNuevo.AutoSize = true;
+            this.lblNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNuevo.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.lblNuevo.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNuevo.Location = new System.Drawing.Point(22, 34);
+            this.lblNuevo.Name = "lblNuevo";
+            this.lblNuevo.Size = new System.Drawing.Size(182, 23);
+            this.lblNuevo.TabIndex = 19;
+            this.lblNuevo.Text = "Consultar Helado";
             // 
             // txtId
             // 
@@ -180,7 +181,7 @@
             this.txtId.PpNombreTabla = null;
             this.txtId.PpValidable = true;
             this.txtId.Size = new System.Drawing.Size(124, 24);
-            this.txtId.TabIndex = 14;
+            this.txtId.TabIndex = 23;
             // 
             // lblId
             // 
@@ -188,13 +189,13 @@
             this.lblId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblId.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblId.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblId.Location = new System.Drawing.Point(147, 85);
+            this.lblId.Location = new System.Drawing.Point(144, 87);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(26, 19);
-            this.lblId.TabIndex = 15;
+            this.lblId.TabIndex = 24;
             this.lblId.Text = "Id:";
             // 
-            // FrmModificarUsuarios
+            // FrmConsultarHelados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,38 +205,39 @@
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtRepetir);
-            this.Controls.Add(this.lblRepetir);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.lblContraseña);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.lblCantidad);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblNuevo);
-            this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmModificarUsuarios";
+            this.Name = "FrmConsultarHelados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Usuario";
-            this.Load += new System.EventHandler(this.FrmModificarUsuarios_Load);
+            this.Text = "Consultar Helado";
+            this.Load += new System.EventHandler(this.FrmConsultarHelados_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblNuevo;
-        private Clases.TextBox01 txtNombre;
-        private System.Windows.Forms.Label lblNombre;
-        private Clases.TextBox01 txtContraseña;
-        private System.Windows.Forms.Label lblContraseña;
-        private Clases.TextBox01 txtRepetir;
-        private System.Windows.Forms.Label lblRepetir;
+
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
+        private Clases.TextBox01 txtCantidad;
+        private System.Windows.Forms.Label lblCantidad;
+        private Clases.TextBox01 txtPrecio;
+        private System.Windows.Forms.Label lblPrecio;
+        private Clases.TextBox01 txtNombre;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblNuevo;
         private Clases.TextBox01 txtId;
         private System.Windows.Forms.Label lblId;
     }

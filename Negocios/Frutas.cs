@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Practico.Formularios.Abm.Usuarios;
 
 
 namespace Practico.Negocios
@@ -13,7 +13,6 @@ namespace Practico.Negocios
 	class Frutas
 	{
 		private BaseDatos baseDatos = new BaseDatos();
-
 		public enum Respuesta
 		{   validacionCorrecta,
 			validacionIncorrecta
