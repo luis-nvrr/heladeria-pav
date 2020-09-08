@@ -12,7 +12,7 @@ using Practico.Clases;
 
 namespace Practico.Formularios.Abm.Helados
 {
-    public partial class FrmModificarHelados : Form
+    public partial class FrmEliminarHelados : Form
     {
         public string id { get; set; }
         public string nombre { get; set; }
@@ -20,12 +20,12 @@ namespace Practico.Formularios.Abm.Helados
         public string cantidad { get; set; }
 
 
-        public FrmModificarHelados()
+        public FrmEliminarHelados()
         {
             InitializeComponent();
         }
 
-        private void FrmModificarHelados_Load(object sender, EventArgs e)
+        private void FrmEliminarHelados_Load(object sender, EventArgs e)
         {
             lblNombre.TabStop = false;
             lblPrecio.TabStop = false;
@@ -37,29 +37,19 @@ namespace Practico.Formularios.Abm.Helados
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            TratamientosEspeciales tratamiento = new TratamientosEspeciales();
+            Negocios.Helados helados = new Negocios.Helados();
 
-            if (tratamiento.Validar(this.Controls) == TratamientosEspeciales.Validacion.correcta)
+            if (helados.EliminarHelado(Int32.Parse(id)) == Negocios.Helados.Respuesta.validacionCorrecta)
             {
-                Negocios.Helados helados = new Negocios.Helados();
-                if (helados.ModificarHelado(Int32.Parse(id), txtNombre.Text, float.Parse(txtPrecio.Text, CultureInfo.InvariantCulture), Int32.Parse(txtCantidad.Text)) ==
-                    Negocios.Helados.Respuesta.validacionCorrecta)
-                {
-                    MessageBox.Show("Modificado correctamente!", "Informacion",
-                            buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-                    CargarCampos();
-                }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido un error...", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    CargarCampos();
-                }
-
+                MessageBox.Show("Eliminado correctamente!", "Informacion",
+                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                this.Close();
             }
-
-
+            else
+            {
+                MessageBox.Show("No se ha podido eliminar!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
 
 
         private void CargarCampos()

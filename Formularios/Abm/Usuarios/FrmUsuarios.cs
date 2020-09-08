@@ -123,16 +123,24 @@ namespace Practico.Formularios.Abm
             }
             else  //IGUAL QUE CONSULTAR
             {
-                int indiceFilaSeleccionada = grdUsuarios.SelectedRows[0].Index;
-                string id = grdUsuarios[0, indiceFilaSeleccionada].Value.ToString();
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int indiceFilaSeleccionada = grdUsuarios.SelectedRows[0].Index;
+                    string id = grdUsuarios[0, indiceFilaSeleccionada].Value.ToString();
 
-                FrmEliminarUsuarios eliminarUsuarios = new FrmEliminarUsuarios();
-                eliminarUsuarios.id = id;
-                eliminarUsuarios.ShowDialog();
+                    FrmEliminarUsuarios eliminarUsuarios = new FrmEliminarUsuarios();
+                    eliminarUsuarios.id = id;
+                    eliminarUsuarios.ShowDialog();
 
-                DataTable tabla = usuarios.TodosLosUsuarios(); //actualiza la grilla
-                CargarGrilla(tabla);
-                eliminarUsuarios.Close();
+                    DataTable tabla = usuarios.TodosLosUsuarios(); //actualiza la grilla
+                    CargarGrilla(tabla);
+                    eliminarUsuarios.Close();
+                }
+                else
+                {
+                    return;
+                }
             }
         }
 

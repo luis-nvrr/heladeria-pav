@@ -12,19 +12,19 @@ using Practico.Negocios;
 
 namespace Practico.Formularios.Abm.Usuarios
 {
-    public partial class FrmEliminarUsuarios : Form
+    public partial class FrmConsultarUsuarios : Form
     {
         public string id { get; set; }
         public string nombre { get; set; }
         public string contraseña { get; set; }
 
 
-        public FrmEliminarUsuarios()
+        public FrmConsultarUsuarios()
         {
             InitializeComponent();
         }
 
-        private void FrmEliminarUsuarios_Load(object sender, EventArgs e)
+        private void FrmConsultarUsuarios_Load(object sender, EventArgs e)
         {
             lblId.TabStop = false;
             lblNombre.TabStop = false;
@@ -55,7 +55,6 @@ namespace Practico.Formularios.Abm.Usuarios
         }
 
 
-
         private void CargarCampos()
         {
             Negocios.Usuarios usuario = new Negocios.Usuarios();
@@ -69,25 +68,15 @@ namespace Practico.Formularios.Abm.Usuarios
             txtContraseña.Text = contraseña;
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            Negocios.Usuarios usuarios = new Negocios.Usuarios();
 
-            if(usuarios.EliminarUsuario(Int32.Parse(id)) == Negocios.Usuarios.Respuesta.validacionCorrecta)
-            {
-                MessageBox.Show("Eliminado correctamente!", "Informacion",
-                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("No se ha podido eliminar!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Practico.Formularios.Abm.Helados
 {
-    partial class FrmModificarHelados
+    partial class FrmConsultarHelados
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarHelados));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultarHelados));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtCantidad = new Practico.Clases.TextBox01();
@@ -84,6 +84,7 @@
             // txtCantidad
             // 
             this.txtCantidad.BackColor = System.Drawing.Color.White;
+            this.txtCantidad.Enabled = false;
             this.txtCantidad.Location = new System.Drawing.Point(179, 172);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.PpMensajeError = "No se ingresó cantidad en stock!";
@@ -109,6 +110,7 @@
             // txtPrecio
             // 
             this.txtPrecio.BackColor = System.Drawing.Color.White;
+            this.txtPrecio.Enabled = false;
             this.txtPrecio.Location = new System.Drawing.Point(179, 142);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.PpMensajeError = "No ingresó Precio!";
@@ -134,6 +136,7 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(179, 112);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PpMensajeError = "No ingresó nombre!";
@@ -164,9 +167,9 @@
             this.lblNuevo.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNuevo.Location = new System.Drawing.Point(22, 34);
             this.lblNuevo.Name = "lblNuevo";
-            this.lblNuevo.Size = new System.Drawing.Size(178, 23);
+            this.lblNuevo.Size = new System.Drawing.Size(182, 23);
             this.lblNuevo.TabIndex = 19;
-            this.lblNuevo.Text = "Modificar Helado";
+            this.lblNuevo.Text = "Consultar Helado";
             // 
             // txtId
             // 
@@ -192,7 +195,7 @@
             this.lblId.TabIndex = 24;
             this.lblId.Text = "Id:";
             // 
-            // FrmModificarHelados
+            // FrmConsultarHelados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,10 +218,10 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmModificarHelados";
+            this.Name = "FrmConsultarHelados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Helado";
-            this.Load += new System.EventHandler(this.FrmModificarHelados_Load);
+            this.Text = "Consultar Helado";
+            this.Load += new System.EventHandler(this.FrmConsultarHelados_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

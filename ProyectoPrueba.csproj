@@ -57,6 +57,18 @@
     <Compile Include="Formularios\Abm\Helados\FrmAltaHelados.Designer.cs">
       <DependentUpon>FrmAltaHelados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmConsultarHelados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmConsultarHelados.designer.cs">
+      <DependentUpon>FrmConsultarHelados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmEliminarHelados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Helados\FrmEliminarHelados.designer.cs">
+      <DependentUpon>FrmEliminarHelados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Helados\FrmHelados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +136,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Abm\Helados\FrmAltaHelados.resx">
       <DependentUpon>FrmAltaHelados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Helados\FrmConsultarHelados.resx">
+      <DependentUpon>FrmConsultarHelados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Helados\FrmEliminarHelados.resx">
+      <DependentUpon>FrmEliminarHelados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Helados\FrmHelados.resx">
       <DependentUpon>FrmHelados.cs</DependentUpon>

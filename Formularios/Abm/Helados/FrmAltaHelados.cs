@@ -37,7 +37,7 @@ namespace Practico.Formularios.Abm.Helados
                 if (helados.InsertarHelado(txtNombre.Text, float.Parse(txtPrecio.Text, CultureInfo.InvariantCulture), Int32.Parse(txtCantidad.Text)) ==
                     Negocios.Helados.Respuesta.validacionCorrecta)
                 {
-                    MessageBox.Show("Helado ingresado correctamente", "Informacion",
+                    MessageBox.Show("Ingresado correctamente!", "Informacion",
                             buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     LimpiarCampos();
                 }

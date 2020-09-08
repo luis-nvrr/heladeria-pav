@@ -145,24 +145,19 @@ namespace Practico.Formularios.Abm.Helados
             }
             else
             {
-                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     int indiceFilaSeleccionada = grdHelados.SelectedRows[0].Index;
-                    int id = Convert.ToInt32(grdHelados[0, indiceFilaSeleccionada].Value);
+                    string id = grdHelados[0, indiceFilaSeleccionada].Value.ToString();
 
-                    if (helados.EliminarHelado(id) == Negocios.Helados.Respuesta.validacionCorrecta)
-                    {
-                        MessageBox.Show("Usuario eliminado correctamente", "Informacion",
-                            buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                    FrmEliminarHelados eliminarHelados = new FrmEliminarHelados();
+                    eliminarHelados.id = id;
+                    eliminarHelados.ShowDialog();
 
-                        DataTable tabla = helados.TodosLosHelados(); //actualiza la grilla
-                        CargarGrilla(tabla);
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se ha podido eliminar!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    
+                    DataTable tabla = helados.TodosLosHelados(); //actualiza la grilla
+                    CargarGrilla(tabla);
+                    eliminarHelados.Close();
                 }
                 else
                 {
@@ -198,6 +193,32 @@ namespace Practico.Formularios.Abm.Helados
                     return;
                 }
 
+            }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if (grdHelados.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int indiceFilaSeleccionada = grdHelados.SelectedRows[0].Index;
+                    string id = grdHelados[0, indiceFilaSeleccionada].Value.ToString();
+
+                    FrmConsultarHelados consultarHelados = new FrmConsultarHelados();
+                    consultarHelados.id = id;
+                    consultarHelados.ShowDialog();
+                    consultarHelados.Close();
+                }
+                else
+                {
+                    return;
+                }
             }
         }
     }

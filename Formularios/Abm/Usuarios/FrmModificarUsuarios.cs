@@ -45,7 +45,7 @@ namespace Practico.Formularios.Abm.Usuarios
                 {
                     Negocios.Usuarios usuarios = new Negocios.Usuarios();
                     usuarios.ModificarUsuario(Int32.Parse(id), txtNombre.Text.Trim(), txtContraseña.Text.Trim());
-                    MessageBox.Show("Usuario modificado correctamente", "Informacion",
+                    MessageBox.Show("Modificado correctamente!", "Informacion",
                         buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     CargarCampos();
                 }
