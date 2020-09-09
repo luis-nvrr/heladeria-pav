@@ -37,7 +37,7 @@ namespace Practico.Formularios
             abrirFormulario(new FrmHelados());
         }
 
-        private void abrirFormulario(Form formulario)  // usar para abrir CUALQUIER FORMULARIO
+        private void abrirFormulario(Form formulario) // usar para abrir CUALQUIER FORMULARIO
         {
             Panel esteFormulario = this.Parent as Panel;
             formulario.FormBorderStyle = FormBorderStyle.None;
@@ -53,7 +53,9 @@ namespace Practico.Formularios
         {
             FrmEmpleados empleados = new FrmEmpleados();
             abrirFormulario(empleados);
-            
+
+        }
+
         private void btn_Proveedores_Click(object sender, EventArgs e)
         {
             abrirFormulario(new FrmProveedores());
