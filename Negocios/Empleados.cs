@@ -93,5 +93,22 @@ namespace Practico.Negocios
         }
 
 
+        public Respuesta EliminarEmpleado(int tipoDoc, int nroDoc)
+        {
+            string sql = "DELETE FROM Empleados WHERE tipoDoc =" + tipoDoc + "AND nroDoc = " + nroDoc;
+
+            try
+            {
+                baseDatos.Eliminar(sql);
+                return Respuesta.validacionCorrecta;
+
+            }
+            catch (SqlException exception)
+            {
+                return Respuesta.validacionIncorrecta;
+            }
+
+        }
+
     }
 }

@@ -53,7 +53,18 @@ namespace Practico.Formularios.Abm.Empleados
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Negocios.Empleados empleados = new Negocios.Empleados();
+
+            if (empleados.EliminarEmpleado(Int32.Parse(tipoDoc), Int32.Parse(nroDoc)) == Negocios.Empleados.Respuesta.validacionCorrecta)
+            {
+                MessageBox.Show("Eliminado correctamente!", "Informacion",
+                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido eliminar!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 

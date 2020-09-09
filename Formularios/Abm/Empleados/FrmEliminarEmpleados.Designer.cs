@@ -54,9 +54,9 @@
             this.cmbTurno = new Practico.Clases.ComboBox01();
             this.lblTurno = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            //
+            // 
             // btnCancelar
-            //
+            // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -74,9 +74,9 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            //
+            // 
             // btnAceptar
-            //
+            // 
             this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAceptar.FlatAppearance.BorderSize = 0;
@@ -90,12 +90,12 @@
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(103, 40);
             this.btnAceptar.TabIndex = 10;
-            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.Text = "Confirmar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            //
+            // 
             // lblApellido
-            //
+            // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -105,9 +105,9 @@
             this.lblApellido.Size = new System.Drawing.Size(69, 19);
             this.lblApellido.TabIndex = 31;
             this.lblApellido.Text = "Apellido:";
-            //
+            // 
             // lblNumeroD
-            //
+            // 
             this.lblNumeroD.AutoSize = true;
             this.lblNumeroD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNumeroD.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -117,9 +117,9 @@
             this.lblNumeroD.Size = new System.Drawing.Size(176, 19);
             this.lblNumeroD.TabIndex = 30;
             this.lblNumeroD.Text = "Numero de Documento:";
-            //
+            // 
             // lblTipo
-            //
+            // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTipo.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -129,21 +129,21 @@
             this.lblTipo.Size = new System.Drawing.Size(149, 19);
             this.lblTipo.TabIndex = 29;
             this.lblTipo.Text = "Tipo de Documento:";
-            //
+            // 
             // lblNuevo
-            //
+            // 
             this.lblNuevo.AutoSize = true;
             this.lblNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNuevo.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.lblNuevo.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNuevo.Location = new System.Drawing.Point(21, 33);
             this.lblNuevo.Name = "lblNuevo";
-            this.lblNuevo.Size = new System.Drawing.Size(212, 23);
+            this.lblNuevo.Size = new System.Drawing.Size(192, 23);
             this.lblNuevo.TabIndex = 28;
-            this.lblNuevo.Text = "Consultar Empleado";
-            //
+            this.lblNuevo.Text = "Eliminar Empleado";
+            // 
             // lblNumero
-            //
+            // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNumero.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -153,9 +153,9 @@
             this.lblNumero.Size = new System.Drawing.Size(67, 19);
             this.lblNumero.TabIndex = 37;
             this.lblNumero.Text = "Numero:";
-            //
+            // 
             // lblCalle
-            //
+            // 
             this.lblCalle.AutoSize = true;
             this.lblCalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCalle.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -165,9 +165,9 @@
             this.lblCalle.Size = new System.Drawing.Size(49, 19);
             this.lblCalle.TabIndex = 36;
             this.lblCalle.Text = "Calle:";
-            //
+            // 
             // lblNombre
-            //
+            // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -177,9 +177,9 @@
             this.lblNombre.Size = new System.Drawing.Size(68, 19);
             this.lblNombre.TabIndex = 35;
             this.lblNombre.Text = "Nombre:";
-            //
+            // 
             // lblFechaNa
-            //
+            // 
             this.lblFechaNa.AutoSize = true;
             this.lblFechaNa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFechaNa.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -189,25 +189,25 @@
             this.lblFechaNa.Size = new System.Drawing.Size(164, 19);
             this.lblFechaNa.TabIndex = 39;
             this.lblFechaNa.Text = "Fecha de Nacimiento:";
-            //
+            // 
             // pckNacimiento
-            //
+            // 
             this.pckNacimiento.Enabled = false;
             this.pckNacimiento.Location = new System.Drawing.Point(190, 293);
             this.pckNacimiento.Name = "pckNacimiento";
             this.pckNacimiento.Size = new System.Drawing.Size(176, 24);
             this.pckNacimiento.TabIndex = 7;
-            //
+            // 
             // pckIngreso
-            //
+            // 
             this.pckIngreso.Enabled = false;
             this.pckIngreso.Location = new System.Drawing.Point(190, 323);
             this.pckIngreso.Name = "pckIngreso";
             this.pckIngreso.Size = new System.Drawing.Size(176, 24);
             this.pckIngreso.TabIndex = 8;
-            //
+            // 
             // lblFechaIn
-            //
+            // 
             this.lblFechaIn.AutoSize = true;
             this.lblFechaIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFechaIn.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -217,9 +217,9 @@
             this.lblFechaIn.Size = new System.Drawing.Size(132, 19);
             this.lblFechaIn.TabIndex = 41;
             this.lblFechaIn.Text = "Fecha de Ingreso:";
-            //
+            // 
             // lblUsuario
-            //
+            // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -229,9 +229,9 @@
             this.lblUsuario.Size = new System.Drawing.Size(62, 19);
             this.lblUsuario.TabIndex = 43;
             this.lblUsuario.Text = "Usuario:";
-            //
+            // 
             // lblBarrio
-            //
+            // 
             this.lblBarrio.AutoSize = true;
             this.lblBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblBarrio.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -241,9 +241,9 @@
             this.lblBarrio.Size = new System.Drawing.Size(51, 19);
             this.lblBarrio.TabIndex = 45;
             this.lblBarrio.Text = "Barrio:";
-            //
+            // 
             // cmbBarrio
-            //
+            // 
             this.cmbBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBarrio.Enabled = false;
             this.cmbBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -259,9 +259,9 @@
             this.cmbBarrio.PpValue = "idBarrio";
             this.cmbBarrio.Size = new System.Drawing.Size(123, 25);
             this.cmbBarrio.TabIndex = 6;
-            //
+            // 
             // cmbUsuario
-            //
+            // 
             this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuario.Enabled = false;
             this.cmbUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -277,9 +277,9 @@
             this.cmbUsuario.PpValue = "idUsuario";
             this.cmbUsuario.Size = new System.Drawing.Size(123, 25);
             this.cmbUsuario.TabIndex = 9;
-            //
+            // 
             // cmbTipo
-            //
+            // 
             this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.Enabled = false;
             this.cmbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -295,9 +295,9 @@
             this.cmbTipo.PpValue = "tipoDocumento";
             this.cmbTipo.Size = new System.Drawing.Size(123, 25);
             this.cmbTipo.TabIndex = 0;
-            //
+            // 
             // txtNroCalle
-            //
+            // 
             this.txtNroCalle.BackColor = System.Drawing.Color.White;
             this.txtNroCalle.Enabled = false;
             this.txtNroCalle.Location = new System.Drawing.Point(396, 231);
@@ -308,9 +308,9 @@
             this.txtNroCalle.PpValidable = true;
             this.txtNroCalle.Size = new System.Drawing.Size(82, 24);
             this.txtNroCalle.TabIndex = 5;
-            //
+            // 
             // txtCalle
-            //
+            // 
             this.txtCalle.BackColor = System.Drawing.Color.White;
             this.txtCalle.Enabled = false;
             this.txtCalle.Location = new System.Drawing.Point(190, 231);
@@ -321,9 +321,9 @@
             this.txtCalle.PpValidable = true;
             this.txtCalle.Size = new System.Drawing.Size(124, 24);
             this.txtCalle.TabIndex = 4;
-            //
+            // 
             // txtApellido
-            //
+            // 
             this.txtApellido.BackColor = System.Drawing.Color.White;
             this.txtApellido.Enabled = false;
             this.txtApellido.Location = new System.Drawing.Point(190, 201);
@@ -334,9 +334,9 @@
             this.txtApellido.PpValidable = true;
             this.txtApellido.Size = new System.Drawing.Size(124, 24);
             this.txtApellido.TabIndex = 3;
-            //
+            // 
             // txtNombre
-            //
+            // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(190, 171);
@@ -347,9 +347,9 @@
             this.txtNombre.PpValidable = true;
             this.txtNombre.Size = new System.Drawing.Size(124, 24);
             this.txtNombre.TabIndex = 2;
-            //
+            // 
             // txtNroDoc
-            //
+            // 
             this.txtNroDoc.BackColor = System.Drawing.Color.White;
             this.txtNroDoc.Enabled = false;
             this.txtNroDoc.Location = new System.Drawing.Point(190, 141);
@@ -360,9 +360,9 @@
             this.txtNroDoc.PpValidable = true;
             this.txtNroDoc.Size = new System.Drawing.Size(124, 24);
             this.txtNroDoc.TabIndex = 1;
-            //
+            // 
             // cmbTurno
-            //
+            // 
             this.cmbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTurno.Enabled = false;
             this.cmbTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -378,9 +378,9 @@
             this.cmbTurno.PpValue = "idTurno";
             this.cmbTurno.Size = new System.Drawing.Size(123, 25);
             this.cmbTurno.TabIndex = 46;
-            //
+            // 
             // lblTurno
-            //
+            // 
             this.lblTurno.AutoSize = true;
             this.lblTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTurno.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -390,9 +390,9 @@
             this.lblTurno.Size = new System.Drawing.Size(49, 19);
             this.lblTurno.TabIndex = 47;
             this.lblTurno.Text = "Turno:";
-            //
+            // 
             // FrmEliminarEmpleados
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));

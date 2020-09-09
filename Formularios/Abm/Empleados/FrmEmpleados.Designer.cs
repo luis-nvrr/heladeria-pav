@@ -266,7 +266,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdEmpleados.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.grdEmpleados.Location = new System.Drawing.Point(26, 395);
+            this.grdEmpleados.Location = new System.Drawing.Point(26, 339);
             this.grdEmpleados.Name = "grdEmpleados";
             this.grdEmpleados.ReadOnly = true;
             this.grdEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -334,7 +334,7 @@
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Controls.Add(this.btnNuevo);
-            this.panel1.Location = new System.Drawing.Point(43, 661);
+            this.panel1.Location = new System.Drawing.Point(38, 586);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(675, 76);
             this.panel1.TabIndex = 21;
@@ -356,6 +356,7 @@
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar Empleado";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 

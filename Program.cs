@@ -20,8 +20,8 @@ namespace Practico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmEscritorio());
-            Application.Run(new FrmEmpleados());
+            Application.Run(new FrmEscritorio());
+            //Application.Run(new FrmEmpleados());
         }
     }
 }

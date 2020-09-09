@@ -196,5 +196,38 @@ namespace Practico.Formularios.Abm.Empleados
                 }
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (grdEmpleados.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int indiceFilaSeleccionada = grdEmpleados.SelectedRows[0].Index;
+                    string tipoDoc = grdEmpleados[0, indiceFilaSeleccionada].Value.ToString();
+                    string nroDoc = grdEmpleados[1, indiceFilaSeleccionada].Value.ToString();
+
+                    FrmEliminarEmpleados eliminarEmpleados = new FrmEliminarEmpleados();
+                    eliminarEmpleados.tipoDoc = tipoDoc; 
+                    eliminarEmpleados.nroDoc = nroDoc;
+
+                    eliminarEmpleados.ShowDialog();
+
+                    DataTable tabla = empleados.TodosLosEmpleados(); //actualiza la grilla
+                    CargarGrilla(tabla);
+                    eliminarEmpleados.Close();
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+        }
     }
 }

@@ -63,7 +63,9 @@
     <Compile Include="Formularios\Abm\Empleados\FrmConsultarEmpleados.designer.cs">
       <DependentUpon>FrmConsultarEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Abm\Empleados\FrmEliminarEmpleados.cs" />
+    <Compile Include="Formularios\Abm\Empleados\FrmEliminarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Abm\Empleados\FrmEliminarEmpleados.designer.cs">
       <DependentUpon>FrmEliminarEmpleados.cs</DependentUpon>
     </Compile>
