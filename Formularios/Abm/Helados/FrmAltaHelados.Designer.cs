@@ -51,7 +51,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(89, 219);
+            this.btnCancelar.Location = new System.Drawing.Point(88, 218);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 40);
@@ -69,7 +69,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAceptar.Location = new System.Drawing.Point(200, 219);
+            this.btnAceptar.Location = new System.Drawing.Point(199, 218);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(103, 40);
@@ -81,7 +81,7 @@
             // txtCantidad
             // 
             this.txtCantidad.BackColor = System.Drawing.Color.White;
-            this.txtCantidad.Location = new System.Drawing.Point(179, 172);
+            this.txtCantidad.Location = new System.Drawing.Point(178, 171);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.PpMensajeError = "No se ingresó cantidad en stock!";
             this.txtCantidad.PpNombreCampo = null;
@@ -97,7 +97,7 @@
             this.lblCantidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCantidad.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblCantidad.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidad.Location = new System.Drawing.Point(26, 177);
+            this.lblCantidad.Location = new System.Drawing.Point(25, 176);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(144, 19);
             this.lblCantidad.TabIndex = 22;
@@ -106,7 +106,7 @@
             // txtPrecio
             // 
             this.txtPrecio.BackColor = System.Drawing.Color.White;
-            this.txtPrecio.Location = new System.Drawing.Point(179, 142);
+            this.txtPrecio.Location = new System.Drawing.Point(178, 141);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.PpMensajeError = "No ingresó Precio!";
             this.txtPrecio.PpNombreCampo = null;
@@ -122,7 +122,7 @@
             this.lblPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblPrecio.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPrecio.Location = new System.Drawing.Point(115, 147);
+            this.lblPrecio.Location = new System.Drawing.Point(114, 146);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(55, 19);
             this.lblPrecio.TabIndex = 21;
@@ -131,7 +131,7 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(179, 112);
+            this.txtNombre.Location = new System.Drawing.Point(178, 111);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PpMensajeError = "No ingresó nombre!";
             this.txtNombre.PpNombreCampo = null;
@@ -147,7 +147,7 @@
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombre.Location = new System.Drawing.Point(105, 117);
+            this.lblNombre.Location = new System.Drawing.Point(101, 116);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(68, 19);
             this.lblNombre.TabIndex = 20;
@@ -159,7 +159,7 @@
             this.lblNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNuevo.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.lblNuevo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNuevo.Location = new System.Drawing.Point(22, 34);
+            this.lblNuevo.Location = new System.Drawing.Point(21, 33);
             this.lblNuevo.Name = "lblNuevo";
             this.lblNuevo.Size = new System.Drawing.Size(155, 23);
             this.lblNuevo.TabIndex = 19;

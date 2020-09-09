@@ -51,6 +51,34 @@
     <Compile Include="Clases\ComboBox01.cs" />
     <Compile Include="Clases\TextBox01.cs" />
     <Compile Include="Clases\TratamientosEspeciales.cs" />
+    <Compile Include="Formularios\Abm\Empleados\FrmAltaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Empleados\FrmAltaEmpleados.Designer.cs">
+      <DependentUpon>FrmAltaEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Empleados\FrmConsultarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Empleados\FrmConsultarEmpleados.designer.cs">
+      <DependentUpon>FrmConsultarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Empleados\FrmEliminarEmpleados.cs" />
+    <Compile Include="Formularios\Abm\Empleados\FrmEliminarEmpleados.designer.cs">
+      <DependentUpon>FrmEliminarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Empleados\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Empleados\FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Empleados\FrmModificarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Empleados\FrmModificarEmpleados.designer.cs">
+      <DependentUpon>FrmModificarEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Helados\FrmAltaHelados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,11 +157,27 @@
     <Compile Include="Formularios\Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\Empleados.cs" />
     <Compile Include="Negocios\Frutas.cs" />
     <Compile Include="Negocios\Helados.cs" />
     <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Abm\Empleados\FrmAltaEmpleados.resx">
+      <DependentUpon>FrmAltaEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Empleados\FrmConsultarEmpleados.resx">
+      <DependentUpon>FrmConsultarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Empleados\FrmEliminarEmpleados.resx">
+      <DependentUpon>FrmEliminarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Empleados\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Empleados\FrmModificarEmpleados.resx">
+      <DependentUpon>FrmModificarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Helados\FrmAltaHelados.resx">
       <DependentUpon>FrmAltaHelados.cs</DependentUpon>
     </EmbeddedResource>

@@ -17,6 +17,7 @@ namespace Practico.Clases
         public bool PpValidable { get; set; }
         public string PpNombreCampo { get; set; }
         public string PpNombreTabla { get; set; }
+        public string PpMensajeError { get; set; }
 
 
         public void Cargar()  //cargar con consulta SELECT *
@@ -30,7 +31,11 @@ namespace Practico.Clases
 
         public void Cargar(string tabla, string display, string value)
         {
-            ;
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT * FROM " + tabla;
+            this.DisplayMember = display;
+            this.ValueMember = value;
+            this.DataSource = baseDatos.Consulta(sql);
         }
 
         public void Cargar(DataTable tabla, string display, string value)

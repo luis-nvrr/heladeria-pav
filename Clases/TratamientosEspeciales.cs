@@ -33,5 +33,36 @@ namespace Practico.Clases
             return Validacion.correcta;
         }
 
+
+        public Validacion ValidarAlMenosUno(Control.ControlCollection controles) // valida que un objeto textbox01 tenga datos
+        {
+            foreach (var item in controles)
+            {
+                if (item.GetType().Name == "TextBox01")
+                {
+                    if (((TextBox01)item).PpValidable == true)
+                    {
+                        if (((TextBox01)item).Text != "")
+                        {
+                            return Validacion.correcta;
+                        }
+                    }
+                }
+                if (item.GetType().Name == "ComboBox01")
+                {
+                    if (((ComboBox01)item).PpValidable == true)
+                    {
+                        if (((ComboBox01)item).Text != "")
+                        {
+                            return Validacion.correcta;
+                        }
+                    }
+                }
+            }
+            MessageBox.Show("Ingrese un parametro de busqueda!", caption: "Atención",
+                icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
+            return Validacion.incorrecta;
+        }
+
     }
 }

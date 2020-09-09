@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Formularios.Abm;
+using Practico.Formularios.Abm.Empleados;
 using Practico.Formularios.Abm.Helados;
 
 namespace Practico.Formularios
@@ -47,6 +48,10 @@ namespace Practico.Formularios
 
         }
 
-
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            FrmEmpleados empleados = new FrmEmpleados();
+            abrirFormulario(empleados);
+        }
     }
 }
