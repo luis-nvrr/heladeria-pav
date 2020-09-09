@@ -32,7 +32,7 @@ namespace Practico.Formularios
         {
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnEscritorio = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Proveedores = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -93,23 +93,24 @@ namespace Practico.Formularios
             this.btnEscritorio.UseVisualStyleBackColor = false;
             this.btnEscritorio.Click += new System.EventHandler(this.btnEscritorio_Click);
             // 
-            // button2
+            // btn_Proveedores
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button2.Location = new System.Drawing.Point(37, 169);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 63);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Proveedores";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_Proveedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btn_Proveedores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Proveedores.FlatAppearance.BorderSize = 0;
+            this.btn_Proveedores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btn_Proveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btn_Proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Proveedores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Proveedores.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btn_Proveedores.Location = new System.Drawing.Point(37, 169);
+            this.btn_Proveedores.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btn_Proveedores.Name = "btn_Proveedores";
+            this.btn_Proveedores.Size = new System.Drawing.Size(166, 63);
+            this.btn_Proveedores.TabIndex = 3;
+            this.btn_Proveedores.Text = "Proveedores";
+            this.btn_Proveedores.UseVisualStyleBackColor = false;
+            this.btn_Proveedores.Click += new System.EventHandler(this.btn_Proveedores_Click);
             // 
             // btnUsuarios
             // 
@@ -401,7 +402,7 @@ namespace Practico.Formularios
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnUsuarios);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_Proveedores);
             this.Controls.Add(this.btnEscritorio);
             this.Controls.Add(this.btnIngresar);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -424,7 +425,7 @@ namespace Practico.Formularios
 
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnEscritorio;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Proveedores;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;

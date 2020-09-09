@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Formularios.Abm;
 using Practico.Formularios.Abm.Helados;
+using Practico.Formularios.Abm.Proveedores;
 
 namespace Practico.Formularios
 {
@@ -47,6 +48,9 @@ namespace Practico.Formularios
 
         }
 
-
+        private void btn_Proveedores_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmProveedores());
+        }
     }
 }

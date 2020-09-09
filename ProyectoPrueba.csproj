@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Clases\BaseDatos.cs" />
     <Compile Include="Clases\ComboBox01.cs" />
+    <Compile Include="Clases\EstructuraComboBox.cs" />
     <Compile Include="Clases\TextBox01.cs" />
     <Compile Include="Clases\TratamientosEspeciales.cs" />
     <Compile Include="Formularios\Abm\Helados\FrmAltaHelados.cs">
@@ -80,6 +81,18 @@
     </Compile>
     <Compile Include="Formularios\Abm\Helados\FrmModificarHelados.designer.cs">
       <DependentUpon>FrmModificarHelados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Proveedores\FrmAltaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Proveedores\FrmAltaProveedores.Designer.cs">
+      <DependentUpon>FrmAltaProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Proveedores\FrmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Proveedores\FrmProveedores.Designer.cs">
+      <DependentUpon>FrmProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.cs">
       <SubType>Form</SubType>
@@ -129,8 +142,11 @@
     <Compile Include="Formularios\Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\Barrios.cs" />
     <Compile Include="Negocios\Frutas.cs" />
     <Compile Include="Negocios\Helados.cs" />
+    <Compile Include="Negocios\Proveedores.cs" />
+    <Compile Include="Negocios\TiposDocumento.cs" />
     <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,6 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Helados\FrmModificarHelados.resx">
       <DependentUpon>FrmModificarHelados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Proveedores\FrmAltaProveedores.resx">
+      <DependentUpon>FrmAltaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Proveedores\FrmProveedores.resx">
+      <DependentUpon>FrmProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.resx">
       <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>
