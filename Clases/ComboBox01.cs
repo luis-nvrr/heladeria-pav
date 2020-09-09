@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
+using Practico.Clases;
+
 namespace Practico.Clases
 {
     [System.ComponentModel.DesignerCategory("")]
@@ -44,6 +46,12 @@ namespace Practico.Clases
             this.ValueMember = value;
             this.DataSource = tabla;
 
+        }
+        public void cargar(EstructuraComboBox ec)
+        {
+            this.DisplayMember = ec.Display;
+            this.ValueMember = ec.Value;
+            this.DataSource = ec.Tabla;
         }
 
     }

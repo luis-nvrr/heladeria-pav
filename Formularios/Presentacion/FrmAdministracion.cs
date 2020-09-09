@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Practico.Formularios.Abm;
 using Practico.Formularios.Abm.Empleados;
 using Practico.Formularios.Abm.Helados;
+using Practico.Formularios.Abm.Proveedores;
 
 namespace Practico.Formularios
 {
@@ -52,6 +53,10 @@ namespace Practico.Formularios
         {
             FrmEmpleados empleados = new FrmEmpleados();
             abrirFormulario(empleados);
+            
+        private void btn_Proveedores_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmProveedores());
         }
     }
 }
