@@ -173,7 +173,6 @@
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocios\Empleados.cs" />
-=======
     <Compile Include="Negocios\Barrios.cs" />
     <Compile Include="Negocios\Frutas.cs" />
     <Compile Include="Negocios\Helados.cs" />
