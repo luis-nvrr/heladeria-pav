@@ -5,12 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Practico.Clases;
+using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Practico.Negocios
 {
     class Proveedores
     {
+
         BaseDatos baseDatos = new BaseDatos();
+
+        public enum Respuesta
+        {
+            validacionCorrecta,
+            validacionIncorrecta
+        }
+
         public DataTable TodosLosProveedores()
         {
             string sql = "SELECT * FROM Proveedores P JOIN TiposDocumento TD ON P.tipoDocumento=TD.tipoDocumento";
@@ -26,5 +36,22 @@ namespace Practico.Negocios
             DataTable tabla = baseDatos.Consulta(sql);
             return tabla;
         }
+
+        public Respuesta Insertar(Control.ControlCollection controles)
+        {
+            try
+            {
+                baseDatos.InsertarAutomatizado("Proveedores", controles);
+                return Respuesta.validacionCorrecta;
+
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.ToString());
+                return Respuesta.validacionIncorrecta;
+            }
+
+        }
+
     }
 }
