@@ -40,8 +40,8 @@
             this.lblNroCalle = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cmbBarrios = new Practico.Clases.ComboBox01();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.cmbBarrio = new Practico.Clases.ComboBox01();
             this.txtNroCalle = new Practico.Clases.TextBox01();
             this.txtCalle = new Practico.Clases.TextBox01();
             this.txtTelFijo = new Practico.Clases.TextBox01();
@@ -154,11 +154,11 @@
             this.lblNroCalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNroCalle.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNroCalle.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNroCalle.Location = new System.Drawing.Point(99, 298);
+            this.lblNroCalle.Location = new System.Drawing.Point(366, 271);
             this.lblNroCalle.Name = "lblNroCalle";
-            this.lblNroCalle.Size = new System.Drawing.Size(130, 19);
+            this.lblNroCalle.Size = new System.Drawing.Size(67, 19);
             this.lblNroCalle.TabIndex = 37;
-            this.lblNroCalle.Text = "Número de Calle:";
+            this.lblNroCalle.Text = "Número:";
             // 
             // label8
             // 
@@ -166,7 +166,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(180, 323);
+            this.label8.Location = new System.Drawing.Point(180, 298);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 19);
             this.label8.TabIndex = 38;
@@ -182,159 +182,163 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAceptar.Location = new System.Drawing.Point(257, 362);
+            this.btnAceptar.Location = new System.Drawing.Point(280, 337);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(103, 40);
-            this.btnAceptar.TabIndex = 39;
+            this.btnAceptar.TabIndex = 9;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // button1
+            // btnCancelar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(146, 362);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 40);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Location = new System.Drawing.Point(160, 337);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(103, 40);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // cmbBarrios
+            // cmbBarrio
             // 
-            this.cmbBarrios.FormattingEnabled = true;
-            this.cmbBarrios.Location = new System.Drawing.Point(236, 323);
-            this.cmbBarrios.Name = "cmbBarrios";
-            this.cmbBarrios.PpDisplay = null;
-            this.cmbBarrios.PpNombreCampo = null;
-            this.cmbBarrios.PpNombreTabla = null;
-            this.cmbBarrios.PpTabla = null;
-            this.cmbBarrios.PpValidable = false;
-            this.cmbBarrios.PpValue = null;
-            this.cmbBarrios.Size = new System.Drawing.Size(124, 21);
-            this.cmbBarrios.TabIndex = 34;
+            this.cmbBarrio.FormattingEnabled = true;
+            this.cmbBarrio.Location = new System.Drawing.Point(236, 298);
+            this.cmbBarrio.Name = "cmbBarrio";
+            this.cmbBarrio.PpDisplay = "";
+            this.cmbBarrio.PpMensajeError = "No ingresó Barrio !";
+            this.cmbBarrio.PpNombreCampo = "idBarrio";
+            this.cmbBarrio.PpNombreTabla = "Proveedores";
+            this.cmbBarrio.PpTabla = null;
+            this.cmbBarrio.PpValidable = true;
+            this.cmbBarrio.PpValue = null;
+            this.cmbBarrio.Size = new System.Drawing.Size(124, 21);
+            this.cmbBarrio.TabIndex = 8;
             // 
             // txtNroCalle
             // 
             this.txtNroCalle.BackColor = System.Drawing.Color.White;
-            this.txtNroCalle.Location = new System.Drawing.Point(236, 297);
+            this.txtNroCalle.Location = new System.Drawing.Point(439, 272);
             this.txtNroCalle.Name = "txtNroCalle";
-            this.txtNroCalle.PpMensajeError = "No ingresó nombre!";
-            this.txtNroCalle.PpNombreCampo = null;
-            this.txtNroCalle.PpNombreTabla = null;
+            this.txtNroCalle.PpMensajeError = "No ingresó Número de Calle !";
+            this.txtNroCalle.PpNombreCampo = "nroCalle";
+            this.txtNroCalle.PpNombreTabla = "Proveedores";
             this.txtNroCalle.PpValidable = true;
-            this.txtNroCalle.Size = new System.Drawing.Size(124, 20);
-            this.txtNroCalle.TabIndex = 33;
+            this.txtNroCalle.Size = new System.Drawing.Size(63, 20);
+            this.txtNroCalle.TabIndex = 7;
             // 
             // txtCalle
             // 
             this.txtCalle.BackColor = System.Drawing.Color.White;
-            this.txtCalle.Location = new System.Drawing.Point(236, 271);
+            this.txtCalle.Location = new System.Drawing.Point(236, 272);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.PpMensajeError = "No ingresó nombre!";
-            this.txtCalle.PpNombreCampo = null;
-            this.txtCalle.PpNombreTabla = null;
-            this.txtCalle.PpValidable = true;
+            this.txtCalle.PpMensajeError = "No ingresó Calle !";
+            this.txtCalle.PpNombreCampo = "calle";
+            this.txtCalle.PpNombreTabla = "Proveedores";
+            this.txtCalle.PpValidable = false;
             this.txtCalle.Size = new System.Drawing.Size(124, 20);
-            this.txtCalle.TabIndex = 32;
+            this.txtCalle.TabIndex = 6;
             // 
             // txtTelFijo
             // 
             this.txtTelFijo.BackColor = System.Drawing.Color.White;
             this.txtTelFijo.Location = new System.Drawing.Point(236, 245);
             this.txtTelFijo.Name = "txtTelFijo";
-            this.txtTelFijo.PpMensajeError = "No ingresó nombre!";
-            this.txtTelFijo.PpNombreCampo = null;
-            this.txtTelFijo.PpNombreTabla = null;
+            this.txtTelFijo.PpMensajeError = "No ingresó Teléfono Fijo !";
+            this.txtTelFijo.PpNombreCampo = "telFijo";
+            this.txtTelFijo.PpNombreTabla = "Proveedores";
             this.txtTelFijo.PpValidable = true;
             this.txtTelFijo.Size = new System.Drawing.Size(124, 20);
-            this.txtTelFijo.TabIndex = 31;
+            this.txtTelFijo.TabIndex = 5;
             // 
             // txtTelCel
             // 
             this.txtTelCel.BackColor = System.Drawing.Color.White;
             this.txtTelCel.Location = new System.Drawing.Point(236, 219);
             this.txtTelCel.Name = "txtTelCel";
-            this.txtTelCel.PpMensajeError = "No ingresó nombre!";
-            this.txtTelCel.PpNombreCampo = null;
-            this.txtTelCel.PpNombreTabla = null;
+            this.txtTelCel.PpMensajeError = "No ingresó Teléfono Celular !";
+            this.txtTelCel.PpNombreCampo = "telCelular";
+            this.txtTelCel.PpNombreTabla = "Proveedores";
             this.txtTelCel.PpValidable = true;
             this.txtTelCel.Size = new System.Drawing.Size(124, 20);
-            this.txtTelCel.TabIndex = 30;
+            this.txtTelCel.TabIndex = 4;
             // 
             // cmbTipoDoc
             // 
             this.cmbTipoDoc.FormattingEnabled = true;
             this.cmbTipoDoc.Location = new System.Drawing.Point(236, 112);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
-            this.cmbTipoDoc.PpDisplay = null;
-            this.cmbTipoDoc.PpNombreCampo = null;
-            this.cmbTipoDoc.PpNombreTabla = null;
+            this.cmbTipoDoc.PpDisplay = "";
+            this.cmbTipoDoc.PpMensajeError = "No se ingresó Tipo de Documento !";
+            this.cmbTipoDoc.PpNombreCampo = "tipoDocumento";
+            this.cmbTipoDoc.PpNombreTabla = "Proveedores";
             this.cmbTipoDoc.PpTabla = null;
-            this.cmbTipoDoc.PpValidable = false;
+            this.cmbTipoDoc.PpValidable = true;
             this.cmbTipoDoc.PpValue = null;
             this.cmbTipoDoc.Size = new System.Drawing.Size(124, 21);
-            this.cmbTipoDoc.TabIndex = 28;
+            this.cmbTipoDoc.TabIndex = 0;
             // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(236, 193);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PpMensajeError = "No ingresó nombre!";
-            this.txtEmail.PpNombreCampo = null;
-            this.txtEmail.PpNombreTabla = null;
+            this.txtEmail.PpMensajeError = "No ingresó email !";
+            this.txtEmail.PpNombreCampo = "mail";
+            this.txtEmail.PpNombreTabla = "Proveedores";
             this.txtEmail.PpValidable = true;
             this.txtEmail.Size = new System.Drawing.Size(124, 20);
-            this.txtEmail.TabIndex = 27;
+            this.txtEmail.TabIndex = 3;
             // 
             // txtRazónSocial
             // 
             this.txtRazónSocial.BackColor = System.Drawing.Color.White;
             this.txtRazónSocial.Location = new System.Drawing.Point(236, 167);
             this.txtRazónSocial.Name = "txtRazónSocial";
-            this.txtRazónSocial.PpMensajeError = "No ingresó nombre!";
-            this.txtRazónSocial.PpNombreCampo = null;
-            this.txtRazónSocial.PpNombreTabla = null;
+            this.txtRazónSocial.PpMensajeError = "No ingresó Razón Social !";
+            this.txtRazónSocial.PpNombreCampo = "razonSocial";
+            this.txtRazónSocial.PpNombreTabla = "Proveedores";
             this.txtRazónSocial.PpValidable = true;
             this.txtRazónSocial.Size = new System.Drawing.Size(124, 20);
-            this.txtRazónSocial.TabIndex = 26;
+            this.txtRazónSocial.TabIndex = 2;
             // 
             // txtNroDoc
             // 
             this.txtNroDoc.BackColor = System.Drawing.Color.White;
             this.txtNroDoc.Location = new System.Drawing.Point(236, 141);
             this.txtNroDoc.Name = "txtNroDoc";
-            this.txtNroDoc.PpMensajeError = "No ingresó nombre!";
-            this.txtNroDoc.PpNombreCampo = null;
-            this.txtNroDoc.PpNombreTabla = null;
+            this.txtNroDoc.PpMensajeError = "No se ingresó Número de Documento !";
+            this.txtNroDoc.PpNombreCampo = "nroDocumento";
+            this.txtNroDoc.PpNombreTabla = "Proveedores";
             this.txtNroDoc.PpValidable = true;
             this.txtNroDoc.Size = new System.Drawing.Size(124, 20);
-            this.txtNroDoc.TabIndex = 25;
+            this.txtNroDoc.TabIndex = 1;
             // 
             // FrmAltaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(434, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(524, 407);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblNroCalle);
             this.Controls.Add(this.lblTelCel);
             this.Controls.Add(this.lblCalle);
             this.Controls.Add(this.lblTelFijo);
-            this.Controls.Add(this.cmbBarrios);
+            this.Controls.Add(this.cmbBarrio);
             this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.txtTelFijo);
@@ -373,13 +377,13 @@
         private Clases.TextBox01 txtTelFijo;
         private Clases.TextBox01 txtCalle;
         private Clases.TextBox01 txtNroCalle;
-        private Clases.ComboBox01 cmbBarrios;
+        private Clases.ComboBox01 cmbBarrio;
         private System.Windows.Forms.Label lblTelFijo;
         private System.Windows.Forms.Label lblCalle;
         private System.Windows.Forms.Label lblTelCel;
         private System.Windows.Forms.Label lblNroCalle;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

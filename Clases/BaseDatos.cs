@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;  //Conector estandar cliente de SQL
 using System.Data;
+using System.Windows.Forms;
 
 namespace Practico.Clases
 {
@@ -13,6 +14,11 @@ namespace Practico.Clases
         private SqlConnection conexion = new SqlConnection();   // armar conexion
         private SqlCommand comando = new SqlCommand();    // transporte de la consulta
 
+        public enum Respuesta
+        {
+            validacionCorrecta,
+            validacionIncorrecta
+        }
 
         private void Conectar()  // metodo para conectar
         {
@@ -55,6 +61,26 @@ namespace Practico.Clases
             Desconectar();
         }
 
+        public void InsertarAutomatizado(string NombreTabla, Control.ControlCollection controles)
+        {
+            string sqlInsertar = "INSERT INTO " + NombreTabla.Trim() + " (";
+            string sqlDatos = " VALUES (";
+            DataTable Estructura = new DataTable();
+            Estructura = EstructuraTabla(NombreTabla);
+            for (int i = 0; i < Estructura.Columns.Count; i++)
+            {
+                string ValorCampo = BuscarValorCampo(Estructura.Columns[i].Caption, NombreTabla, controles);
+                if (ValorCampo != "")
+                {
+                    sqlInsertar += ", " + Estructura.Columns[i].Caption;
+                    sqlDatos += ", " + FormatearDato(ValorCampo, Estructura.Columns[i].DataType.Name);
+                }
+            }
+            sqlInsertar = sqlInsertar + ")" + sqlDatos + ")";
+            sqlInsertar = sqlInsertar.Replace("(,", "(");
+            Insertar(sqlInsertar);
+        }
+
         public void Eliminar(string sql)
         {
             Conectar();
@@ -83,6 +109,57 @@ namespace Practico.Clases
                 throw exception;
             }
             Desconectar();
+        } 
+
+        public string FormatearDato(string dato,string formato)
+        {
+            switch (formato)
+            {
+                case "String":
+                    return "'" + dato + "'";
+                case "Date":
+                case "DateTime":
+                    return "convert(date,'" + dato + "', 103)";
+                default:
+                    return dato;
+            }
+        }
+
+
+        private DataTable EstructuraTabla (string NombreTabla)
+        {
+            string sql = "SELECT TOP 1 * FROM " + NombreTabla.Trim();
+            DataTable tabla = new DataTable();
+            tabla = this.Consulta(sql);
+            return tabla;
+        }
+
+        private string BuscarValorCampo(string campo, string NombreTabla, Control.ControlCollection controles)
+        {
+            foreach (var item in controles)
+            {
+                if (item.GetType().Name == "TextBox01")
+                {
+                    if (((TextBox01)item).PpNombreCampo is null) 
+                        continue;
+
+                    if (((TextBox01)item).PpNombreTabla.IndexOf(NombreTabla) != -1
+                        && ((TextBox01)item).PpNombreCampo == campo) 
+                        return ((TextBox01)item).Text;
+                }
+
+                if(item.GetType().Name == "ComboBox01")
+                {
+                    if (((ComboBox01)item).PpNombreCampo is null)
+                        continue;
+
+                    if (((ComboBox01)item).PpNombreTabla.IndexOf(NombreTabla) != -1
+                        && ((ComboBox01)item).PpNombreCampo == campo)
+                        return ((ComboBox01)item).SelectedValue.ToString();
+                }
+                
+            }
+            return "";
         }
     }
 }
