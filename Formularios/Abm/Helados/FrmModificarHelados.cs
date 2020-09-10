@@ -42,7 +42,7 @@ namespace Practico.Formularios.Abm.Helados
             if (tratamiento.Validar(this.Controls) == TratamientosEspeciales.Validacion.correcta)
             {
                 Negocios.Helados helados = new Negocios.Helados();
-                if (helados.ModificarHelado(Int32.Parse(id), txtNombre.Text, float.Parse(txtPrecio.Text, CultureInfo.InvariantCulture), Int32.Parse(txtCantidad.Text)) ==
+                if (helados.ModificarHelado(Int32.Parse(id), txtNombre.Text, float.Parse(txtPrecio.Text.Replace(',', '.'), CultureInfo.InvariantCulture), Int32.Parse(txtCantidad.Text)) ==
                     Negocios.Helados.Respuesta.validacionCorrecta)
                 {
                     MessageBox.Show("Modificado correctamente!", "Informacion",

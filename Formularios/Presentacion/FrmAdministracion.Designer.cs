@@ -72,7 +72,7 @@ namespace Practico.Formularios
             this.btnIngresar.TabIndex = 10;
             this.btnIngresar.Text = "Helados Especiales";
             this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click_1);
             // 
             // btnEscritorio
             // 
@@ -419,7 +419,7 @@ namespace Practico.Formularios
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
         #endregion

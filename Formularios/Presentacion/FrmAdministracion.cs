@@ -60,5 +60,10 @@ namespace Practico.Formularios
         {
             abrirFormulario(new FrmProveedores());
         }
+
+        private void btnIngresar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

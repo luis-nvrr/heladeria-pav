@@ -16,7 +16,8 @@ namespace Practico.Clases
 
         private void Conectar()  // metodo para conectar
         {
-            conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True";   
+            //conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //NICO
+            conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //LUIS
             conexion.Open();
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
@@ -52,7 +53,8 @@ namespace Practico.Clases
             {
                 throw exception;
             }
-            Desconectar();
+            finally{ Desconectar(); }
+            
         }
 
         public void Eliminar(string sql)
@@ -67,7 +69,7 @@ namespace Practico.Clases
             {
                 throw exception;
             }
-            Desconectar();
+            finally { Desconectar(); }
         }
 
         public void Actualizar(string sql)
@@ -82,7 +84,7 @@ namespace Practico.Clases
             {
                 throw exception;
             }
-            Desconectar();
+            finally { Desconectar(); }
         }
     }
 }

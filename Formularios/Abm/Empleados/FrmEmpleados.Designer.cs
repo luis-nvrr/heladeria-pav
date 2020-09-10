@@ -64,6 +64,7 @@
             // 
             // lblEmpleados
             // 
+            this.lblEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmpleados.AutoSize = true;
             this.lblEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEmpleados.Font = new System.Drawing.Font("Century Gothic", 15F);
@@ -76,6 +77,7 @@
             // 
             // chkTodos
             // 
+            this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chkTodos.AutoSize = true;
             this.chkTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkTodos.ForeColor = System.Drawing.SystemColors.Control;
@@ -101,6 +103,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
@@ -199,6 +202,7 @@
             // 
             // cmbBarrio
             // 
+            this.cmbBarrio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbBarrio.FormattingEnabled = true;
@@ -432,6 +436,7 @@
             // 
             // btnLimpiarTurno
             // 
+            this.btnLimpiarTurno.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLimpiarTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnLimpiarTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLimpiarTurno.FlatAppearance.BorderSize = 0;
@@ -451,6 +456,7 @@
             // 
             // btnLimpiarBarrio
             // 
+            this.btnLimpiarBarrio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLimpiarBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnLimpiarBarrio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLimpiarBarrio.FlatAppearance.BorderSize = 0;
