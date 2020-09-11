@@ -12,7 +12,7 @@ using Practico.Clases;
 
 namespace Practico.Formularios.Abm.Proveedores
 {
-    public partial class FrmModificarProveedores : Form
+    public partial class FrmConsultarProveedores : Form
     {
         Negocios.Proveedores proveedor = new Negocios.Proveedores();
         Negocios.TiposDocumento tipoDoc = new Negocios.TiposDocumento();
@@ -28,7 +28,7 @@ namespace Practico.Formularios.Abm.Proveedores
         public string nroCalle { get; set; }
         public string idBarrio { get; set; }
 
-        public FrmModificarProveedores()
+        public FrmConsultarProveedores()
         {
             InitializeComponent();
         }
@@ -38,32 +38,7 @@ namespace Practico.Formularios.Abm.Proveedores
             cmbTipoDoc.cargar(tipoDoc.EstrCombo());
             cmbBarrio.cargar(barrio.EstrCombo());
             CargarCampos();
-        }
-
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            TratamientosEspeciales tratamiento = new TratamientosEspeciales();
-
-            if (tratamiento.Validar(this.Controls) == TratamientosEspeciales.Validacion.correcta)
-            {
-                Negocios.Proveedores proveedor = new Negocios.Proveedores();
-                if (proveedor.Modificar(cmbTipoDoc.SelectedValue.ToString(),nroDocumento,this.Controls) == Negocios.Proveedores.Respuesta.validacionCorrecta)
-                {
-                    MessageBox.Show("Modificado correctamente!", "Informacion",
-                        buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-                    CargarCampos();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido un error...", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    CargarCampos();
-
-                }
-
-            }
-        }
-
+        } 
         private void CargarCampos()
         {
             DataTable tabla = new DataTable();
@@ -86,6 +61,9 @@ namespace Practico.Formularios.Abm.Proveedores
             this.Close();
         }
 
-        
+        private void btnAceptar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

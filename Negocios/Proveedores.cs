@@ -76,5 +76,24 @@ namespace Practico.Negocios
 
         }
 
+        public Respuesta Eliminar(int tipoDocumento, int nroDocumento)
+        {
+            string sql = "DELETE FROM Proveedores WHERE tipoDocumento =" + tipoDocumento + "AND nroDocumento = " + nroDocumento;
+
+            try
+            {
+                baseDatos.Eliminar(sql);
+                return Respuesta.validacionCorrecta;
+
+            }
+            catch (SqlException exception)
+            {
+                return Respuesta.validacionIncorrecta;
+            }
+
+        }
+
+
+
     }
 }

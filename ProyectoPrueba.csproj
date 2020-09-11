@@ -118,6 +118,18 @@
     <Compile Include="Formularios\Abm\Proveedores\FrmAltaProveedores.Designer.cs">
       <DependentUpon>FrmAltaProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\Proveedores\FrmConsultarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Proveedores\FrmConsultarProveedores.Designer.cs">
+      <DependentUpon>FrmConsultarProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Proveedores\FrmEliminarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Proveedores\FrmEliminarProveedores.Designer.cs">
+      <DependentUpon>FrmEliminarProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Proveedores\FrmModificarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Proveedores\FrmAltaProveedores.resx">
       <DependentUpon>FrmAltaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Proveedores\FrmConsultarProveedores.resx">
+      <DependentUpon>FrmConsultarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Proveedores\FrmEliminarProveedores.resx">
+      <DependentUpon>FrmEliminarProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Proveedores\FrmModificarProveedores.resx">
       <DependentUpon>FrmModificarProveedores.cs</DependentUpon>
