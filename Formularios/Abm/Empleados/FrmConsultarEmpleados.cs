@@ -62,8 +62,9 @@ namespace Practico.Formularios.Abm.Empleados
             Negocios.Empleados empleados = new Negocios.Empleados();
             DataTable tabla = empleados.RecuperarEmpleado(tipoDoc, Int32.Parse(nroDoc));
 
-            tipoDoc = tabla.Rows[0]["tipoDoc"].ToString();
-            nroDoc = tabla.Rows[0]["nroDoc"].ToString();
+            //tipoDoc = tabla.Rows[0]["tipoDoc"].ToString();
+            //nroDoc = tabla.Rows[0]["nroDoc"].ToString();
+
             nombre = tabla.Rows[0]["nombre"].ToString();
             apellido = tabla.Rows[0]["apellido"].ToString();
             calle = tabla.Rows[0]["calle"].ToString();
@@ -75,8 +76,9 @@ namespace Practico.Formularios.Abm.Empleados
             turno = tabla.Rows[0]["idTurno"].ToString();
 
 
-            cmbTipo.SelectedValue = tipoDoc;
+            cmbTipo.SelectedIndex = cmbTipo.FindStringExact(tipoDoc); // para seleccionar el item del combo que coincide con la cadena tipoDoc
             txtNroDoc.Text = nroDoc;
+
             txtNombre.Text = nombre;
             txtApellido.Text = apellido;
             txtCalle.Text = calle;

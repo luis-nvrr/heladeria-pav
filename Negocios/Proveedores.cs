@@ -29,9 +29,10 @@ namespace Practico.Negocios
             return tabla;
         }
 
-        public DataTable RecuperarProoveedor(int tipoDocumento, int nroDocumento)
+        public DataTable RecuperarProoveedor(string tipoDocumento, int nroDocumento)
         {
-            string sql = "SELECT * FROM Proveedores WHERE tipoDocumento = " + tipoDocumento + "AND nroDocumento = " + nroDocumento;
+            string sql = "SELECT P.* FROM Proveedores P INNER JOIN TiposDocumento TD ON (P.tipoDocumento = TD.tipoDocumento)" +
+                         " WHERE descripcion LIKE '" + tipoDocumento + "' AND nroDocumento = " + nroDocumento;
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
@@ -60,11 +61,11 @@ namespace Practico.Negocios
 
         }
 
-        public Respuesta Modificar(string tipoDocumento, string nroDocumento, Control.ControlCollection controles)
+        public Respuesta Modificar(int tipoDocumento, string nroDocumento, Control.ControlCollection controles)
         {
             try
             {
-                baseDatos.ModificarAutomatizado("Proveedores", " tipoDocumento = '" + tipoDocumento + "' AND nroDocumento = '" + nroDocumento + "'", controles);
+                baseDatos.ModificarAutomatizado("Proveedores", " tipoDocumento  =" + tipoDocumento + " AND nroDocumento = '" + nroDocumento + "'", controles);
                 return Respuesta.validacionCorrecta;
 
             }
@@ -78,7 +79,7 @@ namespace Practico.Negocios
 
         public Respuesta Eliminar(int tipoDocumento, int nroDocumento)
         {
-            string sql = "DELETE FROM Proveedores WHERE tipoDocumento =" + tipoDocumento + "AND nroDocumento = " + nroDocumento;
+            string sql = "DELETE FROM Proveedores WHERE tipoDocumento LIKE '" + tipoDocumento + "' AND nroDocumento = " + nroDocumento;
 
             try
             {

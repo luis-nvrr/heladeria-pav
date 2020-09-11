@@ -47,7 +47,7 @@ namespace Practico.Formularios.Abm.Proveedores
             if (tratamiento.Validar(this.Controls) == TratamientosEspeciales.Validacion.correcta)
             {
                 Negocios.Proveedores proveedor = new Negocios.Proveedores();
-                if (proveedor.Modificar(cmbTipoDoc.SelectedValue.ToString(),nroDocumento,this.Controls) == Negocios.Proveedores.Respuesta.validacionCorrecta)
+                if (proveedor.Modificar(Int32.Parse(cmbTipoDoc.SelectedValue.ToString()), nroDocumento,this.Controls) == Negocios.Proveedores.Respuesta.validacionCorrecta)
                 {
                     MessageBox.Show("Modificado correctamente!", "Informacion",
                         buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
@@ -67,9 +67,11 @@ namespace Practico.Formularios.Abm.Proveedores
         private void CargarCampos()
         {
             DataTable tabla = new DataTable();
-            tabla = proveedor.RecuperarProoveedor(Int32.Parse(cmbTipoDoc.SelectedValue.ToString()), Int32.Parse(nroDocumento));
-            cmbTipoDoc.SelectedValue = int.Parse(tabla.Rows[0]["tipoDocumento"].ToString());
+            tabla = proveedor.RecuperarProoveedor(tipoDocumento, Int32.Parse(nroDocumento));
+
+            cmbTipoDoc.SelectedIndex = cmbTipoDoc.FindStringExact(tipoDocumento);
             txtNroDoc.Text = tabla.Rows[0]["nroDocumento"].ToString();
+
             txtRazónSocial.Text = tabla.Rows[0]["razonSocial"].ToString();
             txtEmail.Text = tabla.Rows[0]["mail"].ToString();
             txtTelCel.Text = tabla.Rows[0]["telCelular"].ToString();

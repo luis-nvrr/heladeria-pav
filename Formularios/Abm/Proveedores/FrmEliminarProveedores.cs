@@ -42,7 +42,7 @@ namespace Practico.Formularios.Abm.Proveedores
         private void CargarCampos()
         {
             DataTable tabla = new DataTable();
-            tabla = proveedor.RecuperarProoveedor(Int32.Parse(cmbTipoDoc.SelectedValue.ToString()), Int32.Parse(nroDocumento));
+            tabla = proveedor.RecuperarProoveedor(tipoDocumento, Int32.Parse(nroDocumento));
             cmbTipoDoc.SelectedValue = int.Parse(tabla.Rows[0]["tipoDocumento"].ToString());
             txtNroDoc.Text = tabla.Rows[0]["nroDocumento"].ToString();
             txtRazónSocial.Text = tabla.Rows[0]["razonSocial"].ToString();

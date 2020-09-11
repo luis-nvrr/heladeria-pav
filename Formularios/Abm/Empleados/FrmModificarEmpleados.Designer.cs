@@ -66,7 +66,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(103, 442);
+            this.btnCancelar.Location = new System.Drawing.Point(206, 421);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 40);
@@ -85,7 +85,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAceptar.Location = new System.Drawing.Point(214, 442);
+            this.btnAceptar.Location = new System.Drawing.Point(317, 421);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(103, 40);
@@ -100,7 +100,7 @@
             this.lblApellido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblApellido.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblApellido.Location = new System.Drawing.Point(114, 206);
+            this.lblApellido.Location = new System.Drawing.Point(166, 186);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(69, 19);
             this.lblApellido.TabIndex = 31;
@@ -112,7 +112,7 @@
             this.lblNumeroD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNumeroD.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNumeroD.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNumeroD.Location = new System.Drawing.Point(7, 146);
+            this.lblNumeroD.Location = new System.Drawing.Point(59, 126);
             this.lblNumeroD.Name = "lblNumeroD";
             this.lblNumeroD.Size = new System.Drawing.Size(176, 19);
             this.lblNumeroD.TabIndex = 30;
@@ -124,7 +124,7 @@
             this.lblTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTipo.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblTipo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTipo.Location = new System.Drawing.Point(34, 116);
+            this.lblTipo.Location = new System.Drawing.Point(86, 96);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(149, 19);
             this.lblTipo.TabIndex = 29;
@@ -148,7 +148,7 @@
             this.lblNumero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNumero.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNumero.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNumero.Location = new System.Drawing.Point(329, 236);
+            this.lblNumero.Location = new System.Drawing.Point(409, 216);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(67, 19);
             this.lblNumero.TabIndex = 37;
@@ -160,7 +160,7 @@
             this.lblCalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCalle.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblCalle.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCalle.Location = new System.Drawing.Point(134, 236);
+            this.lblCalle.Location = new System.Drawing.Point(186, 216);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(49, 19);
             this.lblCalle.TabIndex = 36;
@@ -172,7 +172,7 @@
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombre.Location = new System.Drawing.Point(115, 176);
+            this.lblNombre.Location = new System.Drawing.Point(167, 156);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(68, 19);
             this.lblNombre.TabIndex = 35;
@@ -184,7 +184,7 @@
             this.lblFechaNa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFechaNa.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblFechaNa.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblFechaNa.Location = new System.Drawing.Point(19, 299);
+            this.lblFechaNa.Location = new System.Drawing.Point(71, 279);
             this.lblFechaNa.Name = "lblFechaNa";
             this.lblFechaNa.Size = new System.Drawing.Size(164, 19);
             this.lblFechaNa.TabIndex = 39;
@@ -192,14 +192,14 @@
             // 
             // pckNacimiento
             // 
-            this.pckNacimiento.Location = new System.Drawing.Point(190, 293);
+            this.pckNacimiento.Location = new System.Drawing.Point(242, 273);
             this.pckNacimiento.Name = "pckNacimiento";
             this.pckNacimiento.Size = new System.Drawing.Size(176, 24);
             this.pckNacimiento.TabIndex = 7;
             // 
             // pckIngreso
             // 
-            this.pckIngreso.Location = new System.Drawing.Point(190, 323);
+            this.pckIngreso.Location = new System.Drawing.Point(242, 303);
             this.pckIngreso.Name = "pckIngreso";
             this.pckIngreso.Size = new System.Drawing.Size(176, 24);
             this.pckIngreso.TabIndex = 8;
@@ -210,7 +210,7 @@
             this.lblFechaIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFechaIn.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblFechaIn.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblFechaIn.Location = new System.Drawing.Point(51, 329);
+            this.lblFechaIn.Location = new System.Drawing.Point(103, 309);
             this.lblFechaIn.Name = "lblFechaIn";
             this.lblFechaIn.Size = new System.Drawing.Size(132, 19);
             this.lblFechaIn.TabIndex = 41;
@@ -222,7 +222,7 @@
             this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUsuario.Location = new System.Drawing.Point(121, 359);
+            this.lblUsuario.Location = new System.Drawing.Point(173, 339);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(62, 19);
             this.lblUsuario.TabIndex = 43;
@@ -234,7 +234,7 @@
             this.lblBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblBarrio.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblBarrio.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBarrio.Location = new System.Drawing.Point(132, 267);
+            this.lblBarrio.Location = new System.Drawing.Point(184, 247);
             this.lblBarrio.Name = "lblBarrio";
             this.lblBarrio.Size = new System.Drawing.Size(51, 19);
             this.lblBarrio.TabIndex = 45;
@@ -245,10 +245,10 @@
             this.cmbBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbBarrio.FormattingEnabled = true;
-            this.cmbBarrio.Location = new System.Drawing.Point(190, 261);
+            this.cmbBarrio.Location = new System.Drawing.Point(242, 241);
             this.cmbBarrio.Name = "cmbBarrio";
             this.cmbBarrio.PpDisplay = "nombre";
-            this.cmbBarrio.PpMensajeError = null;
+            this.cmbBarrio.PpMensajeError = "Seleccione barrio!";
             this.cmbBarrio.PpNombreCampo = null;
             this.cmbBarrio.PpNombreTabla = null;
             this.cmbBarrio.PpTabla = "Barrios";
@@ -262,10 +262,10 @@
             this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.Location = new System.Drawing.Point(190, 353);
+            this.cmbUsuario.Location = new System.Drawing.Point(242, 333);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.PpDisplay = "nombreUsuario";
-            this.cmbUsuario.PpMensajeError = null;
+            this.cmbUsuario.PpMensajeError = "Seleccione usuario!";
             this.cmbUsuario.PpNombreCampo = null;
             this.cmbUsuario.PpNombreTabla = null;
             this.cmbUsuario.PpTabla = "Usuarios";
@@ -280,10 +280,10 @@
             this.cmbTipo.Enabled = false;
             this.cmbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(190, 110);
+            this.cmbTipo.Location = new System.Drawing.Point(242, 90);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.PpDisplay = "descripcion";
-            this.cmbTipo.PpMensajeError = null;
+            this.cmbTipo.PpMensajeError = "Seleccione un tipo de documento!";
             this.cmbTipo.PpNombreCampo = null;
             this.cmbTipo.PpNombreTabla = null;
             this.cmbTipo.PpTabla = "TiposDocumento";
@@ -295,9 +295,9 @@
             // txtNroCalle
             // 
             this.txtNroCalle.BackColor = System.Drawing.Color.White;
-            this.txtNroCalle.Location = new System.Drawing.Point(396, 231);
+            this.txtNroCalle.Location = new System.Drawing.Point(476, 211);
             this.txtNroCalle.Name = "txtNroCalle";
-            this.txtNroCalle.PpMensajeError = "No se ingresó cantidad en stock!";
+            this.txtNroCalle.PpMensajeError = "Ingrese numero!";
             this.txtNroCalle.PpNombreCampo = null;
             this.txtNroCalle.PpNombreTabla = null;
             this.txtNroCalle.PpValidable = true;
@@ -307,46 +307,46 @@
             // txtCalle
             // 
             this.txtCalle.BackColor = System.Drawing.Color.White;
-            this.txtCalle.Location = new System.Drawing.Point(190, 231);
+            this.txtCalle.Location = new System.Drawing.Point(242, 211);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.PpMensajeError = "No ingresó Precio!";
+            this.txtCalle.PpMensajeError = "Ingrese calle!";
             this.txtCalle.PpNombreCampo = null;
             this.txtCalle.PpNombreTabla = null;
             this.txtCalle.PpValidable = true;
-            this.txtCalle.Size = new System.Drawing.Size(124, 24);
+            this.txtCalle.Size = new System.Drawing.Size(156, 24);
             this.txtCalle.TabIndex = 4;
             // 
             // txtApellido
             // 
             this.txtApellido.BackColor = System.Drawing.Color.White;
-            this.txtApellido.Location = new System.Drawing.Point(190, 201);
+            this.txtApellido.Location = new System.Drawing.Point(242, 181);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.PpMensajeError = "No ingresó nombre!";
+            this.txtApellido.PpMensajeError = "Ingrese apellido!";
             this.txtApellido.PpNombreCampo = null;
             this.txtApellido.PpNombreTabla = null;
             this.txtApellido.PpValidable = true;
-            this.txtApellido.Size = new System.Drawing.Size(124, 24);
+            this.txtApellido.Size = new System.Drawing.Size(156, 24);
             this.txtApellido.TabIndex = 3;
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(190, 171);
+            this.txtNombre.Location = new System.Drawing.Point(242, 151);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PpMensajeError = "No se ingresó cantidad en stock!";
+            this.txtNombre.PpMensajeError = "Ingrese nombre!";
             this.txtNombre.PpNombreCampo = null;
             this.txtNombre.PpNombreTabla = null;
             this.txtNombre.PpValidable = true;
-            this.txtNombre.Size = new System.Drawing.Size(124, 24);
+            this.txtNombre.Size = new System.Drawing.Size(156, 24);
             this.txtNombre.TabIndex = 2;
             // 
             // txtNroDoc
             // 
             this.txtNroDoc.BackColor = System.Drawing.Color.White;
             this.txtNroDoc.Enabled = false;
-            this.txtNroDoc.Location = new System.Drawing.Point(190, 141);
+            this.txtNroDoc.Location = new System.Drawing.Point(242, 121);
             this.txtNroDoc.Name = "txtNroDoc";
-            this.txtNroDoc.PpMensajeError = "No ingresó Precio!";
+            this.txtNroDoc.PpMensajeError = "Ingrese un numero de documento!";
             this.txtNroDoc.PpNombreCampo = null;
             this.txtNroDoc.PpNombreTabla = null;
             this.txtNroDoc.PpValidable = true;
@@ -358,10 +358,10 @@
             this.cmbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbTurno.FormattingEnabled = true;
-            this.cmbTurno.Location = new System.Drawing.Point(190, 384);
+            this.cmbTurno.Location = new System.Drawing.Point(242, 364);
             this.cmbTurno.Name = "cmbTurno";
             this.cmbTurno.PpDisplay = "nombre";
-            this.cmbTurno.PpMensajeError = null;
+            this.cmbTurno.PpMensajeError = "Seleccione turno!";
             this.cmbTurno.PpNombreCampo = null;
             this.cmbTurno.PpNombreTabla = null;
             this.cmbTurno.PpTabla = "Turnos";
@@ -376,7 +376,7 @@
             this.lblTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTurno.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblTurno.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTurno.Location = new System.Drawing.Point(132, 390);
+            this.lblTurno.Location = new System.Drawing.Point(184, 370);
             this.lblTurno.Name = "lblTurno";
             this.lblTurno.Size = new System.Drawing.Size(49, 19);
             this.lblTurno.TabIndex = 47;
@@ -387,7 +387,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(544, 495);
+            this.ClientSize = new System.Drawing.Size(634, 495);
             this.Controls.Add(this.cmbTurno);
             this.Controls.Add(this.lblTurno);
             this.Controls.Add(this.cmbBarrio);

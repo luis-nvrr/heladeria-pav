@@ -220,7 +220,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmEliminarHelados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consultar Helado";
+            this.Text = "Eliminar Helado";
             this.Load += new System.EventHandler(this.FrmEliminarHelados_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
