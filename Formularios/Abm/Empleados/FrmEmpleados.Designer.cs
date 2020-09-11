@@ -32,23 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblEmpleados = new System.Windows.Forms.Label();
             this.chkTodos = new System.Windows.Forms.CheckBox();
-            this.txtNombre = new Practico.Clases.TextBox01();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEscritorio = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtApellido = new Practico.Clases.TextBox01();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbBarrio = new Practico.Clases.ComboBox01();
-            this.cmbTurno = new Practico.Clases.ComboBox01();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Turno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -57,6 +47,16 @@
             this.pnlBuscar = new System.Windows.Forms.Panel();
             this.btnLimpiarTurno = new System.Windows.Forms.Button();
             this.btnLimpiarBarrio = new System.Windows.Forms.Button();
+            this.cmbBarrio = new Practico.Clases.ComboBox01();
+            this.txtNombre = new Practico.Clases.TextBox01();
+            this.txtApellido = new Practico.Clases.TextBox01();
+            this.cmbTurno = new Practico.Clases.ComboBox01();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Turno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlBuscar.SuspendLayout();
@@ -77,7 +77,7 @@
             // 
             // chkTodos
             // 
-            this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.chkTodos.AutoSize = true;
             this.chkTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkTodos.ForeColor = System.Drawing.SystemColors.Control;
@@ -89,21 +89,9 @@
             this.chkTodos.UseVisualStyleBackColor = true;
             this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
             // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(110, 30);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PpMensajeError = "No ingresó nombre!";
-            this.txtNombre.PpNombreCampo = null;
-            this.txtNombre.PpNombreTabla = null;
-            this.txtNombre.PpValidable = true;
-            this.txtNombre.Size = new System.Drawing.Size(124, 24);
-            this.txtNombre.TabIndex = 1;
-            // 
             // btnBuscar
             // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
@@ -152,18 +140,6 @@
             this.lblNombre.TabIndex = 11;
             this.lblNombre.Text = "Nombre:";
             // 
-            // txtApellido
-            // 
-            this.txtApellido.BackColor = System.Drawing.Color.White;
-            this.txtApellido.Location = new System.Drawing.Point(110, 60);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.PpMensajeError = "No ingresó nombre!";
-            this.txtApellido.PpNombreCampo = null;
-            this.txtApellido.PpNombreTabla = null;
-            this.txtApellido.PpValidable = true;
-            this.txtApellido.Size = new System.Drawing.Size(124, 24);
-            this.txtApellido.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -199,41 +175,6 @@
             this.label4.Size = new System.Drawing.Size(49, 19);
             this.label4.TabIndex = 18;
             this.label4.Text = "Turno:";
-            // 
-            // cmbBarrio
-            // 
-            this.cmbBarrio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbBarrio.FormattingEnabled = true;
-            this.cmbBarrio.Location = new System.Drawing.Point(110, 122);
-            this.cmbBarrio.Name = "cmbBarrio";
-            this.cmbBarrio.PpDisplay = "nombre";
-            this.cmbBarrio.PpMensajeError = null;
-            this.cmbBarrio.PpNombreCampo = null;
-            this.cmbBarrio.PpNombreTabla = null;
-            this.cmbBarrio.PpTabla = "Barrios";
-            this.cmbBarrio.PpValidable = true;
-            this.cmbBarrio.PpValue = "idBarrio";
-            this.cmbBarrio.Size = new System.Drawing.Size(123, 25);
-            this.cmbBarrio.TabIndex = 4;
-            // 
-            // cmbTurno
-            // 
-            this.cmbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTurno.FormattingEnabled = true;
-            this.cmbTurno.Location = new System.Drawing.Point(110, 91);
-            this.cmbTurno.Name = "cmbTurno";
-            this.cmbTurno.PpDisplay = "nombre";
-            this.cmbTurno.PpMensajeError = null;
-            this.cmbTurno.PpNombreCampo = null;
-            this.cmbTurno.PpNombreTabla = null;
-            this.cmbTurno.PpTabla = "Turnos";
-            this.cmbTurno.PpValidable = true;
-            this.cmbTurno.PpValue = "idTurno";
-            this.cmbTurno.Size = new System.Drawing.Size(123, 25);
-            this.cmbTurno.TabIndex = 3;
             // 
             // grdEmpleados
             // 
@@ -274,8 +215,211 @@
             this.grdEmpleados.Name = "grdEmpleados";
             this.grdEmpleados.ReadOnly = true;
             this.grdEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdEmpleados.Size = new System.Drawing.Size(730, 241);
+            this.grdEmpleados.Size = new System.Drawing.Size(745, 201);
             this.grdEmpleados.TabIndex = 20;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.btnModificar);
+            this.panel1.Controls.Add(this.btnConsultar);
+            this.panel1.Controls.Add(this.btnNuevo);
+            this.panel1.Location = new System.Drawing.Point(50, 546);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(682, 53);
+            this.panel1.TabIndex = 21;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEliminar.Location = new System.Drawing.Point(495, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(149, 40);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar Empleado";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnModificar.Location = new System.Drawing.Point(338, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(149, 40);
+            this.btnModificar.TabIndex = 1;
+            this.btnModificar.Text = "Modificar Empleado";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnConsultar.Location = new System.Drawing.Point(181, 4);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(149, 40);
+            this.btnConsultar.TabIndex = 0;
+            this.btnConsultar.Text = "Consultar Empleado";
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnNuevo.Location = new System.Drawing.Point(24, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(149, 40);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "Nuevo Empleado";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // pnlBuscar
+            // 
+            this.pnlBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pnlBuscar.Controls.Add(this.lblNombre);
+            this.pnlBuscar.Controls.Add(this.cmbBarrio);
+            this.pnlBuscar.Controls.Add(this.txtNombre);
+            this.pnlBuscar.Controls.Add(this.label4);
+            this.pnlBuscar.Controls.Add(this.label1);
+            this.pnlBuscar.Controls.Add(this.label3);
+            this.pnlBuscar.Controls.Add(this.txtApellido);
+            this.pnlBuscar.Controls.Add(this.cmbTurno);
+            this.pnlBuscar.Location = new System.Drawing.Point(74, 79);
+            this.pnlBuscar.Name = "pnlBuscar";
+            this.pnlBuscar.Size = new System.Drawing.Size(250, 158);
+            this.pnlBuscar.TabIndex = 0;
+            // 
+            // btnLimpiarTurno
+            // 
+            this.btnLimpiarTurno.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnLimpiarTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnLimpiarTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiarTurno.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarTurno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnLimpiarTurno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
+            this.btnLimpiarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarTurno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarTurno.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLimpiarTurno.Location = new System.Drawing.Point(333, 171);
+            this.btnLimpiarTurno.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnLimpiarTurno.Name = "btnLimpiarTurno";
+            this.btnLimpiarTurno.Size = new System.Drawing.Size(70, 24);
+            this.btnLimpiarTurno.TabIndex = 22;
+            this.btnLimpiarTurno.Text = "Limpiar";
+            this.btnLimpiarTurno.UseVisualStyleBackColor = false;
+            this.btnLimpiarTurno.Click += new System.EventHandler(this.btnLimpiarTurno_Click);
+            // 
+            // btnLimpiarBarrio
+            // 
+            this.btnLimpiarBarrio.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnLimpiarBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnLimpiarBarrio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiarBarrio.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarBarrio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnLimpiarBarrio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
+            this.btnLimpiarBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarBarrio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarBarrio.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLimpiarBarrio.Location = new System.Drawing.Point(333, 203);
+            this.btnLimpiarBarrio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnLimpiarBarrio.Name = "btnLimpiarBarrio";
+            this.btnLimpiarBarrio.Size = new System.Drawing.Size(70, 24);
+            this.btnLimpiarBarrio.TabIndex = 22;
+            this.btnLimpiarBarrio.Text = "Limpiar";
+            this.btnLimpiarBarrio.UseVisualStyleBackColor = false;
+            this.btnLimpiarBarrio.Click += new System.EventHandler(this.btnLimpiarBarrio_Click);
+            // 
+            // cmbBarrio
+            // 
+            this.cmbBarrio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbBarrio.FormattingEnabled = true;
+            this.cmbBarrio.Location = new System.Drawing.Point(110, 122);
+            this.cmbBarrio.Name = "cmbBarrio";
+            this.cmbBarrio.PpDisplay = "nombre";
+            this.cmbBarrio.PpMensajeError = null;
+            this.cmbBarrio.PpNombreCampo = null;
+            this.cmbBarrio.PpNombreTabla = null;
+            this.cmbBarrio.PpTabla = "Barrios";
+            this.cmbBarrio.PpValidable = true;
+            this.cmbBarrio.PpValue = "idBarrio";
+            this.cmbBarrio.Size = new System.Drawing.Size(123, 25);
+            this.cmbBarrio.TabIndex = 4;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.Location = new System.Drawing.Point(110, 30);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PpMensajeError = "No ingresó nombre!";
+            this.txtNombre.PpNombreCampo = null;
+            this.txtNombre.PpNombreTabla = null;
+            this.txtNombre.PpValidable = true;
+            this.txtNombre.Size = new System.Drawing.Size(124, 24);
+            this.txtNombre.TabIndex = 1;
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.BackColor = System.Drawing.Color.White;
+            this.txtApellido.Location = new System.Drawing.Point(110, 60);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.PpMensajeError = "No ingresó nombre!";
+            this.txtApellido.PpNombreCampo = null;
+            this.txtApellido.PpNombreTabla = null;
+            this.txtApellido.PpValidable = true;
+            this.txtApellido.Size = new System.Drawing.Size(124, 24);
+            this.txtApellido.TabIndex = 2;
+            // 
+            // cmbTurno
+            // 
+            this.cmbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTurno.FormattingEnabled = true;
+            this.cmbTurno.Location = new System.Drawing.Point(110, 91);
+            this.cmbTurno.Name = "cmbTurno";
+            this.cmbTurno.PpDisplay = "nombre";
+            this.cmbTurno.PpMensajeError = null;
+            this.cmbTurno.PpNombreCampo = null;
+            this.cmbTurno.PpNombreTabla = null;
+            this.cmbTurno.PpTabla = "Turnos";
+            this.cmbTurno.PpValidable = true;
+            this.cmbTurno.PpValue = "idTurno";
+            this.cmbTurno.Size = new System.Drawing.Size(123, 25);
+            this.cmbTurno.TabIndex = 3;
             // 
             // Tipo
             // 
@@ -293,7 +437,6 @@
             this.Documento.ReadOnly = true;
             this.Documento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Documento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Documento.Width = 150;
             // 
             // Nombre
             // 
@@ -320,7 +463,6 @@
             this.Turno.ReadOnly = true;
             this.Turno.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Turno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Turno.Width = 75;
             // 
             // Barrio
             // 
@@ -329,150 +471,7 @@
             this.Barrio.ReadOnly = true;
             this.Barrio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Barrio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Barrio.Width = 75;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.btnEliminar);
-            this.panel1.Controls.Add(this.btnModificar);
-            this.panel1.Controls.Add(this.btnConsultar);
-            this.panel1.Controls.Add(this.btnNuevo);
-            this.panel1.Location = new System.Drawing.Point(38, 586);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(675, 76);
-            this.panel1.TabIndex = 21;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEliminar.Location = new System.Drawing.Point(495, 17);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 40);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar Empleado";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnModificar.Location = new System.Drawing.Point(338, 17);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(149, 40);
-            this.btnModificar.TabIndex = 1;
-            this.btnModificar.Text = "Modificar Empleado";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConsultar.Location = new System.Drawing.Point(181, 17);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(149, 40);
-            this.btnConsultar.TabIndex = 0;
-            this.btnConsultar.Text = "Consultar Empleado";
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnNuevo.Location = new System.Drawing.Point(24, 17);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(149, 40);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "Nuevo Empleado";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // pnlBuscar
-            // 
-            this.pnlBuscar.Controls.Add(this.lblNombre);
-            this.pnlBuscar.Controls.Add(this.cmbBarrio);
-            this.pnlBuscar.Controls.Add(this.txtNombre);
-            this.pnlBuscar.Controls.Add(this.label4);
-            this.pnlBuscar.Controls.Add(this.label1);
-            this.pnlBuscar.Controls.Add(this.label3);
-            this.pnlBuscar.Controls.Add(this.txtApellido);
-            this.pnlBuscar.Controls.Add(this.cmbTurno);
-            this.pnlBuscar.Location = new System.Drawing.Point(74, 79);
-            this.pnlBuscar.Name = "pnlBuscar";
-            this.pnlBuscar.Size = new System.Drawing.Size(250, 158);
-            this.pnlBuscar.TabIndex = 0;
-            // 
-            // btnLimpiarTurno
-            // 
-            this.btnLimpiarTurno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLimpiarTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnLimpiarTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLimpiarTurno.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarTurno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnLimpiarTurno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
-            this.btnLimpiarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarTurno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarTurno.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLimpiarTurno.Location = new System.Drawing.Point(333, 171);
-            this.btnLimpiarTurno.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnLimpiarTurno.Name = "btnLimpiarTurno";
-            this.btnLimpiarTurno.Size = new System.Drawing.Size(70, 24);
-            this.btnLimpiarTurno.TabIndex = 22;
-            this.btnLimpiarTurno.Text = "Limpiar";
-            this.btnLimpiarTurno.UseVisualStyleBackColor = false;
-            this.btnLimpiarTurno.Click += new System.EventHandler(this.btnLimpiarTurno_Click);
-            // 
-            // btnLimpiarBarrio
-            // 
-            this.btnLimpiarBarrio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLimpiarBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnLimpiarBarrio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLimpiarBarrio.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarBarrio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnLimpiarBarrio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
-            this.btnLimpiarBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarBarrio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarBarrio.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLimpiarBarrio.Location = new System.Drawing.Point(333, 203);
-            this.btnLimpiarBarrio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnLimpiarBarrio.Name = "btnLimpiarBarrio";
-            this.btnLimpiarBarrio.Size = new System.Drawing.Size(70, 24);
-            this.btnLimpiarBarrio.TabIndex = 22;
-            this.btnLimpiarBarrio.Text = "Limpiar";
-            this.btnLimpiarBarrio.UseVisualStyleBackColor = false;
-            this.btnLimpiarBarrio.Click += new System.EventHandler(this.btnLimpiarBarrio_Click);
+            this.Barrio.Width = 150;
             // 
             // FrmEmpleados
             // 
@@ -480,7 +479,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(807, 749);
+            this.ClientSize = new System.Drawing.Size(960, 749);
             this.Controls.Add(this.btnLimpiarBarrio);
             this.Controls.Add(this.btnLimpiarTurno);
             this.Controls.Add(this.pnlBuscar);
@@ -525,13 +524,13 @@
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Panel pnlBuscar;
+        private System.Windows.Forms.Button btnLimpiarTurno;
+        private System.Windows.Forms.Button btnLimpiarBarrio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Turno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
-        private System.Windows.Forms.Button btnLimpiarTurno;
-        private System.Windows.Forms.Button btnLimpiarBarrio;
     }
 }

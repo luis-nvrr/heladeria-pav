@@ -60,7 +60,7 @@ namespace Practico.Formularios.Abm.Empleados
         private void CargarCampos()
         {
             Negocios.Empleados empleados = new Negocios.Empleados();
-            DataTable tabla = empleados.RecuperarEmpleado(Int32.Parse(tipoDoc), Int32.Parse(nroDoc));
+            DataTable tabla = empleados.RecuperarEmpleado(tipoDoc, Int32.Parse(nroDoc));
 
             tipoDoc = tabla.Rows[0]["tipoDoc"].ToString();
             nroDoc = tabla.Rows[0]["nroDoc"].ToString();

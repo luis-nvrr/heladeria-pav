@@ -93,12 +93,12 @@ namespace Practico.Formularios.Abm.Empleados
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 grdEmpleados.Rows.Add();
-                grdEmpleados.Rows[i].Cells[0].Value = tabla.Rows[i]["tipoDoc"].ToString();
+                grdEmpleados.Rows[i].Cells[0].Value = tabla.Rows[i]["descripcion"].ToString();
                 grdEmpleados.Rows[i].Cells[1].Value = tabla.Rows[i]["nroDoc"].ToString();
                 grdEmpleados.Rows[i].Cells[2].Value = tabla.Rows[i]["nombre"].ToString();
                 grdEmpleados.Rows[i].Cells[3].Value = tabla.Rows[i]["apellido"].ToString();
-                grdEmpleados.Rows[i].Cells[4].Value = tabla.Rows[i]["idTurno"].ToString();
-                grdEmpleados.Rows[i].Cells[5].Value = tabla.Rows[i]["idBarrio"].ToString();
+                grdEmpleados.Rows[i].Cells[4].Value = tabla.Rows[i]["nombreTurno"].ToString();
+                grdEmpleados.Rows[i].Cells[5].Value = tabla.Rows[i]["nombreBarrio"].ToString();
             }
         }
 
@@ -152,7 +152,7 @@ namespace Practico.Formularios.Abm.Empleados
                     string nroDoc = grdEmpleados[1, indiceFilaSeleccionada].Value.ToString();
 
                     FrmModificarEmpleados modificarEmpleados = new FrmModificarEmpleados();
-                    modificarEmpleados.tipoDoc = tipoDoc;
+                    modificarEmpleados.tipoDoc = tipoDoc;  // tipoDoc es literalmente el texto del tipo, NO el codigo
                     modificarEmpleados.nroDoc = nroDoc;
                     modificarEmpleados.ShowDialog();
 
@@ -184,7 +184,7 @@ namespace Practico.Formularios.Abm.Empleados
                     string nroDoc = grdEmpleados[1, indiceFilaSeleccionada].Value.ToString();
 
                     FrmConsultarEmpleados consultarEmpleados = new FrmConsultarEmpleados();
-                    consultarEmpleados.tipoDoc = tipoDoc;
+                    consultarEmpleados.tipoDoc = tipoDoc; // tipoDoc es literalmente el texto del tipo, NO el codigo
                     consultarEmpleados.nroDoc = nroDoc;
 
                     consultarEmpleados.ShowDialog();
@@ -213,7 +213,7 @@ namespace Practico.Formularios.Abm.Empleados
                     string nroDoc = grdEmpleados[1, indiceFilaSeleccionada].Value.ToString();
 
                     FrmEliminarEmpleados eliminarEmpleados = new FrmEliminarEmpleados();
-                    eliminarEmpleados.tipoDoc = tipoDoc; 
+                    eliminarEmpleados.tipoDoc = tipoDoc;  // tipoDoc es literalmente el texto del tipo, NO el codigo
                     eliminarEmpleados.nroDoc = nroDoc;
 
                     eliminarEmpleados.ShowDialog();
