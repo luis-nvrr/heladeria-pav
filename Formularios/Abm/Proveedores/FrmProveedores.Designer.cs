@@ -227,6 +227,7 @@
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar Usuario";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnConsultar
             // 

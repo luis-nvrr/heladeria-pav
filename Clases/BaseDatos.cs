@@ -22,8 +22,8 @@ namespace Practico.Clases
 
         private void Conectar()  // metodo para conectar
         {
-            //conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //NICO
-            conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //LUIS
+            conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //NICO
+            //conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //LUIS
             conexion.Open();
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
@@ -60,7 +60,18 @@ namespace Practico.Clases
                 throw exception;
             }
             finally{ Desconectar(); }
+            
+
         }
+
+        //public string RecuperarId()
+        //{
+        //    DataTable tabla = new DataTable();
+        //    tabla = Consulta("SELECTE @@Identity");
+        //    MessageBox.Show(tabla.Rows[0][0].ToString());
+        //    return tabla.Rows[0][0].ToString();
+        //}
+
 
         public void InsertarAutomatizado(string NombreTabla, Control.ControlCollection controles)
         {
@@ -80,6 +91,26 @@ namespace Practico.Clases
             sqlInsertar = sqlInsertar + ")" + sqlDatos + ")";
             sqlInsertar = sqlInsertar.Replace("(,", "(");
             Insertar(sqlInsertar);
+        }
+
+        public void ModificarAutomatizado(string NombreTabla, string restriccion, Control.ControlCollection controles)
+        {
+            string sqlModificar = "UPDATE " + NombreTabla.Trim() + " SET ";
+
+            DataTable Estructura = new DataTable();
+            Estructura = EstructuraTabla(NombreTabla);
+            for (int i = 0; i < Estructura.Columns.Count; i++)
+            {
+                string ValorCampo = BuscarValorCampo(Estructura.Columns[i].Caption, NombreTabla, controles);
+                if (ValorCampo != "")
+                {
+                    sqlModificar += ", " + Estructura.Columns[i].Caption + " = "
+                                    + FormatearDato(ValorCampo, Estructura.Columns[i].DataType.Name);
+                }
+            }
+            sqlModificar = sqlModificar + "WHERE" + restriccion;
+            sqlModificar = sqlModificar.Replace("SET ,", "SET ");
+            Actualizar(sqlModificar);
         }
 
         public void Eliminar(string sql)

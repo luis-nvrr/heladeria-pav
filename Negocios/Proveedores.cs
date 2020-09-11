@@ -29,6 +29,13 @@ namespace Practico.Negocios
             return tabla;
         }
 
+        public DataTable RecuperarProoveedor(int tipoDocumento, int nroDocumento)
+        {
+            string sql = "SELECT * FROM Proveedores WHERE tipoDocumento = " + tipoDocumento + "AND nroDocumento = " + nroDocumento;
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
 
         public DataTable BuscarProveedor(string razonSocial)
         {
@@ -42,6 +49,22 @@ namespace Practico.Negocios
             try
             {
                 baseDatos.InsertarAutomatizado("Proveedores", controles);
+                return Respuesta.validacionCorrecta;
+
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.ToString());
+                return Respuesta.validacionIncorrecta;
+            }
+
+        }
+
+        public Respuesta Modificar(string tipoDocumento, string nroDocumento, Control.ControlCollection controles)
+        {
+            try
+            {
+                baseDatos.ModificarAutomatizado("Proveedores", " tipoDocumento = '" + tipoDocumento + "' AND nroDocumento = '" + nroDocumento + "'", controles);
                 return Respuesta.validacionCorrecta;
 
             }

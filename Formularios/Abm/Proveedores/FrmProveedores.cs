@@ -70,12 +70,43 @@ namespace Practico.Formularios.Abm.Proveedores
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            FrmAltaProveedores altaProveedores = new FrmAltaProveedores();
+            FrmModificarProveedores altaProveedores = new FrmModificarProveedores();
             altaProveedores.ShowDialog();
 
             DataTable tabla = proveedores.TodosLosProveedores();
             CargarGrilla(tabla);
             altaProveedores.Close();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (grdProveedores.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int indiceFilaSeleccionada = grdProveedores.SelectedRows[0].Index;
+                    string tipoDoc = grdProveedores[0, indiceFilaSeleccionada].Value.ToString();
+                    string nroDoc = grdProveedores[1, indiceFilaSeleccionada].Value.ToString();
+
+                    FrmModificarProveedores modificarEmpleados = new FrmModificarProveedores();
+                    modificarEmpleados.tipoDocumento = tipoDoc;
+                    modificarEmpleados.nroDocumento = nroDoc;
+                    modificarEmpleados.ShowDialog();
+
+                    DataTable tabla = proveedores.TodosLosProveedores();
+                    CargarGrilla(tabla);
+                    modificarEmpleados.Close();
+                }
+                else
+                {
+                    return;
+                }
+
+            }
         }
     }
 }
