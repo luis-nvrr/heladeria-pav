@@ -119,12 +119,12 @@ namespace Practico.Formularios.Abm.Empleados
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            FrmAltaEmpleados altaHelados = new FrmAltaEmpleados();
-            altaHelados.ShowDialog();
+            FrmAltaEmpleados altaEmpleados = new FrmAltaEmpleados();
+            altaEmpleados.ShowDialog();
 
             DataTable tabla = empleados.TodosLosEmpleados();
             CargarGrilla(tabla);
-            altaHelados.Close();
+            altaEmpleados.Close();
         }
 
         private void btnLimpiarBarrio_Click(object sender, EventArgs e)
