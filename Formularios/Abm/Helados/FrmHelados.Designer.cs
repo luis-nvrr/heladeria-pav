@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnNuevo);
-            this.panel1.Location = new System.Drawing.Point(520, 180);
+            this.panel1.Location = new System.Drawing.Point(550, 180);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(163, 224);
             this.panel1.TabIndex = 19;
@@ -171,7 +171,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdHelados.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdHelados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.grdHelados.Location = new System.Drawing.Point(41, 192);
+            this.grdHelados.Location = new System.Drawing.Point(71, 192);
             this.grdHelados.Name = "grdHelados";
             this.grdHelados.ReadOnly = true;
             this.grdHelados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

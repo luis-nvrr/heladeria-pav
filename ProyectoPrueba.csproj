@@ -142,6 +142,36 @@
     <Compile Include="Formularios\Abm\Proveedores\FrmProveedores.Designer.cs">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\TelefonosEmpleados\FrmAltaTelefonosEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\TelefonosEmpleados\FrmAltaTelefonosEmpleados.Designer.cs">
+      <DependentUpon>FrmAltaTelefonosEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\TelefonosEmpleados\FrmConsultarTelefonosEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\TelefonosEmpleados\FrmConsultarTelefonosEmpleados.designer.cs">
+      <DependentUpon>FrmConsultarTelefonosEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\TelefonosEmpleados\FrmEliminarTelefonosEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\TelefonosEmpleados\FrmEliminarTelefonosEmpleados.designer.cs">
+      <DependentUpon>FrmEliminarTelefonosEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\TelefonosEmpleados\FrmModificarTelefonosEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\TelefonosEmpleados\FrmModificarTelefonosEmpleados.designer.cs">
+      <DependentUpon>FrmModificarTelefonosEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\TelefonosEmpleados\FrmTelefonosEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\TelefonosEmpleados\FrmTelefonosEmpleados.Designer.cs">
+      <DependentUpon>FrmTelefonosEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +225,7 @@
     <Compile Include="Negocios\Frutas.cs" />
     <Compile Include="Negocios\Helados.cs" />
     <Compile Include="Negocios\Proveedores.cs" />
+    <Compile Include="Negocios\TelefonosEmpleados.cs" />
     <Compile Include="Negocios\TiposDocumento.cs" />
     <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />
@@ -243,6 +274,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Proveedores\FrmProveedores.resx">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\TelefonosEmpleados\FrmAltaTelefonosEmpleados.resx">
+      <DependentUpon>FrmAltaTelefonosEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\TelefonosEmpleados\FrmConsultarTelefonosEmpleados.resx">
+      <DependentUpon>FrmConsultarTelefonosEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\TelefonosEmpleados\FrmEliminarTelefonosEmpleados.resx">
+      <DependentUpon>FrmEliminarTelefonosEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\TelefonosEmpleados\FrmModificarTelefonosEmpleados.resx">
+      <DependentUpon>FrmModificarTelefonosEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\TelefonosEmpleados\FrmTelefonosEmpleados.resx">
+      <DependentUpon>FrmTelefonosEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.resx">
       <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>

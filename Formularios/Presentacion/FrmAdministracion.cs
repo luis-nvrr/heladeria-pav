@@ -11,6 +11,7 @@ using Practico.Formularios.Abm;
 using Practico.Formularios.Abm.Empleados;
 using Practico.Formularios.Abm.Helados;
 using Practico.Formularios.Abm.Proveedores;
+using Practico.Formularios.Abm.TelefonosEmpleados;
 
 namespace Practico.Formularios
 {
@@ -64,6 +65,12 @@ namespace Practico.Formularios
         private void btnIngresar_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FrmTelefonosEmpleados telefonos = new FrmTelefonosEmpleados();
+            abrirFormulario(telefonos);
         }
     }
 }

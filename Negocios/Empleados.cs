@@ -35,8 +35,8 @@ namespace Practico.Negocios
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
-
         }
+
         public DataTable BuscarEmpleado(string nombre, string apellido, string turno, string barrio)
         {
             string sql = "SELECT E.*," +
