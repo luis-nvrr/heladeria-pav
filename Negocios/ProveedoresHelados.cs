@@ -96,7 +96,7 @@ namespace Practico.Negocios
 
         public Respuesta Eliminar(int tipoDocumento, string nroDocumento, int idHelado)
         {
-            string sql = "DELETE FROM ProveedoresHelados WHERE tipoDocProveedor = " + tipoDocumento + " AND nroDocProveedor '" + nroDocumento + "' AND idHelado = " + idHelado;
+            string sql = "DELETE FROM ProveedoresHelados WHERE tipoDocProveedor = " + tipoDocumento + " AND nroDocProveedor LIKE '" + nroDocumento + "' AND idHelado = " + idHelado;
 
             try
             {
@@ -106,6 +106,7 @@ namespace Practico.Negocios
             }
             catch (SqlException exception)
             {
+                MessageBox.Show(exception.ToString());
                 return Respuesta.validacionIncorrecta;
             }
 

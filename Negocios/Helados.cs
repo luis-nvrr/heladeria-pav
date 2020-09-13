@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Practico.Clases;
 
 namespace Practico.Negocios
@@ -44,8 +45,9 @@ namespace Practico.Negocios
                 return Respuesta.validacionCorrecta;
 
             }
-            catch (SqlException)
+            catch (SqlException exception)
             {
+                MessageBox.Show(exception.ToString());
                 return Respuesta.validacionIncorrecta;
             }
 
@@ -62,6 +64,7 @@ namespace Practico.Negocios
             }
             catch (SqlException exception)
             {
+                MessageBox.Show(exception.ToString());
                 return Respuesta.validacionIncorrecta;
             }
             
@@ -81,6 +84,7 @@ namespace Practico.Negocios
             }
             catch (SqlException exception)
             {
+                MessageBox.Show(exception.ToString());
                 return Respuesta.validacionIncorrecta;
             }
         }
