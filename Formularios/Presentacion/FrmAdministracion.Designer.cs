@@ -72,7 +72,6 @@ namespace Practico.Formularios
             this.btnIngresar.TabIndex = 10;
             this.btnIngresar.Text = "Helados Especiales";
             this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click_1);
             // 
             // btnEscritorio
             // 
@@ -387,7 +386,7 @@ namespace Practico.Formularios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(875, 606);
+            this.ClientSize = new System.Drawing.Size(892, 606);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

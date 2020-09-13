@@ -48,8 +48,10 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.lblRazonSocial = new System.Windows.Forms.Label();
             this.txtNombreHelado = new Practico.Clases.TextBox01();
+            this.pnlBuscar = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grdProveedoresHelados)).BeginInit();
             this.panel1.SuspendLayout();
+            this.pnlBuscar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblProveedoresHelados
@@ -90,7 +92,7 @@
             this.lblNombreHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombreHelado.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNombreHelado.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombreHelado.Location = new System.Drawing.Point(61, 143);
+            this.lblNombreHelado.Location = new System.Drawing.Point(27, 64);
             this.lblNombreHelado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreHelado.Name = "lblNombreHelado";
             this.lblNombreHelado.Size = new System.Drawing.Size(146, 19);
@@ -100,7 +102,7 @@
             // txtRazonSocial
             // 
             this.txtRazonSocial.BackColor = System.Drawing.Color.White;
-            this.txtRazonSocial.Location = new System.Drawing.Point(215, 110);
+            this.txtRazonSocial.Location = new System.Drawing.Point(181, 31);
             this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(4);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.PpMensajeError = "No ingresó Razón Social !";
@@ -116,7 +118,7 @@
             this.chkTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkTodos.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.chkTodos.ForeColor = System.Drawing.SystemColors.Control;
-            this.chkTodos.Location = new System.Drawing.Point(215, 172);
+            this.chkTodos.Location = new System.Drawing.Point(181, 93);
             this.chkTodos.Margin = new System.Windows.Forms.Padding(4);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(112, 23);
@@ -135,7 +137,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBuscar.Location = new System.Drawing.Point(402, 104);
+            this.btnBuscar.Location = new System.Drawing.Point(362, 40);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(5);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(103, 40);
@@ -288,7 +290,7 @@
             this.lblRazonSocial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblRazonSocial.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblRazonSocial.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRazonSocial.Location = new System.Drawing.Point(106, 113);
+            this.lblRazonSocial.Location = new System.Drawing.Point(72, 34);
             this.lblRazonSocial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(101, 19);
@@ -298,7 +300,7 @@
             // txtNombreHelado
             // 
             this.txtNombreHelado.BackColor = System.Drawing.Color.White;
-            this.txtNombreHelado.Location = new System.Drawing.Point(215, 140);
+            this.txtNombreHelado.Location = new System.Drawing.Point(181, 61);
             this.txtNombreHelado.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreHelado.Name = "txtNombreHelado";
             this.txtNombreHelado.PpMensajeError = "No ingresó Nombre de Helado !";
@@ -308,20 +310,28 @@
             this.txtNombreHelado.Size = new System.Drawing.Size(164, 24);
             this.txtNombreHelado.TabIndex = 1;
             // 
+            // pnlBuscar
+            // 
+            this.pnlBuscar.Controls.Add(this.txtNombreHelado);
+            this.pnlBuscar.Controls.Add(this.lblRazonSocial);
+            this.pnlBuscar.Controls.Add(this.btnBuscar);
+            this.pnlBuscar.Controls.Add(this.chkTodos);
+            this.pnlBuscar.Controls.Add(this.txtRazonSocial);
+            this.pnlBuscar.Controls.Add(this.lblNombreHelado);
+            this.pnlBuscar.Location = new System.Drawing.Point(34, 79);
+            this.pnlBuscar.Name = "pnlBuscar";
+            this.pnlBuscar.Size = new System.Drawing.Size(495, 122);
+            this.pnlBuscar.TabIndex = 27;
+            // 
             // FrmProveedoresHelados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(807, 606);
-            this.Controls.Add(this.txtNombreHelado);
-            this.Controls.Add(this.lblRazonSocial);
+            this.Controls.Add(this.pnlBuscar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grdProveedoresHelados);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.chkTodos);
-            this.Controls.Add(this.txtRazonSocial);
-            this.Controls.Add(this.lblNombreHelado);
             this.Controls.Add(this.btnEscritorio);
             this.Controls.Add(this.lblProveedoresHelados);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -333,6 +343,8 @@
             this.Load += new System.EventHandler(this.FrmProveedoresHelados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdProveedoresHelados)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.pnlBuscar.ResumeLayout(false);
+            this.pnlBuscar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,5 +369,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Panel pnlBuscar;
     }
 }

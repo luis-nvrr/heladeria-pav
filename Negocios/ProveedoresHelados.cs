@@ -31,11 +31,11 @@ namespace Practico.Negocios
             return tabla;
         }
 
-        public DataTable RecuperarProoveedorHelado(string tipoDocumento, int nroDocumento, string idHelado)
+        public DataTable RecuperarProoveedorHelado(string tipoDocumento, string nroDocumento, string idHelado)
         {
             string sql = "SELECT PH.* FROM ProveedoresHelados PH INNER JOIN TiposDocumento TD ON (PH.tipoDocProveedor = TD.tipoDocumento) " +
                                                                 "INNER JOIN helados H ON (PH.idHelado=H.idHelado) " +
-                         " WHERE descripcion LIKE '" + tipoDocumento + "' AND nroDocProveedor = " + nroDocumento + "AND nombre = '" + idHelado + "'";
+                         " WHERE descripcion LIKE '" + tipoDocumento + "' AND nroDocProveedor LIKE '" + nroDocumento + "' AND nombre = '" + idHelado + "'";
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
@@ -81,7 +81,7 @@ namespace Practico.Negocios
         {
             try
             {
-                baseDatos.ModificarAutomatizado("ProveedoresHelados", " tipoDocumento  =" + tipoDocumento + " AND nroDocumento = '" + nroDocumento + "'"
+                baseDatos.ModificarAutomatizado("ProveedoresHelados", " tipoDocumento  =" + tipoDocumento + " AND nroDocumento LIKE '" + nroDocumento + "'"
                                                 + " AND idHelado = '" + idHelado + "'", controles);
                 return Respuesta.validacionCorrecta;
 
@@ -94,9 +94,9 @@ namespace Practico.Negocios
 
         }
 
-        public Respuesta Eliminar(int tipoDocumento, int nroDocumento, int idHelado)
+        public Respuesta Eliminar(int tipoDocumento, string nroDocumento, int idHelado)
         {
-            string sql = "DELETE FROM ProveedoresHelados WHERE tipoDocProveedor = " + tipoDocumento + " AND nroDocProveedor = " + nroDocumento + " AND idHelado = " + idHelado;
+            string sql = "DELETE FROM ProveedoresHelados WHERE tipoDocProveedor = " + tipoDocumento + " AND nroDocProveedor '" + nroDocumento + "' AND idHelado = " + idHelado;
 
             try
             {

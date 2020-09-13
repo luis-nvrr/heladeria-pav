@@ -249,6 +249,8 @@
     <Compile Include="Negocios\Frutas.cs" />
     <Compile Include="Negocios\Helados.cs" />
     <Compile Include="Negocios\Proveedores.cs" />
+    <Compile Include="Negocios\ProveedoresHelados.cs" />
+    <Compile Include="Negocios\TelefonosEmpleados.cs" />
     <Compile Include="Negocios\TiposDocumento.cs" />
     <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />

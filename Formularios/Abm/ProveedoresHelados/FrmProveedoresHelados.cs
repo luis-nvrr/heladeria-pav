@@ -52,7 +52,7 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
                 TratamientosEspeciales tratamiento = new TratamientosEspeciales();
 
                 // valida que haya texto en el textbox
-                if (tratamiento.Validar(this.Controls) == TratamientosEspeciales.Validacion.correcta)
+                if (tratamiento.ValidarAlMenosUno(pnlBuscar.Controls) == TratamientosEspeciales.Validacion.correcta)
                 {
                     DataTable tabla = proveedoresHelados.BuscarProveedorHelado(txtRazonSocial.Text,txtNombreHelado.Text);
                     CargarGrilla(tabla);
@@ -80,17 +80,13 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
             if (chkTodos.Checked)
             {
                 txtRazonSocial.Enabled = false;
-                txtRazonSocial.BackColor = Color.SlateGray;
                 txtNombreHelado.Enabled = false;
-                txtNombreHelado.BackColor = Color.SlateGray;
                 LimpiarCampos();
             }
             else
             {
                 txtRazonSocial.Enabled = true;
-                txtRazonSocial.BackColor = Color.White;
                 txtNombreHelado.Enabled = true;
-                txtNombreHelado.BackColor = Color.White;
                 txtRazonSocial.Focus();
             }
         }

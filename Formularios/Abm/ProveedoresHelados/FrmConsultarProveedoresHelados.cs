@@ -39,7 +39,7 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
         private void CargarCampos()
         {
             DataTable tabla = new DataTable();
-            tabla = proveedoresHelados.RecuperarProoveedorHelado(tipoDocumento, Int32.Parse(nroDocumento),idHelado);
+            tabla = proveedoresHelados.RecuperarProoveedorHelado(tipoDocumento, nroDocumento,idHelado);
             cmbTipoDoc.SelectedIndex = cmbTipoDoc.FindStringExact(tipoDocumento);
             txtNroDoc.Text = tabla.Rows[0]["nroDocProveedor"].ToString();
             txtIdHelado.Text = tabla.Rows[0]["idHelado"].ToString();
