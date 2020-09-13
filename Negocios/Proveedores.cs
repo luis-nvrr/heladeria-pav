@@ -29,10 +29,10 @@ namespace Practico.Negocios
             return tabla;
         }
 
-        public DataTable RecuperarProoveedor(string tipoDocumento, int nroDocumento)
+        public DataTable RecuperarProoveedor(string tipoDocumento, string nroDocumento)
         {
             string sql = "SELECT P.* FROM Proveedores P INNER JOIN TiposDocumento TD ON (P.tipoDocumento = TD.tipoDocumento)" +
-                         " WHERE descripcion LIKE '" + tipoDocumento + "' AND nroDocumento = " + nroDocumento;
+                         " WHERE descripcion LIKE '" + tipoDocumento + "' AND nroDocumento LIKE '" + nroDocumento +"'";
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
@@ -65,7 +65,7 @@ namespace Practico.Negocios
         {
             try
             {
-                baseDatos.ModificarAutomatizado("Proveedores", " tipoDocumento  =" + tipoDocumento + " AND nroDocumento = '" + nroDocumento + "'", controles);
+                baseDatos.ModificarAutomatizado("Proveedores", " tipoDocumento  =" + tipoDocumento + " AND nroDocumento LIKE '" + nroDocumento + "'", controles);
                 return Respuesta.validacionCorrecta;
 
             }
@@ -77,9 +77,9 @@ namespace Practico.Negocios
 
         }
 
-        public Respuesta Eliminar(int tipoDocumento, int nroDocumento)
+        public Respuesta Eliminar(int tipoDocumento, string nroDocumento)
         {
-            string sql = "DELETE FROM Proveedores WHERE tipoDocumento LIKE '" + tipoDocumento + "' AND nroDocumento = " + nroDocumento;
+            string sql = "DELETE FROM Proveedores WHERE tipoDocumento LIKE '" + tipoDocumento + "' AND nroDocumento LIKE '" + nroDocumento +"'";
 
             try
             {

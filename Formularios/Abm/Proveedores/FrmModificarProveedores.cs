@@ -67,7 +67,7 @@ namespace Practico.Formularios.Abm.Proveedores
         private void CargarCampos()
         {
             DataTable tabla = new DataTable();
-            tabla = proveedor.RecuperarProoveedor(tipoDocumento, Int32.Parse(nroDocumento));
+            tabla = proveedor.RecuperarProoveedor(tipoDocumento, nroDocumento);
 
             cmbTipoDoc.SelectedIndex = cmbTipoDoc.FindStringExact(tipoDocumento);
             txtNroDoc.Text = tabla.Rows[0]["nroDocumento"].ToString();
