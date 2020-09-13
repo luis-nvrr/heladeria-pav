@@ -339,6 +339,7 @@
             // txtNroDoc
             // 
             this.txtNroDoc.BackColor = System.Drawing.Color.White;
+            this.txtNroDoc.Enabled = false;
             this.txtNroDoc.Location = new System.Drawing.Point(259, 161);
             this.txtNroDoc.Margin = new System.Windows.Forms.Padding(4);
             this.txtNroDoc.Name = "txtNroDoc";

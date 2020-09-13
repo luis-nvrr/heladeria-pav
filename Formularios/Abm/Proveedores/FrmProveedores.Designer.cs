@@ -80,7 +80,7 @@
             // 
             this.txtRazónSocial.BackColor = System.Drawing.Color.White;
             this.txtRazónSocial.Location = new System.Drawing.Point(184, 113);
-            this.txtRazónSocial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRazónSocial.Margin = new System.Windows.Forms.Padding(4);
             this.txtRazónSocial.Name = "txtRazónSocial";
             this.txtRazónSocial.PpMensajeError = "No ingresó Razón Social!";
             this.txtRazónSocial.PpNombreCampo = null;
@@ -100,7 +100,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnBuscar.Location = new System.Drawing.Point(367, 106);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(5);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(103, 40);
             this.btnBuscar.TabIndex = 10;
@@ -112,15 +112,16 @@
             // 
             this.chkTodos.AutoSize = true;
             this.chkTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTodos.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.chkTodos.ForeColor = System.Drawing.SystemColors.Control;
             this.chkTodos.Location = new System.Drawing.Point(184, 145);
-            this.chkTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkTodos.Margin = new System.Windows.Forms.Padding(4);
             this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(109, 20);
+            this.chkTodos.Size = new System.Drawing.Size(112, 23);
             this.chkTodos.TabIndex = 11;
             this.chkTodos.Text = "Buscar Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
+            this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
             // 
             // grdProveedores
             // 
@@ -153,8 +154,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdProveedores.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdProveedores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.grdProveedores.Location = new System.Drawing.Point(96, 250);
-            this.grdProveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdProveedores.Location = new System.Drawing.Point(75, 226);
+            this.grdProveedores.Margin = new System.Windows.Forms.Padding(4);
             this.grdProveedores.Name = "grdProveedores";
             this.grdProveedores.ReadOnly = true;
             this.grdProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -191,7 +192,7 @@
             this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Controls.Add(this.btnNuevo);
             this.panel1.Location = new System.Drawing.Point(521, 226);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(185, 227);
             this.panel1.TabIndex = 17;
@@ -207,7 +208,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.Location = new System.Drawing.Point(13, 167);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(149, 40);
             this.btnEliminar.TabIndex = 2;
@@ -226,7 +227,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnModificar.Location = new System.Drawing.Point(13, 118);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(5);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(149, 40);
             this.btnModificar.TabIndex = 1;
@@ -245,7 +246,7 @@
             this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnConsultar.Location = new System.Drawing.Point(14, 69);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(5);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(149, 40);
             this.btnConsultar.TabIndex = 0;
@@ -264,7 +265,7 @@
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.Control;
             this.btnNuevo.Location = new System.Drawing.Point(13, 22);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(5);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(149, 40);
             this.btnNuevo.TabIndex = 0;
@@ -307,8 +308,9 @@
             this.Controls.Add(this.lblRazónSocial);
             this.Controls.Add(this.lblProveedores);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmProveedores";
             this.Text = "Gestión de Proveedores";
             this.Load += new System.EventHandler(this.FrmProveedores_Load);

@@ -22,8 +22,8 @@ namespace Practico.Clases
 
         private void Conectar()  // metodo para conectar
         {
-            //conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //NICO
-            conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //LUIS
+            conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //NICO
+            //conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //LUIS
             conexion.Open();
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
@@ -108,7 +108,7 @@ namespace Practico.Clases
                                     + FormatearDato(ValorCampo, Estructura.Columns[i].DataType.Name);
                 }
             }
-            sqlModificar = sqlModificar + "WHERE" + restriccion;
+            sqlModificar = sqlModificar + " WHERE" + restriccion;
             sqlModificar = sqlModificar.Replace("SET ,", "SET ");
             Actualizar(sqlModificar);
         }

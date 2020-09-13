@@ -42,7 +42,7 @@ namespace Practico.Formularios
             this.button10 = new System.Windows.Forms.Button();
             this.btnHelados = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.btnProveedoresHelados = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.lblPersonas = new System.Windows.Forms.Label();
             this.lblHelados = new System.Windows.Forms.Label();
@@ -277,23 +277,24 @@ namespace Practico.Formularios
             this.button12.Text = "Localidades";
             this.button12.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // btnProveedoresHelados
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button13.Location = new System.Drawing.Point(220, 169);
-            this.button13.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(166, 63);
-            this.button13.TabIndex = 4;
-            this.button13.Text = "Proveedores de Helados";
-            this.button13.UseVisualStyleBackColor = false;
+            this.btnProveedoresHelados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnProveedoresHelados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProveedoresHelados.FlatAppearance.BorderSize = 0;
+            this.btnProveedoresHelados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnProveedoresHelados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnProveedoresHelados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedoresHelados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedoresHelados.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnProveedoresHelados.Location = new System.Drawing.Point(220, 169);
+            this.btnProveedoresHelados.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnProveedoresHelados.Name = "btnProveedoresHelados";
+            this.btnProveedoresHelados.Size = new System.Drawing.Size(166, 63);
+            this.btnProveedoresHelados.TabIndex = 4;
+            this.btnProveedoresHelados.Text = "Proveedores de Helados";
+            this.btnProveedoresHelados.UseVisualStyleBackColor = false;
+            this.btnProveedoresHelados.Click += new System.EventHandler(this.btnProveedoresHelados_Click);
             // 
             // button15
             // 
@@ -385,7 +386,7 @@ namespace Practico.Formularios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(858, 606);
+            this.ClientSize = new System.Drawing.Size(875, 606);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -393,7 +394,7 @@ namespace Practico.Formularios
             this.Controls.Add(this.lblHelados);
             this.Controls.Add(this.lblPersonas);
             this.Controls.Add(this.button15);
-            this.Controls.Add(this.button13);
+            this.Controls.Add(this.btnProveedoresHelados);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.btnHelados);
             this.Controls.Add(this.button10);
@@ -436,7 +437,7 @@ namespace Practico.Formularios
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button btnHelados;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnProveedoresHelados;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Label lblPersonas;
         private System.Windows.Forms.Label lblHelados;

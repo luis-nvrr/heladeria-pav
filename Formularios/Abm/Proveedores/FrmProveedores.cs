@@ -168,5 +168,21 @@ namespace Practico.Formularios.Abm.Proveedores
                 }
             }
         }
+
+        private void chkTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTodos.Checked)
+            {
+                txtRazónSocial.Enabled = false;
+                txtRazónSocial.BackColor = Color.SlateGray;
+                
+            }
+            else
+            {
+                txtRazónSocial.Enabled = true;
+                txtRazónSocial.BackColor = Color.White;
+                txtRazónSocial.Focus();
+            }
+        }
     }
 }
