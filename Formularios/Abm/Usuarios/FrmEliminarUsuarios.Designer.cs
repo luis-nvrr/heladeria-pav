@@ -188,7 +188,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmEliminarUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Usuario";
+            this.Text = "Eliminar Usuario";
             this.Load += new System.EventHandler(this.FrmEliminarUsuarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

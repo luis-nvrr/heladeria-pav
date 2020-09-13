@@ -39,24 +39,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.pnlBuscar = new System.Windows.Forms.Panel();
-            this.btnLimpiarTurno = new System.Windows.Forms.Button();
-            this.btnLimpiarBarrio = new System.Windows.Forms.Button();
-            this.cmbBarrio = new Practico.Clases.ComboBox01();
-            this.txtNombre = new Practico.Clases.TextBox01();
-            this.txtApellido = new Practico.Clases.TextBox01();
-            this.cmbTurno = new Practico.Clases.ComboBox01();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Turno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.pnlBuscar = new System.Windows.Forms.Panel();
+            this.cmbBarrio = new Practico.Clases.ComboBox01();
+            this.txtNombre = new Practico.Clases.TextBox01();
+            this.txtApellido = new Practico.Clases.TextBox01();
+            this.cmbTurno = new Practico.Clases.ComboBox01();
+            this.btnLimpiarTurno = new System.Windows.Forms.Button();
+            this.btnLimpiarBarrio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlBuscar.SuspendLayout();
@@ -64,7 +64,6 @@
             // 
             // lblEmpleados
             // 
-            this.lblEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmpleados.AutoSize = true;
             this.lblEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEmpleados.Font = new System.Drawing.Font("Century Gothic", 15F);
@@ -77,7 +76,6 @@
             // 
             // chkTodos
             // 
-            this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.chkTodos.AutoSize = true;
             this.chkTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkTodos.ForeColor = System.Drawing.SystemColors.Control;
@@ -91,7 +89,6 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
@@ -182,7 +179,6 @@
             this.grdEmpleados.AllowUserToDeleteRows = false;
             this.grdEmpleados.AllowUserToResizeColumns = false;
             this.grdEmpleados.AllowUserToResizeRows = false;
-            this.grdEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grdEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.grdEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdEmpleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -211,21 +207,72 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdEmpleados.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.grdEmpleados.Location = new System.Drawing.Point(26, 339);
+            this.grdEmpleados.Location = new System.Drawing.Point(48, 339);
             this.grdEmpleados.Name = "grdEmpleados";
             this.grdEmpleados.ReadOnly = true;
             this.grdEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdEmpleados.Size = new System.Drawing.Size(745, 201);
+            this.grdEmpleados.Size = new System.Drawing.Size(775, 201);
             this.grdEmpleados.TabIndex = 20;
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
+            this.Tipo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Tipo.Width = 50;
+            // 
+            // Documento
+            // 
+            this.Documento.HeaderText = "Documento";
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
+            this.Documento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Documento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Nombre.Width = 150;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Apellido.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Apellido.Width = 150;
+            // 
+            // Turno
+            // 
+            this.Turno.HeaderText = "Turno";
+            this.Turno.Name = "Turno";
+            this.Turno.ReadOnly = true;
+            this.Turno.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Turno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Barrio
+            // 
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
+            this.Barrio.ReadOnly = true;
+            this.Barrio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Barrio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Barrio.Width = 150;
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Controls.Add(this.btnNuevo);
-            this.panel1.Location = new System.Drawing.Point(50, 546);
+            this.panel1.Location = new System.Drawing.Point(72, 546);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(682, 53);
             this.panel1.TabIndex = 21;
@@ -308,7 +355,6 @@
             // 
             // pnlBuscar
             // 
-            this.pnlBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pnlBuscar.Controls.Add(this.lblNombre);
             this.pnlBuscar.Controls.Add(this.cmbBarrio);
             this.pnlBuscar.Controls.Add(this.txtNombre);
@@ -321,46 +367,6 @@
             this.pnlBuscar.Name = "pnlBuscar";
             this.pnlBuscar.Size = new System.Drawing.Size(250, 158);
             this.pnlBuscar.TabIndex = 0;
-            // 
-            // btnLimpiarTurno
-            // 
-            this.btnLimpiarTurno.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnLimpiarTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnLimpiarTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLimpiarTurno.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarTurno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnLimpiarTurno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
-            this.btnLimpiarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarTurno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarTurno.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLimpiarTurno.Location = new System.Drawing.Point(333, 171);
-            this.btnLimpiarTurno.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnLimpiarTurno.Name = "btnLimpiarTurno";
-            this.btnLimpiarTurno.Size = new System.Drawing.Size(70, 24);
-            this.btnLimpiarTurno.TabIndex = 22;
-            this.btnLimpiarTurno.Text = "Limpiar";
-            this.btnLimpiarTurno.UseVisualStyleBackColor = false;
-            this.btnLimpiarTurno.Click += new System.EventHandler(this.btnLimpiarTurno_Click);
-            // 
-            // btnLimpiarBarrio
-            // 
-            this.btnLimpiarBarrio.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnLimpiarBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnLimpiarBarrio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLimpiarBarrio.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarBarrio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnLimpiarBarrio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
-            this.btnLimpiarBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarBarrio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarBarrio.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLimpiarBarrio.Location = new System.Drawing.Point(333, 203);
-            this.btnLimpiarBarrio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnLimpiarBarrio.Name = "btnLimpiarBarrio";
-            this.btnLimpiarBarrio.Size = new System.Drawing.Size(70, 24);
-            this.btnLimpiarBarrio.TabIndex = 22;
-            this.btnLimpiarBarrio.Text = "Limpiar";
-            this.btnLimpiarBarrio.UseVisualStyleBackColor = false;
-            this.btnLimpiarBarrio.Click += new System.EventHandler(this.btnLimpiarBarrio_Click);
             // 
             // cmbBarrio
             // 
@@ -421,57 +427,43 @@
             this.cmbTurno.Size = new System.Drawing.Size(123, 25);
             this.cmbTurno.TabIndex = 3;
             // 
-            // Tipo
+            // btnLimpiarTurno
             // 
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.ReadOnly = true;
-            this.Tipo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Tipo.Width = 50;
+            this.btnLimpiarTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnLimpiarTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiarTurno.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarTurno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnLimpiarTurno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
+            this.btnLimpiarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarTurno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarTurno.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLimpiarTurno.Location = new System.Drawing.Point(333, 171);
+            this.btnLimpiarTurno.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnLimpiarTurno.Name = "btnLimpiarTurno";
+            this.btnLimpiarTurno.Size = new System.Drawing.Size(70, 24);
+            this.btnLimpiarTurno.TabIndex = 22;
+            this.btnLimpiarTurno.Text = "Limpiar";
+            this.btnLimpiarTurno.UseVisualStyleBackColor = false;
+            this.btnLimpiarTurno.Click += new System.EventHandler(this.btnLimpiarTurno_Click);
             // 
-            // Documento
+            // btnLimpiarBarrio
             // 
-            this.Documento.HeaderText = "Documento";
-            this.Documento.Name = "Documento";
-            this.Documento.ReadOnly = true;
-            this.Documento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Documento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nombre.Width = 150;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            this.Apellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Apellido.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Apellido.Width = 150;
-            // 
-            // Turno
-            // 
-            this.Turno.HeaderText = "Turno";
-            this.Turno.Name = "Turno";
-            this.Turno.ReadOnly = true;
-            this.Turno.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Turno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Barrio
-            // 
-            this.Barrio.HeaderText = "Barrio";
-            this.Barrio.Name = "Barrio";
-            this.Barrio.ReadOnly = true;
-            this.Barrio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Barrio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Barrio.Width = 150;
+            this.btnLimpiarBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnLimpiarBarrio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiarBarrio.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarBarrio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnLimpiarBarrio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
+            this.btnLimpiarBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarBarrio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarBarrio.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLimpiarBarrio.Location = new System.Drawing.Point(333, 203);
+            this.btnLimpiarBarrio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnLimpiarBarrio.Name = "btnLimpiarBarrio";
+            this.btnLimpiarBarrio.Size = new System.Drawing.Size(70, 24);
+            this.btnLimpiarBarrio.TabIndex = 22;
+            this.btnLimpiarBarrio.Text = "Limpiar";
+            this.btnLimpiarBarrio.UseVisualStyleBackColor = false;
+            this.btnLimpiarBarrio.Click += new System.EventHandler(this.btnLimpiarBarrio_Click);
             // 
             // FrmEmpleados
             // 
@@ -479,7 +471,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(960, 749);
+            this.ClientSize = new System.Drawing.Size(861, 609);
             this.Controls.Add(this.btnLimpiarBarrio);
             this.Controls.Add(this.btnLimpiarTurno);
             this.Controls.Add(this.pnlBuscar);

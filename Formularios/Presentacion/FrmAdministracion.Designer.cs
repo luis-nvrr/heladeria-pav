@@ -184,6 +184,7 @@ namespace Practico.Formularios
             this.button6.TabIndex = 1;
             this.button6.Text = "Telefonos de Empleados";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnEmpleados
             // 

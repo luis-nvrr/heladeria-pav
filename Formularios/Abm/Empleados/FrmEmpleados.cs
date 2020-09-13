@@ -24,25 +24,17 @@ namespace Practico.Formularios.Abm.Empleados
             if (chkTodos.Checked)
             {
                 txtNombre.Enabled = false;
-                txtNombre.BackColor = Color.SlateGray;
                 txtApellido.Enabled = false;
-                txtApellido.BackColor = Color.SlateGray;
                 cmbTurno.Enabled = false;
-                cmbTurno.BackColor = Color.SlateGray;
                 cmbBarrio.Enabled = false;
-                cmbBarrio.BackColor = Color.SlateGray;
                 LimpiarCampos();
             }
             else
             {
                 txtNombre.Enabled = true;
-                txtNombre.BackColor = Color.White;
                 txtApellido.Enabled = true;
-                txtApellido.BackColor = Color.White;
                 cmbTurno.Enabled = true;
-                cmbTurno.BackColor = Color.White;
                 cmbBarrio.Enabled = true;
-                cmbBarrio.BackColor = Color.White;
                 txtNombre.Focus();
             }
         }
@@ -69,17 +61,17 @@ namespace Practico.Formularios.Abm.Empleados
                 // valida que haya texto en el textbox
                 if (tratamiento.ValidarAlMenosUno(pnlBuscar.Controls) == TratamientosEspeciales.Validacion.correcta)
                 {
-                    string comboTurno = "(0,1,2,3,4)";
+                    string comboTurno = "(0,1,2,3,4,5,6,7,8,9,10)";
                     if (cmbTurno.SelectedIndex > -1)
                     {
                         comboTurno = "(" + cmbTurno.SelectedValue.ToString() + ")";
                     }
-                    string comboBarrio = "(0,1,2,3,4)";
+                    string comboBarrio = "(0,1,2,3,4,5,6,7,8,9,10)";
                     if (cmbBarrio.SelectedIndex > -1)
                     {
                         comboBarrio = "(" + cmbBarrio.SelectedValue.ToString() + ")" ;
                     }
-                    DataTable tabla = empleados.BuscarEmpleado(txtNombre.Text, txtApellido.Text, 
+                    DataTable tabla = empleados.BuscarEmpleado(txtNombre.Text, txtApellido.Text,
                         comboTurno, comboBarrio);
                     CargarGrilla(tabla);
                 }

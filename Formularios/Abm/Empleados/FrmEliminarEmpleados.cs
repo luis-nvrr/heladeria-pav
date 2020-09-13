@@ -56,7 +56,7 @@ namespace Practico.Formularios.Abm.Empleados
         {
             Negocios.Empleados empleados = new Negocios.Empleados();
 
-            if (empleados.EliminarEmpleado(Int32.Parse(cmbTipo.SelectedValue.ToString()), Int32.Parse(nroDoc)) == Negocios.Empleados.Respuesta.validacionCorrecta)
+            if (empleados.EliminarEmpleado(Int32.Parse(cmbTipo.SelectedValue.ToString()), nroDoc) == Negocios.Empleados.Respuesta.validacionCorrecta)
             {
                 MessageBox.Show("Eliminado correctamente!", "Informacion",
                     buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
@@ -72,7 +72,7 @@ namespace Practico.Formularios.Abm.Empleados
         private void CargarCampos()
         {
             Negocios.Empleados empleados = new Negocios.Empleados();
-            DataTable tabla = empleados.RecuperarEmpleado(tipoDoc, Int32.Parse(nroDoc));
+            DataTable tabla = empleados.RecuperarEmpleado(tipoDoc, nroDoc);
 
             //tipoDoc = tabla.Rows[0]["tipoDoc"].ToString();  no deberian cambiar
             //nroDoc = tabla.Rows[0]["nroDoc"].ToString();

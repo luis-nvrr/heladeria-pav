@@ -46,7 +46,7 @@ namespace Practico.Formularios.Abm.Empleados
             {
                 Negocios.Empleados empleados = new Negocios.Empleados();
                 if (empleados.InsertarEmpleado(Int32.Parse(cmbTipo.SelectedValue.ToString()), 
-                        Int32.Parse(txtNumeroD.Text), 
+                        txtNumeroD.Text, 
                         txtNombre.Text,
                         txtApellido.Text,
                         txtCalle.Text, 

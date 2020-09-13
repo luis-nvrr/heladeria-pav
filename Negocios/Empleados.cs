@@ -35,8 +35,8 @@ namespace Practico.Negocios
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
-
         }
+
         public DataTable BuscarEmpleado(string nombre, string apellido, string turno, string barrio)
         {
             string sql = "SELECT E.*," +
@@ -58,13 +58,13 @@ namespace Practico.Negocios
             return tabla;
         }
 
-        public Respuesta InsertarEmpleado(int tipoDoc, int nroDoc, string nombre, string apellido, string calle,
+        public Respuesta InsertarEmpleado(int tipoDoc, string nroDoc, string nombre, string apellido, string calle,
                                             int nroCalle, int idBarrio, DateTime fechaNacimiento, DateTime fechaIngreso,
                                             int idUsuario, int idTurno)
         {
             string sql = "INSERT INTO Empleados (tipoDoc, nroDoc, nombre, apellido, calle, nroCalle, idBarrio, fechaNacimiento," +
                          "fechaIngreso, idUsuario, idTurno) VALUES " +
-                         "(" + tipoDoc + "," + nroDoc + ",'" + nombre + "','" + apellido + "','" + calle + "'," +
+                         "(" + tipoDoc + ",'" + nroDoc + "','" + nombre + "','" + apellido + "','" + calle + "'," +
                          nroCalle + "," + idBarrio + "," + "convert(date,'" + fechaNacimiento + "', 103)" + "," +
                          "convert(date,'" + fechaIngreso + "', 103)" + "," + idUsuario + "," + idTurno + ")";
 
@@ -82,17 +82,17 @@ namespace Practico.Negocios
 
         }
 
-        public DataTable RecuperarEmpleado(string descripcion, int nroDoc) // notar que para buscar usa descripcion y no tipoDocumento, pero recupera solo las columnas de E, para procesar en el form
+        public DataTable RecuperarEmpleado(string descripcion, string nroDoc) // notar que para buscar usa descripcion y no tipoDocumento, pero recupera solo las columnas de E, para procesar en el form
         {
             string sql = "SELECT E.* FROM Empleados E INNER JOIN TiposDocumento TD ON (E.tipoDoc = TD.tipoDocumento)" +
-                         " WHERE descripcion LIKE '" + descripcion + "' AND nroDoc = " + nroDoc;
+                         " WHERE descripcion LIKE '" + descripcion + "' AND nroDoc LIKE '" + nroDoc + "'";
 
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
 
-        public Respuesta ModificarEmpleado(int tipoDoc, int nroDoc, string nombre, string apellido, string calle,
+        public Respuesta ModificarEmpleado(int tipoDoc, string nroDoc, string nombre, string apellido, string calle,
             int nroCalle, int idBarrio, DateTime fechaNacimiento, DateTime fechaIngreso,
             int idUsuario, int idTurno)
         {
@@ -101,7 +101,7 @@ namespace Practico.Negocios
                          ", idBarrio = " + idBarrio + ", fechaNacimiento = " + "convert(date,'" + fechaNacimiento + "', 103)" +
                          ", fechaIngreso = " + "convert(date,'" + fechaIngreso + "', 103)" +
                          ", idUsuario = " + idUsuario + ", idTurno = " + idTurno +
-                         "WHERE tipoDoc = " + tipoDoc + "AND nroDoc = " + nroDoc;
+                         "WHERE tipoDoc = " + tipoDoc + "AND nroDoc LIKE '" + nroDoc+ "'";
 
             try
             {
@@ -117,9 +117,9 @@ namespace Practico.Negocios
         }
 
 
-        public Respuesta EliminarEmpleado(int tipoDoc, int nroDoc)
+        public Respuesta EliminarEmpleado(int tipoDoc, string nroDoc)
         {
-            string sql = "DELETE FROM Empleados WHERE tipoDoc =" + tipoDoc + "AND nroDoc = " + nroDoc;
+            string sql = "DELETE FROM Empleados WHERE tipoDoc =" + tipoDoc + "AND nroDoc LIKE '" + nroDoc + "'";
 
             try
             {

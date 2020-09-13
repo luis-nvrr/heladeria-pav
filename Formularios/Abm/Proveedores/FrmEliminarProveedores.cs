@@ -42,7 +42,7 @@ namespace Practico.Formularios.Abm.Proveedores
         private void CargarCampos()
         {
             DataTable tabla = new DataTable();
-            tabla = proveedor.RecuperarProoveedor(tipoDocumento, Int32.Parse(nroDocumento));
+            tabla = proveedor.RecuperarProoveedor(tipoDocumento, nroDocumento);
             cmbTipoDoc.SelectedValue = int.Parse(tabla.Rows[0]["tipoDocumento"].ToString());
             txtNroDoc.Text = tabla.Rows[0]["nroDocumento"].ToString();
             txtRazónSocial.Text = tabla.Rows[0]["razonSocial"].ToString();
@@ -63,7 +63,7 @@ namespace Practico.Formularios.Abm.Proveedores
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (proveedor.Eliminar(Int32.Parse(cmbTipoDoc.SelectedValue.ToString()), Int32.Parse(nroDocumento)) == Negocios.Proveedores.Respuesta.validacionCorrecta)
+            if (proveedor.Eliminar(Int32.Parse(cmbTipoDoc.SelectedValue.ToString()), nroDocumento) == Negocios.Proveedores.Respuesta.validacionCorrecta)
             {
                 MessageBox.Show("Eliminado correctamente!", "Informacion",
                     buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
