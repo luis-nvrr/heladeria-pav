@@ -32,19 +32,19 @@ namespace Practico.Formularios.Abm
             lblNombre.TabStop = false;
             lblUsuarios.TabStop = false;
             grdUsuarios.TabStop = false;
-            
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
-        {                                                         
-            
+        {
+
             if (chkTodos.Checked)  // busca todos los usuarios
             {
                 DataTable tabla = usuarios.TodosLosUsuarios();
                 CargarGrilla(tabla);
             }
             else  //buscar por nombre
-            { 
+            {
                 TratamientosEspeciales tratamiento = new TratamientosEspeciales();
 
                 // valida que haya texto en el textbox
@@ -76,16 +76,14 @@ namespace Practico.Formularios.Abm
             if (chkTodos.Checked)
             {
                 txtNombre.Enabled = false;
-                txtNombre.BackColor = Color.SlateGray;
                 LimpiarCampos();
             }
             else
             {
                 txtNombre.Enabled = true;
-                txtNombre.BackColor = Color.White;
                 txtNombre.Focus();
             }
-            
+
         }
 
         private void LimpiarCampos()
@@ -112,7 +110,7 @@ namespace Practico.Formularios.Abm
             DataTable tabla = usuarios.TodosLosUsuarios();
             CargarGrilla(tabla);
             altaUsuarios.Close();
-        
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -199,7 +197,7 @@ namespace Practico.Formularios.Abm
             }
         }
 
-        
+
 
     }
 }

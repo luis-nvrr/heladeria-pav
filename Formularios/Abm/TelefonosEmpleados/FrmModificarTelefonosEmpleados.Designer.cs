@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarTelefonosEmpleados));
             this.lblTelefono = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -225,12 +226,13 @@
             this.Controls.Add(this.lblNuevo);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmModificarTelefonosEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Telefono";
+            this.Text = "Modificar Telefono de Empleado";
             this.Load += new System.EventHandler(this.FrmModificarTelefonosEmpleados_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -24,25 +24,17 @@ namespace Practico.Formularios.Abm.Empleados
             if (chkTodos.Checked)
             {
                 txtNombre.Enabled = false;
-                txtNombre.BackColor = Color.SlateGray;
                 txtApellido.Enabled = false;
-                txtApellido.BackColor = Color.SlateGray;
                 cmbTurno.Enabled = false;
-                cmbTurno.BackColor = Color.SlateGray;
                 cmbBarrio.Enabled = false;
-                cmbBarrio.BackColor = Color.SlateGray;
                 LimpiarCampos();
             }
             else
             {
                 txtNombre.Enabled = true;
-                txtNombre.BackColor = Color.White;
                 txtApellido.Enabled = true;
-                txtApellido.BackColor = Color.White;
                 cmbTurno.Enabled = true;
-                cmbTurno.BackColor = Color.White;
                 cmbBarrio.Enabled = true;
-                cmbBarrio.BackColor = Color.White;
                 txtNombre.Focus();
             }
         }
@@ -79,7 +71,7 @@ namespace Practico.Formularios.Abm.Empleados
                     {
                         comboBarrio = "(" + cmbBarrio.SelectedValue.ToString() + ")" ;
                     }
-                    DataTable tabla = empleados.BuscarEmpleado(txtNombre.Text, txtApellido.Text, 
+                    DataTable tabla = empleados.BuscarEmpleado(txtNombre.Text, txtApellido.Text,
                         comboTurno, comboBarrio);
                     CargarGrilla(tabla);
                 }

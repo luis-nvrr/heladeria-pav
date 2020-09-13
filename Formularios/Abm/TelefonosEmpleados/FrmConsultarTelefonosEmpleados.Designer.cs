@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultarTelefonosEmpleados));
             this.cmbDocumento = new Practico.Clases.ComboBox01();
             this.cmbTipo = new Practico.Clases.ComboBox01();
             this.lblTelefono = new System.Windows.Forms.Label();
@@ -228,12 +229,13 @@
             this.Controls.Add(this.lblNuevo);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmConsultarTelefonosEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Telefono";
+            this.Text = "Consultar Telefono de Empleado";
             this.Load += new System.EventHandler(this.FrmConsultarTelefonosEmpleados_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
