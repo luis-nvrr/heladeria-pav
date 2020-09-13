@@ -41,7 +41,7 @@ namespace Practico.Formularios.Abm.TelefonosEmpleados
             {
                 Negocios.TelefonosEmpleados telefonosEmpleados = new Negocios.TelefonosEmpleados();
                 if (telefonosEmpleados.ModificarTelefono(long.Parse(txtTelefono.Text), Int32.Parse(cmbTipo.SelectedValue.ToString()),
-                    Int32.Parse(cmbDocumento.SelectedValue.ToString()))
+                    cmbDocumento.SelectedValue.ToString())
                     == Negocios.TelefonosEmpleados.Respuesta.validacionCorrecta)
                 {
                     MessageBox.Show("Modificado correctamente!", "Informacion",

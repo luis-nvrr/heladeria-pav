@@ -50,10 +50,10 @@ namespace Practico.Negocios
             return tabla;
         }
 
-        public Respuesta InsertarTelefono(long nroTelefono, int tipoDoc, int nroDoc)
+        public Respuesta InsertarTelefono(long nroTelefono, int tipoDoc, string nroDoc)
         {
             string sql = "INSERT INTO TelefonosEmpleados (nroTelefono, tipoDocEmpleado, nroDocEmpleado ) VALUES " +
-                         "(" + nroTelefono + "," + tipoDoc + "," + nroDoc + ")";
+                         "(" + nroTelefono + "," + tipoDoc + ",'" + nroDoc + "')";
             try
             {
                 baseDatos.Insertar(sql);
@@ -67,11 +67,11 @@ namespace Practico.Negocios
             }
         }
 
-        public Respuesta ModificarTelefono(long nroTelefono, int tipoDoc, int nroDoc)
+        public Respuesta ModificarTelefono(long nroTelefono, int tipoDoc, string nroDoc)
         {
             string sql = "UPDATE TelefonosEmpleados" + " SET tipoDocEmpleado = " + tipoDoc +
-                         " ,nroDocEmpleado =" + nroDoc +
-                         "WHERE nroTelefono = " + nroTelefono;
+                         " ,nroDocEmpleado ='" + nroDoc + "'" +
+                         " WHERE nroTelefono = " + nroTelefono;
 
             try
             {

@@ -34,7 +34,7 @@ namespace Practico.Formularios.Abm.TelefonosEmpleados
             {
                 Negocios.TelefonosEmpleados telefonosEmpleados = new Negocios.TelefonosEmpleados();
                 if (telefonosEmpleados.InsertarTelefono(long.Parse(txtTelefono.Text), Int32.Parse(cmbTipo.SelectedValue.ToString()),
-                    Int32.Parse(cmbDocumento.SelectedValue.ToString()))
+                    cmbDocumento.SelectedValue.ToString())
                     == Negocios.TelefonosEmpleados.Respuesta.validacionCorrecta)
                 {
                     MessageBox.Show("Ingresado correctamente!", "Informacion",
@@ -55,6 +55,7 @@ namespace Practico.Formularios.Abm.TelefonosEmpleados
             txtTelefono.Text = "";
             cmbDocumento.SelectedIndex = -1;
             cmbTipo.SelectedIndex = -1;
+            cmbNombre.SelectedIndex = -1;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -88,8 +89,6 @@ namespace Practico.Formularios.Abm.TelefonosEmpleados
         {
             BaseDatos baseDatos = new BaseDatos();
             string sql = "SELECT DISTINCT E.nombre FROM Empleados E ";
-                //         + "WHERE tipoDoc LIKE '%" + cmbTipo.SelectedValue + "%'"
-                //+ " AND nroDoc LIKE '%" + cmbDocumento.SelectedValue + "%'";
             cmbNombre.ValueMember = "nombre";
             cmbNombre.DisplayMember = "nombre";
             cmbNombre.DataSource = baseDatos.Consulta(sql);

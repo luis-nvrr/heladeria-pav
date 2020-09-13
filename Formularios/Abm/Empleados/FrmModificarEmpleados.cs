@@ -59,7 +59,7 @@ namespace Practico.Formularios.Abm.Empleados
             {
                 Negocios.Empleados empleados = new Negocios.Empleados();
                 if (empleados.ModificarEmpleado(Int32.Parse(cmbTipo.SelectedValue.ToString()),
-                        Int32.Parse(txtNroDoc.Text),
+                        txtNroDoc.Text,
                         txtNombre.Text,
                         txtApellido.Text,
                         txtCalle.Text,
@@ -87,7 +87,7 @@ namespace Practico.Formularios.Abm.Empleados
         private void CargarCampos()
         {
             Negocios.Empleados empleados = new Negocios.Empleados();
-            DataTable tabla = empleados.RecuperarEmpleado(tipoDoc, Int32.Parse(nroDoc));
+            DataTable tabla = empleados.RecuperarEmpleado(tipoDoc, nroDoc);
 
             //tipoDoc = tabla.Rows[0]["tipoDoc"].ToString();   // no deberia cambiar nunca
             //nroDoc = tabla.Rows[0]["nroDoc"].ToString();
