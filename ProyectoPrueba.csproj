@@ -322,6 +322,36 @@
     <Compile Include="Formularios\Abm\TipoDocumento\FrmTipoDocumento.designer.cs">
       <DependentUpon>FrmTipoDocumento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\Turnos\FrmAltaTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Turnos\FrmAltaTurnos.Designer.cs">
+      <DependentUpon>FrmAltaTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Turnos\FrmConsultarTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Turnos\FrmConsultarTurnos.Designer.cs">
+      <DependentUpon>FrmConsultarTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Turnos\FrmEliminarTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Turnos\FrmEliminarTurnos.Designer.cs">
+      <DependentUpon>FrmEliminarTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Turnos\FrmModificarTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Turnos\FrmModificarTurnos.Designer.cs">
+      <DependentUpon>FrmModificarTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Turnos\FrmTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Turnos\FrmTurnos.Designer.cs">
+      <DependentUpon>FrmTurnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -519,6 +549,21 @@
     <EmbeddedResource Include="Formularios\Abm\TipoDocumento\FrmTipoDocumento.resx">
       <DependentUpon>FrmTipoDocumento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Turnos\FrmAltaTurnos.resx">
+      <DependentUpon>FrmAltaTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Turnos\FrmConsultarTurnos.resx">
+      <DependentUpon>FrmConsultarTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Turnos\FrmEliminarTurnos.resx">
+      <DependentUpon>FrmEliminarTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Turnos\FrmModificarTurnos.resx">
+      <DependentUpon>FrmModificarTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Turnos\FrmTurnos.resx">
+      <DependentUpon>FrmTurnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.resx">
       <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -581,8 +626,6 @@
     <None Include="Resources\settings.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formularios\Abm\Turnos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

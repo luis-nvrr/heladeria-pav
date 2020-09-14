@@ -68,7 +68,7 @@ namespace Practico.Negocios
 
             try
             {
-                baseDatos.Eliminar(sql); 
+                baseDatos.Eliminar(sql);
                 return Respuesta.validacionCorrecta;
 
             }
@@ -77,7 +77,7 @@ namespace Practico.Negocios
                 MessageBox.Show(exception.ToString());
                 return Respuesta.validacionIncorrecta;
             }
-            
+
         }
 
         public Respuesta ModificarHelado(int id, string nombre, float precio, int cantidad)
@@ -106,15 +106,5 @@ namespace Practico.Negocios
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
-
-        //public EstructuraComboBox EstrCombo()
-        //{
-        //    EstructuraComboBox ec = new EstructuraComboBox();
-        //    ec.Display = "nombre";
-        //    ec.Value = "idHelado";
-        //    ec.Sql = "SELECT * FROM Helados";
-        //    ec.Tabla = baseDatos.Consulta(ec.Sql);
-        //    return ec;
-        //}
     }
 }
