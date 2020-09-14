@@ -96,5 +96,15 @@ namespace Practico.Negocios
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
+
+        public EstructuraComboBox EstrCombo()
+        {
+            EstructuraComboBox ec = new EstructuraComboBox();
+            ec.Display = "nombre";
+            ec.Value = "idHelado";
+            ec.Sql = "SELECT * FROM Helados";
+            ec.Tabla = baseDatos.Consulta(ec.Sql);
+            return ec;
+        }
     }
 }
