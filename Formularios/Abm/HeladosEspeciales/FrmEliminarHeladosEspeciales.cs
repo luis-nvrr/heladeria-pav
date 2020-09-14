@@ -55,7 +55,7 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (heladoEspecial.Eliminar(Int32.Parse(cmbTipoHelado.SelectedValue.ToString()), idHelado) == Negocios.HeladosEspeciales.Respuesta.validacionCorrecta)
+            if (heladoEspecial.Eliminar(Int32.Parse(idHeladoEspecial), idHelado) == Negocios.HeladosEspeciales.Respuesta.validacionCorrecta)
             {
                 MessageBox.Show("Eliminado correctamente!", "Informacion",
                     buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);

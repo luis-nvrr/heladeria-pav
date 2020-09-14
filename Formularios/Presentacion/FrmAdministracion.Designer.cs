@@ -65,7 +65,7 @@ namespace Practico.Formularios
             this.btnHeladosEspeciales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeladosEspeciales.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeladosEspeciales.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnHeladosEspeciales.Location = new System.Drawing.Point(220, 373);
+            this.btnHeladosEspeciales.Location = new System.Drawing.Point(220, 325);
             this.btnHeladosEspeciales.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnHeladosEspeciales.Name = "btnHeladosEspeciales";
             this.btnHeladosEspeciales.Size = new System.Drawing.Size(166, 63);
@@ -84,7 +84,7 @@ namespace Practico.Formularios
             this.btnEscritorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEscritorio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscritorio.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnEscritorio.Location = new System.Drawing.Point(616, 77);
+            this.btnEscritorio.Location = new System.Drawing.Point(616, 29);
             this.btnEscritorio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnEscritorio.Name = "btnEscritorio";
             this.btnEscritorio.Size = new System.Drawing.Size(166, 63);
@@ -103,7 +103,7 @@ namespace Practico.Formularios
             this.btn_Proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Proveedores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Proveedores.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btn_Proveedores.Location = new System.Drawing.Point(37, 229);
+            this.btn_Proveedores.Location = new System.Drawing.Point(37, 181);
             this.btn_Proveedores.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btn_Proveedores.Name = "btn_Proveedores";
             this.btn_Proveedores.Size = new System.Drawing.Size(166, 63);
@@ -122,7 +122,7 @@ namespace Practico.Formularios
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnUsuarios.Location = new System.Drawing.Point(396, 156);
+            this.btnUsuarios.Location = new System.Drawing.Point(396, 108);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(166, 63);
@@ -141,7 +141,7 @@ namespace Practico.Formularios
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button4.Location = new System.Drawing.Point(37, 663);
+            this.button4.Location = new System.Drawing.Point(37, 616);
             this.button4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(166, 63);
@@ -159,7 +159,7 @@ namespace Practico.Formularios
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button5.Location = new System.Drawing.Point(37, 446);
+            this.button5.Location = new System.Drawing.Point(37, 398);
             this.button5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(166, 63);
@@ -177,7 +177,7 @@ namespace Practico.Formularios
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button6.Location = new System.Drawing.Point(220, 156);
+            this.button6.Location = new System.Drawing.Point(220, 108);
             this.button6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(166, 63);
@@ -196,7 +196,7 @@ namespace Practico.Formularios
             this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpleados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpleados.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnEmpleados.Location = new System.Drawing.Point(37, 156);
+            this.btnEmpleados.Location = new System.Drawing.Point(37, 108);
             this.btnEmpleados.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(166, 63);
@@ -215,7 +215,7 @@ namespace Practico.Formularios
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button9.Location = new System.Drawing.Point(220, 446);
+            this.button9.Location = new System.Drawing.Point(220, 398);
             this.button9.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(166, 63);
@@ -233,7 +233,7 @@ namespace Practico.Formularios
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button10.Location = new System.Drawing.Point(220, 591);
+            this.button10.Location = new System.Drawing.Point(220, 543);
             this.button10.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(166, 63);
@@ -251,7 +251,7 @@ namespace Practico.Formularios
             this.btnHelados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHelados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelados.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnHelados.Location = new System.Drawing.Point(37, 373);
+            this.btnHelados.Location = new System.Drawing.Point(37, 325);
             this.btnHelados.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnHelados.Name = "btnHelados";
             this.btnHelados.Size = new System.Drawing.Size(166, 63);
@@ -270,7 +270,7 @@ namespace Practico.Formularios
             this.btnLocalidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocalidades.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLocalidades.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnLocalidades.Location = new System.Drawing.Point(37, 591);
+            this.btnLocalidades.Location = new System.Drawing.Point(37, 543);
             this.btnLocalidades.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnLocalidades.Name = "btnLocalidades";
             this.btnLocalidades.Size = new System.Drawing.Size(166, 63);
@@ -289,7 +289,7 @@ namespace Practico.Formularios
             this.btnProveedoresHelados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProveedoresHelados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProveedoresHelados.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnProveedoresHelados.Location = new System.Drawing.Point(220, 229);
+            this.btnProveedoresHelados.Location = new System.Drawing.Point(220, 181);
             this.btnProveedoresHelados.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnProveedoresHelados.Name = "btnProveedoresHelados";
             this.btnProveedoresHelados.Size = new System.Drawing.Size(166, 63);
@@ -308,7 +308,7 @@ namespace Practico.Formularios
             this.btnTipoDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoDoc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoDoc.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnTipoDoc.Location = new System.Drawing.Point(220, 663);
+            this.btnTipoDoc.Location = new System.Drawing.Point(220, 616);
             this.btnTipoDoc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnTipoDoc.Name = "btnTipoDoc";
             this.btnTipoDoc.Size = new System.Drawing.Size(166, 63);
@@ -323,7 +323,7 @@ namespace Practico.Formularios
             this.lblPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPersonas.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.lblPersonas.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPersonas.Location = new System.Drawing.Point(22, 117);
+            this.lblPersonas.Location = new System.Drawing.Point(22, 69);
             this.lblPersonas.Name = "lblPersonas";
             this.lblPersonas.Size = new System.Drawing.Size(96, 23);
             this.lblPersonas.TabIndex = 14;
@@ -335,7 +335,7 @@ namespace Practico.Formularios
             this.lblHelados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblHelados.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.lblHelados.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblHelados.Location = new System.Drawing.Point(22, 335);
+            this.lblHelados.Location = new System.Drawing.Point(22, 287);
             this.lblHelados.Name = "lblHelados";
             this.lblHelados.Size = new System.Drawing.Size(91, 23);
             this.lblHelados.TabIndex = 14;
@@ -347,7 +347,7 @@ namespace Practico.Formularios
             this.lblOtros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblOtros.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.lblOtros.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblOtros.Location = new System.Drawing.Point(22, 553);
+            this.lblOtros.Location = new System.Drawing.Point(22, 505);
             this.lblOtros.Name = "lblOtros";
             this.lblOtros.Size = new System.Drawing.Size(61, 23);
             this.lblOtros.TabIndex = 14;
@@ -356,7 +356,7 @@ namespace Practico.Formularios
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Practico.Properties.Resources.settings;
-            this.pictureBox3.Location = new System.Drawing.Point(124, 532);
+            this.pictureBox3.Location = new System.Drawing.Point(124, 484);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(51, 44);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -366,7 +366,7 @@ namespace Practico.Formularios
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Practico.Properties.Resources.iceCream;
-            this.pictureBox2.Location = new System.Drawing.Point(124, 314);
+            this.pictureBox2.Location = new System.Drawing.Point(124, 266);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(51, 44);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -376,7 +376,7 @@ namespace Practico.Formularios
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Practico.Properties.Resources.team;
-            this.pictureBox1.Location = new System.Drawing.Point(124, 96);
+            this.pictureBox1.Location = new System.Drawing.Point(124, 48);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(51, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

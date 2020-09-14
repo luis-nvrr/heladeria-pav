@@ -90,10 +90,10 @@ namespace Practico.Negocios
             {
                 baseDatos.Eliminar(sql);
                 return Respuesta.validacionCorrecta;
-
             }
             catch (SqlException exception)
             {
+                MessageBox.Show(exception.ToString());
                 return Respuesta.validacionIncorrecta;
             }
 
