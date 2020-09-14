@@ -51,7 +51,7 @@
             this.lblNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNuevo.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.lblNuevo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNuevo.Location = new System.Drawing.Point(75, 42);
+            this.lblNuevo.Location = new System.Drawing.Point(27, 36);
             this.lblNuevo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNuevo.Name = "lblNuevo";
             this.lblNuevo.Size = new System.Drawing.Size(133, 23);
@@ -109,10 +109,10 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(86, 314);
+            this.btnCancelar.Location = new System.Drawing.Point(122, 314);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(137, 52);
+            this.btnCancelar.Size = new System.Drawing.Size(103, 40);
             this.btnCancelar.TabIndex = 39;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -128,10 +128,10 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAceptar.Location = new System.Drawing.Point(234, 314);
+            this.btnAceptar.Location = new System.Drawing.Point(235, 314);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(5);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(137, 52);
+            this.btnAceptar.Size = new System.Drawing.Size(103, 40);
             this.btnAceptar.TabIndex = 38;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -255,19 +255,19 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(60, 202);
+            this.label1.Location = new System.Drawing.Point(101, 202);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 19);
+            this.label1.Size = new System.Drawing.Size(124, 19);
             this.label1.TabIndex = 57;
-            this.label1.Text = "Nombre de Empleado:";
+            this.label1.Text = "Nombre de Jefe:";
             // 
             // FrmAltaTurnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(534, 458);
+            this.ClientSize = new System.Drawing.Size(534, 405);
             this.Controls.Add(this.cmbNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbDocumento);

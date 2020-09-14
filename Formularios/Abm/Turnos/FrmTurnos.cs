@@ -76,8 +76,8 @@ namespace Practico.Formularios.Abm.Turnos
                 grdTurnos.Rows.Add();
                 grdTurnos.Rows[i].Cells[0].Value = tabla.Rows[i]["idTurno"].ToString();
                 grdTurnos.Rows[i].Cells[1].Value = tabla.Rows[i]["nombre"].ToString();
-                grdTurnos.Rows[i].Cells[2].Value = tabla.Rows[i]["horaInicio"].ToString();
-                grdTurnos.Rows[i].Cells[3].Value = tabla.Rows[i]["horaFin"].ToString();
+                grdTurnos.Rows[i].Cells[2].Value = tabla.Rows[i]["horaInicioT"].ToString();
+                grdTurnos.Rows[i].Cells[3].Value = tabla.Rows[i]["horaFinT"].ToString();
                 grdTurnos.Rows[i].Cells[4].Value = tabla.Rows[i]["tipoDocSupervisor"].ToString();
                 grdTurnos.Rows[i].Cells[5].Value = tabla.Rows[i]["nroDocSupervisor"].ToString();
             }

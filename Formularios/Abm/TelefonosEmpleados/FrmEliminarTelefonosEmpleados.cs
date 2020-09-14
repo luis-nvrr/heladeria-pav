@@ -119,6 +119,8 @@ namespace Practico.Formularios.Abm.TelefonosEmpleados
             nombre = tabla.Rows[0]["nombre"].ToString();
 
             cmbNombre.SelectedValue = nombre;
+            cmbTipo.SelectedValue = tipoDoc;
+            cmbDocumento.SelectedValue = nroDoc;
             txtTelefono.Text = nroTelefono;
         }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Practico.Clases;
 
 namespace Practico.Formularios.Abm.Turnos
 {
@@ -19,6 +20,7 @@ namespace Practico.Formularios.Abm.Turnos
         public string horaFin { get; set; }
         public string nroDoc { get; set; }
         public string tipoDoc { get; set; }
+        public string nombreJefe { get; set; }
 
 
         public FrmEliminarTurnos()
@@ -34,13 +36,13 @@ namespace Practico.Formularios.Abm.Turnos
         private void FrmEliminarTurnos_Load(object sender, EventArgs e)
         {
             lblId.TabStop = false;
-            lblNombre.TabStop = false;
-            lblHoraInicio.TabStop = false;
             lblHoraFin.TabStop = false;
+            lblHoraInicio.TabStop = false;
+            lblNombre.TabStop = false;
+            lblNuevo.TabStop = false;
             lblNumeroD.TabStop = false;
             lblTipo.TabStop = false;
-            cmbTipo.Cargar();
-
+            CargarComboNombre();
             CargarCampos();
         }
         private void CargarCampos()
@@ -54,13 +56,16 @@ namespace Practico.Formularios.Abm.Turnos
             horaFin = tabla.Rows[0]["horaFin"].ToString();
             nroDoc = tabla.Rows[0]["nroDocSupervisor"].ToString();
             tipoDoc = tabla.Rows[0]["tipoDocSupervisor"].ToString();
+            nombreJefe = tabla.Rows[0]["nombreJefe"].ToString();
 
             txtId.Text = idTurno;
             txtNombre.Text = nombre;
             pckHoraInicio.Value = DateTime.Parse(horaInicio);
             pckHoraFin.Value = DateTime.Parse(horaFin);
-            cmbTipo.SelectedIndex = cmbTipo.FindStringExact(tipoDoc);
-            txtNumeroD.Text = nroDoc;
+
+            cmbNombre.SelectedValue = nombreJefe;
+            cmbTipo.SelectedValue = tipoDoc;
+            cmbDocumento.SelectedValue = nroDoc;
 
         }
 
@@ -68,7 +73,7 @@ namespace Practico.Formularios.Abm.Turnos
         {
             Negocios.Turnos turnos = new Negocios.Turnos();
             
-            if (turnos.EliminarTurno(Int32.Parse(idTurno)) == Negocios.Turnos.Respuesta.validacionCorrecta)
+            if (turnos.EliminarTurno(Int32.Parse(txtId.Text)) == Negocios.Turnos.Respuesta.validacionCorrecta)
             {
                 MessageBox.Show("Eliminado correctamente!", "Informacion",
                     buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
@@ -78,6 +83,46 @@ namespace Practico.Formularios.Abm.Turnos
             {
                 MessageBox.Show("No se ha podido eliminar!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void cmbTipo_SelectedValueChanged(object sender, EventArgs e)
+        {
+            CargarComboDocumento();
+        }
+
+
+        private void cmbNombre_SelectedValueChanged(object sender, EventArgs e)
+        {
+            CargarComboTipo();
+        }
+
+
+        public void CargarComboTipo()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT DISTINCT TD.* FROM Empleados E JOIN TiposDocumento TD ON (E.tipoDoc = TD.tipoDocumento)"
+                         + "WHERE nombre LIKE '%" + cmbNombre.SelectedValue + "%'";
+            cmbTipo.DisplayMember = "descripcion";
+            cmbTipo.ValueMember = "tipoDocumento";
+            cmbTipo.DataSource = baseDatos.Consulta(sql);
+        }
+
+        public void CargarComboDocumento()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT E.* FROM Empleados E WHERE tipoDoc LIKE '%" + cmbTipo.SelectedValue + "%'"
+                         + "AND nombre LIKE '%" + cmbNombre.SelectedValue + "%'";
+            cmbDocumento.ValueMember = "nroDoc";
+            cmbDocumento.DisplayMember = "nroDoc";
+            cmbDocumento.DataSource = baseDatos.Consulta(sql);
+        }
+        private void CargarComboNombre()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT DISTINCT E.nombre FROM Empleados E ";
+            cmbNombre.ValueMember = "nombre";
+            cmbNombre.DisplayMember = "nombre";
+            cmbNombre.DataSource = baseDatos.Consulta(sql);
         }
 
     }

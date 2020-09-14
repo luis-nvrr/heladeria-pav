@@ -100,10 +100,6 @@ namespace Practico.Formularios.Abm.TelefonosEmpleados
             CargarComboDocumento();
         }
 
-        private void cmbDocumento_SelectedValueChanged(object sender, EventArgs e)
-        {
-            CargarComboNombre();
-        }
 
         private void cmbNombre_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -120,6 +116,8 @@ namespace Practico.Formularios.Abm.TelefonosEmpleados
             nombre = tabla.Rows[0]["nombre"].ToString();
 
             cmbNombre.SelectedValue = nombre;
+            cmbTipo.SelectedValue = tipoDoc;
+            cmbDocumento.SelectedValue = nroDoc;
             txtTelefono.Text = nroTelefono;
         }
 

@@ -23,7 +23,8 @@ namespace Practico.Negocios
 
         public DataTable TodosLosTurnos()
         {
-            string sql = "SELECT * FROM Turnos";
+            string sql = "SELECT T.*, CONVERT(time,T.horaInicio,108) as horaInicioT" +
+                         ", CONVERT(time,T.horaFin,108) as horaFinT FROM Turnos T";
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
@@ -31,14 +32,18 @@ namespace Practico.Negocios
 
         public DataTable BuscarTurno(string nombre)
         {
-            string sql = "Select * FROM Turnos WHERE nombre = '" + nombre + "'";
+            string sql = "SELECT T.*, CONVERT(time,T.horaInicio,108) as horaInicioT" +
+                         ", CONVERT(time,T.horaFin,108) as horaFinT FROM Turnos T"+
+                        " WHERE T.nombre LIKE '%" + nombre + "%'";
             DataTable tabla = baseDatos.Consulta(sql);
             return tabla;
         }
 
         public DataTable RecuperarTurno(int id)
         {
-            string sql = "SELECT * FROM Turnos WHERE idTurno = " + id;
+            string sql = "SELECT T.*, J.nombre AS nombreJefe FROM Turnos T " +
+                         "INNER JOIN Empleados J ON (T.nroDocSupervisor = J.nroDoc) AND (T.tipoDocSupervisor = J.TipoDoc)" +
+                         "WHERE T.idTurno = " + id;
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
@@ -80,13 +85,16 @@ namespace Practico.Negocios
 
         }
 
-        public Respuesta ModificarTurno(int idTurno, string nombre, DateTime horaInicio, DateTime horaFin
+        public Respuesta ModificarTurno(int idTurno, string nombre, string horaInicio, string horaFin
                                        , string nroDocSupervisor, int tipoDocSupervisor)
         {
-            string sql = "INSERT INTO Turnos(idTurno,nombre,horaInicio,horaFin,nroDocSupervisor" +
-                        ",tipoDocSupervisor) VALUES " + "(" + idTurno + ",'" + nombre + "','" +
-                        "," + "convert(date," + horaInicio + "',103)" + "convert(date," + horaInicio + "',103)" +
-                        "," + nroDocSupervisor + "," + tipoDocSupervisor + ")";
+            string sql = "UPDATE Turnos " +
+                         "SET nombre = '" + nombre + "'," +
+                         "horaInicio = convert(time,'" + horaInicio + "',108), " +
+                         "horaFin = convert(time,'" + horaFin + "',108), " +
+                         "nroDocSupervisor = " + nroDocSupervisor + ", " +
+                         "tipoDocSupervisor = " + tipoDocSupervisor +
+                         " WHERE idTurno = " + idTurno;
             try
             {
                 baseDatos.Actualizar(sql);
