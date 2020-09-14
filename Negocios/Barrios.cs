@@ -48,8 +48,8 @@ namespace Practico.Negocios
 
         public Respuesta InsertarBarrio( string nombre,int idLocalidad)
         {
-            string sql = "INSERT INTO Barrios(, nombre, idLocalidad) VALUES " +
-                "("+ nombre + "," + idLocalidad + ")";
+            string sql = "INSERT INTO Barrios(nombre, idLocalidad) VALUES " +
+                "('"+ nombre.Trim() + "'," + idLocalidad + ")";
 
             try
             {
@@ -74,8 +74,8 @@ namespace Practico.Negocios
 
         public Respuesta ModificarBarrio(int idBarrio, string nombre, int idLocalidad)
         {
-            string sql = "UPDATE Barrios" + "SET nombre = '" + nombre + "',idLocalidad = ' " + idLocalidad
-                + "WHERE idBarrio = " + idBarrio;
+            string sql = "UPDATE Barrios" + " SET nombre = '" + nombre + "',idLocalidad = '" + idLocalidad + "'"
+                         + " WHERE idBarrio = " + idBarrio;
 
             try
             {

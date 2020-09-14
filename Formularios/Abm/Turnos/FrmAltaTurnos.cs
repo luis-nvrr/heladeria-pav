@@ -26,12 +26,13 @@ namespace Practico.Formularios.Abm.Turnos
             lblNuevo.TabStop = false;
             lblNumeroD.TabStop = false;
             lblTipo.TabStop = false;
+            CargarComboNombre();
         }
 
         private void LimpiarCampos()
         {
             txtNombre.Text = "";
-            txtNumeroD.Text = "";
+            cmbDocumento.SelectedIndex = -1;
             cmbTipo.SelectedIndex = -1;
         }
 
@@ -46,10 +47,7 @@ namespace Practico.Formularios.Abm.Turnos
             this.Close();
         }
 
-        private void pckHoraInicio_ValueChanged(object sender, EventArgs e)
-        {
-          
-        }
+ 
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -59,9 +57,9 @@ namespace Practico.Formularios.Abm.Turnos
             {
                 Negocios.Turnos turnos = new Negocios.Turnos();
                 if (turnos.InsertarTurno(txtNombre.Text,
-                                         pckHoraInicio.Value,
-                                         pckHoraFin.Value,
-                                         txtNumeroD.Text,
+                                         pckHoraInicio.Value.ToShortTimeString(),
+                                         pckHoraFin.Value.ToShortTimeString(),
+                                         cmbDocumento.SelectedValue.ToString(),
                                          Int32.Parse(cmbTipo.SelectedValue.ToString())) ==
                                          Negocios.Turnos.Respuesta.validacionCorrecta)
                 {
@@ -71,9 +69,50 @@ namespace Practico.Formularios.Abm.Turnos
                 }
                 else
                 {
+                    MessageBox.Show(pckHoraFin.Value.ToString());
                     MessageBox.Show("Ha ocurrido un error...", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void cmbTipo_SelectedValueChanged(object sender, EventArgs e)
+        {
+            CargarComboDocumento();
+        }
+
+
+        private void cmbNombre_SelectedValueChanged(object sender, EventArgs e)
+        {
+            CargarComboTipo();
+        }
+
+
+        public void CargarComboTipo()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT DISTINCT TD.* FROM Empleados E JOIN TiposDocumento TD ON (E.tipoDoc = TD.tipoDocumento)"
+                         + "WHERE nombre LIKE '%" + cmbNombre.SelectedValue + "%'";
+            cmbTipo.DisplayMember = "descripcion";
+            cmbTipo.ValueMember = "tipoDocumento";
+            cmbTipo.DataSource = baseDatos.Consulta(sql);
+        }
+
+        public void CargarComboDocumento()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT E.* FROM Empleados E WHERE tipoDoc LIKE '%" + cmbTipo.SelectedValue + "%'"
+                         + "AND nombre LIKE '%" + cmbNombre.SelectedValue + "%'";
+            cmbDocumento.ValueMember = "nroDoc";
+            cmbDocumento.DisplayMember = "nroDoc";
+            cmbDocumento.DataSource = baseDatos.Consulta(sql);
+        }
+        private void CargarComboNombre()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT DISTINCT E.nombre FROM Empleados E ";
+            cmbNombre.ValueMember = "nombre";
+            cmbNombre.DisplayMember = "nombre";
+            cmbNombre.DataSource = baseDatos.Consulta(sql);
         }
     }
 }

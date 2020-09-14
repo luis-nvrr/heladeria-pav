@@ -69,6 +69,7 @@ namespace Practico.Formularios.Abm.Barrios
             lblLocalidad.TabStop = false;
             lblNombre.TabStop = false;
             cmbLocalidad.Cargar();
+            CargarCampos();
         }
     }
 }

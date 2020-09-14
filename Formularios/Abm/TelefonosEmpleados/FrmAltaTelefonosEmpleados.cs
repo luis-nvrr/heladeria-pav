@@ -99,10 +99,6 @@ namespace Practico.Formularios.Abm.TelefonosEmpleados
             CargarComboDocumento();
         }
 
-        private void cmbDocumento_SelectedValueChanged(object sender, EventArgs e)
-        {
-            CargarComboNombre();
-        }
 
         private void cmbNombre_SelectedValueChanged(object sender, EventArgs e)
         {

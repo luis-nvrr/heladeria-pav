@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Practico.Formularios.Abm.Usuarios;
 
 namespace Practico.Negocios
@@ -54,19 +56,33 @@ namespace Practico.Negocios
 			string sql = "INSERT INTO Localidades VALUES " + "('" + nombre + "')";
 
 
-			if (ValidarLocalidad(nombre) == Respuesta.validacionIncorrecta)
-			{
-				baseDatos.Insertar(sql);
-				return Respuesta.validacionCorrecta;
-			}
+            try
+            {
+                baseDatos.Insertar(sql);
+                return Localidades.Respuesta.validacionCorrecta;
 
-			return Respuesta.validacionIncorrecta;
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.ToString());
+                return Localidades.Respuesta.validacionIncorrecta;
+            }
 		}
 
-		public void EliminarLocalidad(int id)
+		public Respuesta EliminarLocalidad(int id)
 		{
 			string sql = "DELETE FROM Localidades WHERE idLocalidad =" + id;
-			baseDatos.Eliminar(sql);
+            try
+            {
+                baseDatos.Eliminar(sql);
+                return Respuesta.validacionCorrecta;
+
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.ToString());
+                return Respuesta.validacionIncorrecta;
+            }
 
 		}
 
@@ -74,14 +90,17 @@ namespace Practico.Negocios
 		{
 			string sql = "UPDATE Localidades" + " SET nombre = '" + nombre + "' " +
 						 "WHERE idLocalidad = " + id;
-			if (baseDatos.Consulta(sql).HasErrors)
-			{
-				return Respuesta.validacionIncorrecta;
-			}
-			else
-			{
-				return Respuesta.validacionCorrecta;
-			}
+            try
+            {
+                baseDatos.Actualizar(sql);
+                return Respuesta.validacionCorrecta;
+
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.ToString());
+                return Respuesta.validacionIncorrecta;
+            }
 		}
 
 		public DataTable RecuperarLocalidad(int id)

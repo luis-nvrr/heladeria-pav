@@ -59,13 +59,12 @@ namespace Practico.Negocios
             }
         }
 
-        public Respuesta InsertarTurno( string nombre, DateTime horaInicio, DateTime horaFin
+        public Respuesta InsertarTurno( string nombre, string horaInicio, string horaFin
                                        ,string nroDocSupervisor, int tipoDocSupervisor)
         {
-            string sql = "INSERT INTO Turnos(nombre,horaInicio,horaFin,nroDocSupervisor" +
-                         ",tipoDocSupervisor) VALUES " + ",'" + nombre + "','" +
-                         "," + "convert(date," + horaInicio + "',103)" + "convert(date," + horaInicio + "',103)" +
-                         "," + nroDocSupervisor + "," + tipoDocSupervisor + ")";
+            string sql = "INSERT INTO Turnos(nombre,horaInicio,horaFin,nroDocSupervisor,tipoDocSupervisor) " +
+                         "VALUES ('" + nombre + "', convert(time,'" + horaInicio + "',108), convert(Time,'" + horaFin + "',108), " +
+                         nroDocSupervisor + "," + tipoDocSupervisor + ")";
             try
             {
                 baseDatos.Insertar(sql);
@@ -74,7 +73,6 @@ namespace Practico.Negocios
             }
             catch (SqlException exception)
             {
-                MessageBox.Show(exception.ToString());
                 return Respuesta.validacionIncorrecta;
             }
 

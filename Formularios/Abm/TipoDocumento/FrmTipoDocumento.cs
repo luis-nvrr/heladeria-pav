@@ -122,12 +122,18 @@ namespace Practico.Formularios.Abm.Localidades
                     int indiceFilaSeleccionada = grdTipoDoc.SelectedRows[0].Index;
                     int id = Convert.ToInt32(grdTipoDoc[0, indiceFilaSeleccionada].Value);
 
-                    tipoDocumento.EliminarTipoDocumento(id);
-                    MessageBox.Show("Tipo de documento eliminado correctamente", "Informacion",
+                    if (tipoDocumento.EliminarTipoDocumento(id) == Negocios.TipoDocumento.Respuesta.validacionCorrecta)
+                    {
+                        MessageBox.Show("Tipo de documento eliminado correctamente", "Informacion",
                             buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
 
-                    DataTable tabla = tipoDocumento.TodosLosTipoDocumento();
-                    CargarGrilla(tabla);
+                        DataTable tabla = tipoDocumento.TodosLosTipoDocumento();
+                        CargarGrilla(tabla);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido eliminar!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {

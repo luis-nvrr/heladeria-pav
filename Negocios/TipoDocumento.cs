@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Practico.Formularios.Abm.Usuarios;
 
 namespace Practico.Negocios
@@ -65,19 +67,33 @@ namespace Practico.Negocios
 			string sql = "INSERT INTO TiposDocumento VALUES " + "('" + nombreTipoDocumento + "')";
 
 
-			if (ValidarTipoDocumento(nombreTipoDocumento) == Respuesta.validacionIncorrecta)
-			{
-				baseDatos.Insertar(sql);
-				return Respuesta.validacionCorrecta;
-			}
+            try
+            {
+                baseDatos.Insertar(sql);
+                return Respuesta.validacionCorrecta;
 
-			return Respuesta.validacionIncorrecta;
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.ToString());
+                return Respuesta.validacionIncorrecta;
+            }
 		}
 
-		public void EliminarTipoDocumento(int id)
+		public Respuesta EliminarTipoDocumento(int id)
 		{
 			string sql = "DELETE FROM TiposDocumento WHERE tipoDocumento =" + id;
-			baseDatos.Eliminar(sql);
+            try
+            {
+                baseDatos.Eliminar(sql);
+                return Respuesta.validacionCorrecta;
+
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.ToString());
+                return Respuesta.validacionIncorrecta;
+            }
 
 		}
 
@@ -85,14 +101,17 @@ namespace Practico.Negocios
 		{
 			string sql = "UPDATE TiposDocumento" + " SET descripcion = '" + descripcionTipoDocumento + "' " +
 						 "WHERE tipoDocumento = " + id;
-			if (baseDatos.Consulta(sql).HasErrors)
-			{
-				return Respuesta.validacionIncorrecta;
-			}
-			else
-			{
-				return Respuesta.validacionCorrecta;
-			}
+            try
+            {
+                baseDatos.Actualizar(sql);
+                return Respuesta.validacionCorrecta;
+
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.ToString());
+                return Respuesta.validacionIncorrecta;
+            }
 		}
 
 		public DataTable RecuperarTipoDocumento(int id)

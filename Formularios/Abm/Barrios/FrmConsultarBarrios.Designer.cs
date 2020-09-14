@@ -42,13 +42,14 @@
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(169, 75);
+            this.txtId.Location = new System.Drawing.Point(225, 98);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtId.Name = "txtId";
             this.txtId.PpMensajeError = "No ingresó nombre!";
             this.txtId.PpNombreCampo = null;
             this.txtId.PpNombreTabla = null;
             this.txtId.PpValidable = true;
-            this.txtId.Size = new System.Drawing.Size(124, 20);
+            this.txtId.Size = new System.Drawing.Size(164, 24);
             this.txtId.TabIndex = 29;
             // 
             // lblId
@@ -57,7 +58,8 @@
             this.lblId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblId.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblId.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblId.Location = new System.Drawing.Point(137, 78);
+            this.lblId.Location = new System.Drawing.Point(183, 102);
+            this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(26, 19);
             this.lblId.TabIndex = 30;
@@ -66,13 +68,14 @@
             // txtNombre
             // 
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(169, 105);
+            this.txtNombre.Location = new System.Drawing.Point(225, 137);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PpMensajeError = "No ingresó nombre!";
             this.txtNombre.PpNombreCampo = null;
             this.txtNombre.PpNombreTabla = null;
             this.txtNombre.PpValidable = true;
-            this.txtNombre.Size = new System.Drawing.Size(124, 20);
+            this.txtNombre.Size = new System.Drawing.Size(164, 24);
             this.txtNombre.TabIndex = 26;
             // 
             // lblNombre
@@ -81,7 +84,8 @@
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombre.Location = new System.Drawing.Point(95, 110);
+            this.lblNombre.Location = new System.Drawing.Point(127, 144);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(68, 19);
             this.lblNombre.TabIndex = 28;
@@ -93,7 +97,8 @@
             this.lblNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNuevo.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.lblNuevo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNuevo.Location = new System.Drawing.Point(12, 27);
+            this.lblNuevo.Location = new System.Drawing.Point(16, 35);
+            this.lblNuevo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNuevo.Name = "lblNuevo";
             this.lblNuevo.Size = new System.Drawing.Size(162, 23);
             this.lblNuevo.TabIndex = 27;
@@ -110,10 +115,10 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(87, 205);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(116, 268);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(103, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(137, 52);
             this.btnCancelar.TabIndex = 25;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -129,10 +134,10 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAceptar.Location = new System.Drawing.Point(198, 205);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAceptar.Location = new System.Drawing.Point(264, 268);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(103, 40);
+            this.btnAceptar.Size = new System.Drawing.Size(137, 52);
             this.btnAceptar.TabIndex = 24;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -144,7 +149,8 @@
             this.cmbLocalidad.Enabled = false;
             this.cmbLocalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbLocalidad.FormattingEnabled = true;
-            this.cmbLocalidad.Location = new System.Drawing.Point(169, 137);
+            this.cmbLocalidad.Location = new System.Drawing.Point(225, 179);
+            this.cmbLocalidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbLocalidad.Name = "cmbLocalidad";
             this.cmbLocalidad.PpDisplay = "nombre";
             this.cmbLocalidad.PpMensajeError = null;
@@ -153,7 +159,7 @@
             this.cmbLocalidad.PpTabla = "Localidades";
             this.cmbLocalidad.PpValidable = false;
             this.cmbLocalidad.PpValue = "idLocalidad";
-            this.cmbLocalidad.Size = new System.Drawing.Size(123, 21);
+            this.cmbLocalidad.Size = new System.Drawing.Size(163, 25);
             this.cmbLocalidad.TabIndex = 46;
             // 
             // lblLocalidad
@@ -162,7 +168,8 @@
             this.lblLocalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLocalidad.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblLocalidad.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblLocalidad.Location = new System.Drawing.Point(80, 139);
+            this.lblLocalidad.Location = new System.Drawing.Point(107, 182);
+            this.lblLocalidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(83, 19);
             this.lblLocalidad.TabIndex = 47;
@@ -170,10 +177,10 @@
             // 
             // FrmConsultarBarrios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(392, 325);
+            this.ClientSize = new System.Drawing.Size(523, 425);
             this.Controls.Add(this.cmbLocalidad);
             this.Controls.Add(this.lblLocalidad);
             this.Controls.Add(this.txtId);
@@ -183,6 +190,8 @@
             this.Controls.Add(this.lblNuevo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
+            this.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmConsultarBarrios";
             this.Text = "Consultar Barrios";
             this.Load += new System.EventHandler(this.FrmConsultarBarrios_Load);

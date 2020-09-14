@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBarrios = new System.Windows.Forms.Label();
             this.btnEscritorio = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -58,7 +58,8 @@
             this.lblBarrios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblBarrios.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.lblBarrios.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBarrios.Location = new System.Drawing.Point(58, 35);
+            this.lblBarrios.Location = new System.Drawing.Point(77, 46);
+            this.lblBarrios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBarrios.Name = "lblBarrios";
             this.lblBarrios.Size = new System.Drawing.Size(183, 23);
             this.lblBarrios.TabIndex = 13;
@@ -74,10 +75,10 @@
             this.btnEscritorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEscritorio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscritorio.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEscritorio.Location = new System.Drawing.Point(589, 35);
-            this.btnEscritorio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnEscritorio.Location = new System.Drawing.Point(785, 46);
+            this.btnEscritorio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnEscritorio.Name = "btnEscritorio";
-            this.btnEscritorio.Size = new System.Drawing.Size(166, 63);
+            this.btnEscritorio.Size = new System.Drawing.Size(221, 82);
             this.btnEscritorio.TabIndex = 14;
             this.btnEscritorio.Text = "Volver Al Escritorio";
             this.btnEscritorio.UseVisualStyleBackColor = false;
@@ -90,9 +91,10 @@
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Controls.Add(this.btnNuevo);
-            this.panel1.Location = new System.Drawing.Point(513, 216);
+            this.panel1.Location = new System.Drawing.Point(684, 282);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 280);
+            this.panel1.Size = new System.Drawing.Size(291, 366);
             this.panel1.TabIndex = 22;
             // 
             // btnEliminar
@@ -105,10 +107,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEliminar.Location = new System.Drawing.Point(42, 220);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(56, 288);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 40);
+            this.btnEliminar.Size = new System.Drawing.Size(199, 52);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar Barrio";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -124,10 +126,10 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnModificar.Location = new System.Drawing.Point(42, 155);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Location = new System.Drawing.Point(56, 203);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(5);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(149, 40);
+            this.btnModificar.Size = new System.Drawing.Size(199, 52);
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar Barrio";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -143,10 +145,10 @@
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConsultar.Location = new System.Drawing.Point(42, 90);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultar.Location = new System.Drawing.Point(56, 118);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(5);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(149, 40);
+            this.btnConsultar.Size = new System.Drawing.Size(199, 52);
             this.btnConsultar.TabIndex = 0;
             this.btnConsultar.Text = "Consultar Barrio";
             this.btnConsultar.UseVisualStyleBackColor = false;
@@ -162,10 +164,10 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnNuevo.Location = new System.Drawing.Point(42, 30);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevo.Location = new System.Drawing.Point(56, 39);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(5);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(149, 40);
+            this.btnNuevo.Size = new System.Drawing.Size(199, 52);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo Barrio";
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -181,33 +183,34 @@
             this.grdBarrios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.grdBarrios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdBarrios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdBarrios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdBarrios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdBarrios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdBarrios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.Nombre,
             this.Localidad});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdBarrios.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdBarrios.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdBarrios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.grdBarrios.Location = new System.Drawing.Point(49, 306);
+            this.grdBarrios.Location = new System.Drawing.Point(65, 400);
+            this.grdBarrios.Margin = new System.Windows.Forms.Padding(4);
             this.grdBarrios.Name = "grdBarrios";
             this.grdBarrios.ReadOnly = true;
             this.grdBarrios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdBarrios.Size = new System.Drawing.Size(366, 135);
+            this.grdBarrios.Size = new System.Drawing.Size(488, 177);
             this.grdBarrios.TabIndex = 23;
             // 
             // id
@@ -241,9 +244,10 @@
             this.chkTodos.AutoSize = true;
             this.chkTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkTodos.ForeColor = System.Drawing.SystemColors.Control;
-            this.chkTodos.Location = new System.Drawing.Point(135, 216);
+            this.chkTodos.Location = new System.Drawing.Point(180, 282);
+            this.chkTodos.Margin = new System.Windows.Forms.Padding(4);
             this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(89, 17);
+            this.chkTodos.Size = new System.Drawing.Size(112, 23);
             this.chkTodos.TabIndex = 26;
             this.chkTodos.Text = "Buscar Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
@@ -252,13 +256,14 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(134, 121);
+            this.txtNombre.Location = new System.Drawing.Point(179, 158);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PpMensajeError = "No ingresó nombre!";
             this.txtNombre.PpNombreCampo = null;
             this.txtNombre.PpNombreTabla = null;
             this.txtNombre.PpValidable = true;
-            this.txtNombre.Size = new System.Drawing.Size(124, 20);
+            this.txtNombre.Size = new System.Drawing.Size(164, 24);
             this.txtNombre.TabIndex = 24;
             // 
             // btnBuscar
@@ -271,10 +276,10 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBuscar.Location = new System.Drawing.Point(325, 110);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(433, 144);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(5);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(103, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(137, 52);
             this.btnBuscar.TabIndex = 25;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -286,7 +291,8 @@
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombre.Location = new System.Drawing.Point(45, 122);
+            this.lblNombre.Location = new System.Drawing.Point(60, 160);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(68, 19);
             this.lblNombre.TabIndex = 27;
@@ -297,16 +303,17 @@
             this.cmbLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLocalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbLocalidad.FormattingEnabled = true;
-            this.cmbLocalidad.Location = new System.Drawing.Point(135, 170);
+            this.cmbLocalidad.Location = new System.Drawing.Point(180, 222);
+            this.cmbLocalidad.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLocalidad.Name = "cmbLocalidad";
             this.cmbLocalidad.PpDisplay = "nombre";
             this.cmbLocalidad.PpMensajeError = null;
             this.cmbLocalidad.PpNombreCampo = null;
             this.cmbLocalidad.PpNombreTabla = null;
-            this.cmbLocalidad.PpTabla = "Turnos";
+            this.cmbLocalidad.PpTabla = "Localidades";
             this.cmbLocalidad.PpValidable = true;
-            this.cmbLocalidad.PpValue = "idTurno";
-            this.cmbLocalidad.Size = new System.Drawing.Size(123, 21);
+            this.cmbLocalidad.PpValue = "idLocalidad";
+            this.cmbLocalidad.Size = new System.Drawing.Size(163, 25);
             this.cmbLocalidad.TabIndex = 28;
             // 
             // label1
@@ -315,7 +322,8 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(45, 172);
+            this.label1.Location = new System.Drawing.Point(60, 225);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 19);
             this.label1.TabIndex = 29;
@@ -331,10 +339,10 @@
             this.btnLimpiarLocalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarLocalidad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarLocalidad.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLimpiarLocalidad.Location = new System.Drawing.Point(279, 168);
-            this.btnLimpiarLocalidad.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnLimpiarLocalidad.Location = new System.Drawing.Point(372, 220);
+            this.btnLimpiarLocalidad.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnLimpiarLocalidad.Name = "btnLimpiarLocalidad";
-            this.btnLimpiarLocalidad.Size = new System.Drawing.Size(70, 24);
+            this.btnLimpiarLocalidad.Size = new System.Drawing.Size(93, 31);
             this.btnLimpiarLocalidad.TabIndex = 30;
             this.btnLimpiarLocalidad.Text = "Limpiar";
             this.btnLimpiarLocalidad.UseVisualStyleBackColor = false;
@@ -342,10 +350,10 @@
             // 
             // FrmBarrios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(807, 606);
+            this.ClientSize = new System.Drawing.Size(1028, 749);
             this.Controls.Add(this.btnLimpiarLocalidad);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbLocalidad);
@@ -357,6 +365,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEscritorio);
             this.Controls.Add(this.lblBarrios);
+            this.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmBarrios";
             this.Text = "Gestion De Barrios";
             this.Load += new System.EventHandler(this.FrmBarrios_Load);

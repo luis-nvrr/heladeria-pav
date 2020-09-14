@@ -122,9 +122,15 @@ namespace Practico.Formularios.Abm.Localidades
                     int indiceFilaSeleccionada = grdLocalidades.SelectedRows[0].Index;
                     int id = Convert.ToInt32(grdLocalidades[0, indiceFilaSeleccionada].Value);
 
-                    localidades.EliminarLocalidad(id);
-                    MessageBox.Show("Localidad eliminada correctamente", "Informacion",
+                    if (localidades.EliminarLocalidad(id) == Negocios.Localidades.Respuesta.validacionCorrecta)
+                    {
+                        MessageBox.Show("Localidad eliminada correctamente", "Informacion",
                             buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido eliminar!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
                     DataTable tabla = localidades.TodasLasLocalidades();
                     CargarGrilla(tabla); 

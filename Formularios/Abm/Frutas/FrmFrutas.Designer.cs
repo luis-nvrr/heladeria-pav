@@ -55,9 +55,10 @@
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Controls.Add(this.btnNuevo);
-            this.panel1.Location = new System.Drawing.Point(421, 190);
+            this.panel1.Location = new System.Drawing.Point(561, 248);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(191, 224);
+            this.panel1.Size = new System.Drawing.Size(255, 293);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -71,10 +72,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEliminar.Location = new System.Drawing.Point(24, 163);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(32, 213);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 40);
+            this.btnEliminar.Size = new System.Drawing.Size(199, 52);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar Fruta";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -90,10 +91,10 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnModificar.Location = new System.Drawing.Point(24, 115);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Location = new System.Drawing.Point(32, 150);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(149, 40);
+            this.btnModificar.Size = new System.Drawing.Size(199, 52);
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar Fruta";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -109,10 +110,10 @@
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConsultar.Location = new System.Drawing.Point(24, 65);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultar.Location = new System.Drawing.Point(32, 85);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(149, 40);
+            this.btnConsultar.Size = new System.Drawing.Size(199, 52);
             this.btnConsultar.TabIndex = 0;
             this.btnConsultar.Text = "Consultar Fruta";
             this.btnConsultar.UseVisualStyleBackColor = false;
@@ -128,10 +129,10 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnNuevo.Location = new System.Drawing.Point(24, 17);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevo.Location = new System.Drawing.Point(32, 22);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(149, 40);
+            this.btnNuevo.Size = new System.Drawing.Size(199, 52);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nueva Fruta";
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -168,11 +169,12 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdFrutas.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdFrutas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.grdFrutas.Location = new System.Drawing.Point(108, 190);
+            this.grdFrutas.Location = new System.Drawing.Point(144, 248);
+            this.grdFrutas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdFrutas.Name = "grdFrutas";
             this.grdFrutas.ReadOnly = true;
             this.grdFrutas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdFrutas.Size = new System.Drawing.Size(271, 290);
+            this.grdFrutas.Size = new System.Drawing.Size(361, 379);
             this.grdFrutas.TabIndex = 23;
             this.grdFrutas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdFrutas_CellContentClick);
             // 
@@ -200,7 +202,8 @@
             this.lblFrutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFrutas.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.lblFrutas.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblFrutas.Location = new System.Drawing.Point(21, 33);
+            this.lblFrutas.Location = new System.Drawing.Point(28, 43);
+            this.lblFrutas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFrutas.Name = "lblFrutas";
             this.lblFrutas.Size = new System.Drawing.Size(179, 23);
             this.lblFrutas.TabIndex = 22;
@@ -211,9 +214,10 @@
             this.chkTodos.AutoSize = true;
             this.chkTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkTodos.ForeColor = System.Drawing.SystemColors.Control;
-            this.chkTodos.Location = new System.Drawing.Point(178, 141);
+            this.chkTodos.Location = new System.Drawing.Point(237, 184);
+            this.chkTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(89, 17);
+            this.chkTodos.Size = new System.Drawing.Size(112, 23);
             this.chkTodos.TabIndex = 18;
             this.chkTodos.Text = "Buscar Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
@@ -229,10 +233,10 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBuscar.Location = new System.Drawing.Point(336, 102);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(448, 133);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(103, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(137, 52);
             this.btnBuscar.TabIndex = 17;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -248,10 +252,10 @@
             this.btnEscritorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEscritorio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscritorio.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEscritorio.Location = new System.Drawing.Point(615, 16);
-            this.btnEscritorio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnEscritorio.Location = new System.Drawing.Point(820, 21);
+            this.btnEscritorio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnEscritorio.Name = "btnEscritorio";
-            this.btnEscritorio.Size = new System.Drawing.Size(166, 63);
+            this.btnEscritorio.Size = new System.Drawing.Size(221, 82);
             this.btnEscritorio.TabIndex = 20;
             this.btnEscritorio.Text = "Volver Al Escritorio";
             this.btnEscritorio.UseVisualStyleBackColor = false;
@@ -263,7 +267,8 @@
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombre.Location = new System.Drawing.Point(104, 116);
+            this.lblNombre.Location = new System.Drawing.Point(139, 152);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(68, 19);
             this.lblNombre.TabIndex = 21;
@@ -272,23 +277,24 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(178, 111);
+            this.txtNombre.Location = new System.Drawing.Point(237, 145);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PpMensajeError = "No ingresó nombre!";
             this.txtNombre.PpNombreCampo = null;
             this.txtNombre.PpNombreTabla = null;
             this.txtNombre.PpValidable = true;
-            this.txtNombre.Size = new System.Drawing.Size(124, 20);
+            this.txtNombre.Size = new System.Drawing.Size(164, 24);
             this.txtNombre.TabIndex = 16;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
             // 
             // FrmFrutas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(807, 606);
+            this.ClientSize = new System.Drawing.Size(1028, 749);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grdFrutas);
             this.Controls.Add(this.lblFrutas);
@@ -297,6 +303,8 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEscritorio);
             this.Controls.Add(this.lblNombre);
+            this.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmFrutas";
             this.Text = "Gestión de Frutas";
             this.Load += new System.EventHandler(this.FrmFrutas_Load);
