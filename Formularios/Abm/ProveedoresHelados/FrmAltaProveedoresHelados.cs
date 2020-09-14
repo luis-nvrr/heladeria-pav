@@ -14,8 +14,11 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
 {
     public partial class FrmAltaProveedoresHelados : Form
     {
-        Negocios.TiposDocumento tipoDoc = new Negocios.TiposDocumento();
+        Negocios.TipoDocumento tipoDoc = new Negocios.TipoDocumento();
         Negocios.ProveedoresHelados proveedoresHelados = new Negocios.ProveedoresHelados();
+        Negocios.Proveedores proveedores = new Negocios.Proveedores();
+        Negocios.Helados helados = new Negocios.Helados();
+
         public FrmAltaProveedoresHelados()
         {
             InitializeComponent();
@@ -24,6 +27,8 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
         private void FrmAltaProveedoresHelados_Load(object sender, EventArgs e)
         {
             cmbTipoDoc.cargar(tipoDoc.EstrCombo());
+            cmbNroDoc.cargar(proveedores.EstrCombo());
+            cmbIdHelado.cargar(helados.EstrCombo());
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -51,15 +56,13 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
         private void LimpiarCampos()
         {
             cmbTipoDoc.SelectedIndex = -1;
-            txtNroDoc.Text = "";
-            txtIdHelado.Text = "";
+            cmbNroDoc.SelectedIndex = -1;
+            cmbIdHelado.SelectedIndex = -1;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-     
     }
 }

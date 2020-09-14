@@ -15,6 +15,16 @@ namespace Practico.Negocios
     {
         private BaseDatos baseDatos = new BaseDatos(); // creacion de la base de datos
 
+        public EstructuraComboBox EstrCombo()
+        {
+            EstructuraComboBox ec = new EstructuraComboBox();
+            ec.Display = "nombre";
+            ec.Value = "idHelado";
+            ec.Sql = "SELECT * FROM Helados";
+            ec.Tabla = baseDatos.Consulta(ec.Sql);
+            return ec;
+        }
+
         public enum Respuesta
         {
             validacionCorrecta,
@@ -95,6 +105,16 @@ namespace Practico.Negocios
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
+        }
+
+        public EstructuraComboBox EstrCombo()
+        {
+            EstructuraComboBox ec = new EstructuraComboBox();
+            ec.Display = "nombre";
+            ec.Value = "idHelado";
+            ec.Sql = "SELECT * FROM Helados";
+            ec.Tabla = baseDatos.Consulta(ec.Sql);
+            return ec;
         }
     }
 }

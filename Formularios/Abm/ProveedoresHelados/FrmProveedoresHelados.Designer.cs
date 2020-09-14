@@ -81,7 +81,7 @@
             this.btnEscritorio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnEscritorio.Name = "btnEscritorio";
             this.btnEscritorio.Size = new System.Drawing.Size(166, 63);
-            this.btnEscritorio.TabIndex = 5;
+            this.btnEscritorio.TabIndex = 2;
             this.btnEscritorio.Text = "Volver Al Escritorio";
             this.btnEscritorio.UseVisualStyleBackColor = false;
             this.btnEscritorio.Click += new System.EventHandler(this.btnEscritorio_Click);
@@ -225,7 +225,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(176, 202);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 1;
             // 
             // btnEliminar
             // 
@@ -321,7 +321,7 @@
             this.pnlBuscar.Location = new System.Drawing.Point(34, 79);
             this.pnlBuscar.Name = "pnlBuscar";
             this.pnlBuscar.Size = new System.Drawing.Size(495, 122);
-            this.pnlBuscar.TabIndex = 27;
+            this.pnlBuscar.TabIndex = 0;
             // 
             // FrmProveedoresHelados
             // 

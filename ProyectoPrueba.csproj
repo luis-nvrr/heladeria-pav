@@ -380,7 +380,6 @@
     <Compile Include="Negocios\ProveedoresHelados.cs" />
     <Compile Include="Negocios\TelefonosEmpleados.cs" />
     <Compile Include="Negocios\TipoDocumento.cs" />
-    <Compile Include="Negocios\TiposDocumento.cs" />
     <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

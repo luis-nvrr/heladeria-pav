@@ -10,22 +10,21 @@ using System.Windows.Forms;
 using Practico.Negocios;
 using Practico.Clases;
 
-namespace Practico.Formularios.Abm.Proveedores
+namespace Practico.Formularios.Abm.HeladosEspeciales
 {
-    public partial class FrmAltaProveedores : Form
+    public partial class FrmAltaHeladosEspeciales : Form
     {
-        Negocios.TipoDocumento tipoDoc = new Negocios.TipoDocumento();
-        Negocios.Barrios barrio = new Negocios.Barrios();
 
-        public FrmAltaProveedores()
+        Negocios.Helados helados = new Negocios.Helados();
+
+        public FrmAltaHeladosEspeciales()
         {
             InitializeComponent();
         }
 
-        private void FrmAltaProveedores_Load(object sender, EventArgs e)
+        private void FrmAltaHeladosEspeciales_Load(object sender, EventArgs e)
         {
-            cmbTipoDoc.cargar(tipoDoc.EstrCombo());
-            cmbBarrio.cargar(barrio.EstrCombo());
+            cmbHelado.cargar(helados.EstrCombo());
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -34,8 +33,8 @@ namespace Practico.Formularios.Abm.Proveedores
 
             if (tratamiento.Validar(this.Controls) == TratamientosEspeciales.Validacion.correcta)
             {
-                Negocios.Proveedores proveedor = new Negocios.Proveedores();
-                if (proveedor.Insertar(this.Controls) == Negocios.Proveedores.Respuesta.validacionCorrecta)
+                Negocios.HeladosEspeciales heladoEspecial = new Negocios.HeladosEspeciales();
+                if (heladoEspecial.Insertar(this.Controls) == Negocios.HeladosEspeciales.Respuesta.validacionCorrecta)
                 {
                     MessageBox.Show("Ingresado correctamente!", "Informacion",
                         buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
@@ -52,15 +51,11 @@ namespace Practico.Formularios.Abm.Proveedores
 
         private void LimpiarCampos()
         {
-            txtNroDoc.Text = "";
-            txtRazónSocial.Text = "";
-            txtEmail.Text = "";
-            txtCalle.Text = "";
-            txtNroCalle.Text = "";
-            txtTelCel.Text = "";
-            txtTelFijo.Text = "";
-            cmbBarrio.SelectedIndex = -1;
-            cmbTipoDoc.SelectedIndex = -1;
+            txtNombre.Text = "";
+            txtCantBochas.Text = "";
+            txtPrecio.Text = "";
+            txtStock.Text = "";
+            cmbHelado.SelectedIndex = -1;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

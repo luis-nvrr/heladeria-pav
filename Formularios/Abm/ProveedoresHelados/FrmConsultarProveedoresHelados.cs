@@ -14,12 +14,16 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
 {
     public partial class FrmConsultarProveedoresHelados : Form
     {
-        Negocios.TiposDocumento tipoDoc = new Negocios.TiposDocumento();
+        Negocios.TipoDocumento tipoDoc = new Negocios.TipoDocumento();
         Negocios.ProveedoresHelados proveedoresHelados = new Negocios.ProveedoresHelados();
+        Negocios.Proveedores proveedores = new Negocios.Proveedores();
+        Negocios.Helados helados = new Negocios.Helados();
 
         public string tipoDocumento { get; set; }
         public string nroDocumento { get; set; }
         public string idHelado { get; set; }
+        public string razonSocial { get; set; }
+       
         public FrmConsultarProveedoresHelados()
         {
             InitializeComponent();
@@ -28,6 +32,8 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
         private void FrmAltaProveedoresHelados_Load(object sender, EventArgs e)
         {
             cmbTipoDoc.cargar(tipoDoc.EstrCombo());
+            cmbNroDoc.cargar(proveedores.EstrCombo());
+            cmbIdHelado.cargar(helados.EstrCombo());
             CargarCampos();
         }
 
@@ -41,8 +47,8 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
             DataTable tabla = new DataTable();
             tabla = proveedoresHelados.RecuperarProoveedorHelado(tipoDocumento, nroDocumento,idHelado);
             cmbTipoDoc.SelectedIndex = cmbTipoDoc.FindStringExact(tipoDocumento);
-            txtNroDoc.Text = tabla.Rows[0]["nroDocProveedor"].ToString();
-            txtIdHelado.Text = tabla.Rows[0]["idHelado"].ToString();
+            cmbNroDoc.SelectedIndex = cmbNroDoc.FindStringExact(razonSocial);
+            cmbIdHelado.SelectedIndex = cmbIdHelado.FindStringExact(idHelado);
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {

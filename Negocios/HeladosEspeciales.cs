@@ -10,20 +10,10 @@ using System.Data.SqlClient;
 
 namespace Practico.Negocios
 {
-    class Proveedores
+    class HeladosEspeciales
     {
 
         BaseDatos baseDatos = new BaseDatos();
-
-        public EstructuraComboBox EstrCombo()
-        {
-            EstructuraComboBox ec = new EstructuraComboBox();
-            ec.Display = "razonSocial";
-            ec.Value = "nroDocumento";
-            ec.Sql = "SELECT * FROM Proveedores";
-            ec.Tabla = baseDatos.Consulta(ec.Sql);
-            return ec;
-        }
 
         public enum Respuesta
         {
@@ -31,26 +21,27 @@ namespace Practico.Negocios
             validacionIncorrecta
         }
 
-        public DataTable TodosLosProveedores()
+        public DataTable TodosLosHeladosEspeciales()
         {
-            string sql = "SELECT * FROM Proveedores P JOIN TiposDocumento TD ON P.tipoDocumento=TD.tipoDocumento";
+            string sql = "SELECT * FROM HeladosEspeciales P JOIN Helados TD ON P.idHelado=TD.idHelado";
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
 
-        public DataTable RecuperarProoveedor(string tipoDocumento, string nroDocumento)
+
+        public DataTable RecuperarHeladosEspeciales(string idHeladoEspecial, string idHelado)
         {
-            string sql = "SELECT P.* FROM Proveedores P INNER JOIN TiposDocumento TD ON (P.tipoDocumento = TD.tipoDocumento)" +
-                         " WHERE descripcion LIKE '" + tipoDocumento + "' AND nroDocumento LIKE '" + nroDocumento +"'";
+            string sql = "SELECT P.* FROM HeladosEspeciales P INNER JOIN Helados TD ON (P.idhelado = TD.idHelado)" +
+                         " WHERE idHeladoEspecial LIKE '" + idHeladoEspecial + "' AND P.idHelado LIKE '" + idHelado + "'";
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
 
-        public DataTable BuscarProveedor(string razonSocial)
+        public DataTable BuscarHeladosEspeciales(string nombreProducto)
         {
-            string sql = "SELECT * FROM Proveedores P JOIN TiposDocumento TD ON P.tipoDocumento=TD.tipoDocumento WHERE razonSocial LIKE '%" + razonSocial.Trim() + "%'";
+            string sql = "SELECT * FROM HeladosEspeciales P JOIN Helados TD ON P.idhelado=TD.idHelado WHERE nombreProducto LIKE '%" + nombreProducto.Trim() + "%'";
             DataTable tabla = baseDatos.Consulta(sql);
             return tabla;
         }
@@ -59,7 +50,7 @@ namespace Practico.Negocios
         {
             try
             {
-                baseDatos.InsertarAutomatizado("Proveedores", controles);
+                baseDatos.InsertarAutomatizado("HeladosEspeciales", controles);
                 return Respuesta.validacionCorrecta;
 
             }
@@ -71,11 +62,14 @@ namespace Practico.Negocios
 
         }
 
-        public Respuesta Modificar(int tipoDocumento, string nroDocumento, Control.ControlCollection controles)
+
+        //public Respuesta Modificar(int idHeladoEspecial, string idHelado, Control.ControlCollection controles)
+        public Respuesta Modificar(int idHelado, string idHeladoEspecial, Control.ControlCollection controles)
         {
             try
             {
-                baseDatos.ModificarAutomatizado("Proveedores", " tipoDocumento  =" + tipoDocumento + " AND nroDocumento LIKE '" + nroDocumento + "'", controles);
+                baseDatos.ModificarAutomatizado("HeladosEspeciales", " idHeladoEspecial  =" + idHeladoEspecial + " AND idHelado LIKE '" + idHelado + "'", controles);
+                //baseDatos.ModificarAutomatizado("HeladosEspeciales", " idHelado  =" + idHelado + " AND idHeladoEspecial LIKE '" + idHeladoEspecial + "'", controles);
                 return Respuesta.validacionCorrecta;
 
             }
@@ -87,9 +81,10 @@ namespace Practico.Negocios
 
         }
 
-        public Respuesta Eliminar(int tipoDocumento, string nroDocumento)
+
+        public Respuesta Eliminar(int idHeladoEspecial, string idHelado)
         {
-            string sql = "DELETE FROM Proveedores WHERE tipoDocumento LIKE '" + tipoDocumento + "' AND nroDocumento LIKE '" + nroDocumento +"'";
+            string sql = "DELETE FROM HeladosEspeciales WHERE idHeladoEspecial LIKE '" + idHeladoEspecial + "' AND idHelado LIKE '" + idHelado + "'";
 
             try
             {
@@ -103,7 +98,6 @@ namespace Practico.Negocios
             }
 
         }
-
 
 
     }

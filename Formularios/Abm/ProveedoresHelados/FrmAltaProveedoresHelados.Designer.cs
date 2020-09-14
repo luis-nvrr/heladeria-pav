@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAltaProveedoresHelados));
             this.lblNuevoProveedor = new System.Windows.Forms.Label();
             this.lblTipoDoc = new System.Windows.Forms.Label();
-            this.cmbTipoDoc = new Practico.Clases.ComboBox01();
             this.lblNroDoc = new System.Windows.Forms.Label();
-            this.txtNroDoc = new Practico.Clases.TextBox01();
             this.lblIdHelado = new System.Windows.Forms.Label();
-            this.txtIdHelado = new Practico.Clases.TextBox01();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.cmbNroDoc = new Practico.Clases.ComboBox01();
+            this.cmbIdHelado = new Practico.Clases.ComboBox01();
+            this.cmbTipoDoc = new Practico.Clases.ComboBox01();
             this.SuspendLayout();
             // 
             // lblNuevoProveedor
@@ -66,24 +66,6 @@
             this.lblTipoDoc.TabIndex = 30;
             this.lblTipoDoc.Text = "Tipo de Documento:";
             // 
-            // cmbTipoDoc
-            // 
-            this.cmbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTipoDoc.FormattingEnabled = true;
-            this.cmbTipoDoc.Location = new System.Drawing.Point(254, 123);
-            this.cmbTipoDoc.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbTipoDoc.Name = "cmbTipoDoc";
-            this.cmbTipoDoc.PpDisplay = "";
-            this.cmbTipoDoc.PpMensajeError = "No se ingresó Tipo de Documento !";
-            this.cmbTipoDoc.PpNombreCampo = "tipoDocProveedor";
-            this.cmbTipoDoc.PpNombreTabla = "ProveedoresHelados";
-            this.cmbTipoDoc.PpTabla = null;
-            this.cmbTipoDoc.PpValidable = true;
-            this.cmbTipoDoc.PpValue = null;
-            this.cmbTipoDoc.Size = new System.Drawing.Size(164, 25);
-            this.cmbTipoDoc.TabIndex = 0;
-            // 
             // lblNroDoc
             // 
             this.lblNroDoc.AutoSize = true;
@@ -97,19 +79,6 @@
             this.lblNroDoc.TabIndex = 32;
             this.lblNroDoc.Text = "Número de Documento:";
             // 
-            // txtNroDoc
-            // 
-            this.txtNroDoc.BackColor = System.Drawing.Color.White;
-            this.txtNroDoc.Location = new System.Drawing.Point(254, 161);
-            this.txtNroDoc.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNroDoc.Name = "txtNroDoc";
-            this.txtNroDoc.PpMensajeError = "No se ingresó Número de Documento !";
-            this.txtNroDoc.PpNombreCampo = "nroDocProveedor";
-            this.txtNroDoc.PpNombreTabla = "ProveedoresHelados";
-            this.txtNroDoc.PpValidable = true;
-            this.txtNroDoc.Size = new System.Drawing.Size(164, 24);
-            this.txtNroDoc.TabIndex = 1;
-            // 
             // lblIdHelado
             // 
             this.lblIdHelado.AutoSize = true;
@@ -122,19 +91,6 @@
             this.lblIdHelado.Size = new System.Drawing.Size(81, 19);
             this.lblIdHelado.TabIndex = 34;
             this.lblIdHelado.Text = "Id Helado:";
-            // 
-            // txtIdHelado
-            // 
-            this.txtIdHelado.BackColor = System.Drawing.Color.White;
-            this.txtIdHelado.Location = new System.Drawing.Point(254, 195);
-            this.txtIdHelado.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIdHelado.Name = "txtIdHelado";
-            this.txtIdHelado.PpMensajeError = "No ingresó Id Helado !";
-            this.txtIdHelado.PpNombreCampo = "idHelado";
-            this.txtIdHelado.PpNombreTabla = "ProveedoresHelados";
-            this.txtIdHelado.PpValidable = true;
-            this.txtIdHelado.Size = new System.Drawing.Size(202, 24);
-            this.txtIdHelado.TabIndex = 2;
             // 
             // btnCancelar
             // 
@@ -175,17 +131,71 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // cmbNroDoc
+            // 
+            this.cmbNroDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNroDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbNroDoc.FormattingEnabled = true;
+            this.cmbNroDoc.Location = new System.Drawing.Point(254, 162);
+            this.cmbNroDoc.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbNroDoc.Name = "cmbNroDoc";
+            this.cmbNroDoc.PpDisplay = "";
+            this.cmbNroDoc.PpMensajeError = "No se ingresó Número de Documento !";
+            this.cmbNroDoc.PpNombreCampo = "nroDocProveedor";
+            this.cmbNroDoc.PpNombreTabla = "ProveedoresHelados";
+            this.cmbNroDoc.PpTabla = "";
+            this.cmbNroDoc.PpValidable = true;
+            this.cmbNroDoc.PpValue = "";
+            this.cmbNroDoc.Size = new System.Drawing.Size(202, 25);
+            this.cmbNroDoc.TabIndex = 1;
+            // 
+            // cmbIdHelado
+            // 
+            this.cmbIdHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbIdHelado.FormattingEnabled = true;
+            this.cmbIdHelado.Location = new System.Drawing.Point(254, 195);
+            this.cmbIdHelado.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbIdHelado.Name = "cmbIdHelado";
+            this.cmbIdHelado.PpDisplay = "";
+            this.cmbIdHelado.PpMensajeError = "No se ingresó Id Helado !";
+            this.cmbIdHelado.PpNombreCampo = "idHelado";
+            this.cmbIdHelado.PpNombreTabla = "ProveedoresHelados";
+            this.cmbIdHelado.PpTabla = null;
+            this.cmbIdHelado.PpValidable = true;
+            this.cmbIdHelado.PpValue = null;
+            this.cmbIdHelado.Size = new System.Drawing.Size(202, 25);
+            this.cmbIdHelado.TabIndex = 2;
+            // 
+            // cmbTipoDoc
+            // 
+            this.cmbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTipoDoc.FormattingEnabled = true;
+            this.cmbTipoDoc.Location = new System.Drawing.Point(254, 128);
+            this.cmbTipoDoc.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbTipoDoc.Name = "cmbTipoDoc";
+            this.cmbTipoDoc.PpDisplay = "";
+            this.cmbTipoDoc.PpMensajeError = "No se ingresó Tipo de Documento !";
+            this.cmbTipoDoc.PpNombreCampo = "tipoDocProveedor";
+            this.cmbTipoDoc.PpNombreTabla = "ProveedoresHelados";
+            this.cmbTipoDoc.PpTabla = null;
+            this.cmbTipoDoc.PpValidable = true;
+            this.cmbTipoDoc.PpValue = null;
+            this.cmbTipoDoc.Size = new System.Drawing.Size(202, 25);
+            this.cmbTipoDoc.TabIndex = 0;
+            // 
             // FrmAltaProveedoresHelados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(498, 319);
+            this.Controls.Add(this.cmbNroDoc);
+            this.Controls.Add(this.cmbIdHelado);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtIdHelado);
             this.Controls.Add(this.lblIdHelado);
-            this.Controls.Add(this.txtNroDoc);
             this.Controls.Add(this.lblNroDoc);
             this.Controls.Add(this.cmbTipoDoc);
             this.Controls.Add(this.lblTipoDoc);
@@ -211,10 +221,10 @@
         private System.Windows.Forms.Label lblTipoDoc;
         private Clases.ComboBox01 cmbTipoDoc;
         private System.Windows.Forms.Label lblNroDoc;
-        private Clases.TextBox01 txtNroDoc;
         private System.Windows.Forms.Label lblIdHelado;
-        private Clases.TextBox01 txtIdHelado;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
+        private Clases.ComboBox01 cmbIdHelado;
+        private Clases.ComboBox01 cmbNroDoc;
     }
 }
