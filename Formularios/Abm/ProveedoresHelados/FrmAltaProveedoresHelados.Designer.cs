@@ -38,6 +38,8 @@
             this.cmbNroDoc = new Practico.Clases.ComboBox01();
             this.cmbIdHelado = new Practico.Clases.ComboBox01();
             this.cmbTipoDoc = new Practico.Clases.ComboBox01();
+            this.cmbNombre = new Practico.Clases.ComboBox01();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNuevoProveedor
@@ -184,6 +186,37 @@
             this.cmbTipoDoc.PpValue = null;
             this.cmbTipoDoc.Size = new System.Drawing.Size(202, 25);
             this.cmbTipoDoc.TabIndex = 0;
+            this.cmbTipoDoc.SelectedValueChanged += new System.EventHandler(this.cmbTipo_SelectedValueChanged);
+            // 
+            // cmbNombre
+            // 
+            this.cmbNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbNombre.FormattingEnabled = true;
+            this.cmbNombre.Location = new System.Drawing.Point(254, 96);
+            this.cmbNombre.Name = "cmbNombre";
+            this.cmbNombre.PpDisplay = "tipoDoc";
+            this.cmbNombre.PpMensajeError = "Seleccione un tipo de documento!";
+            this.cmbNombre.PpNombreCampo = null;
+            this.cmbNombre.PpNombreTabla = null;
+            this.cmbNombre.PpTabla = "Empleados";
+            this.cmbNombre.PpValidable = true;
+            this.cmbNombre.PpValue = "tipoDoc";
+            this.cmbNombre.Size = new System.Drawing.Size(166, 25);
+            this.cmbNombre.TabIndex = 67;
+            this.cmbNombre.SelectedValueChanged += new System.EventHandler(this.cmbNombre_SelectedValueChanged);
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombre.Location = new System.Drawing.Point(178, 102);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(68, 19);
+            this.lblNombre.TabIndex = 68;
+            this.lblNombre.Text = "Nombre:";
             // 
             // FrmAltaProveedoresHelados
             // 
@@ -191,6 +224,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(498, 319);
+            this.Controls.Add(this.cmbNombre);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.cmbNroDoc);
             this.Controls.Add(this.cmbIdHelado);
             this.Controls.Add(this.btnAceptar);
@@ -226,5 +261,7 @@
         private System.Windows.Forms.Button btnAceptar;
         private Clases.ComboBox01 cmbIdHelado;
         private Clases.ComboBox01 cmbNroDoc;
+        private Clases.ComboBox01 cmbNombre;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

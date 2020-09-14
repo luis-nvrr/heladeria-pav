@@ -158,7 +158,7 @@
             this.lblTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTipo.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblTipo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTipo.Location = new System.Drawing.Point(138, 138);
+            this.lblTipo.Location = new System.Drawing.Point(139, 138);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(149, 19);
             this.lblTipo.TabIndex = 61;
@@ -181,7 +181,7 @@
             this.cmbNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbNombre.FormattingEnabled = true;
-            this.cmbNombre.Location = new System.Drawing.Point(292, 98);
+            this.cmbNombre.Location = new System.Drawing.Point(294, 101);
             this.cmbNombre.Name = "cmbNombre";
             this.cmbNombre.PpDisplay = "tipoDoc";
             this.cmbNombre.PpMensajeError = "Seleccione un tipo de documento!";
@@ -200,7 +200,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(218, 101);
+            this.label1.Location = new System.Drawing.Point(218, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 19);
             this.label1.TabIndex = 66;

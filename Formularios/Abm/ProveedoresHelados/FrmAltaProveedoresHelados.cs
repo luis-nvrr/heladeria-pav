@@ -26,9 +26,8 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
 
         private void FrmAltaProveedoresHelados_Load(object sender, EventArgs e)
         {
-            cmbTipoDoc.cargar(tipoDoc.EstrCombo());
-            cmbNroDoc.cargar(proveedores.EstrCombo());
             cmbIdHelado.cargar(helados.EstrCombo());
+            CargarComboNombre();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -58,11 +57,52 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
             cmbTipoDoc.SelectedIndex = -1;
             cmbNroDoc.SelectedIndex = -1;
             cmbIdHelado.SelectedIndex = -1;
+            cmbNombre.SelectedIndex = -1;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void CargarComboNombre()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT DISTINCT P.razonSocial FROM Proveedores P";
+            cmbNombre.ValueMember = "razonSocial";
+            cmbNombre.DisplayMember = "razonSocial";
+            cmbNombre.DataSource = baseDatos.Consulta(sql);
+        }
+
+        public void CargarComboTipo()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT DISTINCT TD.* FROM Proveedores P JOIN TiposDocumento TD ON (P.tipoDocumento = TD.tipoDocumento)"
+                         + " WHERE razonSocial LIKE '%" + cmbNombre.SelectedValue + "%'";
+            cmbTipoDoc.DisplayMember = "descripcion";
+            cmbTipoDoc.ValueMember = "tipoDocumento";
+            cmbTipoDoc.DataSource = baseDatos.Consulta(sql);
+        }
+
+        public void CargarComboDocumento()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT P.* FROM Proveedores P WHERE P.tipoDocumento LIKE '%" + cmbTipoDoc.SelectedValue + "%'"
+                         + " AND P.razonSocial LIKE '%" + cmbNombre.SelectedValue + "%'";
+            cmbNroDoc.ValueMember = "nroDocumento";
+            cmbNroDoc.DisplayMember = "nroDocumento";
+            cmbNroDoc.DataSource = baseDatos.Consulta(sql);
+        }
+
+        private void cmbTipo_SelectedValueChanged(object sender, EventArgs e)
+        {
+            CargarComboDocumento();
+        }
+
+
+        private void cmbNombre_SelectedValueChanged(object sender, EventArgs e)
+        {
+            CargarComboTipo();
         }
     }
 }
