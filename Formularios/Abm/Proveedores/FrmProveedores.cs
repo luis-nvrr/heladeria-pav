@@ -77,5 +77,112 @@ namespace Practico.Formularios.Abm.Proveedores
             CargarGrilla(tabla);
             altaProveedores.Close();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (grdProveedores.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int indiceFilaSeleccionada = grdProveedores.SelectedRows[0].Index;
+                    string tipoDocumento = grdProveedores[0, indiceFilaSeleccionada].Value.ToString();
+                    string nroDocumento = grdProveedores[1, indiceFilaSeleccionada].Value.ToString();
+
+                    FrmModificarProveedores modificarProveedores = new FrmModificarProveedores();
+                    modificarProveedores.tipoDocumento = tipoDocumento;
+                    modificarProveedores.nroDocumento = nroDocumento;
+                    modificarProveedores.ShowDialog();
+
+                    DataTable tabla = proveedores.TodosLosProveedores();
+                    CargarGrilla(tabla);
+                    modificarProveedores.Close();
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (grdProveedores.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int indiceFilaSeleccionada = grdProveedores.SelectedRows[0].Index;
+                    string tipoDocumento = grdProveedores[0, indiceFilaSeleccionada].Value.ToString();
+                    string nroDocumento = grdProveedores[1, indiceFilaSeleccionada].Value.ToString();
+
+                    FrmEliminarProveedores eliminarProveedores = new FrmEliminarProveedores();
+                    eliminarProveedores.tipoDocumento = tipoDocumento;
+                    eliminarProveedores.nroDocumento = nroDocumento;
+
+                    eliminarProveedores.ShowDialog();
+
+                    DataTable tabla = proveedores.TodosLosProveedores(); //actualiza la grilla
+                    CargarGrilla(tabla);
+                    eliminarProveedores.Close();
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if (grdProveedores.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int indiceFilaSeleccionada = grdProveedores.SelectedRows[0].Index;
+                    string tipoDocumento = grdProveedores[0, indiceFilaSeleccionada].Value.ToString();
+                    string nroDocumento = grdProveedores[1, indiceFilaSeleccionada].Value.ToString();
+
+                    FrmConsultarProveedores consultarProveedores = new FrmConsultarProveedores();
+                    consultarProveedores.tipoDocumento = tipoDocumento;
+                    consultarProveedores.nroDocumento = nroDocumento;
+
+                    consultarProveedores.ShowDialog();
+                    consultarProveedores.Close();
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+
+        private void chkTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTodos.Checked)
+            {
+                txtRazónSocial.Enabled = false;
+                txtRazónSocial.BackColor = Color.SlateGray;
+                
+            }
+            else
+            {
+                txtRazónSocial.Enabled = true;
+                txtRazónSocial.BackColor = Color.White;
+                txtRazónSocial.Focus();
+            }
+        }
     }
 }

@@ -219,7 +219,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmModificarUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Usuario";
+            this.Text = "Modificar Usuario";
             this.Load += new System.EventHandler(this.FrmModificarUsuarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

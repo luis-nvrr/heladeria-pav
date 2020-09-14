@@ -24,25 +24,17 @@ namespace Practico.Formularios.Abm.Empleados
             if (chkTodos.Checked)
             {
                 txtNombre.Enabled = false;
-                txtNombre.BackColor = Color.SlateGray;
                 txtApellido.Enabled = false;
-                txtApellido.BackColor = Color.SlateGray;
                 cmbTurno.Enabled = false;
-                cmbTurno.BackColor = Color.SlateGray;
                 cmbBarrio.Enabled = false;
-                cmbBarrio.BackColor = Color.SlateGray;
                 LimpiarCampos();
             }
             else
             {
                 txtNombre.Enabled = true;
-                txtNombre.BackColor = Color.White;
                 txtApellido.Enabled = true;
-                txtApellido.BackColor = Color.White;
                 cmbTurno.Enabled = true;
-                cmbTurno.BackColor = Color.White;
                 cmbBarrio.Enabled = true;
-                cmbBarrio.BackColor = Color.White;
                 txtNombre.Focus();
             }
         }
@@ -69,17 +61,17 @@ namespace Practico.Formularios.Abm.Empleados
                 // valida que haya texto en el textbox
                 if (tratamiento.ValidarAlMenosUno(pnlBuscar.Controls) == TratamientosEspeciales.Validacion.correcta)
                 {
-                    string comboTurno = "(0,1,2,3,4)";
+                    string comboTurno = "(0,1,2,3,4,5,6,7,8,9,10)";
                     if (cmbTurno.SelectedIndex > -1)
                     {
                         comboTurno = "(" + cmbTurno.SelectedValue.ToString() + ")";
                     }
-                    string comboBarrio = "(0,1,2,3,4)";
+                    string comboBarrio = "(0,1,2,3,4,5,6,7,8,9,10)";
                     if (cmbBarrio.SelectedIndex > -1)
                     {
                         comboBarrio = "(" + cmbBarrio.SelectedValue.ToString() + ")" ;
                     }
-                    DataTable tabla = empleados.BuscarEmpleado(txtNombre.Text, txtApellido.Text, 
+                    DataTable tabla = empleados.BuscarEmpleado(txtNombre.Text, txtApellido.Text,
                         comboTurno, comboBarrio);
                     CargarGrilla(tabla);
                 }
@@ -93,12 +85,12 @@ namespace Practico.Formularios.Abm.Empleados
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 grdEmpleados.Rows.Add();
-                grdEmpleados.Rows[i].Cells[0].Value = tabla.Rows[i]["tipoDoc"].ToString();
+                grdEmpleados.Rows[i].Cells[0].Value = tabla.Rows[i]["descripcion"].ToString();
                 grdEmpleados.Rows[i].Cells[1].Value = tabla.Rows[i]["nroDoc"].ToString();
                 grdEmpleados.Rows[i].Cells[2].Value = tabla.Rows[i]["nombre"].ToString();
                 grdEmpleados.Rows[i].Cells[3].Value = tabla.Rows[i]["apellido"].ToString();
-                grdEmpleados.Rows[i].Cells[4].Value = tabla.Rows[i]["idTurno"].ToString();
-                grdEmpleados.Rows[i].Cells[5].Value = tabla.Rows[i]["idBarrio"].ToString();
+                grdEmpleados.Rows[i].Cells[4].Value = tabla.Rows[i]["nombreTurno"].ToString();
+                grdEmpleados.Rows[i].Cells[5].Value = tabla.Rows[i]["nombreBarrio"].ToString();
             }
         }
 
@@ -119,12 +111,12 @@ namespace Practico.Formularios.Abm.Empleados
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            FrmAltaEmpleados altaHelados = new FrmAltaEmpleados();
-            altaHelados.ShowDialog();
+            FrmAltaEmpleados altaEmpleados = new FrmAltaEmpleados();
+            altaEmpleados.ShowDialog();
 
             DataTable tabla = empleados.TodosLosEmpleados();
             CargarGrilla(tabla);
-            altaHelados.Close();
+            altaEmpleados.Close();
         }
 
         private void btnLimpiarBarrio_Click(object sender, EventArgs e)
@@ -152,7 +144,7 @@ namespace Practico.Formularios.Abm.Empleados
                     string nroDoc = grdEmpleados[1, indiceFilaSeleccionada].Value.ToString();
 
                     FrmModificarEmpleados modificarEmpleados = new FrmModificarEmpleados();
-                    modificarEmpleados.tipoDoc = tipoDoc;
+                    modificarEmpleados.tipoDoc = tipoDoc;  // tipoDoc es literalmente el texto del tipo, NO el codigo
                     modificarEmpleados.nroDoc = nroDoc;
                     modificarEmpleados.ShowDialog();
 
@@ -184,7 +176,7 @@ namespace Practico.Formularios.Abm.Empleados
                     string nroDoc = grdEmpleados[1, indiceFilaSeleccionada].Value.ToString();
 
                     FrmConsultarEmpleados consultarEmpleados = new FrmConsultarEmpleados();
-                    consultarEmpleados.tipoDoc = tipoDoc;
+                    consultarEmpleados.tipoDoc = tipoDoc; // tipoDoc es literalmente el texto del tipo, NO el codigo
                     consultarEmpleados.nroDoc = nroDoc;
 
                     consultarEmpleados.ShowDialog();
@@ -213,7 +205,7 @@ namespace Practico.Formularios.Abm.Empleados
                     string nroDoc = grdEmpleados[1, indiceFilaSeleccionada].Value.ToString();
 
                     FrmEliminarEmpleados eliminarEmpleados = new FrmEliminarEmpleados();
-                    eliminarEmpleados.tipoDoc = tipoDoc; 
+                    eliminarEmpleados.tipoDoc = tipoDoc;  // tipoDoc es literalmente el texto del tipo, NO el codigo
                     eliminarEmpleados.nroDoc = nroDoc;
 
                     eliminarEmpleados.ShowDialog();

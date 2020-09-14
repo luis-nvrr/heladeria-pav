@@ -14,7 +14,7 @@ namespace Practico.Formularios.Abm.Empleados
 {
     public partial class FrmEliminarEmpleados : Form
     {
-        public string tipoDoc { get; set; }
+        public string tipoDoc { get; set; } // tipoDoc es literalmente el texto del tipo, NO el codigo
         public string nroDoc { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
@@ -43,6 +43,7 @@ namespace Practico.Formularios.Abm.Empleados
             lblFechaIn.TabStop = false;
             lblUsuario.TabStop = false;
             lblTurno.TabStop = false;
+
             cmbTipo.Cargar();
             cmbBarrio.Cargar();
             cmbTurno.Cargar();
@@ -55,7 +56,7 @@ namespace Practico.Formularios.Abm.Empleados
         {
             Negocios.Empleados empleados = new Negocios.Empleados();
 
-            if (empleados.EliminarEmpleado(Int32.Parse(tipoDoc), Int32.Parse(nroDoc)) == Negocios.Empleados.Respuesta.validacionCorrecta)
+            if (empleados.EliminarEmpleado(Int32.Parse(cmbTipo.SelectedValue.ToString()), nroDoc) == Negocios.Empleados.Respuesta.validacionCorrecta)
             {
                 MessageBox.Show("Eliminado correctamente!", "Informacion",
                     buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
@@ -71,10 +72,11 @@ namespace Practico.Formularios.Abm.Empleados
         private void CargarCampos()
         {
             Negocios.Empleados empleados = new Negocios.Empleados();
-            DataTable tabla = empleados.RecuperarEmpleado(Int32.Parse(tipoDoc), Int32.Parse(nroDoc));
+            DataTable tabla = empleados.RecuperarEmpleado(tipoDoc, nroDoc);
 
-            tipoDoc = tabla.Rows[0]["tipoDoc"].ToString();
-            nroDoc = tabla.Rows[0]["nroDoc"].ToString();
+            //tipoDoc = tabla.Rows[0]["tipoDoc"].ToString();  no deberian cambiar
+            //nroDoc = tabla.Rows[0]["nroDoc"].ToString();
+
             nombre = tabla.Rows[0]["nombre"].ToString();
             apellido = tabla.Rows[0]["apellido"].ToString();
             calle = tabla.Rows[0]["calle"].ToString();
@@ -86,8 +88,9 @@ namespace Practico.Formularios.Abm.Empleados
             turno = tabla.Rows[0]["idTurno"].ToString();
 
 
-            cmbTipo.SelectedValue = tipoDoc;
+            cmbTipo.SelectedIndex = cmbTipo.FindStringExact(tipoDoc);  // se selecciona el item del combo que coincide con el nombre tipoDoc
             txtNroDoc.Text = nroDoc;
+
             txtNombre.Text = nombre;
             txtApellido.Text = apellido;
             txtCalle.Text = calle;

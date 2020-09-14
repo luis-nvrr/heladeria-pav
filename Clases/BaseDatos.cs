@@ -22,13 +22,16 @@ namespace Practico.Clases
 
         private void Conectar()  // metodo para conectar
         {
-            conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True";   
+            //conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //NICO
+            //conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //LUIS
+            //conexion.ConnectionString = "Data Source=DESKTOP-49CNN6T\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //MARCOS
+            conexion.ConnectionString = "Data Source=DESKTOP-5U8R5O6\\SQLEXPRESS; Initial Catalog=HeladeriaPAV;Integrated Security=True"; //GASTÓN
             conexion.Open();
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
-            
+
         }
-       
+
 
         private void Desconectar()  // metodo para desconectar
         {
@@ -58,8 +61,19 @@ namespace Practico.Clases
             {
                 throw exception;
             }
-            Desconectar();
+            finally{ Desconectar(); }
+            
+
         }
+
+        //public string RecuperarId()
+        //{
+        //    DataTable tabla = new DataTable();
+        //    tabla = Consulta("SELECTE @@Identity");
+        //    MessageBox.Show(tabla.Rows[0][0].ToString());
+        //    return tabla.Rows[0][0].ToString();
+        //}
+
 
         public void InsertarAutomatizado(string NombreTabla, Control.ControlCollection controles)
         {
@@ -81,6 +95,26 @@ namespace Practico.Clases
             Insertar(sqlInsertar);
         }
 
+        public void ModificarAutomatizado(string NombreTabla, string restriccion, Control.ControlCollection controles)
+        {
+            string sqlModificar = "UPDATE " + NombreTabla.Trim() + " SET ";
+
+            DataTable Estructura = new DataTable();
+            Estructura = EstructuraTabla(NombreTabla);
+            for (int i = 0; i < Estructura.Columns.Count; i++)
+            {
+                string ValorCampo = BuscarValorCampo(Estructura.Columns[i].Caption, NombreTabla, controles);
+                if (ValorCampo != "")
+                {
+                    sqlModificar += ", " + Estructura.Columns[i].Caption + " = "
+                                    + FormatearDato(ValorCampo, Estructura.Columns[i].DataType.Name);
+                }
+            }
+            sqlModificar = sqlModificar + " WHERE" + restriccion;
+            sqlModificar = sqlModificar.Replace("SET ,", "SET ");
+            Actualizar(sqlModificar);
+        }
+
         public void Eliminar(string sql)
         {
             Conectar();
@@ -93,7 +127,7 @@ namespace Practico.Clases
             {
                 throw exception;
             }
-            Desconectar();
+            finally { Desconectar(); }
         }
 
         public void Actualizar(string sql)
@@ -108,8 +142,9 @@ namespace Practico.Clases
             {
                 throw exception;
             }
+            finally { Desconectar(); }
             Desconectar();
-        } 
+        }
 
         public string FormatearDato(string dato,string formato)
         {
@@ -140,11 +175,11 @@ namespace Practico.Clases
             {
                 if (item.GetType().Name == "TextBox01")
                 {
-                    if (((TextBox01)item).PpNombreCampo is null) 
+                    if (((TextBox01)item).PpNombreCampo is null)
                         continue;
 
                     if (((TextBox01)item).PpNombreTabla.IndexOf(NombreTabla) != -1
-                        && ((TextBox01)item).PpNombreCampo == campo) 
+                        && ((TextBox01)item).PpNombreCampo == campo)
                         return ((TextBox01)item).Text;
                 }
 
@@ -157,7 +192,7 @@ namespace Practico.Clases
                         && ((ComboBox01)item).PpNombreCampo == campo)
                         return ((ComboBox01)item).SelectedValue.ToString();
                 }
-                
+
             }
             return "";
         }

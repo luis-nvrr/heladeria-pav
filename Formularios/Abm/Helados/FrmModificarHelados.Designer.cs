@@ -217,7 +217,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmModificarHelados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Helado";
+            this.Text = "Modificar Helado";
             this.Load += new System.EventHandler(this.FrmModificarHelados_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

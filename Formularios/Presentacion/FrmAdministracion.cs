@@ -10,7 +10,10 @@ using System.Windows.Forms;
 using Practico.Formularios.Abm;
 using Practico.Formularios.Abm.Empleados;
 using Practico.Formularios.Abm.Helados;
+using Practico.Formularios.Abm.Localidades;
 using Practico.Formularios.Abm.Proveedores;
+using Practico.Formularios.Abm.ProveedoresHelados;
+using Practico.Formularios.Abm.TelefonosEmpleados;
 
 namespace Practico.Formularios
 {
@@ -59,6 +62,25 @@ namespace Practico.Formularios
         private void btn_Proveedores_Click(object sender, EventArgs e)
         {
             abrirFormulario(new FrmProveedores());
+        }
+        private void btnProveedoresHelados_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmProveedoresHelados());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmTelefonosEmpleados());
+        }
+
+        private void btnLocalidades_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmLocalidades());
+        }
+
+        private void btnTipoDoc_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmTipoDocumento());
         }
     }
 }

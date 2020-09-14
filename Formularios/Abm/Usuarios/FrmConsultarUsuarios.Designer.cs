@@ -188,7 +188,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmConsultarUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Usuario";
+            this.Text = "Consultar Usuario";
             this.Load += new System.EventHandler(this.FrmConsultarUsuarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

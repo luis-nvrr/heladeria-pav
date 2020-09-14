@@ -67,5 +67,6 @@ namespace Practico.Formularios.Abm.Proveedores
         {
             this.Close();
         }
+
     }
 }
