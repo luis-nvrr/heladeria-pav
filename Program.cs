@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using Practico.Formularios.Abm;
 using Practico.Formularios.Abm.Empleados;
 using Practico.Formularios.Abm.Helados;
+using Practico.Formularios.Abm.Frutas;
 
 namespace Practico
 {
@@ -21,7 +22,7 @@ namespace Practico
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmEscritorio());
-            //Application.Run(new FrmEmpleados());
+           // Application.Run(new FrmFrutas());
         }
     }
 }
