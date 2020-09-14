@@ -52,6 +52,36 @@
     <Compile Include="Clases\EstructuraComboBox.cs" />
     <Compile Include="Clases\TextBox01.cs" />
     <Compile Include="Clases\TratamientosEspeciales.cs" />
+    <Compile Include="Formularios\Abm\Barrios\FrmAltaBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Barrios\FrmAltaBarrios.Designer.cs">
+      <DependentUpon>FrmAltaBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Barrios\FrmBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Barrios\FrmBarrios.Designer.cs">
+      <DependentUpon>FrmBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Barrios\FrmConsultarBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Barrios\FrmConsultarBarrios.Designer.cs">
+      <DependentUpon>FrmConsultarBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Barrios\FrmEliminarBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Barrios\FrmEliminarBarrios.Designer.cs">
+      <DependentUpon>FrmEliminarBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Barrios\FrmModificarBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Barrios\FrmModificarBarrios.Designer.cs">
+      <DependentUpon>FrmModificarBarrios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Empleados\FrmAltaEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +112,36 @@
     <Compile Include="Formularios\Abm\Empleados\FrmModificarEmpleados.designer.cs">
       <DependentUpon>FrmModificarEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\Frutas\FrmAltaFrutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Frutas\FrmAltaFrutas.Designer.cs">
+      <DependentUpon>FrmAltaFrutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Frutas\FrmConsultarFrutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Frutas\FrmConsultarFrutas.Designer.cs">
+      <DependentUpon>FrmConsultarFrutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Frutas\FrmEliminarFrutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Frutas\FrmEliminarFrutas.Designer.cs">
+      <DependentUpon>FrmEliminarFrutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Frutas\FrmFrutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Frutas\FrmFrutas.Designer.cs">
+      <DependentUpon>FrmFrutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Frutas\FrmModificarFrutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Frutas\FrmModificarFrutas.Designer.cs">
+      <DependentUpon>FrmModificarFrutas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Helados\FrmAltaHelados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +171,24 @@
     </Compile>
     <Compile Include="Formularios\Abm\Helados\FrmModificarHelados.designer.cs">
       <DependentUpon>FrmModificarHelados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Localidades\FrmAltaLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Localidades\FrmAltaLocalidades.designer.cs">
+      <DependentUpon>FrmAltaLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Localidades\FrmLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Localidades\FrmLocalidades.designer.cs">
+      <DependentUpon>FrmLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\Localidades\FrmModificarLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\Localidades\FrmModificarLocalidades.designer.cs">
+      <DependentUpon>FrmModificarLocalidades.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Abm\ProveedoresHelados\FrmAltaProveedoresHelados.cs">
       <SubType>Form</SubType>
@@ -196,6 +274,24 @@
     <Compile Include="Formularios\Abm\TelefonosEmpleados\FrmTelefonosEmpleados.Designer.cs">
       <DependentUpon>FrmTelefonosEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\TipoDocumento\FrmAltaTipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\TipoDocumento\FrmAltaTipoDocumento.designer.cs">
+      <DependentUpon>FrmAltaTipoDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\TipoDocumento\FrmModificarTipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\TipoDocumento\FrmModificarTipoDocumento.designer.cs">
+      <DependentUpon>FrmModificarTipoDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\TipoDocumento\FrmTipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\TipoDocumento\FrmTipoDocumento.designer.cs">
+      <DependentUpon>FrmTipoDocumento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,17 +340,35 @@
     <Compile Include="Formularios\Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\Turnos.cs" />
     <Compile Include="Negocios\Empleados.cs" />
     <Compile Include="Negocios\Barrios.cs" />
     <Compile Include="Negocios\Frutas.cs" />
     <Compile Include="Negocios\Helados.cs" />
+    <Compile Include="Negocios\Localidades.cs" />
     <Compile Include="Negocios\Proveedores.cs" />
     <Compile Include="Negocios\ProveedoresHelados.cs" />
     <Compile Include="Negocios\TelefonosEmpleados.cs" />
+    <Compile Include="Negocios\TipoDocumento.cs" />
     <Compile Include="Negocios\TiposDocumento.cs" />
     <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Abm\Barrios\FrmAltaBarrios.resx">
+      <DependentUpon>FrmAltaBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Barrios\FrmBarrios.resx">
+      <DependentUpon>FrmBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Barrios\FrmConsultarBarrios.resx">
+      <DependentUpon>FrmConsultarBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Barrios\FrmEliminarBarrios.resx">
+      <DependentUpon>FrmEliminarBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Barrios\FrmModificarBarrios.resx">
+      <DependentUpon>FrmModificarBarrios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Empleados\FrmAltaEmpleados.resx">
       <DependentUpon>FrmAltaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +384,21 @@
     <EmbeddedResource Include="Formularios\Abm\Empleados\FrmModificarEmpleados.resx">
       <DependentUpon>FrmModificarEmpleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Frutas\FrmAltaFrutas.resx">
+      <DependentUpon>FrmAltaFrutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Frutas\FrmConsultarFrutas.resx">
+      <DependentUpon>FrmConsultarFrutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Frutas\FrmEliminarFrutas.resx">
+      <DependentUpon>FrmEliminarFrutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Frutas\FrmFrutas.resx">
+      <DependentUpon>FrmFrutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Frutas\FrmModificarFrutas.resx">
+      <DependentUpon>FrmModificarFrutas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Helados\FrmAltaHelados.resx">
       <DependentUpon>FrmAltaHelados.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +413,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Helados\FrmModificarHelados.resx">
       <DependentUpon>FrmModificarHelados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Localidades\FrmAltaLocalidades.resx">
+      <DependentUpon>FrmAltaLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Localidades\FrmLocalidades.resx">
+      <DependentUpon>FrmLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\Localidades\FrmModificarLocalidades.resx">
+      <DependentUpon>FrmModificarLocalidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\ProveedoresHelados\FrmAltaProveedoresHelados.resx">
       <DependentUpon>FrmAltaProveedoresHelados.cs</DependentUpon>
@@ -326,6 +464,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\TelefonosEmpleados\FrmTelefonosEmpleados.resx">
       <DependentUpon>FrmTelefonosEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\TipoDocumento\FrmAltaTipoDocumento.resx">
+      <DependentUpon>FrmAltaTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\TipoDocumento\FrmModificarTipoDocumento.resx">
+      <DependentUpon>FrmModificarTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\TipoDocumento\FrmTipoDocumento.resx">
+      <DependentUpon>FrmTipoDocumento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmAltaUsuarios.resx">
       <DependentUpon>FrmAltaUsuarios.cs</DependentUpon>
@@ -390,7 +537,7 @@
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Formularios\Abm\Frutas\" />
+    <Folder Include="Formularios\Abm\Turnos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
