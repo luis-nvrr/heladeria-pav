@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Formularios.Abm;
+using Practico.Formularios.Abm.Barrios;
 using Practico.Formularios.Abm.Empleados;
+using Practico.Formularios.Abm.Frutas;
 using Practico.Formularios.Abm.Helados;
 using Practico.Formularios.Abm.HeladosEspeciales;
 using Practico.Formularios.Abm.Localidades;
 using Practico.Formularios.Abm.Proveedores;
 using Practico.Formularios.Abm.ProveedoresHelados;
 using Practico.Formularios.Abm.TelefonosEmpleados;
+using Practico.Formularios.Abm.Turnos;
 
 namespace Practico.Formularios
 {
@@ -87,6 +90,26 @@ namespace Practico.Formularios
         private void btnHeladosEspeciales_Click(object sender, EventArgs e)
         {
             abrirFormulario(new FrmHeladosEspeciales());
+        }
+
+        private void btnFrutas_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmFrutas());
+        }
+
+        private void btnBarrios_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmBarrios());
+        }
+
+        private void btnTurnos_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmTurnos());
+        }
+
+        private void FrmAdministracion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -34,12 +34,12 @@ namespace Practico.Formularios
             this.btnEscritorio = new System.Windows.Forms.Button();
             this.btn_Proveedores = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnTurnos = new System.Windows.Forms.Button();
+            this.btnFrutas = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnFrutasHeladosEspeciales = new System.Windows.Forms.Button();
+            this.btnBarrios = new System.Windows.Forms.Button();
             this.btnHelados = new System.Windows.Forms.Button();
             this.btnLocalidades = new System.Windows.Forms.Button();
             this.btnProveedoresHelados = new System.Windows.Forms.Button();
@@ -131,41 +131,43 @@ namespace Practico.Formularios
             this.btnUsuarios.UseVisualStyleBackColor = false;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
-            // button4
+            // btnTurnos
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button4.Location = new System.Drawing.Point(37, 616);
-            this.button4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 63);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Turnos";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnTurnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnTurnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTurnos.FlatAppearance.BorderSize = 0;
+            this.btnTurnos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnTurnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnTurnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTurnos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTurnos.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnTurnos.Location = new System.Drawing.Point(37, 616);
+            this.btnTurnos.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnTurnos.Name = "btnTurnos";
+            this.btnTurnos.Size = new System.Drawing.Size(166, 63);
+            this.btnTurnos.TabIndex = 7;
+            this.btnTurnos.Text = "Turnos";
+            this.btnTurnos.UseVisualStyleBackColor = false;
+            this.btnTurnos.Click += new System.EventHandler(this.btnTurnos_Click);
             // 
-            // button5
+            // btnFrutas
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button5.Location = new System.Drawing.Point(37, 398);
-            this.button5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(166, 63);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Frutas";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnFrutas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnFrutas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFrutas.FlatAppearance.BorderSize = 0;
+            this.btnFrutas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnFrutas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnFrutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFrutas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFrutas.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnFrutas.Location = new System.Drawing.Point(37, 398);
+            this.btnFrutas.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnFrutas.Name = "btnFrutas";
+            this.btnFrutas.Size = new System.Drawing.Size(166, 63);
+            this.btnFrutas.TabIndex = 11;
+            this.btnFrutas.Text = "Frutas";
+            this.btnFrutas.UseVisualStyleBackColor = false;
+            this.btnFrutas.Click += new System.EventHandler(this.btnFrutas_Click);
             // 
             // button6
             // 
@@ -205,41 +207,42 @@ namespace Practico.Formularios
             this.btnEmpleados.UseVisualStyleBackColor = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
-            // button9
+            // btnFrutasHeladosEspeciales
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button9.Location = new System.Drawing.Point(220, 398);
-            this.button9.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(166, 63);
-            this.button9.TabIndex = 12;
-            this.button9.Text = "Frutas de Helados Especiales";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnFrutasHeladosEspeciales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnFrutasHeladosEspeciales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFrutasHeladosEspeciales.FlatAppearance.BorderSize = 0;
+            this.btnFrutasHeladosEspeciales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnFrutasHeladosEspeciales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnFrutasHeladosEspeciales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFrutasHeladosEspeciales.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFrutasHeladosEspeciales.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnFrutasHeladosEspeciales.Location = new System.Drawing.Point(220, 398);
+            this.btnFrutasHeladosEspeciales.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnFrutasHeladosEspeciales.Name = "btnFrutasHeladosEspeciales";
+            this.btnFrutasHeladosEspeciales.Size = new System.Drawing.Size(166, 63);
+            this.btnFrutasHeladosEspeciales.TabIndex = 12;
+            this.btnFrutasHeladosEspeciales.Text = "Frutas de Helados Especiales";
+            this.btnFrutasHeladosEspeciales.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // btnBarrios
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button10.Location = new System.Drawing.Point(220, 543);
-            this.button10.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(166, 63);
-            this.button10.TabIndex = 6;
-            this.button10.Text = "Barrios";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnBarrios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnBarrios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBarrios.FlatAppearance.BorderSize = 0;
+            this.btnBarrios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnBarrios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnBarrios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBarrios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBarrios.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnBarrios.Location = new System.Drawing.Point(220, 543);
+            this.btnBarrios.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnBarrios.Name = "btnBarrios";
+            this.btnBarrios.Size = new System.Drawing.Size(166, 63);
+            this.btnBarrios.TabIndex = 6;
+            this.btnBarrios.Text = "Barrios";
+            this.btnBarrios.UseVisualStyleBackColor = false;
+            this.btnBarrios.Click += new System.EventHandler(this.btnBarrios_Click);
             // 
             // btnHelados
             // 
@@ -400,12 +403,12 @@ namespace Practico.Formularios
             this.Controls.Add(this.btnProveedoresHelados);
             this.Controls.Add(this.btnLocalidades);
             this.Controls.Add(this.btnHelados);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.btnBarrios);
+            this.Controls.Add(this.btnFrutasHeladosEspeciales);
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnFrutas);
+            this.Controls.Add(this.btnTurnos);
             this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btn_Proveedores);
             this.Controls.Add(this.btnEscritorio);
@@ -413,6 +416,7 @@ namespace Practico.Formularios
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.Name = "FrmAdministracion";
             this.Text = "Administracion ABM";
+            this.Load += new System.EventHandler(this.FrmAdministracion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -432,12 +436,12 @@ namespace Practico.Formularios
         private System.Windows.Forms.Button btnEscritorio;
         private System.Windows.Forms.Button btn_Proveedores;
         private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnTurnos;
+        private System.Windows.Forms.Button btnFrutas;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnEmpleados;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnFrutasHeladosEspeciales;
+        private System.Windows.Forms.Button btnBarrios;
         private System.Windows.Forms.Button btnHelados;
         private System.Windows.Forms.Button btnLocalidades;
         private System.Windows.Forms.Button btnProveedoresHelados;
