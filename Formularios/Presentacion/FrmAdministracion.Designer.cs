@@ -30,7 +30,7 @@ namespace Practico.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnHeladosEspeciales = new System.Windows.Forms.Button();
             this.btnEscritorio = new System.Windows.Forms.Button();
             this.btn_Proveedores = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
@@ -55,23 +55,24 @@ namespace Practico.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnIngresar
+            // btnHeladosEspeciales
             // 
-            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnIngresar.FlatAppearance.BorderSize = 0;
-            this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnIngresar.Location = new System.Drawing.Point(220, 373);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(166, 63);
-            this.btnIngresar.TabIndex = 10;
-            this.btnIngresar.Text = "Helados Especiales";
-            this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnHeladosEspeciales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnHeladosEspeciales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeladosEspeciales.FlatAppearance.BorderSize = 0;
+            this.btnHeladosEspeciales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnHeladosEspeciales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnHeladosEspeciales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeladosEspeciales.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeladosEspeciales.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnHeladosEspeciales.Location = new System.Drawing.Point(220, 373);
+            this.btnHeladosEspeciales.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnHeladosEspeciales.Name = "btnHeladosEspeciales";
+            this.btnHeladosEspeciales.Size = new System.Drawing.Size(166, 63);
+            this.btnHeladosEspeciales.TabIndex = 10;
+            this.btnHeladosEspeciales.Text = "Helados Especiales";
+            this.btnHeladosEspeciales.UseVisualStyleBackColor = false;
+            this.btnHeladosEspeciales.Click += new System.EventHandler(this.btnHeladosEspeciales_Click);
             // 
             // btnEscritorio
             // 
@@ -408,7 +409,7 @@ namespace Practico.Formularios
             this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btn_Proveedores);
             this.Controls.Add(this.btnEscritorio);
-            this.Controls.Add(this.btnIngresar);
+            this.Controls.Add(this.btnHeladosEspeciales);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.Name = "FrmAdministracion";
             this.Text = "Administracion ABM";
@@ -427,7 +428,7 @@ namespace Practico.Formularios
 
         #endregion
 
-        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnHeladosEspeciales;
         private System.Windows.Forms.Button btnEscritorio;
         private System.Windows.Forms.Button btn_Proveedores;
         private System.Windows.Forms.Button btnUsuarios;
