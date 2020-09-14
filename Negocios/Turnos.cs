@@ -68,8 +68,8 @@ namespace Practico.Negocios
                                        ,string nroDocSupervisor, int tipoDocSupervisor)
         {
             string sql = "INSERT INTO Turnos(nombre,horaInicio,horaFin,nroDocSupervisor,tipoDocSupervisor) " +
-                         "VALUES ('" + nombre + "', convert(time,'" + horaInicio + "',108), convert(Time,'" + horaFin + "',108), " +
-                         nroDocSupervisor + "," + tipoDocSupervisor + ")";
+                         "VALUES ('" + nombre + "', convert(time,'" + horaInicio + "',108), convert(Time,'" + horaFin + "',108), '" +
+                         nroDocSupervisor + "'," + tipoDocSupervisor + ")";
             try
             {
                 baseDatos.Insertar(sql);
@@ -92,7 +92,7 @@ namespace Practico.Negocios
                          "SET nombre = '" + nombre + "'," +
                          "horaInicio = convert(time,'" + horaInicio + "',108), " +
                          "horaFin = convert(time,'" + horaFin + "',108), " +
-                         "nroDocSupervisor = " + nroDocSupervisor + ", " +
+                         "nroDocSupervisor = '" + nroDocSupervisor + "', " +
                          "tipoDocSupervisor = " + tipoDocSupervisor +
                          " WHERE idTurno = " + idTurno;
             try
