@@ -15,7 +15,7 @@ namespace Practico.Formularios.Abm.Proveedores
     public partial class FrmEliminarProveedores : Form
     {
         Negocios.Proveedores proveedor = new Negocios.Proveedores();
-        Negocios.TiposDocumento tipoDoc = new Negocios.TiposDocumento();
+        Negocios.TipoDocumento tipoDoc = new Negocios.TipoDocumento();
         Negocios.Barrios barrio = new Negocios.Barrios();
 
         public string tipoDocumento { get; set; }

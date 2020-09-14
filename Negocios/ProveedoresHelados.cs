@@ -77,6 +77,7 @@ namespace Practico.Negocios
 
         }
 
+        /* Como son todas pk no se va a utilizar la modificación en el ABM
         public Respuesta Modificar(int tipoDocumento,string nroDocumento,int idHelado, Control.ControlCollection controles)
         {
             try
@@ -93,6 +94,7 @@ namespace Practico.Negocios
             }
 
         }
+        */
 
         public Respuesta Eliminar(int tipoDocumento, string nroDocumento, int idHelado)
         {

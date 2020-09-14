@@ -12,6 +12,17 @@ namespace Practico.Negocios
 	class TipoDocumento
 	{
 		private BaseDatos baseDatos = new BaseDatos();
+		
+		public EstructuraComboBox EstrCombo()
+		{
+			EstructuraComboBox ec = new EstructuraComboBox();
+			ec.Display = "descripcion";
+			ec.Value = "tipoDocumento";
+			ec.Sql = "SELECT * FROM TiposDocumento";
+			ec.Tabla = baseDatos.Consulta(ec.Sql);
+			return ec;
+		}
+
 		public enum Respuesta
 		{
 			validacionCorrecta,

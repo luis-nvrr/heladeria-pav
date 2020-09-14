@@ -14,7 +14,7 @@ namespace Practico.Formularios.Abm.Proveedores
 {
     public partial class FrmAltaProveedores : Form
     {
-        Negocios.TiposDocumento tipoDoc = new Negocios.TiposDocumento();
+        Negocios.TipoDocumento tipoDoc = new Negocios.TipoDocumento();
         Negocios.Barrios barrio = new Negocios.Barrios();
 
         public FrmAltaProveedores()

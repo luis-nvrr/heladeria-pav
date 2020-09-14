@@ -15,6 +15,16 @@ namespace Practico.Negocios
 
         BaseDatos baseDatos = new BaseDatos();
 
+        public EstructuraComboBox EstrCombo()
+        {
+            EstructuraComboBox ec = new EstructuraComboBox();
+            ec.Display = "razonSocial";
+            ec.Value = "nroDocumento";
+            ec.Sql = "SELECT * FROM Proveedores";
+            ec.Tabla = baseDatos.Consulta(ec.Sql);
+            return ec;
+        }
+
         public enum Respuesta
         {
             validacionCorrecta,

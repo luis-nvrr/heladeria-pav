@@ -114,11 +114,13 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
                     int indiceFilaSeleccionada = grdProveedoresHelados.SelectedRows[0].Index;
                     string tipoDocumento = grdProveedoresHelados[0, indiceFilaSeleccionada].Value.ToString();
                     string nroDocumento = grdProveedoresHelados[1, indiceFilaSeleccionada].Value.ToString();
+                    string razonSocial = grdProveedoresHelados[2, indiceFilaSeleccionada].Value.ToString();
                     string idHelado = grdProveedoresHelados[3, indiceFilaSeleccionada].Value.ToString();
 
                     FrmConsultarProveedoresHelados consultarProveedoresHelados = new FrmConsultarProveedoresHelados();
                     consultarProveedoresHelados.tipoDocumento = tipoDocumento;
                     consultarProveedoresHelados.nroDocumento = nroDocumento;
+                    consultarProveedoresHelados.razonSocial = razonSocial;
                     consultarProveedoresHelados.idHelado = idHelado;
                     consultarProveedoresHelados.ShowDialog();
 
@@ -147,11 +149,13 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
                     int indiceFilaSeleccionada = grdProveedoresHelados.SelectedRows[0].Index;
                     string tipoDocumento = grdProveedoresHelados[0, indiceFilaSeleccionada].Value.ToString();
                     string nroDocumento = grdProveedoresHelados[1, indiceFilaSeleccionada].Value.ToString();
+                    string razonSocial = grdProveedoresHelados[2, indiceFilaSeleccionada].Value.ToString();
                     string idHelado = grdProveedoresHelados[3, indiceFilaSeleccionada].Value.ToString();
 
                     FrmEliminarProveedoresHelados eliminarProveedoresHelados = new FrmEliminarProveedoresHelados();
                     eliminarProveedoresHelados.tipoDocumento = tipoDocumento;
                     eliminarProveedoresHelados.nroDocumento = nroDocumento;
+                    eliminarProveedoresHelados.razonSocial = razonSocial;
                     eliminarProveedoresHelados.idHelado = idHelado;
                     eliminarProveedoresHelados.ShowDialog();
 
