@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarTipoDocumento));
             this.lblNuevo = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new Practico.Clases.TextBox01();
@@ -152,9 +153,10 @@
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblNuevo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmModificarTipoDocumento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Modificar Localidades";
+            this.Text = "Modificar Tipo de Documento";
             this.Load += new System.EventHandler(this.FrmModificarTipoDocumento_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

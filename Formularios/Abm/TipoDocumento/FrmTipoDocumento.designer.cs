@@ -30,19 +30,20 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTipoDocumento));
             this.lblTipoDoc = new System.Windows.Forms.Label();
             this.lblTipoDocumento = new System.Windows.Forms.Label();
             this.chkTodos = new System.Windows.Forms.CheckBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEscritorio = new System.Windows.Forms.Button();
             this.grdTipoDoc = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.txtNombre = new Practico.Clases.TextBox01();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdTipoDoc)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -158,6 +159,24 @@
             this.grdTipoDoc.Size = new System.Drawing.Size(371, 290);
             this.grdTipoDoc.TabIndex = 16;
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Tipo Documento";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Id.Width = 140;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Descripcion";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Nombre.Width = 160;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnEliminar);
@@ -237,24 +256,6 @@
             this.txtNombre.Size = new System.Drawing.Size(124, 24);
             this.txtNombre.TabIndex = 0;
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "Tipo Documento";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Id.Width = 140;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Descripcion";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nombre.Width = 160;
-            // 
             // FrmTipoDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -270,10 +271,11 @@
             this.Controls.Add(this.lblTipoDocumento);
             this.Controls.Add(this.lblTipoDoc);
             this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmTipoDocumento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestión de Localidades";
+            this.Text = "Gestión de Tipo de Documento";
             this.Load += new System.EventHandler(this.FrmTipoDocumento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdTipoDoc)).EndInit();
             this.panel1.ResumeLayout(false);

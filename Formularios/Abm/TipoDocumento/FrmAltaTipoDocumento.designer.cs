@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAltaTipoDocumento));
             this.lblNuevo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new Practico.Clases.TextBox01();
@@ -111,7 +112,7 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // FrmAltaLocalidades
+            // FrmAltaTipoDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,9 +124,10 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblNuevo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "FrmAltaLocalidades";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FrmAltaTipoDocumento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Localidad";
+            this.Text = "Registrar Tipo de Documento";
             this.Load += new System.EventHandler(this.FrmAltaTipoDocumento_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
