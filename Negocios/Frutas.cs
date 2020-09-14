@@ -6,7 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Practico.Formularios.Abm.Usuarios;
-
+using System.Data.SqlClient;
+using System.Net.Http.Headers;
 
 namespace Practico.Negocios
 {
@@ -34,21 +35,13 @@ namespace Practico.Negocios
 			}
 		}
 		
-		public int RecuperarIdFruta(string nombreFruta)
-        {
-			string sql = "SELECT * FROM Frutas WHERE nombre = '" + nombreFruta + "'";
+
+		public DataTable RecuperarFruta(int id)
+		{
+			string sql = "SELECT * FROM Frutas WHERE idFruta = " + id;
 			DataTable tabla = new DataTable();
 			tabla = baseDatos.Consulta(sql);
-
-			if (tabla.Rows.Count == 1)
-			{
-				return int.Parse(tabla.Rows[0]["idFruta "].ToString()); // retorna idUsuario
-			}
-			else
-			{
-				return 0;
-			}
-
+			return tabla;
 		}
 
 		public DataTable TodasLasFrutas()
@@ -61,9 +54,56 @@ namespace Practico.Negocios
 
 		public DataTable BuscarFruta(string nombreFruta)
         {
-            string sql = "SELECT * FROM Frutas WHERE nombre LIKE '%" + nombreFruta.Trim() + "%";
+			string sql = "SELECT * FROM Frutas WHERE nombre LIKE '%" + nombreFruta.Trim() + "%";
 				DataTable tabla = baseDatos.Consulta(sql);
 			return tabla;
         }
+		
+		public Respuesta IngresarFruta(string nombre)
+        {
+			string sql = "INSERT INTO Frutas VALUES" + "('" + nombre + "')";
+			try
+			{
+				baseDatos.Insertar(sql);
+				return Respuesta.validacionCorrecta;
+
+			}
+			catch (SqlException)
+			{
+				return Respuesta.validacionIncorrecta;
+			}
+
+		}
+
+		public Respuesta EliminarFruta(int id)
+        {
+			string sql = "DELETE FROM Frutas WHERE idFruta=" + id;
+			try
+			{
+				baseDatos.Eliminar(sql);
+				return Respuesta.validacionCorrecta;
+
+			}
+			catch (SqlException exception)
+			{
+				return Respuesta.validacionIncorrecta;
+			}
+		}
+
+		public Respuesta ModificarFruta(int id, string nombre)
+        {
+			string sql = "UPDATE Frutas" + "SET nombre = '" + nombre + "' WHERE idFruta =" + id;
+			try
+			{
+				baseDatos.Actualizar(sql);
+				return Respuesta.validacionCorrecta;
+
+			}
+			catch (SqlException exception)
+			{
+				return Respuesta.validacionIncorrecta;
+			}
+		}
+		
 	}
 }

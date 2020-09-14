@@ -83,13 +83,11 @@ namespace Practico.Formularios.Abm.Helados
             if (chkTodos.Checked)
             {
                 txtNombre.Enabled = false;
-                txtNombre.BackColor = Color.SlateGray;
                 LimpiarCampos();
             }
             else
             {
                 txtNombre.Enabled = true;
-                txtNombre.BackColor = Color.White;
                 txtNombre.Focus();
             }
         }
