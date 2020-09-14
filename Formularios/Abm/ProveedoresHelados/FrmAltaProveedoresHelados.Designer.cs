@@ -147,7 +147,7 @@
             this.cmbNroDoc.PpValidable = true;
             this.cmbNroDoc.PpValue = "";
             this.cmbNroDoc.Size = new System.Drawing.Size(202, 25);
-            this.cmbNroDoc.TabIndex = 37;
+            this.cmbNroDoc.TabIndex = 1;
             // 
             // cmbIdHelado
             // 
@@ -165,7 +165,7 @@
             this.cmbIdHelado.PpValidable = true;
             this.cmbIdHelado.PpValue = null;
             this.cmbIdHelado.Size = new System.Drawing.Size(202, 25);
-            this.cmbIdHelado.TabIndex = 36;
+            this.cmbIdHelado.TabIndex = 2;
             // 
             // cmbTipoDoc
             // 
