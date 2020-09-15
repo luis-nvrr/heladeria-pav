@@ -54,7 +54,7 @@
             this.cmbHeladoEspecial.PpValidable = true;
             this.cmbHeladoEspecial.PpValue = "idHeladoEspecial";
             this.cmbHeladoEspecial.Size = new System.Drawing.Size(166, 25);
-            this.cmbHeladoEspecial.TabIndex = 76;
+            this.cmbHeladoEspecial.TabIndex = 0;
             // 
             // label1
             // 
@@ -83,7 +83,7 @@
             this.cmbFruta.PpValidable = true;
             this.cmbFruta.PpValue = "idFruta";
             this.cmbFruta.Size = new System.Drawing.Size(164, 25);
-            this.cmbFruta.TabIndex = 69;
+            this.cmbFruta.TabIndex = 1;
             // 
             // lblTelefono
             // 
@@ -112,7 +112,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 40);
-            this.btnCancelar.TabIndex = 71;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
@@ -130,7 +130,7 @@
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(103, 40);
-            this.btnAceptar.TabIndex = 70;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -145,7 +145,7 @@
             this.txtCantidad.PpNombreTabla = null;
             this.txtCantidad.PpValidable = true;
             this.txtCantidad.Size = new System.Drawing.Size(103, 24);
-            this.txtCantidad.TabIndex = 68;
+            this.txtCantidad.TabIndex = 2;
             // 
             // lblDocumento
             // 
