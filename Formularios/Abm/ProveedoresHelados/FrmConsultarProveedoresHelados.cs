@@ -35,6 +35,7 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
             cmbNroDoc.cargar(proveedores.EstrCombo());
             cmbIdHelado.cargar(helados.EstrCombo());
             CargarCampos();
+           
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -46,15 +47,27 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
         {
             DataTable tabla = new DataTable();
             tabla = proveedoresHelados.RecuperarProoveedorHelado(tipoDocumento, nroDocumento,idHelado);
+            
             cmbTipoDoc.SelectedIndex = cmbTipoDoc.FindStringExact(tipoDocumento);
-            cmbNroDoc.SelectedIndex = cmbNroDoc.FindStringExact(razonSocial);
+            cmbNroDoc.SelectedValue = nroDocumento;
             cmbIdHelado.SelectedIndex = cmbIdHelado.FindStringExact(idHelado);
+            CargarComboNombre();
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-     
+        private void CargarComboNombre()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string sql = "SELECT P.razonSocial FROM Proveedores P WHERE P.tipoDocumento = " + cmbTipoDoc.SelectedValue +
+                        " AND P.nroDocumento LIKE '" +cmbNroDoc.SelectedValue +"'";
+            cmbNombre.ValueMember = "razonSocial";
+            cmbNombre.DisplayMember = "razonSocial";
+            cmbNombre.DataSource = baseDatos.Consulta(sql);
+        }
+
+
     }
 }

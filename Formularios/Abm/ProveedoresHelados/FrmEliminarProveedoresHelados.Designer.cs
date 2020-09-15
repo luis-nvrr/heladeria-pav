@@ -30,14 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEliminarProveedoresHelados));
             this.lblNuevoProveedor = new System.Windows.Forms.Label();
-            this.lblTipoDoc = new System.Windows.Forms.Label();
-            this.cmbTipoDoc = new Practico.Clases.ComboBox01();
-            this.lblNroDoc = new System.Windows.Forms.Label();
-            this.lblIdHelado = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.cmbNombre = new Practico.Clases.ComboBox01();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.cmbNroDoc = new Practico.Clases.ComboBox01();
             this.cmbIdHelado = new Practico.Clases.ComboBox01();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblIdHelado = new System.Windows.Forms.Label();
+            this.lblNroDoc = new System.Windows.Forms.Label();
+            this.cmbTipoDoc = new Practico.Clases.ComboBox01();
+            this.lblTipoDoc = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNuevoProveedor
@@ -53,63 +55,92 @@
             this.lblNuevoProveedor.TabIndex = 21;
             this.lblNuevoProveedor.Text = "Eliminar Proveedor de Helado";
             // 
-            // lblTipoDoc
+            // cmbNombre
             // 
-            this.lblTipoDoc.AutoSize = true;
-            this.lblTipoDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTipoDoc.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblTipoDoc.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTipoDoc.Location = new System.Drawing.Point(97, 131);
-            this.lblTipoDoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTipoDoc.Name = "lblTipoDoc";
-            this.lblTipoDoc.Size = new System.Drawing.Size(149, 19);
-            this.lblTipoDoc.TabIndex = 30;
-            this.lblTipoDoc.Text = "Tipo de Documento:";
+            this.cmbNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNombre.Enabled = false;
+            this.cmbNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbNombre.FormattingEnabled = true;
+            this.cmbNombre.Location = new System.Drawing.Point(237, 98);
+            this.cmbNombre.Name = "cmbNombre";
+            this.cmbNombre.PpDisplay = "tipoDoc";
+            this.cmbNombre.PpMensajeError = "Seleccione un tipo de documento!";
+            this.cmbNombre.PpNombreCampo = null;
+            this.cmbNombre.PpNombreTabla = null;
+            this.cmbNombre.PpTabla = "Empleados";
+            this.cmbNombre.PpValidable = true;
+            this.cmbNombre.PpValue = "tipoDoc";
+            this.cmbNombre.Size = new System.Drawing.Size(166, 25);
+            this.cmbNombre.TabIndex = 87;
             // 
-            // cmbTipoDoc
+            // lblNombre
             // 
-            this.cmbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoDoc.Enabled = false;
-            this.cmbTipoDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTipoDoc.FormattingEnabled = true;
-            this.cmbTipoDoc.Location = new System.Drawing.Point(254, 128);
-            this.cmbTipoDoc.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbTipoDoc.Name = "cmbTipoDoc";
-            this.cmbTipoDoc.PpDisplay = "";
-            this.cmbTipoDoc.PpMensajeError = "No se ingresó Tipo de Documento !";
-            this.cmbTipoDoc.PpNombreCampo = "tipoDocProveedor";
-            this.cmbTipoDoc.PpNombreTabla = "ProveedoresHelados";
-            this.cmbTipoDoc.PpTabla = null;
-            this.cmbTipoDoc.PpValidable = true;
-            this.cmbTipoDoc.PpValue = null;
-            this.cmbTipoDoc.Size = new System.Drawing.Size(202, 25);
-            this.cmbTipoDoc.TabIndex = 31;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombre.Location = new System.Drawing.Point(161, 104);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(68, 19);
+            this.lblNombre.TabIndex = 88;
+            this.lblNombre.Text = "Nombre:";
             // 
-            // lblNroDoc
+            // cmbNroDoc
             // 
-            this.lblNroDoc.AutoSize = true;
-            this.lblNroDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNroDoc.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblNroDoc.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNroDoc.Location = new System.Drawing.Point(70, 169);
-            this.lblNroDoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNroDoc.Name = "lblNroDoc";
-            this.lblNroDoc.Size = new System.Drawing.Size(176, 19);
-            this.lblNroDoc.TabIndex = 32;
-            this.lblNroDoc.Text = "Número de Documento:";
+            this.cmbNroDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNroDoc.Enabled = false;
+            this.cmbNroDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbNroDoc.FormattingEnabled = true;
+            this.cmbNroDoc.Location = new System.Drawing.Point(237, 164);
+            this.cmbNroDoc.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbNroDoc.Name = "cmbNroDoc";
+            this.cmbNroDoc.PpDisplay = "";
+            this.cmbNroDoc.PpMensajeError = "No se ingresó Número de Documento !";
+            this.cmbNroDoc.PpNombreCampo = "nroDocProveedor";
+            this.cmbNroDoc.PpNombreTabla = "ProveedoresHelados";
+            this.cmbNroDoc.PpTabla = "";
+            this.cmbNroDoc.PpValidable = true;
+            this.cmbNroDoc.PpValue = "";
+            this.cmbNroDoc.Size = new System.Drawing.Size(202, 25);
+            this.cmbNroDoc.TabIndex = 80;
             // 
-            // lblIdHelado
+            // cmbIdHelado
             // 
-            this.lblIdHelado.AutoSize = true;
-            this.lblIdHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblIdHelado.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblIdHelado.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblIdHelado.Location = new System.Drawing.Point(165, 198);
-            this.lblIdHelado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIdHelado.Name = "lblIdHelado";
-            this.lblIdHelado.Size = new System.Drawing.Size(81, 19);
-            this.lblIdHelado.TabIndex = 34;
-            this.lblIdHelado.Text = "Id Helado:";
+            this.cmbIdHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdHelado.Enabled = false;
+            this.cmbIdHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbIdHelado.FormattingEnabled = true;
+            this.cmbIdHelado.Location = new System.Drawing.Point(237, 197);
+            this.cmbIdHelado.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbIdHelado.Name = "cmbIdHelado";
+            this.cmbIdHelado.PpDisplay = "";
+            this.cmbIdHelado.PpMensajeError = "No se ingresó Id Helado !";
+            this.cmbIdHelado.PpNombreCampo = "idHelado";
+            this.cmbIdHelado.PpNombreTabla = "ProveedoresHelados";
+            this.cmbIdHelado.PpTabla = null;
+            this.cmbIdHelado.PpValidable = true;
+            this.cmbIdHelado.PpValue = null;
+            this.cmbIdHelado.Size = new System.Drawing.Size(202, 25);
+            this.cmbIdHelado.TabIndex = 81;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAceptar.Location = new System.Drawing.Point(237, 242);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(103, 40);
+            this.btnAceptar.TabIndex = 82;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnCancelar
             // 
@@ -122,71 +153,72 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(230, 247);
+            this.btnCancelar.Location = new System.Drawing.Point(124, 242);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 40);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 83;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnConfirmar
+            // lblIdHelado
             // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfirmar.FlatAppearance.BorderSize = 0;
-            this.btnConfirmar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConfirmar.Location = new System.Drawing.Point(343, 247);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(103, 40);
-            this.btnConfirmar.TabIndex = 0;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = false;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            this.lblIdHelado.AutoSize = true;
+            this.lblIdHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblIdHelado.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblIdHelado.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblIdHelado.Location = new System.Drawing.Point(148, 200);
+            this.lblIdHelado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdHelado.Name = "lblIdHelado";
+            this.lblIdHelado.Size = new System.Drawing.Size(81, 19);
+            this.lblIdHelado.TabIndex = 86;
+            this.lblIdHelado.Text = "Id Helado:";
             // 
-            // cmbNroDoc
+            // lblNroDoc
             // 
-            this.cmbNroDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbNroDoc.Enabled = false;
-            this.cmbNroDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbNroDoc.FormattingEnabled = true;
-            this.cmbNroDoc.Location = new System.Drawing.Point(254, 162);
-            this.cmbNroDoc.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbNroDoc.Name = "cmbNroDoc";
-            this.cmbNroDoc.PpDisplay = "";
-            this.cmbNroDoc.PpMensajeError = "No se ingresó Número de Documento !";
-            this.cmbNroDoc.PpNombreCampo = "nroDocProveedor";
-            this.cmbNroDoc.PpNombreTabla = "ProveedoresHelados";
-            this.cmbNroDoc.PpTabla = "";
-            this.cmbNroDoc.PpValidable = true;
-            this.cmbNroDoc.PpValue = "";
-            this.cmbNroDoc.Size = new System.Drawing.Size(202, 25);
-            this.cmbNroDoc.TabIndex = 39;
+            this.lblNroDoc.AutoSize = true;
+            this.lblNroDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNroDoc.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblNroDoc.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNroDoc.Location = new System.Drawing.Point(53, 171);
+            this.lblNroDoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNroDoc.Name = "lblNroDoc";
+            this.lblNroDoc.Size = new System.Drawing.Size(176, 19);
+            this.lblNroDoc.TabIndex = 85;
+            this.lblNroDoc.Text = "Número de Documento:";
             // 
-            // cmbIdHelado
+            // cmbTipoDoc
             // 
-            this.cmbIdHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbIdHelado.Enabled = false;
-            this.cmbIdHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbIdHelado.FormattingEnabled = true;
-            this.cmbIdHelado.Location = new System.Drawing.Point(254, 192);
-            this.cmbIdHelado.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbIdHelado.Name = "cmbIdHelado";
-            this.cmbIdHelado.PpDisplay = "";
-            this.cmbIdHelado.PpMensajeError = "No se ingresó Id Helado !";
-            this.cmbIdHelado.PpNombreCampo = "idHelado";
-            this.cmbIdHelado.PpNombreTabla = "ProveedoresHelados";
-            this.cmbIdHelado.PpTabla = null;
-            this.cmbIdHelado.PpValidable = true;
-            this.cmbIdHelado.PpValue = null;
-            this.cmbIdHelado.Size = new System.Drawing.Size(202, 25);
-            this.cmbIdHelado.TabIndex = 40;
+            this.cmbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoDoc.Enabled = false;
+            this.cmbTipoDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTipoDoc.FormattingEnabled = true;
+            this.cmbTipoDoc.Location = new System.Drawing.Point(237, 130);
+            this.cmbTipoDoc.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbTipoDoc.Name = "cmbTipoDoc";
+            this.cmbTipoDoc.PpDisplay = "";
+            this.cmbTipoDoc.PpMensajeError = "No se ingresó Tipo de Documento !";
+            this.cmbTipoDoc.PpNombreCampo = "tipoDocProveedor";
+            this.cmbTipoDoc.PpNombreTabla = "ProveedoresHelados";
+            this.cmbTipoDoc.PpTabla = null;
+            this.cmbTipoDoc.PpValidable = true;
+            this.cmbTipoDoc.PpValue = null;
+            this.cmbTipoDoc.Size = new System.Drawing.Size(202, 25);
+            this.cmbTipoDoc.TabIndex = 79;
+            // 
+            // lblTipoDoc
+            // 
+            this.lblTipoDoc.AutoSize = true;
+            this.lblTipoDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTipoDoc.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblTipoDoc.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTipoDoc.Location = new System.Drawing.Point(80, 133);
+            this.lblTipoDoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipoDoc.Name = "lblTipoDoc";
+            this.lblTipoDoc.Size = new System.Drawing.Size(149, 19);
+            this.lblTipoDoc.TabIndex = 84;
+            this.lblTipoDoc.Text = "Tipo de Documento:";
             // 
             // FrmEliminarProveedoresHelados
             // 
@@ -194,9 +226,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(498, 319);
-            this.Controls.Add(this.cmbIdHelado);
+            this.Controls.Add(this.cmbNombre);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.cmbNroDoc);
-            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.cmbIdHelado);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblIdHelado);
             this.Controls.Add(this.lblNroDoc);
@@ -221,13 +255,15 @@
         #endregion
 
         private System.Windows.Forms.Label lblNuevoProveedor;
-        private System.Windows.Forms.Label lblTipoDoc;
-        private Clases.ComboBox01 cmbTipoDoc;
-        private System.Windows.Forms.Label lblNroDoc;
-        private System.Windows.Forms.Label lblIdHelado;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnConfirmar;
+        private Clases.ComboBox01 cmbNombre;
+        private System.Windows.Forms.Label lblNombre;
         private Clases.ComboBox01 cmbNroDoc;
         private Clases.ComboBox01 cmbIdHelado;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblIdHelado;
+        private System.Windows.Forms.Label lblNroDoc;
+        private Clases.ComboBox01 cmbTipoDoc;
+        private System.Windows.Forms.Label lblTipoDoc;
     }
 }

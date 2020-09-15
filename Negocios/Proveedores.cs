@@ -18,7 +18,7 @@ namespace Practico.Negocios
         public EstructuraComboBox EstrCombo()
         {
             EstructuraComboBox ec = new EstructuraComboBox();
-            ec.Display = "razonSocial";
+            ec.Display = "nroDocumento";
             ec.Value = "nroDocumento";
             ec.Sql = "SELECT * FROM Proveedores";
             ec.Tabla = baseDatos.Consulta(ec.Sql);
