@@ -202,6 +202,36 @@
     <Compile Include="Formularios\Abm\HeladosEspeciales\FrmModificarHeladosEspeciales.Designer.cs">
       <DependentUpon>FrmModificarHeladosEspeciales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\HeladosHeladosEspeciales\FrmAltaHeladosHeladosEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\HeladosHeladosEspeciales\FrmAltaHeladosHeladosEspeciales.Designer.cs">
+      <DependentUpon>FrmAltaHeladosHeladosEspeciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\HeladosHeladosEspeciales\FrmConsultarHeladosHeladosEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\HeladosHeladosEspeciales\FrmConsultarHeladosHeladosEspeciales.Designer.cs">
+      <DependentUpon>FrmConsultarHeladosHeladosEspeciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\HeladosHeladosEspeciales\FrmEliminarHeladosHeladosEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\HeladosHeladosEspeciales\FrmEliminarHeladosHeladosEspeciales.Designer.cs">
+      <DependentUpon>FrmEliminarHeladosHeladosEspeciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\HeladosHeladosEspeciales\FrmHeladosHeladosEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\HeladosHeladosEspeciales\FrmHeladosHeladosEspeciales.Designer.cs">
+      <DependentUpon>FrmHeladosHeladosEspeciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\HeladosHeladosEspeciales\FrmModificarHeladosHeladosEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\HeladosHeladosEspeciales\FrmModificarHeladosHeladosEspeciales.Designer.cs">
+      <DependentUpon>FrmModificarHeladosHeladosEspeciales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Helados\FrmAltaHelados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -430,6 +460,7 @@
     <Compile Include="Formularios\Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\HeladosHeladosEspeciales.cs" />
     <Compile Include="Negocios\FrutasHeladosEspeciales.cs" />
     <Compile Include="Negocios\HeladosEspeciales.cs" />
     <Compile Include="Negocios\Turnos.cs" />
@@ -519,6 +550,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\HeladosEspeciales\FrmModificarHeladosEspeciales.resx">
       <DependentUpon>FrmModificarHeladosEspeciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\HeladosHeladosEspeciales\FrmAltaHeladosHeladosEspeciales.resx">
+      <DependentUpon>FrmAltaHeladosHeladosEspeciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\HeladosHeladosEspeciales\FrmConsultarHeladosHeladosEspeciales.resx">
+      <DependentUpon>FrmConsultarHeladosHeladosEspeciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\HeladosHeladosEspeciales\FrmEliminarHeladosHeladosEspeciales.resx">
+      <DependentUpon>FrmEliminarHeladosHeladosEspeciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\HeladosHeladosEspeciales\FrmHeladosHeladosEspeciales.resx">
+      <DependentUpon>FrmHeladosHeladosEspeciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\HeladosHeladosEspeciales\FrmModificarHeladosHeladosEspeciales.resx">
+      <DependentUpon>FrmModificarHeladosHeladosEspeciales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Helados\FrmAltaHelados.resx">
       <DependentUpon>FrmAltaHelados.cs</DependentUpon>
