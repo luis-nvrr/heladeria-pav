@@ -192,6 +192,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmModificarBarrios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Barrio";
             this.Load += new System.EventHandler(this.FrmModificarBarrios_Load);
             this.ResumeLayout(false);

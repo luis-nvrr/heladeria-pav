@@ -62,11 +62,14 @@ namespace Practico.Formularios.Abm.Turnos
             txtNombre.Text = nombre;
             pckHoraInicio.Value = DateTime.Parse(horaInicio);
             pckHoraFin.Value = DateTime.Parse(horaFin);
-            
-            cmbNombre.SelectedValue = nombreJefe;
-            cmbTipo.SelectedValue = tipoDoc;
-            cmbDocumento.SelectedValue = nroDoc;
 
+            if (nroDoc != "")
+            {
+                cmbNombre.SelectedValue = nombreJefe;
+                cmbTipo.SelectedValue = tipoDoc;
+                cmbDocumento.SelectedValue = nroDoc;
+            }
+          
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
