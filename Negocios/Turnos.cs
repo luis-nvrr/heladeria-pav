@@ -42,7 +42,7 @@ namespace Practico.Negocios
         public DataTable RecuperarTurno(int id)
         {
             string sql = "SELECT T.*, J.nombre AS nombreJefe FROM Turnos T " +
-                         "INNER JOIN Empleados J ON (T.nroDocSupervisor = J.nroDoc) AND (T.tipoDocSupervisor = J.TipoDoc)" +
+                         "LEFT JOIN Empleados J ON (T.nroDocSupervisor = J.nroDoc) AND (T.tipoDocSupervisor = J.TipoDoc)" +
                          "WHERE T.idTurno = " + id;
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
