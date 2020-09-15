@@ -50,6 +50,7 @@ namespace Practico.Formularios
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnHeladosHeladosEspeciales = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -387,6 +388,25 @@ namespace Practico.Formularios
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // btnHeladosHeladosEspeciales
+            // 
+            this.btnHeladosHeladosEspeciales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnHeladosHeladosEspeciales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeladosHeladosEspeciales.FlatAppearance.BorderSize = 0;
+            this.btnHeladosHeladosEspeciales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnHeladosHeladosEspeciales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnHeladosHeladosEspeciales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeladosHeladosEspeciales.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeladosHeladosEspeciales.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnHeladosHeladosEspeciales.Location = new System.Drawing.Point(396, 325);
+            this.btnHeladosHeladosEspeciales.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnHeladosHeladosEspeciales.Name = "btnHeladosHeladosEspeciales";
+            this.btnHeladosHeladosEspeciales.Size = new System.Drawing.Size(166, 63);
+            this.btnHeladosHeladosEspeciales.TabIndex = 16;
+            this.btnHeladosHeladosEspeciales.Text = "Helados de Helados Especiales";
+            this.btnHeladosHeladosEspeciales.UseVisualStyleBackColor = false;
+            this.btnHeladosHeladosEspeciales.Click += new System.EventHandler(this.btnHeladosHeladosEspeciales_Click);
+            // 
             // FrmAdministracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -394,6 +414,7 @@ namespace Practico.Formularios
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(909, 606);
+            this.Controls.Add(this.btnHeladosHeladosEspeciales);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -453,5 +474,6 @@ namespace Practico.Formularios
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnHeladosHeladosEspeciales;
     }
 }

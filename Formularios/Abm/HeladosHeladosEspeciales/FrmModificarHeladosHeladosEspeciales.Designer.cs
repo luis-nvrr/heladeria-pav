@@ -42,6 +42,7 @@
             // cmbHeladoEspecial
             // 
             this.cmbHeladoEspecial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHeladoEspecial.Enabled = false;
             this.cmbHeladoEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbHeladoEspecial.FormattingEnabled = true;
             this.cmbHeladoEspecial.Location = new System.Drawing.Point(297, 90);
@@ -71,6 +72,7 @@
             // cmbHelado
             // 
             this.cmbHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHelado.Enabled = false;
             this.cmbHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbHelado.FormattingEnabled = true;
             this.cmbHelado.Location = new System.Drawing.Point(297, 121);

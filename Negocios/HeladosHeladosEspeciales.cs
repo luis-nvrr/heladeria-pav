@@ -24,11 +24,11 @@ namespace Practico.Negocios
         public DataTable todosLosHelados()
         {
             string sql = "SELECT HHS.*," +
-                         "H.nombre AS nombreHelado," +
-                         "HS.nombreProducto" +
-                         "FROM HeladosHeladosEspeciales HHS" +
-                         "INNER JOIN HeladosEspeciales HS ON (HHS.idHeladoEspecial = HS.idHeladoEspecial)" +
-                         "INNER JOIN Helados H ON (HHS.idHelado = H.idHelado)";
+                         " H.nombre AS nombreHelado," +
+                         " HS.nombreProducto" +
+                         " FROM HeladosHeladosEspeciales HHS" +
+                         " INNER JOIN HeladosEspeciales HS ON (HHS.idHeladoEspecial = HS.idHeladoEspecial)" +
+                         " INNER JOIN Helados H ON (HHS.idHelado = H.idHelado)";
 
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
@@ -38,13 +38,13 @@ namespace Practico.Negocios
         public DataTable buscarHelado(string heladoEspecial, string helado)
         {
             string sql = "SELECT HHS.*," +
-                       "H.nombre AS nombreHelado," +
-                       "HS.nombreProducto" +
-                       "FROM HeladosHeladosEspeciales HHS" +
-                       "INNER JOIN HeladosEspeciales HS ON (HHS.idHeladoEspecial = HS.idHeladoEspecial)" +
-                       "INNER JOIN Helados H ON (HHS.idHelado = H.idHelado)" +
-                       "WHERE HHS.idHelado IN " + helado +
-                       "AND HHS.idHeladoEspecial IN " + heladoEspecial;
+                       " H.nombre AS nombreHelado," +
+                       " HS.nombreProducto" +
+                       " FROM HeladosHeladosEspeciales HHS" +
+                       " INNER JOIN HeladosEspeciales HS ON (HHS.idHeladoEspecial = HS.idHeladoEspecial)" +
+                       " INNER JOIN Helados H ON (HHS.idHelado = H.idHelado)" +
+                       " WHERE HHS.idHelado IN " + helado +
+                       " AND HHS.idHeladoEspecial IN " + heladoEspecial;
 
             DataTable tabla = baseDatos.Consulta(sql);
             return tabla;
@@ -73,19 +73,19 @@ namespace Practico.Negocios
             string sql = "SELECT HHS.*," +
                       "H.nombre AS nombreHelado," +
                       "HS.nombreProducto" +
-                      "FROM HeladosHeladosEspeciales HHS" +
-                      "INNER JOIN HeladosEspeciales HS ON (HHS.idHeladoEspecial = HS.idHeladoEspecial)" +
-                      "INNER JOIN Helados H ON (HHS.idHelado = H.idHelado)" +
-                      "WHERE HS.nombreProducto LIKE '" + heladoEspecial + "'" +
-                      "AND H.nombre LIKE '" + helado + "'";
+                      " FROM HeladosHeladosEspeciales HHS" +
+                      " INNER JOIN HeladosEspeciales HS ON (HHS.idHeladoEspecial = HS.idHeladoEspecial)" +
+                      " INNER JOIN Helados H ON (HHS.idHelado = H.idHelado)" +
+                      " WHERE HS.nombreProducto LIKE '" + heladoEspecial + "'" +
+                      " AND H.nombre LIKE '" + helado + "'";
             DataTable tabla = baseDatos.Consulta(sql);
             return tabla;
         }
 
         public Respuesta ModificarHelado(int idHeladoEspecial, int idHelado, int cantBochas)
         {
-            string sql = "UPDATE HeladosHeladosEspeciales" + "SET cantBochas = " + cantBochas +
-                         "WHERE idHeladoEspecial = " + idHeladoEspecial + "AND idHelado = " + idHelado;
+            string sql = "UPDATE HeladosHeladosEspeciales" + " SET cantBochas = " + cantBochas +
+                         " WHERE idHeladoEspecial = " + idHeladoEspecial + "AND idHelado = " + idHelado;
 
             try
             {
@@ -103,7 +103,7 @@ namespace Practico.Negocios
         public Respuesta EliminarHelado(int idHeladoEspecial, int idHelado)
         {
             string sql = "DELETE FROM HeladosHeladosEspeciales" +
-                         "WHERE idHeladoEspecial = " + idHeladoEspecial + "AND idHelado = " + idHelado;
+                         " WHERE idHeladoEspecial = " + idHeladoEspecial + "AND idHelado = " + idHelado;
             try
             {
                 baseDatos.Eliminar(sql);

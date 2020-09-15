@@ -102,7 +102,7 @@ namespace Practico.Formularios.Abm.HeladosHeladosEspeciales
             {
                 grdHeladosHeladosEspeciales.Rows.Add();
                 grdHeladosHeladosEspeciales.Rows[i].Cells[0].Value = tabla.Rows[i]["nombreProducto"].ToString();
-                grdHeladosHeladosEspeciales.Rows[i].Cells[1].Value = tabla.Rows[i]["nombre"].ToString();
+                grdHeladosHeladosEspeciales.Rows[i].Cells[1].Value = tabla.Rows[i]["nombreHelado"].ToString();
                 grdHeladosHeladosEspeciales.Rows[i].Cells[2].Value = tabla.Rows[i]["cantBochas"].ToString();
             }
         }

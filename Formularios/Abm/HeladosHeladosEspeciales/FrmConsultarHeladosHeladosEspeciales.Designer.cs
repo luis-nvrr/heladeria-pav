@@ -42,6 +42,7 @@
             // cmbHeladoEspecial
             // 
             this.cmbHeladoEspecial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHeladoEspecial.Enabled = false;
             this.cmbHeladoEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbHeladoEspecial.FormattingEnabled = true;
             this.cmbHeladoEspecial.Location = new System.Drawing.Point(299, 93);
@@ -71,6 +72,7 @@
             // cmbHelado
             // 
             this.cmbHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHelado.Enabled = false;
             this.cmbHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbHelado.FormattingEnabled = true;
             this.cmbHelado.Location = new System.Drawing.Point(299, 124);
@@ -139,6 +141,7 @@
             // txtCantidad
             // 
             this.txtCantidad.BackColor = System.Drawing.Color.White;
+            this.txtCantidad.Enabled = false;
             this.txtCantidad.Location = new System.Drawing.Point(299, 155);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.PpMensajeError = "Ingrese un numero de telefono!";

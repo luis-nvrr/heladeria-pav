@@ -14,6 +14,7 @@ using Practico.Formularios.Abm.Frutas;
 using Practico.Formularios.Abm.FrutasHeladosEspeciales;
 using Practico.Formularios.Abm.Helados;
 using Practico.Formularios.Abm.HeladosEspeciales;
+using Practico.Formularios.Abm.HeladosHeladosEspeciales;
 using Practico.Formularios.Abm.Localidades;
 using Practico.Formularios.Abm.Proveedores;
 using Practico.Formularios.Abm.ProveedoresHelados;
@@ -116,6 +117,11 @@ namespace Practico.Formularios
         private void btnFrutasHeladosEspeciales_Click(object sender, EventArgs e)
         {
             abrirFormulario(new FrmFrutasHeladosEspeciales());
+        }
+
+        private void btnHeladosHeladosEspeciales_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmHeladosHeladosEspeciales());
         }
     }
 }

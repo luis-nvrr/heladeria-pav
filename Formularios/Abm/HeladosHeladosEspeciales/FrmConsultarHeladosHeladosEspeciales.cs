@@ -46,8 +46,8 @@ namespace Practico.Formularios.Abm.HeladosHeladosEspeciales
 
             cantidad = tabla.Rows[0]["cantBochas"].ToString();
 
-            cmbHeladoEspecial.SelectedValue = tabla.Rows[0]["idHeladoEspecial"].ToString();
-            cmbHelado.SelectedValue = tabla.Rows[0]["idHelado"].ToString();
+            cmbHeladoEspecial.SelectedValue = tabla.Rows[0]["idHeladoEspecial"];
+            cmbHelado.SelectedValue = tabla.Rows[0]["idHelado"];
             txtCantidad.Text = cantidad;
         }
     }
