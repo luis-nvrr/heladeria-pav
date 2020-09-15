@@ -30,17 +30,13 @@
         {
             this.lblNuevoHeladoEspecial = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblHelado = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblNombreHeladoEspecial = new System.Windows.Forms.Label();
-            this.lblCantBochas = new System.Windows.Forms.Label();
-            this.cmbHelado = new Practico.Clases.ComboBox01();
             this.txtNombre = new Practico.Clases.TextBox01();
             this.txtPrecio = new Practico.Clases.TextBox01();
             this.txtStock = new Practico.Clases.TextBox01();
-            this.txtCantBochas = new Practico.Clases.TextBox01();
             this.SuspendLayout();
             // 
             // lblNuevoHeladoEspecial
@@ -62,25 +58,12 @@
             this.lblPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblPrecio.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPrecio.Location = new System.Drawing.Point(196, 200);
+            this.lblPrecio.Location = new System.Drawing.Point(208, 138);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(55, 19);
             this.lblPrecio.TabIndex = 23;
             this.lblPrecio.Text = "Precio:";
-            // 
-            // lblHelado
-            // 
-            this.lblHelado.AutoSize = true;
-            this.lblHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblHelado.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblHelado.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblHelado.Location = new System.Drawing.Point(187, 106);
-            this.lblHelado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblHelado.Name = "lblHelado";
-            this.lblHelado.Size = new System.Drawing.Size(64, 19);
-            this.lblHelado.TabIndex = 29;
-            this.lblHelado.Text = "Helado:";
             // 
             // lblStock
             // 
@@ -88,7 +71,7 @@
             this.lblStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblStock.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblStock.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblStock.Location = new System.Drawing.Point(201, 230);
+            this.lblStock.Location = new System.Drawing.Point(213, 168);
             this.lblStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(50, 19);
@@ -105,7 +88,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAceptar.Location = new System.Drawing.Point(287, 286);
+            this.btnAceptar.Location = new System.Drawing.Point(265, 204);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(5);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(103, 40);
@@ -125,7 +108,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(174, 286);
+            this.btnCancelar.Location = new System.Drawing.Point(152, 204);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 40);
@@ -140,47 +123,16 @@
             this.lblNombreHeladoEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombreHeladoEspecial.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNombreHeladoEspecial.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombreHeladoEspecial.Location = new System.Drawing.Point(183, 141);
+            this.lblNombreHeladoEspecial.Location = new System.Drawing.Point(195, 109);
             this.lblNombreHeladoEspecial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreHeladoEspecial.Name = "lblNombreHeladoEspecial";
             this.lblNombreHeladoEspecial.Size = new System.Drawing.Size(68, 19);
             this.lblNombreHeladoEspecial.TabIndex = 21;
             this.lblNombreHeladoEspecial.Text = "Nombre:";
             // 
-            // lblCantBochas
-            // 
-            this.lblCantBochas.AutoSize = true;
-            this.lblCantBochas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCantBochas.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblCantBochas.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantBochas.Location = new System.Drawing.Point(91, 171);
-            this.lblCantBochas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCantBochas.Name = "lblCantBochas";
-            this.lblCantBochas.Size = new System.Drawing.Size(160, 19);
-            this.lblCantBochas.TabIndex = 22;
-            this.lblCantBochas.Text = "Cantidad de bochas:";
-            // 
-            // cmbHelado
-            // 
-            this.cmbHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbHelado.FormattingEnabled = true;
-            this.cmbHelado.Location = new System.Drawing.Point(253, 103);
-            this.cmbHelado.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbHelado.Name = "cmbHelado";
-            this.cmbHelado.PpDisplay = "nombre";
-            this.cmbHelado.PpMensajeError = "No se ingresó Helado";
-            this.cmbHelado.PpNombreCampo = "idHelado";
-            this.cmbHelado.PpNombreTabla = "HeladosEspeciales";
-            this.cmbHelado.PpTabla = "Helados";
-            this.cmbHelado.PpValidable = true;
-            this.cmbHelado.PpValue = "idHelado";
-            this.cmbHelado.Size = new System.Drawing.Size(164, 25);
-            this.cmbHelado.TabIndex = 0;
-            // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(253, 135);
+            this.txtNombre.Location = new System.Drawing.Point(265, 103);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PpMensajeError = "Ingrese un nombre!";
             this.txtNombre.PpNombreCampo = "nombreProducto";
@@ -191,7 +143,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(253, 195);
+            this.txtPrecio.Location = new System.Drawing.Point(265, 133);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.PpMensajeError = "Ingrese el precio!";
             this.txtPrecio.PpNombreCampo = "precio";
@@ -202,7 +154,7 @@
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(253, 225);
+            this.txtStock.Location = new System.Drawing.Point(265, 163);
             this.txtStock.Name = "txtStock";
             this.txtStock.PpMensajeError = "Ingrese el stock!";
             this.txtStock.PpNombreCampo = "cantidadStock";
@@ -211,34 +163,19 @@
             this.txtStock.Size = new System.Drawing.Size(65, 24);
             this.txtStock.TabIndex = 48;
             // 
-            // txtCantBochas
-            // 
-            this.txtCantBochas.Location = new System.Drawing.Point(253, 165);
-            this.txtCantBochas.Name = "txtCantBochas";
-            this.txtCantBochas.PpMensajeError = "Ingrese la cantidad de bochas!";
-            this.txtCantBochas.PpNombreCampo = "cantBochas";
-            this.txtCantBochas.PpNombreTabla = "HeladosEspeciales";
-            this.txtCantBochas.PpValidable = true;
-            this.txtCantBochas.Size = new System.Drawing.Size(65, 24);
-            this.txtCantBochas.TabIndex = 49;
-            // 
             // FrmAltaHeladosEspeciales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(557, 370);
-            this.Controls.Add(this.txtCantBochas);
+            this.ClientSize = new System.Drawing.Size(557, 297);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblStock);
-            this.Controls.Add(this.lblHelado);
-            this.Controls.Add(this.cmbHelado);
             this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.lblCantBochas);
             this.Controls.Add(this.lblNombreHeladoEspecial);
             this.Controls.Add(this.lblNuevoHeladoEspecial);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -259,16 +196,12 @@
 
         private System.Windows.Forms.Label lblNuevoHeladoEspecial;
         private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.Label lblHelado;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblNombreHeladoEspecial;
-        private System.Windows.Forms.Label lblCantBochas;
-        private Clases.ComboBox01 cmbHelado;
         private Clases.TextBox01 txtNombre;
         private Clases.TextBox01 txtPrecio;
         private Clases.TextBox01 txtStock;
-        private Clases.TextBox01 txtCantBochas;
     }
 }

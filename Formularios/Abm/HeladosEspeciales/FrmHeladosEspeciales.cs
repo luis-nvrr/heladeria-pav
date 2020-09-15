@@ -63,8 +63,8 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
             {
                 grdHeladoEspecial.Rows.Add();
                 grdHeladoEspecial.Rows[i].Cells[0].Value = tabla.Rows[i]["idHeladoEspecial"].ToString();
-                grdHeladoEspecial.Rows[i].Cells[1].Value = tabla.Rows[i]["idHelado"].ToString();
-                grdHeladoEspecial.Rows[i].Cells[2].Value = tabla.Rows[i]["nombreProducto"].ToString();
+                grdHeladoEspecial.Rows[i].Cells[1].Value = tabla.Rows[i]["nombreProducto"].ToString();
+                grdHeladoEspecial.Rows[i].Cells[2].Value = tabla.Rows[i]["precio"].ToString();
             }
         }
 
@@ -90,11 +90,9 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
                 {
                     int indiceFilaSeleccionada = grdHeladoEspecial.SelectedRows[0].Index;
                     string idHeladoEspecial = grdHeladoEspecial[0, indiceFilaSeleccionada].Value.ToString();
-                    string idHelado = grdHeladoEspecial[1, indiceFilaSeleccionada].Value.ToString();
 
                     FrmModificarHeladosEspeciales modificarHeladosEspeciales = new FrmModificarHeladosEspeciales();
                     modificarHeladosEspeciales.idHeladoEspecial = idHeladoEspecial;
-                    modificarHeladosEspeciales.idHelado = idHelado;
                     modificarHeladosEspeciales.ShowDialog();
 
                     DataTable tabla = heladosEspeciales.TodosLosHeladosEspeciales();
@@ -121,11 +119,9 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
                 {
                     int indiceFilaSeleccionada = grdHeladoEspecial.SelectedRows[0].Index;
                     string idHeladoEspecial = grdHeladoEspecial[0, indiceFilaSeleccionada].Value.ToString();
-                    string idHelado = grdHeladoEspecial[1, indiceFilaSeleccionada].Value.ToString();
 
                     FrmEliminarHeladosEspeciales eliminarHeladoEspeciales = new FrmEliminarHeladosEspeciales();
                     eliminarHeladoEspeciales.idHeladoEspecial = idHeladoEspecial;
-                    eliminarHeladoEspeciales.idHelado = idHelado;
 
                     eliminarHeladoEspeciales.ShowDialog();
 
@@ -153,11 +149,9 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
                 {
                     int indiceFilaSeleccionada = grdHeladoEspecial.SelectedRows[0].Index;
                     string idHeladoEspecial = grdHeladoEspecial[0, indiceFilaSeleccionada].Value.ToString();
-                    string idHelado = grdHeladoEspecial[1, indiceFilaSeleccionada].Value.ToString();
 
                     FrmConsultarHeladosEspeciales consultarHeladoEspecial = new FrmConsultarHeladosEspeciales();
                     consultarHeladoEspecial.idHeladoEspecial = idHeladoEspecial;
-                    consultarHeladoEspecial.idHelado = idHelado;
 
                     consultarHeladoEspecial.ShowDialog();
                     consultarHeladoEspecial.Close();
@@ -174,15 +168,18 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
             if (chkTodos.Checked)
             {
                 txtHeladosEspeciales.Enabled = false;
-                txtHeladosEspeciales.BackColor = Color.SlateGray;
-                
+                LimpiarCampos();
             }
             else
             {
                 txtHeladosEspeciales.Enabled = true;
-                txtHeladosEspeciales.BackColor = Color.White;
                 txtHeladosEspeciales.Focus();
             }
+        }
+
+        private void LimpiarCampos()
+        {
+            txtHeladosEspeciales.Text = "";
         }
     }
 }

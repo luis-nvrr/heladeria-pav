@@ -18,7 +18,6 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
         Negocios.Helados helado = new Negocios.Helados();
 
         public string idHeladoEspecial { get; set; }
-        public string idHelado { get; set; }
         public string nombre { get; set; }
         public string cantBochas { get; set; }
         public string precio { get; set; }
@@ -32,7 +31,6 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
 
         private void FrmModificarHeladosEspeciales_Load(object sender, EventArgs e)
         {
-            cmbTipoHelado.cargar(helado.EstrCombo());
             CargarCampos();
         }
 
@@ -43,12 +41,11 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
             if (tratamiento.Validar(this.Controls) == TratamientosEspeciales.Validacion.correcta)
             {
                 Negocios.HeladosEspeciales heladoEspecial = new Negocios.HeladosEspeciales();
-                if (heladoEspecial.Modificar(Int32.Parse(cmbTipoHelado.SelectedValue.ToString()), idHeladoEspecial, this.Controls) == Negocios.HeladosEspeciales.Respuesta.validacionCorrecta)
+                if (heladoEspecial.Modificar(idHeladoEspecial, this.Controls) == Negocios.HeladosEspeciales.Respuesta.validacionCorrecta)
                 {
                     MessageBox.Show("Modificado correctamente!", "Informacion",
                         buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     CargarCampos();
-                    this.Close();
                 }
                 else
                 {
@@ -63,15 +60,14 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
         private void CargarCampos()
         {
             DataTable tabla = new DataTable();
-            tabla = heladoEspecial.RecuperarHeladosEspeciales(idHeladoEspecial, idHelado);
+            tabla = heladoEspecial.RecuperarHeladosEspeciales(idHeladoEspecial);
 
-            cmbTipoHelado.SelectedValue = int.Parse(tabla.Rows[0]["idHelado"].ToString());
             //cmbTipoHelado.SelectedIndex = cmbTipoHelado.FindStringExact(idHelado);
 
             txtNombre.Text = tabla.Rows[0]["nombreProducto"].ToString();
-            txtCantBochas.Text = tabla.Rows[0]["cantBochas"].ToString();
             txtPrecio.Text = tabla.Rows[0]["precio"].ToString();
             txtStock.Text = tabla.Rows[0]["cantidadStock"].ToString();
+            txtId.Text = tabla.Rows[0]["idHeladoEspecial"].ToString();
         }
 
 

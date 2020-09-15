@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHeladosEspeciales));
             this.lblHeladosEspeciales = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.chkTodos = new System.Windows.Forms.CheckBox();
             this.grdHeladoEspecial = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -43,9 +46,6 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEscritorio = new System.Windows.Forms.Button();
             this.txtHeladosEspeciales = new System.Windows.Forms.TextBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdHelado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdHeladoEspecial)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -119,35 +119,59 @@
             this.grdHeladoEspecial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.grdHeladoEspecial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdHeladoEspecial.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdHeladoEspecial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdHeladoEspecial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdHeladoEspecial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdHeladoEspecial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.IdHelado,
-            this.Nombre});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdHeladoEspecial.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Nombre,
+            this.precio});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdHeladoEspecial.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdHeladoEspecial.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.grdHeladoEspecial.Location = new System.Drawing.Point(98, 198);
             this.grdHeladoEspecial.Margin = new System.Windows.Forms.Padding(4);
             this.grdHeladoEspecial.Name = "grdHeladoEspecial";
             this.grdHeladoEspecial.ReadOnly = true;
             this.grdHeladoEspecial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdHeladoEspecial.Size = new System.Drawing.Size(372, 319);
+            this.grdHeladoEspecial.Size = new System.Drawing.Size(372, 293);
             this.grdHeladoEspecial.TabIndex = 16;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Id.Width = 40;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Nombre.Width = 150;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
             // 
             // panel1
             // 
@@ -155,7 +179,7 @@
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Controls.Add(this.btnNuevo);
-            this.panel1.Location = new System.Drawing.Point(521, 226);
+            this.panel1.Location = new System.Drawing.Point(460, 173);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 227);
@@ -263,30 +287,6 @@
             this.txtHeladosEspeciales.Size = new System.Drawing.Size(175, 24);
             this.txtHeladosEspeciales.TabIndex = 19;
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Id.Width = 40;
-            // 
-            // IdHelado
-            // 
-            this.IdHelado.HeaderText = "IdHelado";
-            this.IdHelado.Name = "IdHelado";
-            this.IdHelado.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nombre.Width = 150;
-            // 
             // FrmHeladosEspeciales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -332,7 +332,7 @@
         private System.Windows.Forms.Button btnEscritorio;
         private System.Windows.Forms.TextBox txtHeladosEspeciales;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdHelado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
     }
 }

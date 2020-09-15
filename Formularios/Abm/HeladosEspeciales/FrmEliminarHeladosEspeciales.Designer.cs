@@ -30,18 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEliminarHeladosEspeciales));
             this.lblEliminarHeladoEspecial = new System.Windows.Forms.Label();
-            this.btnConfirmar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtCantBochas = new Practico.Clases.TextBox01();
             this.txtStock = new Practico.Clases.TextBox01();
             this.txtPrecio = new Practico.Clases.TextBox01();
             this.txtNombre = new Practico.Clases.TextBox01();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.lblStock = new System.Windows.Forms.Label();
-            this.lblHelado = new System.Windows.Forms.Label();
-            this.cmbTipoHelado = new Practico.Clases.ComboBox01();
             this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblCantBochas = new System.Windows.Forms.Label();
             this.lblNombreHeladoEspecial = new System.Windows.Forms.Label();
+            this.txtId = new Practico.Clases.TextBox01();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEliminarHeladoEspecial
@@ -57,24 +55,41 @@
             this.lblEliminarHeladoEspecial.TabIndex = 20;
             this.lblEliminarHeladoEspecial.Text = "Eliminar Helado Especial";
             // 
-            // btnConfirmar
+            // txtStock
             // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfirmar.FlatAppearance.BorderSize = 0;
-            this.btnConfirmar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConfirmar.Location = new System.Drawing.Point(285, 273);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(103, 40);
-            this.btnConfirmar.TabIndex = 9;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = false;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            this.txtStock.Enabled = false;
+            this.txtStock.Location = new System.Drawing.Point(268, 193);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.PpMensajeError = "Ingrese el stock!";
+            this.txtStock.PpNombreCampo = "cantidadStock";
+            this.txtStock.PpNombreTabla = "HeladosEspeciales";
+            this.txtStock.PpValidable = false;
+            this.txtStock.Size = new System.Drawing.Size(65, 24);
+            this.txtStock.TabIndex = 56;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Enabled = false;
+            this.txtPrecio.Location = new System.Drawing.Point(268, 163);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.PpMensajeError = "Ingrese el precio!";
+            this.txtPrecio.PpNombreCampo = "precio";
+            this.txtPrecio.PpNombreTabla = "HeladosEspeciales";
+            this.txtPrecio.PpValidable = true;
+            this.txtPrecio.Size = new System.Drawing.Size(65, 24);
+            this.txtPrecio.TabIndex = 55;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Location = new System.Drawing.Point(268, 133);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PpMensajeError = "Ingrese un nombre!";
+            this.txtNombre.PpNombreCampo = "nombreProducto";
+            this.txtNombre.PpNombreTabla = "HeladosEspeciales";
+            this.txtNombre.PpValidable = true;
+            this.txtNombre.Size = new System.Drawing.Size(161, 24);
+            this.txtNombre.TabIndex = 54;
             // 
             // btnCancelar
             // 
@@ -87,62 +102,33 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(174, 273);
+            this.btnCancelar.Location = new System.Drawing.Point(155, 234);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 40);
-            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.TabIndex = 50;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtCantBochas
+            // btnAceptar
             // 
-            this.txtCantBochas.Enabled = false;
-            this.txtCantBochas.Location = new System.Drawing.Point(285, 165);
-            this.txtCantBochas.Name = "txtCantBochas";
-            this.txtCantBochas.PpMensajeError = "Ingrese la cantidad de bochas!";
-            this.txtCantBochas.PpNombreCampo = "cantBochas";
-            this.txtCantBochas.PpNombreTabla = "HeladosEspeciales";
-            this.txtCantBochas.PpValidable = true;
-            this.txtCantBochas.Size = new System.Drawing.Size(65, 24);
-            this.txtCantBochas.TabIndex = 59;
-            // 
-            // txtStock
-            // 
-            this.txtStock.Enabled = false;
-            this.txtStock.Location = new System.Drawing.Point(285, 225);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.PpMensajeError = "Ingrese el stock!";
-            this.txtStock.PpNombreCampo = "cantidadStock";
-            this.txtStock.PpNombreTabla = "HeladosEspeciales";
-            this.txtStock.PpValidable = false;
-            this.txtStock.Size = new System.Drawing.Size(65, 24);
-            this.txtStock.TabIndex = 58;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Enabled = false;
-            this.txtPrecio.Location = new System.Drawing.Point(285, 195);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.PpMensajeError = "Ingrese el precio!";
-            this.txtPrecio.PpNombreCampo = "precio";
-            this.txtPrecio.PpNombreTabla = "HeladosEspeciales";
-            this.txtPrecio.PpValidable = true;
-            this.txtPrecio.Size = new System.Drawing.Size(65, 24);
-            this.txtPrecio.TabIndex = 57;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(285, 135);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PpMensajeError = "Ingrese un nombre!";
-            this.txtNombre.PpNombreCampo = "nombreProducto";
-            this.txtNombre.PpNombreTabla = "HeladosEspeciales";
-            this.txtNombre.PpValidable = true;
-            this.txtNombre.Size = new System.Drawing.Size(161, 24);
-            this.txtNombre.TabIndex = 56;
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAceptar.Location = new System.Drawing.Point(268, 234);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(103, 40);
+            this.btnAceptar.TabIndex = 49;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // lblStock
             // 
@@ -150,44 +136,12 @@
             this.lblStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblStock.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblStock.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblStock.Location = new System.Drawing.Point(233, 230);
+            this.lblStock.Location = new System.Drawing.Point(216, 198);
             this.lblStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(50, 19);
-            this.lblStock.TabIndex = 55;
+            this.lblStock.TabIndex = 53;
             this.lblStock.Text = "Stock:";
-            // 
-            // lblHelado
-            // 
-            this.lblHelado.AutoSize = true;
-            this.lblHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblHelado.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblHelado.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblHelado.Location = new System.Drawing.Point(219, 106);
-            this.lblHelado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblHelado.Name = "lblHelado";
-            this.lblHelado.Size = new System.Drawing.Size(64, 19);
-            this.lblHelado.TabIndex = 54;
-            this.lblHelado.Text = "Helado:";
-            // 
-            // cmbTipoHelado
-            // 
-            this.cmbTipoHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoHelado.Enabled = false;
-            this.cmbTipoHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTipoHelado.FormattingEnabled = true;
-            this.cmbTipoHelado.Location = new System.Drawing.Point(285, 103);
-            this.cmbTipoHelado.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbTipoHelado.Name = "cmbTipoHelado";
-            this.cmbTipoHelado.PpDisplay = "nombre";
-            this.cmbTipoHelado.PpMensajeError = "No se ingresó Helado";
-            this.cmbTipoHelado.PpNombreCampo = "idHelado";
-            this.cmbTipoHelado.PpNombreTabla = "HeladosEspeciales";
-            this.cmbTipoHelado.PpTabla = "Helados";
-            this.cmbTipoHelado.PpValidable = true;
-            this.cmbTipoHelado.PpValue = "idHelado";
-            this.cmbTipoHelado.Size = new System.Drawing.Size(164, 25);
-            this.cmbTipoHelado.TabIndex = 50;
             // 
             // lblPrecio
             // 
@@ -195,25 +149,12 @@
             this.lblPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblPrecio.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPrecio.Location = new System.Drawing.Point(228, 200);
+            this.lblPrecio.Location = new System.Drawing.Point(211, 168);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(55, 19);
-            this.lblPrecio.TabIndex = 53;
+            this.lblPrecio.TabIndex = 52;
             this.lblPrecio.Text = "Precio:";
-            // 
-            // lblCantBochas
-            // 
-            this.lblCantBochas.AutoSize = true;
-            this.lblCantBochas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCantBochas.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblCantBochas.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantBochas.Location = new System.Drawing.Point(123, 171);
-            this.lblCantBochas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCantBochas.Name = "lblCantBochas";
-            this.lblCantBochas.Size = new System.Drawing.Size(160, 19);
-            this.lblCantBochas.TabIndex = 52;
-            this.lblCantBochas.Text = "Cantidad de bochas:";
             // 
             // lblNombreHeladoEspecial
             // 
@@ -221,31 +162,54 @@
             this.lblNombreHeladoEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombreHeladoEspecial.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNombreHeladoEspecial.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombreHeladoEspecial.Location = new System.Drawing.Point(215, 141);
+            this.lblNombreHeladoEspecial.Location = new System.Drawing.Point(198, 139);
             this.lblNombreHeladoEspecial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreHeladoEspecial.Name = "lblNombreHeladoEspecial";
             this.lblNombreHeladoEspecial.Size = new System.Drawing.Size(68, 19);
             this.lblNombreHeladoEspecial.TabIndex = 51;
             this.lblNombreHeladoEspecial.Text = "Nombre:";
             // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(268, 103);
+            this.txtId.Name = "txtId";
+            this.txtId.PpMensajeError = "Ingrese un nombre!";
+            this.txtId.PpNombreCampo = "nombreProducto";
+            this.txtId.PpNombreTabla = "HeladosEspeciales";
+            this.txtId.PpValidable = true;
+            this.txtId.Size = new System.Drawing.Size(65, 24);
+            this.txtId.TabIndex = 60;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(235, 108);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 19);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "Id:";
+            // 
             // FrmEliminarHeladosEspeciales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(578, 355);
-            this.Controls.Add(this.txtCantBochas);
+            this.ClientSize = new System.Drawing.Size(578, 320);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblStock);
-            this.Controls.Add(this.lblHelado);
-            this.Controls.Add(this.cmbTipoHelado);
-            this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.lblCantBochas);
-            this.Controls.Add(this.lblNombreHeladoEspecial);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.lblStock);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.lblNombreHeladoEspecial);
             this.Controls.Add(this.lblEliminarHeladoEspecial);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -265,17 +229,15 @@
         #endregion
 
         private System.Windows.Forms.Label lblEliminarHeladoEspecial;
-        private System.Windows.Forms.Button btnConfirmar;
-        private System.Windows.Forms.Button btnCancelar;
-        private Clases.TextBox01 txtCantBochas;
         private Clases.TextBox01 txtStock;
         private Clases.TextBox01 txtPrecio;
         private Clases.TextBox01 txtNombre;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label lblStock;
-        private System.Windows.Forms.Label lblHelado;
-        private Clases.ComboBox01 cmbTipoHelado;
         private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.Label lblCantBochas;
         private System.Windows.Forms.Label lblNombreHeladoEspecial;
+        private Clases.TextBox01 txtId;
+        private System.Windows.Forms.Label label1;
     }
 }

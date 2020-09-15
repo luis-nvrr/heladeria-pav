@@ -224,6 +224,7 @@ namespace Practico.Formularios
             this.btnFrutasHeladosEspeciales.TabIndex = 12;
             this.btnFrutasHeladosEspeciales.Text = "Frutas de Helados Especiales";
             this.btnFrutasHeladosEspeciales.UseVisualStyleBackColor = false;
+            this.btnFrutasHeladosEspeciales.Click += new System.EventHandler(this.btnFrutasHeladosEspeciales_Click);
             // 
             // btnBarrios
             // 

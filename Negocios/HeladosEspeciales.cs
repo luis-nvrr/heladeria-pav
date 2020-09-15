@@ -23,17 +23,17 @@ namespace Practico.Negocios
 
         public DataTable TodosLosHeladosEspeciales()
         {
-            string sql = "SELECT * FROM HeladosEspeciales P JOIN Helados TD ON P.idHelado=TD.idHelado";
+            string sql = "SELECT * FROM HeladosEspeciales P";
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
 
 
-        public DataTable RecuperarHeladosEspeciales(string idHeladoEspecial, string idHelado)
+        public DataTable RecuperarHeladosEspeciales(string idHeladoEspecial)
         {
-            string sql = "SELECT P.* FROM HeladosEspeciales P INNER JOIN Helados TD ON (P.idhelado = TD.idHelado)" +
-                         " WHERE idHeladoEspecial LIKE '" + idHeladoEspecial + "' AND P.idHelado LIKE '" + idHelado + "'";
+            string sql = "SELECT P.* FROM HeladosEspeciales P " +
+                         " WHERE idHeladoEspecial LIKE '" + idHeladoEspecial +"'";
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
             return tabla;
@@ -41,7 +41,7 @@ namespace Practico.Negocios
 
         public DataTable BuscarHeladosEspeciales(string nombreProducto)
         {
-            string sql = "SELECT * FROM HeladosEspeciales P JOIN Helados TD ON P.idhelado=TD.idHelado WHERE nombreProducto LIKE '%" + nombreProducto.Trim() + "%'";
+            string sql = "SELECT * FROM HeladosEspeciales P WHERE nombreProducto LIKE '%" + nombreProducto.Trim() + "%'";
             DataTable tabla = baseDatos.Consulta(sql);
             return tabla;
         }
@@ -64,11 +64,11 @@ namespace Practico.Negocios
 
 
         //public Respuesta Modificar(int idHeladoEspecial, string idHelado, Control.ControlCollection controles)
-        public Respuesta Modificar(int idHelado, string idHeladoEspecial, Control.ControlCollection controles)
+        public Respuesta Modificar(string idHeladoEspecial, Control.ControlCollection controles)
         {
             try
             {
-                baseDatos.ModificarAutomatizado("HeladosEspeciales", " idHeladoEspecial  =" + idHeladoEspecial + " AND idHelado LIKE '" + idHelado + "'", controles);
+                baseDatos.ModificarAutomatizado("HeladosEspeciales", " idHeladoEspecial  =" + idHeladoEspecial, controles);
                 //baseDatos.ModificarAutomatizado("HeladosEspeciales", " idHelado  =" + idHelado + " AND idHeladoEspecial LIKE '" + idHeladoEspecial + "'", controles);
                 return Respuesta.validacionCorrecta;
 
@@ -82,9 +82,9 @@ namespace Practico.Negocios
         }
 
 
-        public Respuesta Eliminar(int idHeladoEspecial, string idHelado)
+        public Respuesta Eliminar(int idHeladoEspecial)
         {
-            string sql = "DELETE FROM HeladosEspeciales WHERE idHeladoEspecial LIKE '" + idHeladoEspecial + "' AND idHelado LIKE '" + idHelado + "'";
+            string sql = "DELETE FROM HeladosEspeciales WHERE idHeladoEspecial LIKE '" + idHeladoEspecial +"'";
 
             try
             {

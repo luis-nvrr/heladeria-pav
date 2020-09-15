@@ -112,6 +112,36 @@
     <Compile Include="Formularios\Abm\Empleados\FrmModificarEmpleados.designer.cs">
       <DependentUpon>FrmModificarEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\FrutasHeladosEspeciales\FrmAltaFrutaHeladoEspecial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\FrutasHeladosEspeciales\FrmAltaFrutaHeladoEspecial.Designer.cs">
+      <DependentUpon>FrmAltaFrutaHeladoEspecial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\FrutasHeladosEspeciales\FrmConsultarFrutaHeladoEspecial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\FrutasHeladosEspeciales\FrmConsultarFrutaHeladoEspecial.designer.cs">
+      <DependentUpon>FrmConsultarFrutaHeladoEspecial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\FrutasHeladosEspeciales\FrmEliminarFrutaHeladoEspecial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\FrutasHeladosEspeciales\FrmEliminarFrutaHeladoEspecial.designer.cs">
+      <DependentUpon>FrmEliminarFrutaHeladoEspecial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\FrutasHeladosEspeciales\FrmFrutasHeladosEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\FrutasHeladosEspeciales\FrmFrutasHeladosEspeciales.Designer.cs">
+      <DependentUpon>FrmFrutasHeladosEspeciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Abm\FrutasHeladosEspeciales\FrmModificarFrutaHeladoEspecial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\FrutasHeladosEspeciales\FrmModificarFrutaHeladoEspecial.designer.cs">
+      <DependentUpon>FrmModificarFrutaHeladoEspecial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Frutas\FrmAltaFrutas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -400,6 +430,7 @@
     <Compile Include="Formularios\Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\FrutasHeladosEspeciales.cs" />
     <Compile Include="Negocios\HeladosEspeciales.cs" />
     <Compile Include="Negocios\Turnos.cs" />
     <Compile Include="Negocios\Empleados.cs" />
@@ -443,6 +474,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Empleados\FrmModificarEmpleados.resx">
       <DependentUpon>FrmModificarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\FrutasHeladosEspeciales\FrmAltaFrutaHeladoEspecial.resx">
+      <DependentUpon>FrmAltaFrutaHeladoEspecial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\FrutasHeladosEspeciales\FrmConsultarFrutaHeladoEspecial.resx">
+      <DependentUpon>FrmConsultarFrutaHeladoEspecial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\FrutasHeladosEspeciales\FrmEliminarFrutaHeladoEspecial.resx">
+      <DependentUpon>FrmEliminarFrutaHeladoEspecial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\FrutasHeladosEspeciales\FrmFrutasHeladosEspeciales.resx">
+      <DependentUpon>FrmFrutasHeladosEspeciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\FrutasHeladosEspeciales\FrmModificarFrutaHeladoEspecial.resx">
+      <DependentUpon>FrmModificarFrutaHeladoEspecial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Frutas\FrmAltaFrutas.resx">
       <DependentUpon>FrmAltaFrutas.cs</DependentUpon>

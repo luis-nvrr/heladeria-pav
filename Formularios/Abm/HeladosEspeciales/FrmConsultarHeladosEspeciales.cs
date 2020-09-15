@@ -18,7 +18,6 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
         Negocios.Helados helado = new Negocios.Helados();
 
         public string idHeladoEspecial { get; set; }
-        public string idHelado { get; set; }
         public string nombreProducto { get; set; }
         public string cantBochas { get; set; }
         public string precio { get; set; }
@@ -31,18 +30,16 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
 
         private void FrmModificarHeladosEspeciales_Load(object sender, EventArgs e)
         {
-            cmbTipoHelado.cargar(helado.EstrCombo());
             CargarCampos();
         } 
         private void CargarCampos()
         {
             DataTable tabla = new DataTable();
-            tabla = heladoEspecial.RecuperarHeladosEspeciales(idHeladoEspecial, idHelado);
-            cmbTipoHelado.SelectedValue = int.Parse(tabla.Rows[0]["idHeladoEspecial"].ToString());
+            tabla = heladoEspecial.RecuperarHeladosEspeciales(idHeladoEspecial);
             txtNombre.Text = tabla.Rows[0]["nombreProducto"].ToString();
-            txtCantBochas.Text = tabla.Rows[0]["cantBochas"].ToString();
             txtPrecio.Text = tabla.Rows[0]["precio"].ToString();
             txtStock.Text = tabla.Rows[0]["cantidadStock"].ToString();
+            txtId.Text = tabla.Rows[0]["idHeladoEspecial"].ToString();
 
         }
 
