@@ -23,9 +23,10 @@ namespace Practico.Clases
         private void Conectar()  // metodo para conectar
         {
             //conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //NICO
-            conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //LUIS
+            //conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //LUIS
             //conexion.ConnectionString = "Data Source=DESKTOP-49CNN6T\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //MARCOS
             //conexion.ConnectionString = "Data Source=DESKTOP-5U8R5O6\\SQLEXPRESS; Initial Catalog=HeladeriaPAV;Integrated Security=True"; //GASTÓN
+            //conexion.ConnectionString = "Data Source=DESKTOP-UOQ5CGK;Initial Catalog=HeladeriaPAV;Integrated Security=True"; // Bruno
             conexion.Open();
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
