@@ -273,6 +273,16 @@ namespace Practico.Clases
                         return ((ComboBox01)item).SelectedValue.ToString();
                 }
 
+                if (item.GetType().Name == "TextBox02")
+                {
+                    if (((TextBox02)item).PpNombreCampo is null)
+                        continue;
+
+                    if (((TextBox02)item).PpNombreTabla.IndexOf(NombreTabla) != -1
+                        && ((TextBox02)item).PpNombreCampo == campo)
+                        return ((TextBox02)item).Text;
+                }
+
             }
             return "";
         }

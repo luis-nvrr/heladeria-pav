@@ -104,5 +104,10 @@ namespace Practico.Formularios.Abm.TelefonosEmpleados
         {
             CargarComboTipo();
         }
+
+        private void txtTelefono_Click(object sender, EventArgs e)
+        {
+            txtTelefono.Select(0,0);
+        }
     }
 }

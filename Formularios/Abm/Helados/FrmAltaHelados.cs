@@ -86,5 +86,10 @@ namespace Practico.Formularios.Abm.Helados
                 SelectNextControl(ActiveControl, true, true, true, true);
             }
         }
+
+        private void txtCantidad_Click(object sender, EventArgs e)
+        {
+            txtCantidad.Select(0,0);
+        }
     }
 }

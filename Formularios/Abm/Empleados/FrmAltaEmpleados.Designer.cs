@@ -44,16 +44,16 @@
             this.lblFechaIn = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblBarrio = new System.Windows.Forms.Label();
+            this.lblTurno = new System.Windows.Forms.Label();
+            this.cmbTurno = new Practico.Clases.ComboBox01();
             this.cmbBarrio = new Practico.Clases.ComboBox01();
             this.cmbUsuario = new Practico.Clases.ComboBox01();
             this.cmbTipo = new Practico.Clases.ComboBox01();
-            this.txtNumero = new Practico.Clases.TextBox01();
             this.txtCalle = new Practico.Clases.TextBox01();
             this.txtApellido = new Practico.Clases.TextBox01();
             this.txtNombre = new Practico.Clases.TextBox01();
             this.txtNumeroD = new Practico.Clases.TextBox01();
-            this.cmbTurno = new Practico.Clases.ComboBox01();
-            this.lblTurno = new System.Windows.Forms.Label();
+            this.txtNumero = new Practico.Clases.TextBox02();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -241,6 +241,35 @@
             this.lblBarrio.TabIndex = 45;
             this.lblBarrio.Text = "Barrio:";
             // 
+            // lblTurno
+            // 
+            this.lblTurno.AutoSize = true;
+            this.lblTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTurno.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblTurno.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTurno.Location = new System.Drawing.Point(186, 372);
+            this.lblTurno.Name = "lblTurno";
+            this.lblTurno.Size = new System.Drawing.Size(49, 19);
+            this.lblTurno.TabIndex = 47;
+            this.lblTurno.Text = "Turno:";
+            // 
+            // cmbTurno
+            // 
+            this.cmbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTurno.FormattingEnabled = true;
+            this.cmbTurno.Location = new System.Drawing.Point(244, 366);
+            this.cmbTurno.Name = "cmbTurno";
+            this.cmbTurno.PpDisplay = "nombre";
+            this.cmbTurno.PpMensajeError = "Seleccione Turno!";
+            this.cmbTurno.PpNombreCampo = null;
+            this.cmbTurno.PpNombreTabla = null;
+            this.cmbTurno.PpTabla = "Turnos";
+            this.cmbTurno.PpValidable = false;
+            this.cmbTurno.PpValue = "idTurno";
+            this.cmbTurno.Size = new System.Drawing.Size(123, 25);
+            this.cmbTurno.TabIndex = 46;
+            // 
             // cmbBarrio
             // 
             this.cmbBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -292,18 +321,6 @@
             this.cmbTipo.Size = new System.Drawing.Size(123, 25);
             this.cmbTipo.TabIndex = 0;
             // 
-            // txtNumero
-            // 
-            this.txtNumero.BackColor = System.Drawing.Color.White;
-            this.txtNumero.Location = new System.Drawing.Point(485, 213);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.PpMensajeError = "Ingrese Numero!";
-            this.txtNumero.PpNombreCampo = null;
-            this.txtNumero.PpNombreTabla = null;
-            this.txtNumero.PpValidable = true;
-            this.txtNumero.Size = new System.Drawing.Size(82, 24);
-            this.txtNumero.TabIndex = 5;
-            // 
             // txtCalle
             // 
             this.txtCalle.BackColor = System.Drawing.Color.White;
@@ -352,34 +369,21 @@
             this.txtNumeroD.Size = new System.Drawing.Size(124, 24);
             this.txtNumeroD.TabIndex = 1;
             // 
-            // cmbTurno
+            // txtNumero
             // 
-            this.cmbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTurno.FormattingEnabled = true;
-            this.cmbTurno.Location = new System.Drawing.Point(244, 366);
-            this.cmbTurno.Name = "cmbTurno";
-            this.cmbTurno.PpDisplay = "nombre";
-            this.cmbTurno.PpMensajeError = "Seleccione Turno!";
-            this.cmbTurno.PpNombreCampo = null;
-            this.cmbTurno.PpNombreTabla = null;
-            this.cmbTurno.PpTabla = "Turnos";
-            this.cmbTurno.PpValidable = false;
-            this.cmbTurno.PpValue = "idTurno";
-            this.cmbTurno.Size = new System.Drawing.Size(123, 25);
-            this.cmbTurno.TabIndex = 46;
-            // 
-            // lblTurno
-            // 
-            this.lblTurno.AutoSize = true;
-            this.lblTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTurno.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblTurno.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTurno.Location = new System.Drawing.Point(186, 372);
-            this.lblTurno.Name = "lblTurno";
-            this.lblTurno.Size = new System.Drawing.Size(49, 19);
-            this.lblTurno.TabIndex = 47;
-            this.lblTurno.Text = "Turno:";
+            this.txtNumero.BackColor = System.Drawing.Color.White;
+            this.txtNumero.Location = new System.Drawing.Point(489, 213);
+            this.txtNumero.Mask = "0000000";
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.PpMensajeError = "Ingrese Numero!";
+            this.txtNumero.PpNombreCampo = null;
+            this.txtNumero.PpNombreTabla = null;
+            this.txtNumero.PpValidable = true;
+            this.txtNumero.PromptChar = ' ';
+            this.txtNumero.Size = new System.Drawing.Size(71, 24);
+            this.txtNumero.TabIndex = 48;
+            this.txtNumero.ValidatingType = typeof(int);
+            this.txtNumero.Click += new System.EventHandler(this.txtNumero_Click);
             // 
             // FrmAltaEmpleados
             // 
@@ -387,6 +391,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(634, 495);
+            this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.cmbTurno);
             this.Controls.Add(this.lblTurno);
             this.Controls.Add(this.cmbBarrio);
@@ -398,7 +403,6 @@
             this.Controls.Add(this.pckNacimiento);
             this.Controls.Add(this.lblFechaNa);
             this.Controls.Add(this.cmbTipo);
-            this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.lblCalle);
@@ -437,7 +441,6 @@
         private System.Windows.Forms.Label lblNumeroD;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblNuevo;
-        private Clases.TextBox01 txtNumero;
         private System.Windows.Forms.Label lblNumero;
         private Clases.TextBox01 txtCalle;
         private System.Windows.Forms.Label lblCalle;
@@ -454,5 +457,6 @@
         private System.Windows.Forms.Label lblBarrio;
         private Clases.ComboBox01 cmbTurno;
         private System.Windows.Forms.Label lblTurno;
+        private Clases.TextBox02 txtNumero;
     }
 }

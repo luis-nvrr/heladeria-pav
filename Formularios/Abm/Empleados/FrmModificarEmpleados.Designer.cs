@@ -47,13 +47,13 @@
             this.cmbBarrio = new Practico.Clases.ComboBox01();
             this.cmbUsuario = new Practico.Clases.ComboBox01();
             this.cmbTipo = new Practico.Clases.ComboBox01();
-            this.txtNroCalle = new Practico.Clases.TextBox01();
             this.txtCalle = new Practico.Clases.TextBox01();
             this.txtApellido = new Practico.Clases.TextBox01();
             this.txtNombre = new Practico.Clases.TextBox01();
             this.txtNroDoc = new Practico.Clases.TextBox01();
             this.cmbTurno = new Practico.Clases.ComboBox01();
             this.lblTurno = new System.Windows.Forms.Label();
+            this.txtNroCalle = new Practico.Clases.TextBox02();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -293,18 +293,6 @@
             this.cmbTipo.Size = new System.Drawing.Size(123, 25);
             this.cmbTipo.TabIndex = 0;
             // 
-            // txtNroCalle
-            // 
-            this.txtNroCalle.BackColor = System.Drawing.Color.White;
-            this.txtNroCalle.Location = new System.Drawing.Point(476, 211);
-            this.txtNroCalle.Name = "txtNroCalle";
-            this.txtNroCalle.PpMensajeError = "Ingrese numero!";
-            this.txtNroCalle.PpNombreCampo = null;
-            this.txtNroCalle.PpNombreTabla = null;
-            this.txtNroCalle.PpValidable = true;
-            this.txtNroCalle.Size = new System.Drawing.Size(82, 24);
-            this.txtNroCalle.TabIndex = 5;
-            // 
             // txtCalle
             // 
             this.txtCalle.BackColor = System.Drawing.Color.White;
@@ -383,12 +371,29 @@
             this.lblTurno.TabIndex = 47;
             this.lblTurno.Text = "Turno:";
             // 
+            // txtNroCalle
+            // 
+            this.txtNroCalle.BackColor = System.Drawing.Color.White;
+            this.txtNroCalle.Location = new System.Drawing.Point(482, 211);
+            this.txtNroCalle.Mask = "0000000";
+            this.txtNroCalle.Name = "txtNroCalle";
+            this.txtNroCalle.PpMensajeError = "Ingrese Numero!";
+            this.txtNroCalle.PpNombreCampo = null;
+            this.txtNroCalle.PpNombreTabla = null;
+            this.txtNroCalle.PpValidable = true;
+            this.txtNroCalle.PromptChar = ' ';
+            this.txtNroCalle.Size = new System.Drawing.Size(71, 24);
+            this.txtNroCalle.TabIndex = 49;
+            this.txtNroCalle.ValidatingType = typeof(int);
+            this.txtNroCalle.Click += new System.EventHandler(this.txtNumero_Click);
+            // 
             // FrmModificarEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(634, 495);
+            this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.cmbTurno);
             this.Controls.Add(this.lblTurno);
             this.Controls.Add(this.cmbBarrio);
@@ -400,7 +405,6 @@
             this.Controls.Add(this.pckNacimiento);
             this.Controls.Add(this.lblFechaNa);
             this.Controls.Add(this.cmbTipo);
-            this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.lblCalle);
@@ -439,7 +443,6 @@
         private System.Windows.Forms.Label lblNumeroD;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblNuevo;
-        private Clases.TextBox01 txtNroCalle;
         private System.Windows.Forms.Label lblNumero;
         private Clases.TextBox01 txtCalle;
         private System.Windows.Forms.Label lblCalle;
@@ -456,5 +459,6 @@
         private System.Windows.Forms.Label lblBarrio;
         private Clases.ComboBox01 cmbTurno;
         private System.Windows.Forms.Label lblTurno;
+        private Clases.TextBox02 txtNroCalle;
     }
 }

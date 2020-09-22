@@ -34,12 +34,12 @@
             this.lblTelefono = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtTelefono = new Practico.Clases.TextBox01();
             this.lblDocumento = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblNuevo = new System.Windows.Forms.Label();
             this.cmbNombre = new Practico.Clases.ComboBox01();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtTelefono = new Practico.Clases.TextBox02();
             this.SuspendLayout();
             // 
             // cmbDocumento
@@ -128,18 +128,6 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.Color.White;
-            this.txtTelefono.Location = new System.Drawing.Point(294, 193);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.PpMensajeError = "Ingrese un numero de telefono!";
-            this.txtTelefono.PpNombreCampo = null;
-            this.txtTelefono.PpNombreTabla = null;
-            this.txtTelefono.PpValidable = true;
-            this.txtTelefono.Size = new System.Drawing.Size(164, 24);
-            this.txtTelefono.TabIndex = 50;
-            // 
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
@@ -206,12 +194,29 @@
             this.label1.TabIndex = 66;
             this.label1.Text = "Nombre:";
             // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BackColor = System.Drawing.Color.White;
+            this.txtTelefono.Location = new System.Drawing.Point(294, 193);
+            this.txtTelefono.Mask = "0000000000000";
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.PpMensajeError = "Ingrese un telefono!";
+            this.txtTelefono.PpNombreCampo = null;
+            this.txtTelefono.PpNombreTabla = null;
+            this.txtTelefono.PpValidable = true;
+            this.txtTelefono.PromptChar = ' ';
+            this.txtTelefono.Size = new System.Drawing.Size(166, 24);
+            this.txtTelefono.TabIndex = 121;
+            this.txtTelefono.ValidatingType = typeof(int);
+            this.txtTelefono.Click += new System.EventHandler(this.txtTelefono_Click);
+            // 
             // FrmAltaTelefonosEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(575, 318);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.cmbNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbDocumento);
@@ -219,7 +224,6 @@
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.lblDocumento);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblNuevo);
@@ -244,11 +248,11 @@
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private Clases.TextBox01 txtTelefono;
         private System.Windows.Forms.Label lblDocumento;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblNuevo;
         private Clases.ComboBox01 cmbNombre;
         private System.Windows.Forms.Label label1;
+        private Clases.TextBox02 txtTelefono;
     }
 }
