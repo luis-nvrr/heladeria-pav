@@ -389,6 +389,7 @@
             this.btnConsulta.Text = "Venta";
             this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsulta.UseVisualStyleBackColor = false;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // btnProcesos
             // 

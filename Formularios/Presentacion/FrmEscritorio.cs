@@ -9,6 +9,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Practico.Formularios.Procesos;
 using Practico.Negocios;
 
 namespace Practico
@@ -134,6 +135,13 @@ namespace Practico
         private void tmrFechaHora_Tick(object sender, EventArgs e)
         {
             lblFechaHora.Text = DateTime.Now.ToString();
+        }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            FrmVenta venta = new FrmVenta();
+            venta.idUsuario = this.idUsuario.ToString();
+            AbrirFormulario(venta);
         }
     }
 }
