@@ -13,46 +13,106 @@ namespace Practico.Clases
     {
         private SqlConnection conexion = new SqlConnection();   // armar conexion
         private SqlCommand comando = new SqlCommand();    // transporte de la consulta
+        SqlTransaction transaccion;
 
-        public enum Respuesta
+        public enum EstadoAccion { correcto, error };
+        public enum TipoConexion { simple, transaccional };
+        public enum EstadoTransaccion { correcta, error };
+
+        public TipoConexion controlConexion { get; set; } = TipoConexion.simple;
+        public EstadoTransaccion controlTransaccion { get; set; } = EstadoTransaccion.correcta;
+
+        string cadenaConexion = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; // LUIS
+        //string cadenaConexion = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //NICO
+        //string cadenaConexion = "Data Source=DESKTOP-49CNN6T\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //MARCOS
+        //string cadenaConexion = "Data Source=DESKTOP-5U8R5O6\\SQLEXPRESS; Initial Catalog=HeladeriaPAV;Integrated Security=True"; //GASTÓN
+        //string cadenaConexion = "Data Source=DESKTOP-UOQ5CGK;Initial Catalog=HeladeriaPAV;Integrated Security=True"; // Bruno
+
+        
+
+        public void IniciarTransaccion()
         {
-            validacionCorrecta,
-            validacionIncorrecta
+            controlConexion = TipoConexion.transaccional;
+            controlTransaccion = EstadoTransaccion.correcta;
         }
+
+
+        public EstadoTransaccion CerrarTransaccion()
+        {
+            if (controlConexion == TipoConexion.transaccional)
+            {
+                if (controlTransaccion == EstadoTransaccion.correcta)
+                {
+                    // terminar por commit
+                    transaccion.Commit();
+                }
+                else
+                {
+                    // terminar por rollback
+                    transaccion.Rollback();
+                }
+                controlConexion = TipoConexion.simple;
+                Desconectar();
+            }
+            return controlTransaccion;
+        }
+
 
         private void Conectar()  // metodo para conectar
         {
-            conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //NICO
-            //conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //LUIS
-            //conexion.ConnectionString = "Data Source=DESKTOP-L73414Q\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //NICO
-            //conexion.ConnectionString = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //LUIS
-            //conexion.ConnectionString = "Data Source=DESKTOP-49CNN6T\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //MARCOS
-            //conexion.ConnectionString = "Data Source=DESKTOP-5U8R5O6\\SQLEXPRESS; Initial Catalog=HeladeriaPAV;Integrated Security=True"; //GASTÓN
-            //conexion.ConnectionString = "Data Source=DESKTOP-UOQ5CGK;Initial Catalog=HeladeriaPAV;Integrated Security=True"; // Bruno
-            conexion.Open();
-            comando.Connection = conexion;
-            comando.CommandType = CommandType.Text;
+            if (conexion.State == ConnectionState.Closed)
+            {
+                conexion.ConnectionString = cadenaConexion;
+                conexion.Open();
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
 
+                if (controlConexion == TipoConexion.transaccional)
+                {
+                    transaccion = conexion.BeginTransaction(IsolationLevel.ReadCommitted);
+                    comando.Transaction = transaccion;
+                }
+            }
+            
         }
 
 
         private void Desconectar()  // metodo para desconectar
         {
-            conexion.Close();
+            if (controlConexion == TipoConexion.simple)
+            {
+                conexion.Close();
+            }
+            
         }
+
 
         public DataTable Consulta (string sql)  // devuelve tabla
         {
             Conectar();
             comando.CommandText = sql;   // comando a ejecutar
             DataTable tabla = new DataTable();
-            tabla.Load(comando.ExecuteReader());   // carga la tabla y ejecuta la consulta en el motor
+
+            try
+            {
+                tabla.Load(comando.ExecuteReader()); // carga la tabla y ejecuta la consulta en el motor
+            }
+            catch (SqlException e)
+            {
+                controlTransaccion = EstadoTransaccion.error;
+                MessageBox.Show("Error con la Base de Datos" + "\n"
+                                                             + "En el comando:" + "\n"
+                                                             + sql + "\n"
+                                                             + "El mensaje es:" + "\n"
+                                                             + e.Message);
+                throw e;
+            }
+
             Desconectar();
             return tabla;
         }
 
-
-        public void Insertar(string sql)
+        private string EjecutarNoSelect(string sql)
         {
             Conectar();
             comando.CommandText = sql;
@@ -60,22 +120,69 @@ namespace Practico.Clases
             {
                 comando.ExecuteNonQuery();
             }
-            catch(SqlException exception)
+            catch (SqlException e)
             {
-                throw exception;
+                controlTransaccion = EstadoTransaccion.error;
+                MessageBox.Show("Error con la Base de Datos" + "\n"
+                                                             + "En el comando:" + "\n"
+                                                             + sql + "\n"
+                                                             + "El mensaje es:" + "\n"
+                                                             + e.Message);
+                throw e;
             }
-            finally{ Desconectar(); }
-            
 
+            if (sql.ToUpper().IndexOf("INSERT") >= 0)
+            {
+                DataTable tabla = new DataTable();
+                comando.CommandText = "SELECT @@Identity";
+                try
+                {
+                    tabla.Load(comando.ExecuteReader());
+                }
+                catch (SqlException e)
+                {
+                    controlTransaccion = EstadoTransaccion.error;
+                    MessageBox.Show("Error con la Base de Datos" + "\n"
+                                                                 + "En el comando:" + "\n"
+                                                                 + sql + "\n"
+                                                                 + "El mensaje es:" + "\n"
+                                                                 + e.Message);
+                    throw e;
+                }
+                Desconectar();
+                return tabla.Rows[0][0].ToString();
+            }
+            else
+            {
+                Desconectar();
+                return "";
+            }
         }
 
-        //public string RecuperarId()
-        //{
-        //    DataTable tabla = new DataTable();
-        //    tabla = Consulta("SELECTE @@Identity");
-        //    MessageBox.Show(tabla.Rows[0][0].ToString());
-        //    return tabla.Rows[0][0].ToString();
-        //}
+
+        public string Insertar(string sql)
+        {
+            return EjecutarNoSelect(sql);
+        }
+
+        public void Eliminar(string sql)
+        {
+            EjecutarNoSelect(sql);
+        }
+
+        public void Actualizar(string sql)
+        {
+            EjecutarNoSelect(sql);
+        }
+
+
+        public string Fecha()
+        {
+            string sql = "select convert (char(10), getdate(),103)";
+            DataTable tabla = new DataTable();
+            tabla = Consulta(sql);
+            return tabla.Rows[0][0].ToString();
+        }
 
 
         public void InsertarAutomatizado(string NombreTabla, Control.ControlCollection controles)
@@ -118,36 +225,6 @@ namespace Practico.Clases
             Actualizar(sqlModificar);
         }
 
-        public void Eliminar(string sql)
-        {
-            Conectar();
-            comando.CommandText = sql;
-            try
-            {
-                comando.ExecuteNonQuery();
-            }
-            catch (SqlException exception)
-            {
-                throw exception;
-            }
-            finally { Desconectar(); }
-        }
-
-        public void Actualizar(string sql)
-        {
-            Conectar();
-            comando.CommandText = sql;
-            try
-            {
-                comando.ExecuteNonQuery();
-            }
-            catch (SqlException exception)
-            {
-                throw exception;
-            }
-            finally { Desconectar(); }
-            Desconectar();
-        }
 
         public string FormatearDato(string dato,string formato)
         {
