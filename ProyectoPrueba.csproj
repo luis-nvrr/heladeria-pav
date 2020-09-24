@@ -468,12 +468,6 @@
     <Compile Include="Formularios\Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Procesos\FrmVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Procesos\FrmVenta.Designer.cs">
-      <DependentUpon>FrmVenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Negocios\HeladosHeladosEspeciales.cs" />
     <Compile Include="Negocios\FrutasHeladosEspeciales.cs" />
     <Compile Include="Negocios\HeladosEspeciales.cs" />
@@ -697,9 +691,6 @@
     <EmbeddedResource Include="Formularios\Presentacion\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Procesos\FrmVenta.resx">
-      <DependentUpon>FrmVenta.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -738,6 +729,8 @@
     <None Include="Resources\settings.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Formularios\Procesos\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
