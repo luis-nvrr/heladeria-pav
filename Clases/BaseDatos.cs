@@ -70,14 +70,14 @@ namespace Practico.Clases
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
 
-                if (controlConexion == TipoConexion.transaccional)
-                {
-                    transaccion = conexion.BeginTransaction(IsolationLevel.ReadCommitted);
-                    comando.Transaction = transaccion;
-                }
+            if (controlConexion == TipoConexion.transaccional)
+            {
+                transaccion = conexion.BeginTransaction(IsolationLevel.ReadCommitted);
+                comando.Transaction = transaccion;
             }
-            
         }
+
+
 
 
         private void Desconectar()  // metodo para desconectar
@@ -86,11 +86,11 @@ namespace Practico.Clases
             {
                 conexion.Close();
             }
-            
+
         }
 
 
-        public DataTable Consulta (string sql)  // devuelve tabla
+        public DataTable Consulta(string sql)  // devuelve tabla
         {
             Conectar();
             comando.CommandText = sql;   // comando a ejecutar
@@ -229,7 +229,7 @@ namespace Practico.Clases
         }
 
 
-        public string FormatearDato(string dato,string formato)
+        public string FormatearDato(string dato, string formato)
         {
             switch (formato)
             {
@@ -244,7 +244,7 @@ namespace Practico.Clases
         }
 
 
-        private DataTable EstructuraTabla (string NombreTabla)
+        private DataTable EstructuraTabla(string NombreTabla)
         {
             string sql = "SELECT TOP 1 * FROM " + NombreTabla.Trim();
             DataTable tabla = new DataTable();
@@ -266,7 +266,7 @@ namespace Practico.Clases
                         return ((TextBox01)item).Text;
                 }
 
-                if(item.GetType().Name == "ComboBox01")
+                if (item.GetType().Name == "ComboBox01")
                 {
                     if (((ComboBox01)item).PpNombreCampo is null)
                         continue;
@@ -291,3 +291,5 @@ namespace Practico.Clases
         }
     }
 }
+
+
