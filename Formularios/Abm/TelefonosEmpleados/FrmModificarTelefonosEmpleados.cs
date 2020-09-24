@@ -121,5 +121,9 @@ namespace Practico.Formularios.Abm.TelefonosEmpleados
             txtTelefono.Text = nroTelefono;
         }
 
+        private void txtTelefono_Click(object sender, EventArgs e)
+        {
+            txtTelefono.Select(0,0);
+        }
     }
 }

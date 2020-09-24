@@ -40,16 +40,16 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cmbBarrio = new Practico.Clases.ComboBox01();
-            this.txtNroCalle = new Practico.Clases.TextBox01();
             this.txtCalle = new Practico.Clases.TextBox01();
-            this.txtTelFijo = new Practico.Clases.TextBox01();
-            this.txtTelCel = new Practico.Clases.TextBox01();
             this.cmbTipoDoc = new Practico.Clases.ComboBox01();
             this.txtEmail = new Practico.Clases.TextBox01();
             this.txtNroDoc = new Practico.Clases.TextBox01();
             this.lblNroDoc = new System.Windows.Forms.Label();
             this.lblRazónSocial = new System.Windows.Forms.Label();
             this.txtRazónSocial = new Practico.Clases.TextBox01();
+            this.txtTelCel = new Practico.Clases.TextBox02();
+            this.txtTelFijo = new Practico.Clases.TextBox02();
+            this.txtNroCalle = new Practico.Clases.TextBox02();
             this.SuspendLayout();
             // 
             // lblNuevoProveedor
@@ -213,19 +213,6 @@
             this.cmbBarrio.Size = new System.Drawing.Size(164, 25);
             this.cmbBarrio.TabIndex = 8;
             // 
-            // txtNroCalle
-            // 
-            this.txtNroCalle.BackColor = System.Drawing.Color.White;
-            this.txtNroCalle.Location = new System.Drawing.Point(515, 333);
-            this.txtNroCalle.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNroCalle.Name = "txtNroCalle";
-            this.txtNroCalle.PpMensajeError = "No ingresó Número de Calle !";
-            this.txtNroCalle.PpNombreCampo = "nroCalle";
-            this.txtNroCalle.PpNombreTabla = "Proveedores";
-            this.txtNroCalle.PpValidable = true;
-            this.txtNroCalle.Size = new System.Drawing.Size(83, 24);
-            this.txtNroCalle.TabIndex = 7;
-            // 
             // txtCalle
             // 
             this.txtCalle.BackColor = System.Drawing.Color.White;
@@ -238,32 +225,6 @@
             this.txtCalle.PpValidable = false;
             this.txtCalle.Size = new System.Drawing.Size(164, 24);
             this.txtCalle.TabIndex = 6;
-            // 
-            // txtTelFijo
-            // 
-            this.txtTelFijo.BackColor = System.Drawing.Color.White;
-            this.txtTelFijo.Location = new System.Drawing.Point(254, 297);
-            this.txtTelFijo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTelFijo.Name = "txtTelFijo";
-            this.txtTelFijo.PpMensajeError = "No ingresó Teléfono Fijo !";
-            this.txtTelFijo.PpNombreCampo = "telFijo";
-            this.txtTelFijo.PpNombreTabla = "Proveedores";
-            this.txtTelFijo.PpValidable = true;
-            this.txtTelFijo.Size = new System.Drawing.Size(164, 24);
-            this.txtTelFijo.TabIndex = 5;
-            // 
-            // txtTelCel
-            // 
-            this.txtTelCel.BackColor = System.Drawing.Color.White;
-            this.txtTelCel.Location = new System.Drawing.Point(254, 263);
-            this.txtTelCel.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTelCel.Name = "txtTelCel";
-            this.txtTelCel.PpMensajeError = "No ingresó Teléfono Celular !";
-            this.txtTelCel.PpNombreCampo = "telCelular";
-            this.txtTelCel.PpNombreTabla = "Proveedores";
-            this.txtTelCel.PpValidable = true;
-            this.txtTelCel.Size = new System.Drawing.Size(164, 24);
-            this.txtTelCel.TabIndex = 4;
             // 
             // cmbTipoDoc
             // 
@@ -348,12 +309,63 @@
             this.txtRazónSocial.Size = new System.Drawing.Size(202, 24);
             this.txtRazónSocial.TabIndex = 2;
             // 
+            // txtTelCel
+            // 
+            this.txtTelCel.BackColor = System.Drawing.Color.White;
+            this.txtTelCel.Location = new System.Drawing.Point(253, 263);
+            this.txtTelCel.Mask = "0000000000000";
+            this.txtTelCel.Name = "txtTelCel";
+            this.txtTelCel.PpMensajeError = "Ingrese un celular!";
+            this.txtTelCel.PpNombreCampo = null;
+            this.txtTelCel.PpNombreTabla = null;
+            this.txtTelCel.PpValidable = true;
+            this.txtTelCel.PromptChar = ' ';
+            this.txtTelCel.Size = new System.Drawing.Size(164, 24);
+            this.txtTelCel.TabIndex = 115;
+            this.txtTelCel.ValidatingType = typeof(int);
+            this.txtTelCel.Click += new System.EventHandler(this.txtTelCel_Click);
+            // 
+            // txtTelFijo
+            // 
+            this.txtTelFijo.BackColor = System.Drawing.Color.White;
+            this.txtTelFijo.Location = new System.Drawing.Point(253, 299);
+            this.txtTelFijo.Mask = "0000000000000";
+            this.txtTelFijo.Name = "txtTelFijo";
+            this.txtTelFijo.PpMensajeError = "Ingrese un telefono!";
+            this.txtTelFijo.PpNombreCampo = null;
+            this.txtTelFijo.PpNombreTabla = null;
+            this.txtTelFijo.PpValidable = true;
+            this.txtTelFijo.PromptChar = ' ';
+            this.txtTelFijo.Size = new System.Drawing.Size(164, 24);
+            this.txtTelFijo.TabIndex = 116;
+            this.txtTelFijo.ValidatingType = typeof(int);
+            this.txtTelFijo.Click += new System.EventHandler(this.txtTelFijo_Click);
+            // 
+            // txtNroCalle
+            // 
+            this.txtNroCalle.BackColor = System.Drawing.Color.White;
+            this.txtNroCalle.Location = new System.Drawing.Point(514, 333);
+            this.txtNroCalle.Mask = "0000000000000";
+            this.txtNroCalle.Name = "txtNroCalle";
+            this.txtNroCalle.PpMensajeError = "Ingrese un telefono!";
+            this.txtNroCalle.PpNombreCampo = null;
+            this.txtNroCalle.PpNombreTabla = null;
+            this.txtNroCalle.PpValidable = true;
+            this.txtNroCalle.PromptChar = ' ';
+            this.txtNroCalle.Size = new System.Drawing.Size(83, 24);
+            this.txtNroCalle.TabIndex = 117;
+            this.txtNroCalle.ValidatingType = typeof(int);
+            this.txtNroCalle.Click += new System.EventHandler(this.txtNroCalle_Click);
+            // 
             // FrmAltaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(634, 532);
+            this.Controls.Add(this.txtNroCalle);
+            this.Controls.Add(this.txtTelFijo);
+            this.Controls.Add(this.txtTelCel);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label8);
@@ -362,10 +374,7 @@
             this.Controls.Add(this.lblCalle);
             this.Controls.Add(this.lblTelFijo);
             this.Controls.Add(this.cmbBarrio);
-            this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.txtCalle);
-            this.Controls.Add(this.txtTelFijo);
-            this.Controls.Add(this.txtTelCel);
             this.Controls.Add(this.lblTipoDoc);
             this.Controls.Add(this.cmbTipoDoc);
             this.Controls.Add(this.txtEmail);
@@ -398,10 +407,7 @@
         private Clases.TextBox01 txtEmail;
         private Clases.ComboBox01 cmbTipoDoc;
         private System.Windows.Forms.Label lblTipoDoc;
-        private Clases.TextBox01 txtTelCel;
-        private Clases.TextBox01 txtTelFijo;
         private Clases.TextBox01 txtCalle;
-        private Clases.TextBox01 txtNroCalle;
         private Clases.ComboBox01 cmbBarrio;
         private System.Windows.Forms.Label lblTelFijo;
         private System.Windows.Forms.Label lblCalle;
@@ -413,5 +419,8 @@
         private System.Windows.Forms.Label lblNroDoc;
         private System.Windows.Forms.Label lblRazónSocial;
         private Clases.TextBox01 txtRazónSocial;
+        private Clases.TextBox02 txtTelCel;
+        private Clases.TextBox02 txtTelFijo;
+        private Clases.TextBox02 txtNroCalle;
     }
 }

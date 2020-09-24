@@ -87,5 +87,10 @@ namespace Practico.Formularios.Abm.Empleados
         {
             this.Close();
         }
+
+        private void txtNumero_Click(object sender, EventArgs e)
+        {
+            txtNumero.Select(0, 0);
+        }
     }
 }

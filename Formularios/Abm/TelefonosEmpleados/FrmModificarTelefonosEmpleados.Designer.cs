@@ -39,7 +39,7 @@
             this.cmbNombre = new Practico.Clases.ComboBox01();
             this.cmbDocumento = new Practico.Clases.ComboBox01();
             this.cmbTipo = new Practico.Clases.ComboBox01();
-            this.txtTelefono = new Practico.Clases.TextBox01();
+            this.txtTelefono = new Practico.Clases.TextBox02();
             this.SuspendLayout();
             // 
             // lblTelefono
@@ -197,15 +197,18 @@
             // txtTelefono
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.White;
-            this.txtTelefono.Enabled = false;
-            this.txtTelefono.Location = new System.Drawing.Point(294, 193);
+            this.txtTelefono.Location = new System.Drawing.Point(294, 194);
+            this.txtTelefono.Mask = "0000000000000";
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.PpMensajeError = "Ingrese un numero de telefono!";
+            this.txtTelefono.PpMensajeError = "Ingrese un telefono!";
             this.txtTelefono.PpNombreCampo = null;
             this.txtTelefono.PpNombreTabla = null;
             this.txtTelefono.PpValidable = true;
-            this.txtTelefono.Size = new System.Drawing.Size(164, 24);
-            this.txtTelefono.TabIndex = 50;
+            this.txtTelefono.PromptChar = ' ';
+            this.txtTelefono.Size = new System.Drawing.Size(166, 24);
+            this.txtTelefono.TabIndex = 122;
+            this.txtTelefono.ValidatingType = typeof(int);
+            this.txtTelefono.Click += new System.EventHandler(this.txtTelefono_Click);
             // 
             // FrmModificarTelefonosEmpleados
             // 
@@ -213,6 +216,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(575, 318);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.cmbNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbDocumento);
@@ -220,7 +224,6 @@
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.lblDocumento);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblNuevo);
@@ -245,11 +248,11 @@
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private Clases.TextBox01 txtTelefono;
         private System.Windows.Forms.Label lblDocumento;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblNuevo;
         private Clases.ComboBox01 cmbNombre;
         private System.Windows.Forms.Label label1;
+        private Clases.TextBox02 txtTelefono;
     }
 }

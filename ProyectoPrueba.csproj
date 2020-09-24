@@ -50,7 +50,15 @@
     <Compile Include="Clases\BaseDatos.cs" />
     <Compile Include="Clases\ComboBox01.cs" />
     <Compile Include="Clases\EstructuraComboBox.cs" />
+    <Compile Include="Clases\Grid01.cs" />
+    <Compile Include="Clases\LabelText01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Clases\LabelText01.Designer.cs">
+      <DependentUpon>LabelText01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\TextBox01.cs" />
+    <Compile Include="Clases\TextBox02.cs" />
     <Compile Include="Clases\TratamientosEspeciales.cs" />
     <Compile Include="Formularios\Abm\Barrios\FrmAltaBarrios.cs">
       <SubType>Form</SubType>
@@ -476,6 +484,9 @@
     <Compile Include="Negocios\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Clases\LabelText01.resx">
+      <DependentUpon>LabelText01.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Barrios\FrmAltaBarrios.resx">
       <DependentUpon>FrmAltaBarrios.cs</DependentUpon>
     </EmbeddedResource>
@@ -718,6 +729,8 @@
     <None Include="Resources\settings.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Formularios\Procesos\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

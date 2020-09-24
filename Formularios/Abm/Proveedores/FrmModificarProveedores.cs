@@ -88,6 +88,19 @@ namespace Practico.Formularios.Abm.Proveedores
             this.Close();
         }
 
-        
+        private void txtTelCel_Click(object sender, EventArgs e)
+        {
+            txtTelCel.Select(0,0);
+        }
+
+        private void txtTelFijo_Click(object sender, EventArgs e)
+        {
+            txtTelFijo.Select(0,0);
+        }
+
+        private void txtNroCalle_Click(object sender, EventArgs e)
+        {
+            txtNroCalle.Select(0,0);
+        }
     }
 }

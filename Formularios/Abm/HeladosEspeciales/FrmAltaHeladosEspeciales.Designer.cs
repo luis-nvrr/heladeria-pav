@@ -36,7 +36,7 @@
             this.lblNombreHeladoEspecial = new System.Windows.Forms.Label();
             this.txtNombre = new Practico.Clases.TextBox01();
             this.txtPrecio = new Practico.Clases.TextBox01();
-            this.txtStock = new Practico.Clases.TextBox01();
+            this.txtStock = new Practico.Clases.TextBox02();
             this.SuspendLayout();
             // 
             // lblNuevoHeladoEspecial
@@ -154,14 +154,19 @@
             // 
             // txtStock
             // 
+            this.txtStock.BackColor = System.Drawing.Color.White;
             this.txtStock.Location = new System.Drawing.Point(265, 163);
+            this.txtStock.Mask = "0000000";
             this.txtStock.Name = "txtStock";
-            this.txtStock.PpMensajeError = "Ingrese el stock!";
-            this.txtStock.PpNombreCampo = "cantidadStock";
-            this.txtStock.PpNombreTabla = "HeladosEspeciales";
-            this.txtStock.PpValidable = false;
+            this.txtStock.PpMensajeError = "Ingrese una cantidad!";
+            this.txtStock.PpNombreCampo = null;
+            this.txtStock.PpNombreTabla = null;
+            this.txtStock.PpValidable = true;
+            this.txtStock.PromptChar = ' ';
             this.txtStock.Size = new System.Drawing.Size(65, 24);
-            this.txtStock.TabIndex = 48;
+            this.txtStock.TabIndex = 51;
+            this.txtStock.ValidatingType = typeof(int);
+            this.txtStock.Click += new System.EventHandler(this.txtStock_Click);
             // 
             // FrmAltaHeladosEspeciales
             // 
@@ -202,6 +207,6 @@
         private System.Windows.Forms.Label lblNombreHeladoEspecial;
         private Clases.TextBox01 txtNombre;
         private Clases.TextBox01 txtPrecio;
-        private Clases.TextBox01 txtStock;
+        private Clases.TextBox02 txtStock;
     }
 }

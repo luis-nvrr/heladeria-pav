@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAltaHelados));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtCantidad = new Practico.Clases.TextBox01();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.txtPrecio = new Practico.Clases.TextBox01();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtNombre = new Practico.Clases.TextBox01();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNuevo = new System.Windows.Forms.Label();
+            this.txtCantidad = new Practico.Clases.TextBox02();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -77,19 +77,6 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.BackColor = System.Drawing.Color.White;
-            this.txtCantidad.Location = new System.Drawing.Point(178, 171);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.PpMensajeError = "No se ingresó cantidad en stock!";
-            this.txtCantidad.PpNombreCampo = null;
-            this.txtCantidad.PpNombreTabla = null;
-            this.txtCantidad.PpValidable = true;
-            this.txtCantidad.Size = new System.Drawing.Size(124, 24);
-            this.txtCantidad.TabIndex = 16;
-            this.txtCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyDown);
             // 
             // lblCantidad
             // 
@@ -165,15 +152,31 @@
             this.lblNuevo.TabIndex = 19;
             this.lblNuevo.Text = "Nuevo Helado";
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.BackColor = System.Drawing.Color.White;
+            this.txtCantidad.Location = new System.Drawing.Point(178, 173);
+            this.txtCantidad.Mask = "0000000";
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.PpMensajeError = "Ingrese una cantidad!";
+            this.txtCantidad.PpNombreCampo = null;
+            this.txtCantidad.PpNombreTabla = null;
+            this.txtCantidad.PpValidable = true;
+            this.txtCantidad.PromptChar = ' ';
+            this.txtCantidad.Size = new System.Drawing.Size(124, 24);
+            this.txtCantidad.TabIndex = 49;
+            this.txtCantidad.ValidatingType = typeof(int);
+            this.txtCantidad.Click += new System.EventHandler(this.txtCantidad_Click);
+            // 
             // FrmAltaHelados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(388, 321);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblPrecio);
@@ -199,12 +202,12 @@
 
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private Clases.TextBox01 txtCantidad;
         private System.Windows.Forms.Label lblCantidad;
         private Clases.TextBox01 txtPrecio;
         private System.Windows.Forms.Label lblPrecio;
         private Clases.TextBox01 txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblNuevo;
+        private Clases.TextBox02 txtCantidad;
     }
 }

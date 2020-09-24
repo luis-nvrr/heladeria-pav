@@ -28,33 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbHeladoEspecial = new Practico.Clases.ComboBox01();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbHelado = new Practico.Clases.ComboBox01();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtCantidad = new Practico.Clases.TextBox01();
             this.lblDocumento = new System.Windows.Forms.Label();
             this.lblNuevo = new System.Windows.Forms.Label();
+            this.txtCantidad = new Practico.Clases.TextBox02();
+            this.cmbHeladoEspecial = new Practico.Clases.ComboBox01();
+            this.cmbHelado = new Practico.Clases.ComboBox01();
             this.SuspendLayout();
-            // 
-            // cmbHeladoEspecial
-            // 
-            this.cmbHeladoEspecial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbHeladoEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbHeladoEspecial.FormattingEnabled = true;
-            this.cmbHeladoEspecial.Location = new System.Drawing.Point(315, 94);
-            this.cmbHeladoEspecial.Name = "cmbHeladoEspecial";
-            this.cmbHeladoEspecial.PpDisplay = "nombreProducto";
-            this.cmbHeladoEspecial.PpMensajeError = "Seleccione un Helado Especial!!";
-            this.cmbHeladoEspecial.PpNombreCampo = null;
-            this.cmbHeladoEspecial.PpNombreTabla = null;
-            this.cmbHeladoEspecial.PpTabla = "HeladosEspeciales";
-            this.cmbHeladoEspecial.PpValidable = true;
-            this.cmbHeladoEspecial.PpValue = "idHeladoEspecial";
-            this.cmbHeladoEspecial.Size = new System.Drawing.Size(166, 21);
-            this.cmbHeladoEspecial.TabIndex = 85;
             // 
             // label1
             // 
@@ -67,23 +50,6 @@
             this.label1.Size = new System.Drawing.Size(125, 19);
             this.label1.TabIndex = 86;
             this.label1.Text = "Helado Especial:";
-            // 
-            // cmbHelado
-            // 
-            this.cmbHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbHelado.FormattingEnabled = true;
-            this.cmbHelado.Location = new System.Drawing.Point(315, 125);
-            this.cmbHelado.Name = "cmbHelado";
-            this.cmbHelado.PpDisplay = "nombre";
-            this.cmbHelado.PpMensajeError = "Seleccione un Helado!!";
-            this.cmbHelado.PpNombreCampo = null;
-            this.cmbHelado.PpNombreTabla = null;
-            this.cmbHelado.PpTabla = "Helados";
-            this.cmbHelado.PpValidable = true;
-            this.cmbHelado.PpValue = "idHelado";
-            this.cmbHelado.Size = new System.Drawing.Size(164, 21);
-            this.cmbHelado.TabIndex = 79;
             // 
             // lblTelefono
             // 
@@ -136,18 +102,6 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // txtCantidad
-            // 
-            this.txtCantidad.BackColor = System.Drawing.Color.White;
-            this.txtCantidad.Location = new System.Drawing.Point(315, 156);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.PpMensajeError = "Ingrese un numero de telefono!";
-            this.txtCantidad.PpNombreCampo = null;
-            this.txtCantidad.PpNombreTabla = null;
-            this.txtCantidad.PpValidable = true;
-            this.txtCantidad.Size = new System.Drawing.Size(103, 20);
-            this.txtCantidad.TabIndex = 78;
-            // 
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
@@ -172,19 +126,69 @@
             this.lblNuevo.TabIndex = 82;
             this.lblNuevo.Text = "Nuevo Helado de Helado Especial";
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.BackColor = System.Drawing.Color.White;
+            this.txtCantidad.Location = new System.Drawing.Point(315, 158);
+            this.txtCantidad.Mask = "0000000";
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.PpMensajeError = "Ingrese una cantidad!";
+            this.txtCantidad.PpNombreCampo = null;
+            this.txtCantidad.PpNombreTabla = null;
+            this.txtCantidad.PpValidable = true;
+            this.txtCantidad.PromptChar = ' ';
+            this.txtCantidad.Size = new System.Drawing.Size(103, 20);
+            this.txtCantidad.TabIndex = 87;
+            this.txtCantidad.ValidatingType = typeof(int);
+            this.txtCantidad.Click += new System.EventHandler(this.txtCantidad_Click);
+            // 
+            // cmbHeladoEspecial
+            // 
+            this.cmbHeladoEspecial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHeladoEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbHeladoEspecial.FormattingEnabled = true;
+            this.cmbHeladoEspecial.Location = new System.Drawing.Point(315, 94);
+            this.cmbHeladoEspecial.Name = "cmbHeladoEspecial";
+            this.cmbHeladoEspecial.PpDisplay = "nombreProducto";
+            this.cmbHeladoEspecial.PpMensajeError = "Seleccione un Helado Especial!!";
+            this.cmbHeladoEspecial.PpNombreCampo = null;
+            this.cmbHeladoEspecial.PpNombreTabla = null;
+            this.cmbHeladoEspecial.PpTabla = "HeladosEspeciales";
+            this.cmbHeladoEspecial.PpValidable = true;
+            this.cmbHeladoEspecial.PpValue = "idHeladoEspecial";
+            this.cmbHeladoEspecial.Size = new System.Drawing.Size(166, 21);
+            this.cmbHeladoEspecial.TabIndex = 85;
+            // 
+            // cmbHelado
+            // 
+            this.cmbHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbHelado.FormattingEnabled = true;
+            this.cmbHelado.Location = new System.Drawing.Point(315, 125);
+            this.cmbHelado.Name = "cmbHelado";
+            this.cmbHelado.PpDisplay = "nombre";
+            this.cmbHelado.PpMensajeError = "Seleccione un Helado!!";
+            this.cmbHelado.PpNombreCampo = null;
+            this.cmbHelado.PpNombreTabla = null;
+            this.cmbHelado.PpTabla = "Helados";
+            this.cmbHelado.PpValidable = true;
+            this.cmbHelado.PpValue = "idHelado";
+            this.cmbHelado.Size = new System.Drawing.Size(164, 21);
+            this.cmbHelado.TabIndex = 79;
+            // 
             // FrmAltaHeladosHeladosEspeciales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(577, 276);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.cmbHeladoEspecial);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbHelado);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblDocumento);
             this.Controls.Add(this.lblNuevo);
             this.Name = "FrmAltaHeladosHeladosEspeciales";
@@ -203,8 +207,8 @@
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private Clases.TextBox01 txtCantidad;
         private System.Windows.Forms.Label lblDocumento;
         private System.Windows.Forms.Label lblNuevo;
+        private Clases.TextBox02 txtCantidad;
     }
 }

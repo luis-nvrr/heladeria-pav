@@ -12,6 +12,19 @@ namespace Practico.Negocios
 {
     class Empleados
     {
+        public string tipoDoc { get; set; }
+        public string nroDoc { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public string calle { get; set; }
+        public string nroCalle { get; set; }
+        public string barrio { get; set; }
+        public string fechaNacimiento { get; set; }
+        public string fechaIngreso { get; set; }
+        public string usuario { get; set; }
+        public string turno { get; set; }
+
+
         private BaseDatos baseDatos = new BaseDatos(); // creacion de la base de datos
         public enum Respuesta
         {
@@ -133,6 +146,16 @@ namespace Practico.Negocios
                 return Respuesta.validacionIncorrecta;
             }
 
+        }
+
+        public DataTable RecuperarEmpleadoPorUsuario(string idUsuario)
+        {
+            string sql = "SELECT E.* FROM Empleados E INNER JOIN TiposDocumento TD ON (E.tipoDoc = TD.tipoDocumento)" +
+                         " WHERE idUsuario LIKE '" + idUsuario.Trim() + "'";
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
         }
 
     }

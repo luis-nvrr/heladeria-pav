@@ -70,5 +70,10 @@ namespace Practico.Formularios.Abm.HeladosHeladosEspeciales
 
             }
         }
+
+        private void txtCantidad_Click(object sender, EventArgs e)
+        {
+            txtCantidad.Select(0,0);
+        }
     }
 }

@@ -108,5 +108,10 @@ namespace Practico.Formularios.Abm.Helados
         {
             this.Close();
         }
+
+        private void txtCantidad_Click(object sender, EventArgs e)
+        {
+            txtCantidad.Select(0,0);
+        }
     }
 }

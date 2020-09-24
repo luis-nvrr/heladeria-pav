@@ -60,5 +60,9 @@ namespace Practico.Formularios.Abm.HeladosEspeciales
             this.Close();
         }
 
+        private void txtStock_Click(object sender, EventArgs e)
+        {
+            txtStock.Select(0,0);
+        }
     }
 }

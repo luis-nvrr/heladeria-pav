@@ -34,9 +34,9 @@
             this.lblTelefono = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtCantidad = new Practico.Clases.TextBox01();
             this.lblDocumento = new System.Windows.Forms.Label();
             this.lblNuevo = new System.Windows.Forms.Label();
+            this.txtCantidad = new Practico.Clases.TextBox02();
             this.SuspendLayout();
             // 
             // cmbHeladoEspecial
@@ -138,18 +138,6 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // txtCantidad
-            // 
-            this.txtCantidad.BackColor = System.Drawing.Color.White;
-            this.txtCantidad.Location = new System.Drawing.Point(297, 152);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.PpMensajeError = "Ingrese un numero de telefono!";
-            this.txtCantidad.PpNombreCampo = null;
-            this.txtCantidad.PpNombreTabla = null;
-            this.txtCantidad.PpValidable = true;
-            this.txtCantidad.Size = new System.Drawing.Size(103, 20);
-            this.txtCantidad.TabIndex = 105;
-            // 
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
@@ -174,19 +162,35 @@
             this.lblNuevo.TabIndex = 109;
             this.lblNuevo.Text = "Modificar Helado de Helado Especial";
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.BackColor = System.Drawing.Color.White;
+            this.txtCantidad.Location = new System.Drawing.Point(297, 154);
+            this.txtCantidad.Mask = "0000000";
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.PpMensajeError = "Ingrese una cantidad!";
+            this.txtCantidad.PpNombreCampo = null;
+            this.txtCantidad.PpNombreTabla = null;
+            this.txtCantidad.PpValidable = true;
+            this.txtCantidad.PromptChar = ' ';
+            this.txtCantidad.Size = new System.Drawing.Size(103, 20);
+            this.txtCantidad.TabIndex = 114;
+            this.txtCantidad.ValidatingType = typeof(int);
+            this.txtCantidad.Click += new System.EventHandler(this.txtCantidad_Click);
+            // 
             // FrmModificarHeladosHeladosEspeciales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(577, 276);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.cmbHeladoEspecial);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbHelado);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblDocumento);
             this.Controls.Add(this.lblNuevo);
             this.Name = "FrmModificarHeladosHeladosEspeciales";
@@ -205,8 +209,8 @@
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private Clases.TextBox01 txtCantidad;
         private System.Windows.Forms.Label lblDocumento;
         private System.Windows.Forms.Label lblNuevo;
+        private Clases.TextBox02 txtCantidad;
     }
 }

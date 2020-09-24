@@ -68,7 +68,7 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(239, 149);
+            this.txtNombre.Location = new System.Drawing.Point(239, 142);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PpMensajeError = "No ingresó nombre!";
@@ -84,7 +84,7 @@
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombre.Location = new System.Drawing.Point(140, 156);
+            this.lblNombre.Location = new System.Drawing.Point(150, 147);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(68, 19);
@@ -109,7 +109,7 @@
             this.cmbLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLocalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbLocalidad.FormattingEnabled = true;
-            this.cmbLocalidad.Location = new System.Drawing.Point(239, 195);
+            this.cmbLocalidad.Location = new System.Drawing.Point(240, 174);
             this.cmbLocalidad.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLocalidad.Name = "cmbLocalidad";
             this.cmbLocalidad.PpDisplay = "nombre";
@@ -128,7 +128,7 @@
             this.lblLocalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLocalidad.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblLocalidad.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblLocalidad.Location = new System.Drawing.Point(124, 197);
+            this.lblLocalidad.Location = new System.Drawing.Point(135, 180);
             this.lblLocalidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(83, 19);
@@ -146,7 +146,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(129, 297);
+            this.btnCancelar.Location = new System.Drawing.Point(118, 221);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(137, 52);
@@ -165,7 +165,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAceptar.Location = new System.Drawing.Point(277, 297);
+            this.btnAceptar.Location = new System.Drawing.Point(266, 221);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(5);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(137, 52);
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(523, 425);
+            this.ClientSize = new System.Drawing.Size(523, 283);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cmbLocalidad);
