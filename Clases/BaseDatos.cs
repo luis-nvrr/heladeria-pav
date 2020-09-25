@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;  //Conector estandar cliente de SQL
 using System.Data;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace Practico.Clases
@@ -285,6 +286,16 @@ namespace Practico.Clases
 
             }
             return "";
+        }
+
+        public int nextAutoincrement(string tablaBuscada)
+        {
+            string sql = "SELECT IDENT_CURRENT('"+tablaBuscada+"')+1 AS proximoNumero";
+            DataTable tabla = new DataTable();
+            tabla = this.Consulta(sql);
+            string numero = tabla.Rows[0]["proximoNumero"].ToString();
+            MessageBox.Show(numero);
+            return Int32.Parse(numero);
         }
     }
 }

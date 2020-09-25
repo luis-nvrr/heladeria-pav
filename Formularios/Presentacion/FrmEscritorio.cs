@@ -139,7 +139,7 @@ namespace Practico
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            FrmVenta venta = new FrmVenta();
+            FrmAltaVenta venta = new FrmAltaVenta();
             venta.idUsuario = this.idUsuario.ToString();
             AbrirFormulario(venta);
         }
