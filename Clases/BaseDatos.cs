@@ -294,7 +294,6 @@ namespace Practico.Clases
             DataTable tabla = new DataTable();
             tabla = this.Consulta(sql);
             string numero = tabla.Rows[0]["proximoNumero"].ToString();
-            MessageBox.Show(numero);
             return Int32.Parse(numero);
         }
     }

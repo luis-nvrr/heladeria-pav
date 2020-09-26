@@ -73,6 +73,16 @@ namespace Practico.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_to_cart1 {
+            get {
+                object obj = ResourceManager.GetObject("add-to-cart1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnConfiguracion {
             get {
                 object obj = ResourceManager.GetObject("btnConfiguracion", resourceCulture);
@@ -136,6 +146,16 @@ namespace Practico.Properties {
         internal static System.Drawing.Bitmap iceCream {
             get {
                 object obj = ResourceManager.GetObject("iceCream", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap magnifying_glass {
+            get {
+                object obj = ResourceManager.GetObject("magnifying-glass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

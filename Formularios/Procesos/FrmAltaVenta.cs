@@ -168,7 +168,6 @@ namespace Practico.Formularios.Procesos
 
         private void btnRegistrarVenta_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(empleados.tipoDoc + "- " + empleados.nroDoc);
             ventas.InsertarVenta(empleados.tipoDoc, empleados.nroDoc, grdDetalleHelado);
         }
 
