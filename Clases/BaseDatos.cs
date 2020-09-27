@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Practico.Clases
 {
-    class BaseDatos
+    class BaseDatos //nueva
     {
         private SqlConnection conexion = new SqlConnection();   // armar conexion
         private SqlCommand comando = new SqlCommand();    // transporte de la consulta
