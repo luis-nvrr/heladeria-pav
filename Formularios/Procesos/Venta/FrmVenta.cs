@@ -236,7 +236,7 @@ namespace Practico.Formularios.Procesos
                 if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    FrmModificarVenta modificar = new FrmModificarVenta();
+                    //FrmModificarVenta modificar = new FrmModificarVenta();
                 }
             }
         }

@@ -83,7 +83,7 @@ namespace Practico.Clases
             string sql = "SELECT cantidadStock FROM " + nombreTabla + " WHERE " + tipoHelado + " = " + idHelado;
             DataTable tabla = baseDatos.Consulta(sql);
 
-            if (Int32.Parse(tabla.Rows[0]["cantidadStock"].ToString()) - Int32.Parse(cantidad) > 0)
+            if (Int32.Parse(tabla.Rows[0]["cantidadStock"].ToString()) - Int32.Parse(cantidad) >= 0)
             {
                 return Validacion.correcta;
             }

@@ -85,27 +85,14 @@ namespace Practico.Formularios.Procesos
             pnlHelados.BringToFront();
             pnlEspecial.Visible = false;
             pnlHelados.Visible = true;
-            //limpiarEspecial();
         }
 
-        private void limpiarHelados()
-        {
-            cmbHelado.SelectedIndex = -1;
-            txtHelado.Text = "";
-        }
-
-        private void limpiarEspecial()
-        {
-            cmbEspecial.SelectedIndex = -1;
-            txtEspecial.Text = "";
-        }
 
         private void btnEspecial_Click(object sender, EventArgs e)
         {
             pnlEspecial.BringToFront();
             pnlHelados.Visible = false;
             pnlEspecial.Visible = true;
-            //limpiarHelados();
         }
 
         private void actualizarPrecio()
@@ -223,6 +210,7 @@ namespace Practico.Formularios.Procesos
                 if (grdDetalleHelado.Rows.Count > 0)
                 {
                     ventas.InsertarVenta(empleados.tipoDoc, empleados.nroDoc, grdDetalleHelado);
+                    LimpiarCampos();
                 }
                 else
                 {
@@ -248,14 +236,25 @@ namespace Practico.Formularios.Procesos
             }
         }
 
+        private void LimpiarCampos()
+        {
+            cmbEspecial.SelectedIndex = -1;
+            cmbHelado.SelectedIndex = -1;
+
+            txtPrecioHelado.Text = "";
+            txtPrecioEspecial.Text = "";
+
+            txtEspecial.Text = "";
+            txtHelado.Text = "";
+
+            grdDetalleHelado.Rows.Clear();
+
+            actualizarPrecio();
+        }
+
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            limpiarEspecial();
-            limpiarHelados();
-            actualizarPrecio();
-            grdDetalleHelado.Rows.Clear();
-            txtPrecioHelado.Text = "";
-            txtEspecial.Text = "";
+            LimpiarCampos();
         }
 
         private void button1_Click(object sender, EventArgs e) //MODIFICAR

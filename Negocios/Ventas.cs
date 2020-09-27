@@ -17,9 +17,12 @@
             {
                 baseDatos.IniciarTransaccion();
 
-				TratamientosEspeciales tratamientos = new TratamientosEspeciales();
+                TratamientosEspeciales tratamientos = new TratamientosEspeciales();
                 int nroTicket = baseDatos.nextAutoincrement("Ventas");
                 string fecha = baseDatos.Fecha();
+
+
+                string actualizarStock;
 
                 string insertVenta = "INSERT INTO Ventas (fecha, tipoDocEmpleado, nroDocEmpleado) VALUES";
                 insertVenta += "(" + baseDatos.FormatearDato(fecha, "Date") + "," + tipoDoc + ",'" + nroDoc + "')";
@@ -45,16 +48,20 @@
 
                     if (esEspecial == "false")
                     {
-                        if (tratamientos.ValidarStock("Helados",
+                        datosDetalle += "," + idHeladoSimple;
+                        datosDetalle += "," + cantKilos;
+					    if (tratamientos.ValidarStock("Helados",
                             cantKilos,idHeladoSimple) == TratamientosEspeciales.Validacion.correcta)
                         {
-                            datosDetalle += "," + idHeladoSimple;
-                            datosDetalle += "," + cantKilos;
-					    }
+                            actualizarStock = "UPDATE Helados " +
+                                              " SET cantidadStock -= "+cantKilos+
+                                              " WHERE idHelado ="+idHeladoSimple;
+                            baseDatos.Actualizar(actualizarStock);
+                        }
                         else
                         {
+                            baseDatos.controlTransaccion = BaseDatos.EstadoTransaccion.error;
                             MessageBox.Show("No hay stock suficiente de " + nombreHelado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
                         }
                         
                     }
@@ -66,17 +73,21 @@
 
                     if (esEspecial == "true")
                     {
-                        if (tratamientos.ValidarStock("HeladosEspeciales",
+                        datosDetalle += "," + idHeladoEspecial;
+                        datosDetalle += "," + cantItems;
+					    if (tratamientos.ValidarStock("HeladosEspeciales",
                             cantItems, idHeladoEspecial) == TratamientosEspeciales.Validacion.correcta)
                         {
-                            datosDetalle += "," + idHeladoEspecial;
-                            datosDetalle += "," + cantItems;
-					    }
+                            actualizarStock = "UPDATE HeladosEspeciales " +
+                                              " SET cantidadStock -= " + cantItems +
+                                              " WHERE idHeladoEspecial =" + idHeladoEspecial;
+                            baseDatos.Actualizar(actualizarStock);
+                        }
                         else
                         {
-                            MessageBox.Show("No hay stock suficiente de " + nombreHelado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-					    }
+                            baseDatos.controlTransaccion = BaseDatos.EstadoTransaccion.error;
+						    MessageBox.Show("No hay stock suficiente de " + nombreHelado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
@@ -94,7 +105,12 @@
                 {
 				    MessageBox.Show("Transaccion realizada con exito!", "Informacion", 
                         buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-			}
+			    }
+                else
+                {
+				    MessageBox.Show("Ha ocurrido un error con la transaccion!", "Error", 
+                        buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
+                }
 
             }
 

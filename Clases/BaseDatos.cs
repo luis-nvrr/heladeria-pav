@@ -106,7 +106,6 @@ namespace Practico.Clases
                                                              + sql + "\n"
                                                              + "El mensaje es:" + "\n"
                                                              + e.Message);
-                throw e;
             }
 
             Desconectar();
@@ -129,7 +128,6 @@ namespace Practico.Clases
                                                              + sql + "\n"
                                                              + "El mensaje es:" + "\n"
                                                              + e.Message);
-                throw e;
             }
 
             if (sql.ToUpper().IndexOf("INSERT") >= 0)
@@ -148,7 +146,6 @@ namespace Practico.Clases
                                                                  + sql + "\n"
                                                                  + "El mensaje es:" + "\n"
                                                                  + e.Message);
-                    throw e;
                 }
                 Desconectar();
                 return tabla.Rows[0][0].ToString();
