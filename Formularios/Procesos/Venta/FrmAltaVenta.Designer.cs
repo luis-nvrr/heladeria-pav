@@ -381,7 +381,7 @@
             this.panel1.Controls.Add(this.lblTxtTotal);
             this.panel1.Location = new System.Drawing.Point(582, 207);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(161, 121);
+            this.panel1.Size = new System.Drawing.Size(217, 121);
             this.panel1.TabIndex = 62;
             // 
             // panel2
@@ -390,7 +390,7 @@
             this.panel2.Controls.Add(this.lblSigno);
             this.panel2.Location = new System.Drawing.Point(23, 53);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(135, 41);
+            this.panel2.Size = new System.Drawing.Size(194, 41);
             this.panel2.TabIndex = 63;
             // 
             // lblSigno

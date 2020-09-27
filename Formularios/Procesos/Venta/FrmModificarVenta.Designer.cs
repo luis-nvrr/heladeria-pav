@@ -36,13 +36,19 @@
             this.lblHelado = new System.Windows.Forms.Label();
             this.pnlHelados = new System.Windows.Forms.Panel();
             this.lblPrecioHelado = new System.Windows.Forms.Label();
+            this.txtPrecioHelado = new Practico.Clases.TextBox01();
             this.btnConfirmarHelado = new System.Windows.Forms.Button();
             this.lblKilos = new System.Windows.Forms.Label();
+            this.txtHelado = new Practico.Clases.TextBox01();
+            this.cmbHelado = new Practico.Clases.ComboBox01();
             this.pnlEspecial = new System.Windows.Forms.Panel();
             this.lblPrecioEspecial = new System.Windows.Forms.Label();
+            this.txtPrecioEspecial = new Practico.Clases.TextBox01();
             this.btnConfirmarEspecial = new System.Windows.Forms.Button();
             this.lblCantidad = new System.Windows.Forms.Label();
+            this.txtEspecial = new Practico.Clases.TextBox01();
             this.lblEspecial = new System.Windows.Forms.Label();
+            this.cmbEspecial = new Practico.Clases.ComboBox01();
             this.lblOpcion = new System.Windows.Forms.Label();
             this.lblTxtTotal = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -58,13 +64,7 @@
             this.btnEspecial = new System.Windows.Forms.Button();
             this.btnHelado = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPrecioEspecial = new Practico.Clases.TextBox01();
-            this.txtEspecial = new Practico.Clases.TextBox01();
-            this.cmbEspecial = new Practico.Clases.ComboBox01();
             this.grdDetalleHelado = new Practico.Clases.Grid01();
-            this.txtPrecioHelado = new Practico.Clases.TextBox01();
-            this.txtHelado = new Practico.Clases.TextBox01();
-            this.cmbHelado = new Practico.Clases.ComboBox01();
             this.pnlHelados.SuspendLayout();
             this.pnlEspecial.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -144,6 +144,19 @@
             this.lblPrecioHelado.TabIndex = 58;
             this.lblPrecioHelado.Text = "Precio:";
             // 
+            // txtPrecioHelado
+            // 
+            this.txtPrecioHelado.BackColor = System.Drawing.Color.White;
+            this.txtPrecioHelado.Enabled = false;
+            this.txtPrecioHelado.Location = new System.Drawing.Point(302, 5);
+            this.txtPrecioHelado.Name = "txtPrecioHelado";
+            this.txtPrecioHelado.PpMensajeError = "No ingresó precio!";
+            this.txtPrecioHelado.PpNombreCampo = null;
+            this.txtPrecioHelado.PpNombreTabla = null;
+            this.txtPrecioHelado.PpValidable = true;
+            this.txtPrecioHelado.Size = new System.Drawing.Size(68, 24);
+            this.txtPrecioHelado.TabIndex = 57;
+            // 
             // btnConfirmarHelado
             // 
             this.btnConfirmarHelado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -178,6 +191,37 @@
             this.lblKilos.TabIndex = 52;
             this.lblKilos.Text = "Kilos:";
             // 
+            // txtHelado
+            // 
+            this.txtHelado.BackColor = System.Drawing.Color.White;
+            this.txtHelado.Location = new System.Drawing.Point(88, 35);
+            this.txtHelado.Name = "txtHelado";
+            this.txtHelado.PpMensajeError = "No ingresó kilos!";
+            this.txtHelado.PpNombreCampo = null;
+            this.txtHelado.PpNombreTabla = null;
+            this.txtHelado.PpValidable = true;
+            this.txtHelado.Size = new System.Drawing.Size(68, 24);
+            this.txtHelado.TabIndex = 51;
+            this.txtHelado.TextChanged += new System.EventHandler(this.txtHelado_TextChanged);
+            // 
+            // cmbHelado
+            // 
+            this.cmbHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbHelado.FormattingEnabled = true;
+            this.cmbHelado.Location = new System.Drawing.Point(88, 3);
+            this.cmbHelado.Name = "cmbHelado";
+            this.cmbHelado.PpDisplay = "nombre";
+            this.cmbHelado.PpMensajeError = "No seleccionó helado!";
+            this.cmbHelado.PpNombreCampo = null;
+            this.cmbHelado.PpNombreTabla = null;
+            this.cmbHelado.PpTabla = "Helados";
+            this.cmbHelado.PpValidable = true;
+            this.cmbHelado.PpValue = "idHelado";
+            this.cmbHelado.Size = new System.Drawing.Size(123, 25);
+            this.cmbHelado.TabIndex = 47;
+            this.cmbHelado.SelectionChangeCommitted += new System.EventHandler(this.cmbHelado_SelectionChangeCommitted);
+            // 
             // pnlEspecial
             // 
             this.pnlEspecial.Controls.Add(this.lblPrecioEspecial);
@@ -204,6 +248,19 @@
             this.lblPrecioEspecial.Size = new System.Drawing.Size(55, 19);
             this.lblPrecioEspecial.TabIndex = 56;
             this.lblPrecioEspecial.Text = "Precio:";
+            // 
+            // txtPrecioEspecial
+            // 
+            this.txtPrecioEspecial.BackColor = System.Drawing.Color.White;
+            this.txtPrecioEspecial.Enabled = false;
+            this.txtPrecioEspecial.Location = new System.Drawing.Point(370, 7);
+            this.txtPrecioEspecial.Name = "txtPrecioEspecial";
+            this.txtPrecioEspecial.PpMensajeError = "No ingresó precio!";
+            this.txtPrecioEspecial.PpNombreCampo = null;
+            this.txtPrecioEspecial.PpNombreTabla = null;
+            this.txtPrecioEspecial.PpValidable = true;
+            this.txtPrecioEspecial.Size = new System.Drawing.Size(68, 24);
+            this.txtPrecioEspecial.TabIndex = 1;
             // 
             // btnConfirmarEspecial
             // 
@@ -239,6 +296,19 @@
             this.lblCantidad.TabIndex = 52;
             this.lblCantidad.Text = "Cantidad:";
             // 
+            // txtEspecial
+            // 
+            this.txtEspecial.BackColor = System.Drawing.Color.White;
+            this.txtEspecial.Location = new System.Drawing.Point(161, 38);
+            this.txtEspecial.Name = "txtEspecial";
+            this.txtEspecial.PpMensajeError = "No ingresó cantidad!";
+            this.txtEspecial.PpNombreCampo = null;
+            this.txtEspecial.PpNombreTabla = null;
+            this.txtEspecial.PpValidable = true;
+            this.txtEspecial.Size = new System.Drawing.Size(68, 24);
+            this.txtEspecial.TabIndex = 2;
+            this.txtEspecial.TextChanged += new System.EventHandler(this.txtEspecial_TextChanged);
+            // 
             // lblEspecial
             // 
             this.lblEspecial.AutoSize = true;
@@ -250,6 +320,24 @@
             this.lblEspecial.Size = new System.Drawing.Size(125, 19);
             this.lblEspecial.TabIndex = 48;
             this.lblEspecial.Text = "Helado Especial:";
+            // 
+            // cmbEspecial
+            // 
+            this.cmbEspecial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbEspecial.FormattingEnabled = true;
+            this.cmbEspecial.Location = new System.Drawing.Point(161, 4);
+            this.cmbEspecial.Name = "cmbEspecial";
+            this.cmbEspecial.PpDisplay = "nombreProducto";
+            this.cmbEspecial.PpMensajeError = "No seleccionó helado especial!";
+            this.cmbEspecial.PpNombreCampo = null;
+            this.cmbEspecial.PpNombreTabla = null;
+            this.cmbEspecial.PpTabla = "HeladosEspeciales";
+            this.cmbEspecial.PpValidable = true;
+            this.cmbEspecial.PpValue = "idHeladoEspecial";
+            this.cmbEspecial.Size = new System.Drawing.Size(123, 25);
+            this.cmbEspecial.TabIndex = 0;
+            this.cmbEspecial.SelectionChangeCommitted += new System.EventHandler(this.cmbEspecial_SelectionChangeCommitted_1);
             // 
             // lblOpcion
             // 
@@ -294,7 +382,7 @@
             this.panel1.Controls.Add(this.lblTxtTotal);
             this.panel1.Location = new System.Drawing.Point(582, 207);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(161, 121);
+            this.panel1.Size = new System.Drawing.Size(232, 121);
             this.panel1.TabIndex = 62;
             // 
             // panel2
@@ -303,7 +391,7 @@
             this.panel2.Controls.Add(this.lblSigno);
             this.panel2.Location = new System.Drawing.Point(23, 53);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(135, 41);
+            this.panel2.Size = new System.Drawing.Size(209, 41);
             this.panel2.TabIndex = 63;
             // 
             // lblSigno
@@ -357,6 +445,7 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiar.Enabled = false;
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
@@ -374,6 +463,7 @@
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Visible = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
@@ -489,50 +579,6 @@
             this.label1.TabIndex = 63;
             this.label1.Text = "Modificar";
             // 
-            // txtPrecioEspecial
-            // 
-            this.txtPrecioEspecial.BackColor = System.Drawing.Color.White;
-            this.txtPrecioEspecial.Enabled = false;
-            this.txtPrecioEspecial.Location = new System.Drawing.Point(370, 7);
-            this.txtPrecioEspecial.Name = "txtPrecioEspecial";
-            this.txtPrecioEspecial.PpMensajeError = "No ingresó precio!";
-            this.txtPrecioEspecial.PpNombreCampo = null;
-            this.txtPrecioEspecial.PpNombreTabla = null;
-            this.txtPrecioEspecial.PpValidable = true;
-            this.txtPrecioEspecial.Size = new System.Drawing.Size(68, 24);
-            this.txtPrecioEspecial.TabIndex = 1;
-            // 
-            // txtEspecial
-            // 
-            this.txtEspecial.BackColor = System.Drawing.Color.White;
-            this.txtEspecial.Location = new System.Drawing.Point(161, 38);
-            this.txtEspecial.Name = "txtEspecial";
-            this.txtEspecial.PpMensajeError = "No ingresó cantidad!";
-            this.txtEspecial.PpNombreCampo = null;
-            this.txtEspecial.PpNombreTabla = null;
-            this.txtEspecial.PpValidable = true;
-            this.txtEspecial.Size = new System.Drawing.Size(68, 24);
-            this.txtEspecial.TabIndex = 2;
-            this.txtEspecial.TextChanged += new System.EventHandler(this.txtEspecial_TextChanged);
-            // 
-            // cmbEspecial
-            // 
-            this.cmbEspecial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbEspecial.FormattingEnabled = true;
-            this.cmbEspecial.Location = new System.Drawing.Point(161, 4);
-            this.cmbEspecial.Name = "cmbEspecial";
-            this.cmbEspecial.PpDisplay = "nombreProducto";
-            this.cmbEspecial.PpMensajeError = "No seleccionó helado especial!";
-            this.cmbEspecial.PpNombreCampo = null;
-            this.cmbEspecial.PpNombreTabla = null;
-            this.cmbEspecial.PpTabla = "HeladosEspeciales";
-            this.cmbEspecial.PpValidable = true;
-            this.cmbEspecial.PpValue = "idHeladoEspecial";
-            this.cmbEspecial.Size = new System.Drawing.Size(123, 25);
-            this.cmbEspecial.TabIndex = 0;
-            this.cmbEspecial.SelectionChangeCommitted += new System.EventHandler(this.cmbEspecial_SelectionChangeCommitted_1);
-            // 
             // grdDetalleHelado
             // 
             this.grdDetalleHelado.AllowUserToAddRows = false;
@@ -569,50 +615,6 @@
             this.grdDetalleHelado.tabla = null;
             this.grdDetalleHelado.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDetalleHelado_CellEndEdit);
             this.grdDetalleHelado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdDetalleHelado_KeyDown);
-            // 
-            // txtPrecioHelado
-            // 
-            this.txtPrecioHelado.BackColor = System.Drawing.Color.White;
-            this.txtPrecioHelado.Enabled = false;
-            this.txtPrecioHelado.Location = new System.Drawing.Point(302, 5);
-            this.txtPrecioHelado.Name = "txtPrecioHelado";
-            this.txtPrecioHelado.PpMensajeError = "No ingresó precio!";
-            this.txtPrecioHelado.PpNombreCampo = null;
-            this.txtPrecioHelado.PpNombreTabla = null;
-            this.txtPrecioHelado.PpValidable = true;
-            this.txtPrecioHelado.Size = new System.Drawing.Size(68, 24);
-            this.txtPrecioHelado.TabIndex = 57;
-            // 
-            // txtHelado
-            // 
-            this.txtHelado.BackColor = System.Drawing.Color.White;
-            this.txtHelado.Location = new System.Drawing.Point(88, 35);
-            this.txtHelado.Name = "txtHelado";
-            this.txtHelado.PpMensajeError = "No ingresó kilos!";
-            this.txtHelado.PpNombreCampo = null;
-            this.txtHelado.PpNombreTabla = null;
-            this.txtHelado.PpValidable = true;
-            this.txtHelado.Size = new System.Drawing.Size(68, 24);
-            this.txtHelado.TabIndex = 51;
-            this.txtHelado.TextChanged += new System.EventHandler(this.txtHelado_TextChanged);
-            // 
-            // cmbHelado
-            // 
-            this.cmbHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbHelado.FormattingEnabled = true;
-            this.cmbHelado.Location = new System.Drawing.Point(88, 3);
-            this.cmbHelado.Name = "cmbHelado";
-            this.cmbHelado.PpDisplay = "nombre";
-            this.cmbHelado.PpMensajeError = "No seleccionó helado!";
-            this.cmbHelado.PpNombreCampo = null;
-            this.cmbHelado.PpNombreTabla = null;
-            this.cmbHelado.PpTabla = "Helados";
-            this.cmbHelado.PpValidable = true;
-            this.cmbHelado.PpValue = "idHelado";
-            this.cmbHelado.Size = new System.Drawing.Size(123, 25);
-            this.cmbHelado.TabIndex = 47;
-            this.cmbHelado.SelectionChangeCommitted += new System.EventHandler(this.cmbHelado_SelectionChangeCommitted);
             // 
             // FrmModificarVenta
             // 
