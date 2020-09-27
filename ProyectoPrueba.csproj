@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\BaseDatos.cs" />
     <Compile Include="Clases\ComboBox01.cs" />
     <Compile Include="Clases\EstructuraComboBox.cs" />
     <Compile Include="Clases\Grid01.cs" />
@@ -780,8 +779,6 @@
     <None Include="Resources\iconfinder_website_-_pencil_34408481.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formularios\Procesos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
