@@ -39,8 +39,8 @@ namespace Practico.Formularios.Procesos
             pckDesde.Format = DateTimePickerFormat.Short;
             pckHasta.Format = DateTimePickerFormat.Short;
             pckDesde.Value = DateTime.Parse("01/01/" + DateTime.Now.Year);
-            pckHasta.Value= DateTime.Parse(fecha);
-            
+            pckHasta.Value = DateTime.Parse(fecha);
+
 
             pckDesde.Enabled = true;
             pckHasta.Enabled = true;
@@ -64,15 +64,16 @@ namespace Practico.Formularios.Procesos
             if (cmbNombre.DataSource != null)
             {
                 BaseDatos baseDatos = new BaseDatos();
-                string sql = "SELECT DISTINCT TD.* FROM Empleados E JOIN TiposDocumento TD ON (E.tipoDoc = TD.tipoDocumento)"
-                             + "WHERE nombre LIKE '%" + cmbNombre.SelectedValue + "%'";
+                string sql =
+                    "SELECT DISTINCT TD.* FROM Empleados E JOIN TiposDocumento TD ON (E.tipoDoc = TD.tipoDocumento)"
+                    + "WHERE nombre LIKE '%" + cmbNombre.SelectedValue + "%'";
                 cmbTipo.DisplayMember = "descripcion";
                 cmbTipo.ValueMember = "tipoDocumento";
                 cmbTipo.DataSource = baseDatos.Consulta(sql);
 
                 cmbTipo.Enabled = true;
             }
-                
+
         }
 
         private void cmbTipo_SelectedValueChanged(object sender, EventArgs e)
@@ -88,7 +89,7 @@ namespace Practico.Formularios.Procesos
 
                 cmbDocumento.Enabled = true;
             }
-            
+
         }
 
         private void LimpiarNombre()
@@ -164,10 +165,12 @@ namespace Practico.Formularios.Procesos
             {
                 if (chkNombre.Checked)
                 {
-                    tabla = ventas.RecuperarVenta(cmbTipo.SelectedValue.ToString(), cmbDocumento.SelectedValue.ToString(),
+                    tabla = ventas.RecuperarVenta(cmbTipo.SelectedValue.ToString(),
+                        cmbDocumento.SelectedValue.ToString(),
                         cmbNombre.SelectedValue.ToString());
                 }
-                if(chkFecha.Checked)
+
+                if (chkFecha.Checked)
                 {
                     tabla = ventas.RecuperarVenta(pckDesde.Text, pckHasta.Text);
                 }
@@ -191,8 +194,9 @@ namespace Practico.Formularios.Procesos
                     MessageBox.Show("Ingrese un campo de busqueda!", caption: "Atención",
                         icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
                 }
-                
+
             }
+
             CargarGrilla(tabla);
         }
 
@@ -215,7 +219,7 @@ namespace Practico.Formularios.Procesos
                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 FrmAltaVenta altaVenta = new FrmAltaVenta();
-                altaVenta.idUsuario = this.idUsuario;  // LE PASA EL ID DEL EMPLEADO LOGUEADO
+                altaVenta.idUsuario = this.idUsuario; // LE PASA EL ID DEL EMPLEADO LOGUEADO
                 altaVenta.ShowDialog();
 
                 DataTable tabla = ventas.RecuperarTodasLasVentas(); // ACTUALIZA GRILLA
@@ -236,7 +240,18 @@ namespace Practico.Formularios.Procesos
                 if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    //FrmModificarVenta modificar = new FrmModificarVenta();
+                    int indiceFilaSeleccionada = grdVentas.SelectedRows[0].Index;
+                    string nroTicket = grdVentas[0, indiceFilaSeleccionada].Value.ToString();
+
+                    FrmModificarVenta modificarVenta = new FrmModificarVenta();
+                    modificarVenta.nroTicket = nroTicket;
+                    modificarVenta.ShowDialog();
+                    modificarVenta.Close();
+                }
+                else
+                {
+                    return;
+
                 }
             }
         }
