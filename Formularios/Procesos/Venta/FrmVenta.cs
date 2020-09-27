@@ -156,12 +156,6 @@ namespace Practico.Formularios.Procesos
 
         }
 
-        private void btnNuevaVenta_Click(object sender, EventArgs e)
-        {
-            FrmAltaVenta altaVenta = new FrmAltaVenta();
-            altaVenta.idUsuario = this.idUsuario;
-            altaVenta.ShowDialog();
-        }
 
         private void btnConfirmarEspecial_Click(object sender, EventArgs e)
         {
@@ -212,6 +206,38 @@ namespace Practico.Formularios.Procesos
                 grdVentas.Rows[i].Cells[1].Value = tabla.Rows[i]["nombre"].ToString();
                 grdVentas.Rows[i].Cells[2].Value = tabla.Rows[i]["fecha"].ToString();
                 grdVentas.Rows[i].Cells[3].Value = tabla.Rows[i]["SumTotal"].ToString();
+            }
+        }
+
+        private void btnNuevaVenta_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FrmAltaVenta altaVenta = new FrmAltaVenta();
+                altaVenta.idUsuario = this.idUsuario;  // LE PASA EL ID DEL EMPLEADO LOGUEADO
+                altaVenta.ShowDialog();
+
+                DataTable tabla = ventas.RecuperarTodasLasVentas(); // ACTUALIZA GRILLA
+                CargarGrilla(tabla);
+                altaVenta.Close();
+            }
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (grdVentas.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    FrmModificarVenta modificar = new FrmModificarVenta();
+                }
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace Practico.Formularios.Procesos
 {
-    partial class FrmAltaVenta
+    partial class FrmModificarVenta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAltaVenta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarVenta));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnEscritorio = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.lblDetalle = new System.Windows.Forms.Label();
             this.lblHelado = new System.Windows.Forms.Label();
             this.pnlHelados = new System.Windows.Forms.Panel();
@@ -72,27 +72,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdDetalleHelado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnEscritorio
-            // 
-            this.btnEscritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnEscritorio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEscritorio.FlatAppearance.BorderSize = 0;
-            this.btnEscritorio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnEscritorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
-            this.btnEscritorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscritorio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEscritorio.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnEscritorio.Location = new System.Drawing.Point(591, 29);
-            this.btnEscritorio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnEscritorio.Name = "btnEscritorio";
-            this.btnEscritorio.Size = new System.Drawing.Size(166, 63);
-            this.btnEscritorio.TabIndex = 4;
-            this.btnEscritorio.Text = "Volver Al Escritorio";
-            this.btnEscritorio.UseVisualStyleBackColor = false;
-            // 
+            //
+            // btnCerrar
+            //
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnCerrar.Location = new System.Drawing.Point(724, 14);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(71, 41);
+            this.btnCerrar.TabIndex = 4;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            //
             // lblDetalle
-            // 
+            //
             this.lblDetalle.AutoSize = true;
             this.lblDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblDetalle.Font = new System.Drawing.Font("Century Gothic", 20F);
@@ -102,9 +103,9 @@
             this.lblDetalle.Size = new System.Drawing.Size(243, 33);
             this.lblDetalle.TabIndex = 46;
             this.lblDetalle.Text = "Detalle de Venta";
-            // 
+            //
             // lblHelado
-            // 
+            //
             this.lblHelado.AutoSize = true;
             this.lblHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblHelado.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -114,9 +115,9 @@
             this.lblHelado.Size = new System.Drawing.Size(64, 19);
             this.lblHelado.TabIndex = 48;
             this.lblHelado.Text = "Helado:";
-            // 
+            //
             // pnlHelados
-            // 
+            //
             this.pnlHelados.Controls.Add(this.lblPrecioHelado);
             this.pnlHelados.Controls.Add(this.txtPrecioHelado);
             this.pnlHelados.Controls.Add(this.btnConfirmarHelado);
@@ -129,9 +130,9 @@
             this.pnlHelados.Size = new System.Drawing.Size(492, 118);
             this.pnlHelados.TabIndex = 52;
             this.pnlHelados.Visible = false;
-            // 
+            //
             // lblPrecioHelado
-            // 
+            //
             this.lblPrecioHelado.AutoSize = true;
             this.lblPrecioHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPrecioHelado.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -141,9 +142,9 @@
             this.lblPrecioHelado.Size = new System.Drawing.Size(55, 19);
             this.lblPrecioHelado.TabIndex = 58;
             this.lblPrecioHelado.Text = "Precio:";
-            // 
+            //
             // txtPrecioHelado
-            // 
+            //
             this.txtPrecioHelado.BackColor = System.Drawing.Color.White;
             this.txtPrecioHelado.Enabled = false;
             this.txtPrecioHelado.Location = new System.Drawing.Point(302, 5);
@@ -154,9 +155,9 @@
             this.txtPrecioHelado.PpValidable = true;
             this.txtPrecioHelado.Size = new System.Drawing.Size(68, 24);
             this.txtPrecioHelado.TabIndex = 57;
-            // 
+            //
             // btnConfirmarHelado
-            // 
+            //
             this.btnConfirmarHelado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnConfirmarHelado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConfirmarHelado.FlatAppearance.BorderSize = 0;
@@ -176,9 +177,9 @@
             this.btnConfirmarHelado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfirmarHelado.UseVisualStyleBackColor = false;
             this.btnConfirmarHelado.Click += new System.EventHandler(this.btnConfirmarHelado_Click);
-            // 
+            //
             // lblKilos
-            // 
+            //
             this.lblKilos.AutoSize = true;
             this.lblKilos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblKilos.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -188,9 +189,9 @@
             this.lblKilos.Size = new System.Drawing.Size(41, 19);
             this.lblKilos.TabIndex = 52;
             this.lblKilos.Text = "Kilos:";
-            // 
+            //
             // txtHelado
-            // 
+            //
             this.txtHelado.BackColor = System.Drawing.Color.White;
             this.txtHelado.Location = new System.Drawing.Point(88, 35);
             this.txtHelado.Name = "txtHelado";
@@ -201,9 +202,9 @@
             this.txtHelado.Size = new System.Drawing.Size(68, 24);
             this.txtHelado.TabIndex = 51;
             this.txtHelado.TextChanged += new System.EventHandler(this.txtHelado_TextChanged);
-            // 
+            //
             // cmbHelado
-            // 
+            //
             this.cmbHelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbHelado.FormattingEnabled = true;
@@ -219,9 +220,9 @@
             this.cmbHelado.Size = new System.Drawing.Size(123, 25);
             this.cmbHelado.TabIndex = 47;
             this.cmbHelado.SelectionChangeCommitted += new System.EventHandler(this.cmbHelado_SelectionChangeCommitted);
-            // 
+            //
             // pnlEspecial
-            // 
+            //
             this.pnlEspecial.Controls.Add(this.lblPrecioEspecial);
             this.pnlEspecial.Controls.Add(this.txtPrecioEspecial);
             this.pnlEspecial.Controls.Add(this.btnConfirmarEspecial);
@@ -234,9 +235,9 @@
             this.pnlEspecial.Size = new System.Drawing.Size(492, 118);
             this.pnlEspecial.TabIndex = 2;
             this.pnlEspecial.Visible = false;
-            // 
+            //
             // lblPrecioEspecial
-            // 
+            //
             this.lblPrecioEspecial.AutoSize = true;
             this.lblPrecioEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPrecioEspecial.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -246,9 +247,9 @@
             this.lblPrecioEspecial.Size = new System.Drawing.Size(55, 19);
             this.lblPrecioEspecial.TabIndex = 56;
             this.lblPrecioEspecial.Text = "Precio:";
-            // 
+            //
             // txtPrecioEspecial
-            // 
+            //
             this.txtPrecioEspecial.BackColor = System.Drawing.Color.White;
             this.txtPrecioEspecial.Enabled = false;
             this.txtPrecioEspecial.Location = new System.Drawing.Point(370, 7);
@@ -259,9 +260,9 @@
             this.txtPrecioEspecial.PpValidable = true;
             this.txtPrecioEspecial.Size = new System.Drawing.Size(68, 24);
             this.txtPrecioEspecial.TabIndex = 1;
-            // 
+            //
             // btnConfirmarEspecial
-            // 
+            //
             this.btnConfirmarEspecial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnConfirmarEspecial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConfirmarEspecial.FlatAppearance.BorderSize = 0;
@@ -281,9 +282,9 @@
             this.btnConfirmarEspecial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfirmarEspecial.UseVisualStyleBackColor = false;
             this.btnConfirmarEspecial.Click += new System.EventHandler(this.btnConfirmarEspecial_Click);
-            // 
+            //
             // lblCantidad
-            // 
+            //
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCantidad.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -293,9 +294,9 @@
             this.lblCantidad.Size = new System.Drawing.Size(81, 19);
             this.lblCantidad.TabIndex = 52;
             this.lblCantidad.Text = "Cantidad:";
-            // 
+            //
             // txtEspecial
-            // 
+            //
             this.txtEspecial.BackColor = System.Drawing.Color.White;
             this.txtEspecial.Location = new System.Drawing.Point(161, 38);
             this.txtEspecial.Name = "txtEspecial";
@@ -306,9 +307,9 @@
             this.txtEspecial.Size = new System.Drawing.Size(68, 24);
             this.txtEspecial.TabIndex = 2;
             this.txtEspecial.TextChanged += new System.EventHandler(this.txtEspecial_TextChanged);
-            // 
+            //
             // lblEspecial
-            // 
+            //
             this.lblEspecial.AutoSize = true;
             this.lblEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEspecial.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -318,9 +319,9 @@
             this.lblEspecial.Size = new System.Drawing.Size(125, 19);
             this.lblEspecial.TabIndex = 48;
             this.lblEspecial.Text = "Helado Especial:";
-            // 
+            //
             // cmbEspecial
-            // 
+            //
             this.cmbEspecial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbEspecial.FormattingEnabled = true;
@@ -336,9 +337,9 @@
             this.cmbEspecial.Size = new System.Drawing.Size(123, 25);
             this.cmbEspecial.TabIndex = 0;
             this.cmbEspecial.SelectionChangeCommitted += new System.EventHandler(this.cmbEspecial_SelectionChangeCommitted_1);
-            // 
+            //
             // lblOpcion
-            // 
+            //
             this.lblOpcion.AutoSize = true;
             this.lblOpcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblOpcion.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -348,9 +349,9 @@
             this.lblOpcion.Size = new System.Drawing.Size(174, 19);
             this.lblOpcion.TabIndex = 58;
             this.lblOpcion.Text = "Seleccione una opcion:";
-            // 
+            //
             // lblTxtTotal
-            // 
+            //
             this.lblTxtTotal.AutoSize = true;
             this.lblTxtTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTxtTotal.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
@@ -360,9 +361,9 @@
             this.lblTxtTotal.Size = new System.Drawing.Size(73, 28);
             this.lblTxtTotal.TabIndex = 57;
             this.lblTxtTotal.Text = "Total:";
-            // 
+            //
             // lblTotal
-            // 
+            //
             this.lblTotal.AutoSize = true;
             this.lblTotal.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -373,27 +374,27 @@
             this.lblTotal.Size = new System.Drawing.Size(30, 32);
             this.lblTotal.TabIndex = 61;
             this.lblTotal.Text = "0";
-            // 
+            //
             // panel1
-            // 
+            //
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblTxtTotal);
             this.panel1.Location = new System.Drawing.Point(582, 207);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(161, 121);
             this.panel1.TabIndex = 62;
-            // 
+            //
             // panel2
-            // 
+            //
             this.panel2.Controls.Add(this.lblTotal);
             this.panel2.Controls.Add(this.lblSigno);
             this.panel2.Location = new System.Drawing.Point(23, 53);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(135, 41);
             this.panel2.TabIndex = 63;
-            // 
+            //
             // lblSigno
-            // 
+            //
             this.lblSigno.AutoSize = true;
             this.lblSigno.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblSigno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -404,9 +405,9 @@
             this.lblSigno.Size = new System.Drawing.Size(30, 32);
             this.lblSigno.TabIndex = 62;
             this.lblSigno.Text = "$";
-            // 
+            //
             // panel3
-            // 
+            //
             this.panel3.Controls.Add(this.btnModificar);
             this.panel3.Controls.Add(this.btnLimpiar);
             this.panel3.Controls.Add(this.btnEliminar);
@@ -415,9 +416,9 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(202, 200);
             this.panel3.TabIndex = 3;
-            // 
+            //
             // btnModificar
-            // 
+            //
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatAppearance.BorderSize = 0;
@@ -438,9 +439,9 @@
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.button1_Click);
-            // 
+            //
             // btnLimpiar
-            // 
+            //
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
@@ -461,9 +462,9 @@
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
+            //
             // btnEliminar
-            // 
+            //
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
@@ -484,9 +485,9 @@
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
+            //
             // btnRegistrar
-            // 
+            //
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
@@ -507,9 +508,9 @@
             this.btnRegistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
-            // 
+            //
             // grdDetalleHelado
-            // 
+            //
             this.grdDetalleHelado.AllowUserToAddRows = false;
             this.grdDetalleHelado.AllowUserToDeleteRows = false;
             this.grdDetalleHelado.AllowUserToResizeColumns = false;
@@ -544,9 +545,9 @@
             this.grdDetalleHelado.tabla = null;
             this.grdDetalleHelado.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDetalleHelado_CellEndEdit);
             this.grdDetalleHelado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdDetalleHelado_KeyDown);
-            // 
+            //
             // pictureBox1
-            // 
+            //
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -555,9 +556,9 @@
             this.pictureBox1.Size = new System.Drawing.Size(55, 48);
             this.pictureBox1.TabIndex = 59;
             this.pictureBox1.TabStop = false;
-            // 
+            //
             // btnEspecial
-            // 
+            //
             this.btnEspecial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnEspecial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEspecial.FlatAppearance.BorderSize = 0;
@@ -577,9 +578,9 @@
             this.btnEspecial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEspecial.UseVisualStyleBackColor = false;
             this.btnEspecial.Click += new System.EventHandler(this.btnEspecial_Click);
-            // 
+            //
             // btnHelado
-            // 
+            //
             this.btnHelado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnHelado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHelado.FlatAppearance.BorderSize = 0;
@@ -599,9 +600,9 @@
             this.btnHelado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHelado.UseVisualStyleBackColor = false;
             this.btnHelado.Click += new System.EventHandler(this.btnHelado_Click);
-            // 
-            // FrmAltaVenta
-            // 
+            //
+            // FrmModificarVenta
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
@@ -615,7 +616,7 @@
             this.Controls.Add(this.btnEspecial);
             this.Controls.Add(this.btnHelado);
             this.Controls.Add(this.lblDetalle);
-            this.Controls.Add(this.btnEscritorio);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlHelados);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -624,7 +625,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmAltaVenta";
+            this.Name = "FrmModificarVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Venta";
             this.Load += new System.EventHandler(this.FrmVenta_Load);
@@ -646,7 +647,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnEscritorio;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label lblDetalle;
         private Clases.ComboBox01 cmbHelado;
         private System.Windows.Forms.Label lblHelado;

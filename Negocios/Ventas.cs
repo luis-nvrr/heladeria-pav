@@ -16,6 +16,8 @@
             public void InsertarVenta(string tipoDoc, string nroDoc, Grid01 detalles)
             {
                 baseDatos.IniciarTransaccion();
+
+				TratamientosEspeciales tratamientos = new TratamientosEspeciales();
                 int nroTicket = baseDatos.nextAutoincrement("Ventas");
                 string fecha = baseDatos.Fecha();
 
@@ -30,11 +32,31 @@
 
                 for (int i = 0; i < detalles.Rows.Count; i++)
                 {
-                    string datosDetalle = nroTicket.ToString();
-                    if (detalles.Rows[i].Cells[6].Value.ToString() == "false")
+                    string idHeladoSimple = detalles.Rows[i].Cells[1].Value.ToString();
+                    string cantKilos = detalles.Rows[i].Cells[4].Value.ToString();
+                    string idHeladoEspecial = detalles.Rows[i].Cells[1].Value.ToString();
+                    string cantItems = detalles.Rows[i].Cells[4].Value.ToString();
+                    string esEspecial = detalles.Rows[i].Cells[6].Value.ToString();
+                    string nombreHelado = detalles.Rows[i].Cells[2].Value.ToString();
+
+
+				string datosDetalle = nroTicket.ToString();
+
+
+                    if (esEspecial == "false")
                     {
-                        datosDetalle += "," + detalles.Rows[i].Cells[1].Value.ToString();
-                        datosDetalle += "," + detalles.Rows[i].Cells[4].Value.ToString();
+                        if (tratamientos.ValidarStock("Helados",
+                            cantKilos,idHeladoSimple) == TratamientosEspeciales.Validacion.correcta)
+                        {
+                            datosDetalle += "," + idHeladoSimple;
+                            datosDetalle += "," + cantKilos;
+					    }
+                        else
+                        {
+                            MessageBox.Show("No hay stock suficiente de " + nombreHelado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        
                     }
                     else
                     {
@@ -42,10 +64,19 @@
                         datosDetalle += "," + "NULL";
                     }
 
-                    if (detalles.Rows[i].Cells[6].Value.ToString() == "true")
+                    if (esEspecial == "true")
                     {
-                        datosDetalle += "," + detalles.Rows[i].Cells[1].Value.ToString();
-                        datosDetalle += "," + detalles.Rows[i].Cells[4].Value.ToString();
+                        if (tratamientos.ValidarStock("HeladosEspeciales",
+                            cantItems, idHeladoEspecial) == TratamientosEspeciales.Validacion.correcta)
+                        {
+                            datosDetalle += "," + idHeladoEspecial;
+                            datosDetalle += "," + cantItems;
+					    }
+                        else
+                        {
+                            MessageBox.Show("No hay stock suficiente de " + nombreHelado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+					    }
                     }
                     else
                     {
@@ -61,8 +92,9 @@
 
                 if (baseDatos.CerrarTransaccion() == BaseDatos.EstadoTransaccion.correcta)
                 {
-                    MessageBox.Show("exito");
-                }
+				    MessageBox.Show("Transaccion realizada con exito!", "Informacion", 
+                        buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+			}
 
             }
 

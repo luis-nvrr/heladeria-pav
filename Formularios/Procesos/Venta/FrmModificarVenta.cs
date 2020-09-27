@@ -14,23 +14,42 @@ using Practico.Negocios;
 
 namespace Practico.Formularios.Procesos
 {
-    public partial class FrmAltaVenta : Form
+    public partial class FrmModificarVenta : Form
     {
-        private float total = 0;
         private int nroItem = 0;
-        private float cantidadEdicion = 0;
 
         Helados helados = new Helados();
         HeladosEspeciales heladosEspeciales = new HeladosEspeciales();
         Ventas ventas = new Ventas();
-        
+
 
         public string idUsuario { get; set; }
         Empleados empleados = new Empleados();
 
-        public FrmAltaVenta()
+        public FrmModificarVenta()
         {
             InitializeComponent();
+        }
+
+        private float CalcularTotalVenta()
+        {
+            if (grdDetalleHelado.Rows.Count == 0)
+            {
+                return 0;
+            }
+
+            float precioTotal = 0;
+            float cantidad = 0;
+            float precio = 0;
+
+            for (int i = 0; i < grdDetalleHelado.Rows.Count; i++)
+            {
+                cantidad = float.Parse(grdDetalleHelado.Rows[i].Cells[4].Value.ToString());
+                precio = float.Parse(grdDetalleHelado.Rows[i].Cells[3].Value.ToString());
+                precioTotal += cantidad * precio;
+            }
+
+            return precioTotal;
         }
 
         private void FrmVenta_Load(object sender, EventArgs e)
@@ -91,7 +110,8 @@ namespace Practico.Formularios.Procesos
 
         private void actualizarPrecio()
         {
-            lblTotal.Text = total.ToString();
+            string precioTotal = CalcularTotalVenta().ToString();
+            lblTotal.Text = precioTotal;
         }
 
         private bool verificarExistencia(string nombreHelado)
@@ -134,13 +154,11 @@ namespace Practico.Formularios.Procesos
                     grdDetalleHelado.Rows[ind].Cells[5].Value = "uni.";
                     grdDetalleHelado.Rows[ind].Cells[6].Value = "true";
 
-                    total += float.Parse(txtPrecioEspecial.Text) *
-                             float.Parse(txtEspecial.Text.Replace(',', '.'));
                     actualizarPrecio();
                 }
-                
+
             }
-            
+
         }
 
 
@@ -169,13 +187,11 @@ namespace Practico.Formularios.Procesos
                     grdDetalleHelado.Rows[ind].Cells[5].Value = "kg";
                     grdDetalleHelado.Rows[ind].Cells[6].Value = "false";
 
-                    total += float.Parse(txtPrecioHelado.Text) *
-                             float.Parse(txtHelado.Text.Replace(',', '.'));
                     actualizarPrecio();
                 }
-                
+
             }
-            
+
         }
 
         private void cmbHelado_SelectionChangeCommitted(object sender, EventArgs e)
@@ -196,7 +212,7 @@ namespace Practico.Formularios.Procesos
             txtEspecial.Text = "1";
             txtEspecial.Focus();
             txtEspecial.Select();
-            
+
         }
 
         private void btnRegistrarVenta_Click(object sender, EventArgs e)
@@ -226,14 +242,7 @@ namespace Practico.Formularios.Procesos
                 if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    total -= float.Parse(grdDetalleHelado.CurrentRow.Cells[3].Value.ToString()) * 
-                             float.Parse(grdDetalleHelado.CurrentRow.Cells[4].Value.ToString());
-
                     grdDetalleHelado.Rows.Remove(grdDetalleHelado.CurrentRow);
-                    if (grdDetalleHelado.Rows.Count == 0)
-                    {
-                       total = 0;
-                    }
                     actualizarPrecio();
                 }
             }
@@ -243,7 +252,6 @@ namespace Practico.Formularios.Procesos
         {
             limpiarEspecial();
             limpiarHelados();
-            total = 0;
             actualizarPrecio();
             grdDetalleHelado.Rows.Clear();
             txtPrecioHelado.Text = "";
@@ -275,7 +283,6 @@ namespace Practico.Formularios.Procesos
             grdDetalleHelado.Columns[2].ReadOnly = true;
             grdDetalleHelado.Columns[3].ReadOnly = true;
             grdDetalleHelado.Columns[5].ReadOnly = true;
-            cantidadEdicion = float.Parse(grdDetalleHelado.CurrentRow.Cells[4].Value.ToString());
             grdDetalleHelado.CurrentCell = grdDetalleHelado.CurrentRow.Cells[4];
             grdDetalleHelado.BeginEdit(true);
         }
@@ -283,15 +290,10 @@ namespace Practico.Formularios.Procesos
 
         private void grdDetalleHelado_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            float nuevaCantidad = float.Parse(grdDetalleHelado.CurrentRow.Cells[4].Value.ToString());
-
-            total -= cantidadEdicion * float.Parse(grdDetalleHelado.CurrentRow.Cells[3].Value.ToString());
-            total += nuevaCantidad * float.Parse(grdDetalleHelado.CurrentRow.Cells[3].Value.ToString());
-            
             actualizarPrecio();
         }
 
-        
+
         private string previousInput = "";
 
         private void txtEspecial_TextChanged(object sender, EventArgs e)
@@ -321,6 +323,11 @@ namespace Practico.Formularios.Procesos
             {
                 txtHelado.Text = previousInput;
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

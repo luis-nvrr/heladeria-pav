@@ -474,16 +474,20 @@
     <Compile Include="Formularios\Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Procesos\FrmAltaVenta.cs">
+    <Compile Include="Formularios\Procesos\Venta\FrmAltaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Procesos\FrmAltaVenta.Designer.cs">
+    <Compile Include="Formularios\Procesos\Venta\FrmAltaVenta.Designer.cs">
       <DependentUpon>FrmAltaVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Procesos\FrmVenta.cs">
+    <Compile Include="Formularios\Procesos\Venta\FrmModificarVenta.cs" />
+    <Compile Include="Formularios\Procesos\Venta\FrmModificarVenta.designer.cs">
+      <DependentUpon>FrmModificarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Venta\FrmVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Procesos\FrmVenta.Designer.cs">
+    <Compile Include="Formularios\Procesos\Venta\FrmVenta.Designer.cs">
       <DependentUpon>FrmVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocios\HeladosHeladosEspeciales.cs" />
@@ -713,10 +717,13 @@
     <EmbeddedResource Include="Formularios\Presentacion\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Procesos\FrmAltaVenta.resx">
+    <EmbeddedResource Include="Formularios\Procesos\Venta\FrmAltaVenta.resx">
       <DependentUpon>FrmAltaVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Procesos\FrmVenta.resx">
+    <EmbeddedResource Include="Formularios\Procesos\Venta\FrmModificarVenta.resx">
+      <DependentUpon>FrmModificarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Venta\FrmVenta.resx">
       <DependentUpon>FrmVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
