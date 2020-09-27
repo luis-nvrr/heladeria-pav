@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Clases;
@@ -16,6 +18,7 @@ namespace Practico.Formularios.Procesos
     {
         private float total = 0;
         private int nroItem = 0;
+        private float cantidadEdicion = 0;
 
         Helados helados = new Helados();
         HeladosEspeciales heladosEspeciales = new HeladosEspeciales();
@@ -35,7 +38,7 @@ namespace Practico.Formularios.Procesos
             cmbHelado.Cargar();
             cmbEspecial.Cargar();
             RecuperarEmpleado();
-            grdDetalleHelado.Formatear("Item,40;Id,40;Helado,170;Precio,80;Cantidad,80;Unidad,60;Especial,0");
+            grdDetalleHelado.Formatear("Item,45;Id,45;Helado,170;Precio,80;Cantidad,80;Unidad,65;Especial,0");
             grdDetalleHelado.Columns[6].Visible = false;
             actualizarPrecio();
         }
@@ -63,7 +66,7 @@ namespace Practico.Formularios.Procesos
             pnlHelados.BringToFront();
             pnlEspecial.Visible = false;
             pnlHelados.Visible = true;
-            limpiarEspecial();
+            //limpiarEspecial();
         }
 
         private void limpiarHelados()
@@ -83,12 +86,25 @@ namespace Practico.Formularios.Procesos
             pnlEspecial.BringToFront();
             pnlHelados.Visible = false;
             pnlEspecial.Visible = true;
-            limpiarHelados();
+            //limpiarHelados();
         }
 
         private void actualizarPrecio()
         {
             lblTotal.Text = total.ToString();
+        }
+
+        private bool verificarExistencia(string nombreHelado)
+        {
+            for (int i = 0; i < grdDetalleHelado.Rows.Count; i++)
+            {
+                if (grdDetalleHelado.Rows[i].Cells[2].Value.ToString() == nombreHelado)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         private void btnConfirmarEspecial_Click(object sender, EventArgs e)
@@ -97,27 +113,32 @@ namespace Practico.Formularios.Procesos
 
             if (tratamientos.Validar(pnlEspecial.Controls) == TratamientosEspeciales.Validacion.correcta)
             {
-                int nroItem = grdDetalleHelado.Rows.Count;
-                nroItem += 1;
-
-                grdDetalleHelado.Rows.Add();
-                int ind = grdDetalleHelado.Rows.Count - 1;
-
-                if (ind > 4)
+                if (verificarExistencia(cmbEspecial.Text))
                 {
-                    grdDetalleHelado.Height = grdDetalleHelado.Height + 20;
+                    int nroItem = grdDetalleHelado.Rows.Count;
+                    nroItem += 1;
+
+                    grdDetalleHelado.Rows.Add();
+                    int ind = grdDetalleHelado.Rows.Count - 1;
+
+                    if (ind > 4)
+                    {
+                        grdDetalleHelado.Height = grdDetalleHelado.Height + 20;
+                    }
+
+                    grdDetalleHelado.Rows[ind].Cells[0].Value = nroItem;
+                    grdDetalleHelado.Rows[ind].Cells[1].Value = cmbEspecial.SelectedValue;
+                    grdDetalleHelado.Rows[ind].Cells[2].Value = cmbEspecial.Text;
+                    grdDetalleHelado.Rows[ind].Cells[3].Value = txtPrecioEspecial.Text;
+                    grdDetalleHelado.Rows[ind].Cells[4].Value = txtEspecial.Text.Replace(',', '.');
+                    grdDetalleHelado.Rows[ind].Cells[5].Value = "uni.";
+                    grdDetalleHelado.Rows[ind].Cells[6].Value = "true";
+
+                    total += float.Parse(txtPrecioEspecial.Text) *
+                             float.Parse(txtEspecial.Text.Replace(',', '.'));
+                    actualizarPrecio();
                 }
-
-                grdDetalleHelado.Rows[ind].Cells[0].Value = nroItem;
-                grdDetalleHelado.Rows[ind].Cells[1].Value = cmbEspecial.SelectedValue;
-                grdDetalleHelado.Rows[ind].Cells[2].Value = cmbEspecial.Text;
-                grdDetalleHelado.Rows[ind].Cells[3].Value = txtPrecioEspecial.Text;
-                grdDetalleHelado.Rows[ind].Cells[4].Value = txtEspecial.Text;
-                grdDetalleHelado.Rows[ind].Cells[5].Value = "uni.";
-                grdDetalleHelado.Rows[ind].Cells[6].Value = "true";
-
-                total += float.Parse(txtPrecioEspecial.Text) * float.Parse(txtEspecial.Text);
-                actualizarPrecio();
+                
             }
             
         }
@@ -128,26 +149,31 @@ namespace Practico.Formularios.Procesos
             TratamientosEspeciales tratamientos = new TratamientosEspeciales();
             if (tratamientos.Validar(pnlHelados.Controls) == TratamientosEspeciales.Validacion.correcta)
             {
-                nroItem += 1;
-
-                grdDetalleHelado.Rows.Add();
-                int ind = grdDetalleHelado.Rows.Count - 1;
-
-                if (ind > 4)
+                if (verificarExistencia(cmbHelado.Text))
                 {
-                    grdDetalleHelado.Height = grdDetalleHelado.Height + 20;
+                    nroItem += 1;
+
+                    grdDetalleHelado.Rows.Add();
+                    int ind = grdDetalleHelado.Rows.Count - 1;
+
+                    if (ind > 4)
+                    {
+                        grdDetalleHelado.Height = grdDetalleHelado.Height + 20;
+                    }
+
+                    grdDetalleHelado.Rows[ind].Cells[0].Value = nroItem;
+                    grdDetalleHelado.Rows[ind].Cells[1].Value = cmbHelado.SelectedValue;
+                    grdDetalleHelado.Rows[ind].Cells[2].Value = cmbHelado.Text;
+                    grdDetalleHelado.Rows[ind].Cells[3].Value = txtPrecioHelado.Text;
+                    grdDetalleHelado.Rows[ind].Cells[4].Value = txtHelado.Text.Replace(',', '.');
+                    grdDetalleHelado.Rows[ind].Cells[5].Value = "kg";
+                    grdDetalleHelado.Rows[ind].Cells[6].Value = "false";
+
+                    total += float.Parse(txtPrecioHelado.Text) *
+                             float.Parse(txtHelado.Text.Replace(',', '.'));
+                    actualizarPrecio();
                 }
-
-                grdDetalleHelado.Rows[ind].Cells[0].Value = nroItem;
-                grdDetalleHelado.Rows[ind].Cells[1].Value = cmbHelado.SelectedValue;
-                grdDetalleHelado.Rows[ind].Cells[2].Value = cmbHelado.Text;
-                grdDetalleHelado.Rows[ind].Cells[3].Value = txtPrecioHelado.Text;
-                grdDetalleHelado.Rows[ind].Cells[4].Value = txtHelado.Text;
-                grdDetalleHelado.Rows[ind].Cells[5].Value = "kg";
-                grdDetalleHelado.Rows[ind].Cells[6].Value = "false";
-
-                total += float.Parse(txtPrecioHelado.Text) * float.Parse(txtHelado.Text);
-                actualizarPrecio();
+                
             }
             
         }
@@ -157,6 +183,9 @@ namespace Practico.Formularios.Procesos
             DataTable tabla = new DataTable();
             tabla = helados.RecuperarHelado(Int32.Parse(cmbHelado.SelectedValue.ToString()));
             txtPrecioHelado.Text = tabla.Rows[0]["precio"].ToString();
+            txtHelado.Text = "1";
+            txtHelado.Focus();
+            txtHelado.Select();
         }
 
         private void cmbEspecial_SelectionChangeCommitted_1(object sender, EventArgs e)
@@ -164,30 +193,50 @@ namespace Practico.Formularios.Procesos
             DataTable tabla = new DataTable();
             tabla = heladosEspeciales.RecuperarHeladosEspeciales(cmbEspecial.SelectedValue.ToString());
             txtPrecioEspecial.Text = tabla.Rows[0]["precio"].ToString();
+            txtEspecial.Text = "1";
+            txtEspecial.Focus();
+            txtEspecial.Select();
+            
         }
 
         private void btnRegistrarVenta_Click(object sender, EventArgs e)
         {
-            ventas.InsertarVenta(empleados.tipoDoc, empleados.nroDoc, grdDetalleHelado);
+            if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (grdDetalleHelado.Rows.Count > 0)
+                {
+                    ventas.InsertarVenta(empleados.tipoDoc, empleados.nroDoc, grdDetalleHelado);
+                }
+                else
+                {
+                    MessageBox.Show("No hay datos en la grilla!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (grdDetalleHelado.SelectedRows.Count != 1)
             {
-                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seleccione UNA fila!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    total += float.Parse(grdDetalleHelado.CurrentRow.Cells[3].Value.ToString()) * float.Parse(grdDetalleHelado.CurrentRow.Cells[4].Value.ToString());
-                    actualizarPrecio();
+                    total -= float.Parse(grdDetalleHelado.CurrentRow.Cells[3].Value.ToString()) * 
+                             float.Parse(grdDetalleHelado.CurrentRow.Cells[4].Value.ToString());
+
                     grdDetalleHelado.Rows.Remove(grdDetalleHelado.CurrentRow);
+                    if (grdDetalleHelado.Rows.Count == 0)
+                    {
+                       total = 0;
+                    }
+                    actualizarPrecio();
                 }
             }
-
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -199,6 +248,79 @@ namespace Practico.Formularios.Procesos
             grdDetalleHelado.Rows.Clear();
             txtPrecioHelado.Text = "";
             txtEspecial.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e) //MODIFICAR
+        {
+            if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                if (grdDetalleHelado.Rows.Count > 0)
+                {
+                    grdDetalleHelado_KeyDown(sender, new KeyEventArgs(Keys.Enter));
+                }
+                else
+                {
+                    MessageBox.Show("No hay datos en la grilla!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void grdDetalleHelado_KeyDown(object sender, KeyEventArgs e)
+        {
+            grdDetalleHelado.ReadOnly = false;
+            grdDetalleHelado.Columns[0].ReadOnly = true;
+            grdDetalleHelado.Columns[1].ReadOnly = true;
+            grdDetalleHelado.Columns[2].ReadOnly = true;
+            grdDetalleHelado.Columns[3].ReadOnly = true;
+            grdDetalleHelado.Columns[5].ReadOnly = true;
+            cantidadEdicion = float.Parse(grdDetalleHelado.CurrentRow.Cells[4].Value.ToString());
+            grdDetalleHelado.CurrentCell = grdDetalleHelado.CurrentRow.Cells[4];
+            grdDetalleHelado.BeginEdit(true);
+        }
+
+
+        private void grdDetalleHelado_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            float nuevaCantidad = float.Parse(grdDetalleHelado.CurrentRow.Cells[4].Value.ToString());
+
+            total -= cantidadEdicion * float.Parse(grdDetalleHelado.CurrentRow.Cells[3].Value.ToString());
+            total += nuevaCantidad * float.Parse(grdDetalleHelado.CurrentRow.Cells[3].Value.ToString());
+            
+            actualizarPrecio();
+        }
+
+        
+        private string previousInput = "";
+
+        private void txtEspecial_TextChanged(object sender, EventArgs e)
+        {
+            Regex r = new Regex(@"^-{0,1}\d+\.{0,1}\d*$"); // Expresion regular
+            Match m = r.Match(txtEspecial.Text);
+            if (m.Success)
+            {
+                previousInput = txtEspecial.Text;
+            }
+            else
+            {
+                txtEspecial.Text = previousInput;
+            }
+        }
+
+
+        private void txtHelado_TextChanged(object sender, EventArgs e)
+        {
+            Regex r = new Regex(@"^-{0,1}\d+\.{0,1}\d*$"); // Expresion regular
+            Match m = r.Match(txtHelado.Text);
+            if (m.Success)
+            {
+                previousInput = txtHelado.Text;
+            }
+            else
+            {
+                txtHelado.Text = previousInput;
+            }
         }
     }
 }

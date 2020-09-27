@@ -60,6 +60,7 @@ namespace Practico.Negocios
             }
             catch (SqlException exception)
             {
+                MessageBox.Show(exception.ToString());
                 return Respuesta.validacionIncorrecta;
             }
         }
@@ -78,6 +79,7 @@ namespace Practico.Negocios
             }
             catch (SqlException exception)
             {
+                MessageBox.Show(exception.ToString());
                 return Respuesta.validacionIncorrecta;
             }
 

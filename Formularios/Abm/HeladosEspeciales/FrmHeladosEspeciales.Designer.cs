@@ -320,7 +320,6 @@
 
         private System.Windows.Forms.Label lblHeladosEspeciales;
         private System.Windows.Forms.Label lblNombre;
-        private Clases.TextBox01 txtHeladoEspecial;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.CheckBox chkTodos;
         private System.Windows.Forms.DataGridView grdHeladoEspecial;

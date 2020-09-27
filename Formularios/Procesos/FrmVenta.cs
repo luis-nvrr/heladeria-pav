@@ -120,6 +120,7 @@ namespace Practico.Formularios.Procesos
             if (chkNombre.Checked)
             {
                 CargarComboNombre();
+                chkTodos.Checked = false;
             }
             else
             {
@@ -132,6 +133,7 @@ namespace Practico.Formularios.Procesos
             if (chkFecha.Checked)
             {
                 CargarFecha();
+                chkTodos.Checked = false;
             }
             else
             {

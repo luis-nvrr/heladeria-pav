@@ -39,21 +39,23 @@
             this.lblDesde = new System.Windows.Forms.Label();
             this.pckDesde = new System.Windows.Forms.DateTimePicker();
             this.pnlBuscar = new System.Windows.Forms.Panel();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.chkTodos = new System.Windows.Forms.CheckBox();
+            this.chkFecha = new System.Windows.Forms.CheckBox();
+            this.chkNombre = new System.Windows.Forms.CheckBox();
             this.pckHasta = new System.Windows.Forms.DateTimePicker();
             this.lblHasta = new System.Windows.Forms.Label();
-            this.chkNombre = new System.Windows.Forms.CheckBox();
-            this.chkFecha = new System.Windows.Forms.CheckBox();
-            this.chkTodos = new System.Windows.Forms.CheckBox();
-            this.btnNuevaVenta = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.grdVentas = new Practico.Clases.Grid01();
             this.cmbNombre = new Practico.Clases.ComboBox01();
             this.cmbTipo = new Practico.Clases.ComboBox01();
             this.cmbDocumento = new Practico.Clases.ComboBox01();
+            this.btnNuevaVenta = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.grdVentas = new Practico.Clases.Grid01();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdVentas)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDetalle
@@ -165,100 +167,6 @@
             this.pnlBuscar.Size = new System.Drawing.Size(421, 347);
             this.pnlBuscar.TabIndex = 75;
             // 
-            // pckHasta
-            // 
-            this.pckHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.pckHasta.Location = new System.Drawing.Point(193, 216);
-            this.pckHasta.MaxDate = new System.DateTime(2020, 9, 25, 0, 0, 0, 0);
-            this.pckHasta.Name = "pckHasta";
-            this.pckHasta.Size = new System.Drawing.Size(112, 24);
-            this.pckHasta.TabIndex = 76;
-            this.pckHasta.Value = new System.DateTime(2020, 9, 25, 0, 0, 0, 0);
-            // 
-            // lblHasta
-            // 
-            this.lblHasta.AutoSize = true;
-            this.lblHasta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblHasta.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblHasta.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblHasta.Location = new System.Drawing.Point(84, 221);
-            this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(101, 19);
-            this.lblHasta.TabIndex = 75;
-            this.lblHasta.Text = "Fecha Hasta:";
-            // 
-            // chkNombre
-            // 
-            this.chkNombre.AutoSize = true;
-            this.chkNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkNombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.chkNombre.Location = new System.Drawing.Point(32, 3);
-            this.chkNombre.Name = "chkNombre";
-            this.chkNombre.Size = new System.Drawing.Size(154, 23);
-            this.chkNombre.TabIndex = 77;
-            this.chkNombre.Text = "Buscar Por Nombre";
-            this.chkNombre.UseVisualStyleBackColor = true;
-            this.chkNombre.CheckedChanged += new System.EventHandler(this.chkNombre_CheckedChanged);
-            // 
-            // chkFecha
-            // 
-            this.chkFecha.AutoSize = true;
-            this.chkFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkFecha.ForeColor = System.Drawing.SystemColors.Control;
-            this.chkFecha.Location = new System.Drawing.Point(32, 156);
-            this.chkFecha.Name = "chkFecha";
-            this.chkFecha.Size = new System.Drawing.Size(143, 23);
-            this.chkFecha.TabIndex = 78;
-            this.chkFecha.Text = "Buscar Por Fecha";
-            this.chkFecha.UseVisualStyleBackColor = true;
-            this.chkFecha.CheckedChanged += new System.EventHandler(this.chkFecha_CheckedChanged);
-            // 
-            // chkTodos
-            // 
-            this.chkTodos.AutoSize = true;
-            this.chkTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkTodos.ForeColor = System.Drawing.SystemColors.Control;
-            this.chkTodos.Location = new System.Drawing.Point(32, 268);
-            this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(112, 23);
-            this.chkTodos.TabIndex = 79;
-            this.chkTodos.Text = "Buscar Todos";
-            this.chkTodos.UseVisualStyleBackColor = true;
-            this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
-            // 
-            // btnNuevaVenta
-            // 
-            this.btnNuevaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnNuevaVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuevaVenta.FlatAppearance.BorderSize = 0;
-            this.btnNuevaVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnNuevaVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaVenta.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btnNuevaVenta.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnNuevaVenta.Image = global::Practico.Properties.Resources.add_to_cart1;
-            this.btnNuevaVenta.Location = new System.Drawing.Point(61, 669);
-            this.btnNuevaVenta.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNuevaVenta.Name = "btnNuevaVenta";
-            this.btnNuevaVenta.Size = new System.Drawing.Size(145, 40);
-            this.btnNuevaVenta.TabIndex = 82;
-            this.btnNuevaVenta.Text = "Nueva Venta";
-            this.btnNuevaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevaVenta.UseVisualStyleBackColor = false;
-            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(151, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 48);
-            this.pictureBox1.TabIndex = 80;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -281,40 +189,66 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnConfirmarEspecial_Click);
             // 
-            // grdVentas
+            // chkTodos
             // 
-            this.grdVentas.AllowUserToAddRows = false;
-            this.grdVentas.AllowUserToDeleteRows = false;
-            this.grdVentas.AllowUserToResizeColumns = false;
-            this.grdVentas.AllowUserToResizeRows = false;
-            this.grdVentas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.grdVentas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grdVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdVentas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.grdVentas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.grdVentas.Location = new System.Drawing.Point(29, 451);
-            this.grdVentas.Name = "grdVentas";
-            this.grdVentas.ReadOnly = true;
-            this.grdVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdVentas.Size = new System.Drawing.Size(667, 211);
-            this.grdVentas.TabIndex = 76;
-            this.grdVentas.tabla = null;
+            this.chkTodos.AutoSize = true;
+            this.chkTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkTodos.ForeColor = System.Drawing.SystemColors.Control;
+            this.chkTodos.Location = new System.Drawing.Point(32, 268);
+            this.chkTodos.Name = "chkTodos";
+            this.chkTodos.Size = new System.Drawing.Size(112, 23);
+            this.chkTodos.TabIndex = 79;
+            this.chkTodos.Text = "Buscar Todos";
+            this.chkTodos.UseVisualStyleBackColor = true;
+            this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
+            // 
+            // chkFecha
+            // 
+            this.chkFecha.AutoSize = true;
+            this.chkFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkFecha.ForeColor = System.Drawing.SystemColors.Control;
+            this.chkFecha.Location = new System.Drawing.Point(32, 156);
+            this.chkFecha.Name = "chkFecha";
+            this.chkFecha.Size = new System.Drawing.Size(143, 23);
+            this.chkFecha.TabIndex = 78;
+            this.chkFecha.Text = "Buscar Por Fecha";
+            this.chkFecha.UseVisualStyleBackColor = true;
+            this.chkFecha.CheckedChanged += new System.EventHandler(this.chkFecha_CheckedChanged);
+            // 
+            // chkNombre
+            // 
+            this.chkNombre.AutoSize = true;
+            this.chkNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkNombre.ForeColor = System.Drawing.SystemColors.Control;
+            this.chkNombre.Location = new System.Drawing.Point(32, 3);
+            this.chkNombre.Name = "chkNombre";
+            this.chkNombre.Size = new System.Drawing.Size(171, 23);
+            this.chkNombre.TabIndex = 77;
+            this.chkNombre.Text = "Buscar Por Empleado";
+            this.chkNombre.UseVisualStyleBackColor = true;
+            this.chkNombre.CheckedChanged += new System.EventHandler(this.chkNombre_CheckedChanged);
+            // 
+            // pckHasta
+            // 
+            this.pckHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.pckHasta.Location = new System.Drawing.Point(193, 216);
+            this.pckHasta.MaxDate = new System.DateTime(2020, 9, 25, 0, 0, 0, 0);
+            this.pckHasta.Name = "pckHasta";
+            this.pckHasta.Size = new System.Drawing.Size(112, 24);
+            this.pckHasta.TabIndex = 76;
+            this.pckHasta.Value = new System.DateTime(2020, 9, 25, 0, 0, 0, 0);
+            // 
+            // lblHasta
+            // 
+            this.lblHasta.AutoSize = true;
+            this.lblHasta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHasta.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblHasta.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblHasta.Location = new System.Drawing.Point(84, 221);
+            this.lblHasta.Name = "lblHasta";
+            this.lblHasta.Size = new System.Drawing.Size(101, 19);
+            this.lblHasta.TabIndex = 75;
+            this.lblHasta.Text = "Fecha Hasta:";
             // 
             // cmbNombre
             // 
@@ -371,6 +305,82 @@
             this.cmbDocumento.Size = new System.Drawing.Size(164, 25);
             this.cmbDocumento.TabIndex = 68;
             // 
+            // btnNuevaVenta
+            // 
+            this.btnNuevaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnNuevaVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevaVenta.FlatAppearance.BorderSize = 0;
+            this.btnNuevaVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnNuevaVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaVenta.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnNuevaVenta.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnNuevaVenta.Image = global::Practico.Properties.Resources.add_to_cart1;
+            this.btnNuevaVenta.Location = new System.Drawing.Point(4, 10);
+            this.btnNuevaVenta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevaVenta.Name = "btnNuevaVenta";
+            this.btnNuevaVenta.Size = new System.Drawing.Size(145, 40);
+            this.btnNuevaVenta.TabIndex = 82;
+            this.btnNuevaVenta.Text = "Nueva Venta";
+            this.btnNuevaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(151, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 48);
+            this.pictureBox1.TabIndex = 80;
+            this.pictureBox1.TabStop = false;
+            // 
+            // grdVentas
+            // 
+            this.grdVentas.AllowUserToAddRows = false;
+            this.grdVentas.AllowUserToDeleteRows = false;
+            this.grdVentas.AllowUserToResizeColumns = false;
+            this.grdVentas.AllowUserToResizeRows = false;
+            this.grdVentas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.grdVentas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grdVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdVentas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grdVentas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.grdVentas.Location = new System.Drawing.Point(28, 451);
+            this.grdVentas.Name = "grdVentas";
+            this.grdVentas.ReadOnly = true;
+            this.grdVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdVentas.Size = new System.Drawing.Size(657, 211);
+            this.grdVentas.TabIndex = 76;
+            this.grdVentas.tabla = null;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnNuevaVenta);
+            this.panel1.Location = new System.Drawing.Point(28, 668);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(405, 54);
+            this.panel1.TabIndex = 83;
+            // 
             // FrmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -378,7 +388,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(808, 749);
-            this.Controls.Add(this.btnNuevaVenta);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grdVentas);
             this.Controls.Add(this.btnEscritorio);
@@ -393,6 +403,7 @@
             this.pnlBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdVentas)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,5 +431,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnNuevaVenta;
+        private System.Windows.Forms.Panel panel1;
     }
 }

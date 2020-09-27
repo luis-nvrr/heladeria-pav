@@ -766,6 +766,8 @@
     <None Include="Resources\trash.png" />
     <None Include="Resources\magnifying-glass.png" />
     <None Include="Resources\add-to-cart1.png" />
+    <None Include="Resources\iconfinder_website_-_pencil_3440848.png" />
+    <None Include="Resources\iconfinder_website_-_pencil_34408481.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
   <ItemGroup />

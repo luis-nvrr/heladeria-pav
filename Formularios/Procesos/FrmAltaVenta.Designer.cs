@@ -55,21 +55,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblSigno = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.grdDetalleHelado = new Practico.Clases.Grid01();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEspecial = new System.Windows.Forms.Button();
             this.btnHelado = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.grdDetalleHelado = new Practico.Clases.Grid01();
             this.pnlHelados.SuspendLayout();
             this.pnlEspecial.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDetalleHelado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEscritorio
@@ -199,6 +200,7 @@
             this.txtHelado.PpValidable = true;
             this.txtHelado.Size = new System.Drawing.Size(68, 24);
             this.txtHelado.TabIndex = 51;
+            this.txtHelado.TextChanged += new System.EventHandler(this.txtHelado_TextChanged);
             // 
             // cmbHelado
             // 
@@ -227,7 +229,7 @@
             this.pnlEspecial.Controls.Add(this.txtEspecial);
             this.pnlEspecial.Controls.Add(this.lblEspecial);
             this.pnlEspecial.Controls.Add(this.cmbEspecial);
-            this.pnlEspecial.Location = new System.Drawing.Point(63, 214);
+            this.pnlEspecial.Location = new System.Drawing.Point(64, 214);
             this.pnlEspecial.Name = "pnlEspecial";
             this.pnlEspecial.Size = new System.Drawing.Size(492, 118);
             this.pnlEspecial.TabIndex = 2;
@@ -303,6 +305,7 @@
             this.txtEspecial.PpValidable = true;
             this.txtEspecial.Size = new System.Drawing.Size(68, 24);
             this.txtEspecial.TabIndex = 2;
+            this.txtEspecial.TextChanged += new System.EventHandler(this.txtEspecial_TextChanged);
             // 
             // lblEspecial
             // 
@@ -386,7 +389,7 @@
             this.panel2.Controls.Add(this.lblSigno);
             this.panel2.Location = new System.Drawing.Point(23, 53);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(115, 41);
+            this.panel2.Size = new System.Drawing.Size(135, 41);
             this.panel2.TabIndex = 63;
             // 
             // lblSigno
@@ -402,6 +405,40 @@
             this.lblSigno.TabIndex = 62;
             this.lblSigno.Text = "$";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnModificar);
+            this.panel3.Controls.Add(this.btnLimpiar);
+            this.panel3.Controls.Add(this.btnEliminar);
+            this.panel3.Controls.Add(this.btnRegistrar);
+            this.panel3.Location = new System.Drawing.Point(597, 343);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(202, 200);
+            this.panel3.TabIndex = 3;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(4, 108);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(194, 40);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Habilitar Modificacion";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -413,10 +450,11 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLimpiar.Image = global::Practico.Properties.Resources.trash;
-            this.btnLimpiar.Location = new System.Drawing.Point(4, 108);
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiar.Location = new System.Drawing.Point(4, 156);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(161, 40);
+            this.btnLimpiar.Size = new System.Drawing.Size(194, 40);
             this.btnLimpiar.TabIndex = 2;
             this.btnLimpiar.Text = "Limpiar Campos";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -435,27 +473,17 @@
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.Image = global::Practico.Properties.Resources.remove;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(4, 60);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(161, 40);
+            this.btnEliminar.Size = new System.Drawing.Size(194, 40);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar Item";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(268, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 48);
-            this.pictureBox1.TabIndex = 59;
-            this.pictureBox1.TabStop = false;
             // 
             // btnRegistrar
             // 
@@ -468,16 +496,65 @@
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnRegistrar.Image = global::Practico.Properties.Resources.floppy_disk;
+            this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrar.Location = new System.Drawing.Point(4, 12);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(161, 40);
+            this.btnRegistrar.Size = new System.Drawing.Size(194, 40);
             this.btnRegistrar.TabIndex = 0;
             this.btnRegistrar.Text = "Registrar Venta";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
+            // 
+            // grdDetalleHelado
+            // 
+            this.grdDetalleHelado.AllowUserToAddRows = false;
+            this.grdDetalleHelado.AllowUserToDeleteRows = false;
+            this.grdDetalleHelado.AllowUserToResizeColumns = false;
+            this.grdDetalleHelado.AllowUserToResizeRows = false;
+            this.grdDetalleHelado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.grdDetalleHelado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grdDetalleHelado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDetalleHelado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdDetalleHelado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDetalleHelado.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grdDetalleHelado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.grdDetalleHelado.Location = new System.Drawing.Point(25, 357);
+            this.grdDetalleHelado.Name = "grdDetalleHelado";
+            this.grdDetalleHelado.ReadOnly = true;
+            this.grdDetalleHelado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdDetalleHelado.Size = new System.Drawing.Size(570, 160);
+            this.grdDetalleHelado.TabIndex = 5;
+            this.grdDetalleHelado.tabla = null;
+            this.grdDetalleHelado.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDetalleHelado_CellEndEdit);
+            this.grdDetalleHelado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdDetalleHelado_KeyDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(268, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 48);
+            this.pictureBox1.TabIndex = 59;
+            this.pictureBox1.TabStop = false;
             // 
             // btnEspecial
             // 
@@ -523,58 +600,13 @@
             this.btnHelado.UseVisualStyleBackColor = false;
             this.btnHelado.Click += new System.EventHandler(this.btnHelado_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnLimpiar);
-            this.panel3.Controls.Add(this.btnEliminar);
-            this.panel3.Controls.Add(this.btnRegistrar);
-            this.panel3.Location = new System.Drawing.Point(582, 344);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(178, 159);
-            this.panel3.TabIndex = 3;
-            // 
-            // grdDetalleHelado
-            // 
-            this.grdDetalleHelado.AllowUserToAddRows = false;
-            this.grdDetalleHelado.AllowUserToDeleteRows = false;
-            this.grdDetalleHelado.AllowUserToResizeColumns = false;
-            this.grdDetalleHelado.AllowUserToResizeRows = false;
-            this.grdDetalleHelado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.grdDetalleHelado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grdDetalleHelado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDetalleHelado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdDetalleHelado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdDetalleHelado.DefaultCellStyle = dataGridViewCellStyle2;
-            this.grdDetalleHelado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.grdDetalleHelado.Location = new System.Drawing.Point(25, 357);
-            this.grdDetalleHelado.Name = "grdDetalleHelado";
-            this.grdDetalleHelado.ReadOnly = true;
-            this.grdDetalleHelado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDetalleHelado.Size = new System.Drawing.Size(550, 160);
-            this.grdDetalleHelado.TabIndex = 5;
-            this.grdDetalleHelado.tabla = null;
-            // 
             // FrmAltaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(796, 665);
+            this.ClientSize = new System.Drawing.Size(826, 663);
             this.Controls.Add(this.pnlEspecial);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -604,9 +636,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdDetalleHelado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,5 +678,6 @@
         private System.Windows.Forms.Label lblSigno;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

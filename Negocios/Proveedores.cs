@@ -99,6 +99,7 @@ namespace Practico.Negocios
             }
             catch (SqlException exception)
             {
+                MessageBox.Show(exception.ToString());
                 return Respuesta.validacionIncorrecta;
             }
 
