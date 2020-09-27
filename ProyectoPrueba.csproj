@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\BaseDatos.cs" />
     <Compile Include="Clases\ComboBox01.cs" />
     <Compile Include="Clases\EstructuraComboBox.cs" />
     <Compile Include="Clases\Grid01.cs" />
