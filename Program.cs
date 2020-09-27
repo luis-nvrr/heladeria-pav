@@ -9,6 +9,7 @@ using Practico.Formularios.Abm.Empleados;
 using Practico.Formularios.Abm.Helados;
 using Practico.Formularios.Abm.Frutas;
 using Practico.Formularios.Abm.HeladosHeladosEspeciales;
+using Practico.Formularios.Procesos;
 
 namespace Practico
 {
@@ -23,7 +24,7 @@ namespace Practico
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmEscritorio());
-            //Application.Run(new FrmHeladosHeladosEspeciales());
+            //Application.Run(new FrmAltaVenta());
         }
     }
 }

@@ -57,6 +57,12 @@
     <Compile Include="Clases\LabelText01.Designer.cs">
       <DependentUpon>LabelText01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\LabelText02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Clases\LabelText02.designer.cs">
+      <DependentUpon>LabelText02.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\TextBox01.cs" />
     <Compile Include="Clases\TextBox02.cs" />
     <Compile Include="Clases\TratamientosEspeciales.cs" />
@@ -468,6 +474,25 @@
     <Compile Include="Formularios\Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Procesos\Venta\FrmAltaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Venta\FrmAltaVenta.Designer.cs">
+      <DependentUpon>FrmAltaVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Venta\FrmModificarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Venta\FrmModificarVenta.designer.cs">
+      <DependentUpon>FrmModificarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Venta\FrmVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Venta\FrmVenta.Designer.cs">
+      <DependentUpon>FrmVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\DetalleVentas.cs" />
     <Compile Include="Negocios\HeladosHeladosEspeciales.cs" />
     <Compile Include="Negocios\FrutasHeladosEspeciales.cs" />
     <Compile Include="Negocios\HeladosEspeciales.cs" />
@@ -482,10 +507,14 @@
     <Compile Include="Negocios\TelefonosEmpleados.cs" />
     <Compile Include="Negocios\TipoDocumento.cs" />
     <Compile Include="Negocios\Usuarios.cs" />
+    <Compile Include="Negocios\Ventas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clases\LabelText01.resx">
       <DependentUpon>LabelText01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clases\LabelText02.resx">
+      <DependentUpon>LabelText02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\Barrios\FrmAltaBarrios.resx">
       <DependentUpon>FrmAltaBarrios.cs</DependentUpon>
@@ -691,6 +720,15 @@
     <EmbeddedResource Include="Formularios\Presentacion\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Venta\FrmAltaVenta.resx">
+      <DependentUpon>FrmAltaVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Venta\FrmModificarVenta.resx">
+      <DependentUpon>FrmModificarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Venta\FrmVenta.resx">
+      <DependentUpon>FrmVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -727,6 +765,19 @@
     <None Include="Resources\team.png" />
     <None Include="Resources\iceCream.png" />
     <None Include="Resources\settings.png" />
+    <None Include="Resources\floppy-disk.png" />
+    <None Include="Resources\shopping-basket.png" />
+    <None Include="Resources\add-to-cart.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\carts.png" />
+    <None Include="Resources\shopping-cart.png" />
+    <None Include="Resources\shopping-cart1.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\magnifying-glass.png" />
+    <None Include="Resources\add-to-cart1.png" />
+    <None Include="Resources\iconfinder_website_-_pencil_3440848.png" />
+    <None Include="Resources\iconfinder_website_-_pencil_34408481.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
   <ItemGroup>

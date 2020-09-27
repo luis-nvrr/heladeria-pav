@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,6 +63,35 @@ namespace Practico.Clases
             MessageBox.Show("Ingrese un parametro de busqueda!", caption: "Atención",
                 icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
             return Validacion.incorrecta;
+        }
+
+        public Validacion ValidarStock(string nombreTabla, string cantidad, string idHelado)
+        {
+            BaseDatos baseDatos = new BaseDatos();
+
+            string tipoHelado = "";
+
+            if (nombreTabla == "Helados")
+            {
+                tipoHelado = "idHelado";
+            }
+            else
+            {
+                tipoHelado = "idHeladoEspecial";
+            }
+
+            string sql = "SELECT cantidadStock FROM " + nombreTabla + " WHERE " + tipoHelado + " = " + idHelado;
+            DataTable tabla = baseDatos.Consulta(sql);
+
+            if (Int32.Parse(tabla.Rows[0]["cantidadStock"].ToString()) - Int32.Parse(cantidad) >= 0)
+            {
+                return Validacion.correcta;
+            }
+            else
+            {
+                return Validacion.incorrecta;
+            }
+
         }
 
     }

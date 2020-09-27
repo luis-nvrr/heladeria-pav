@@ -158,5 +158,15 @@ namespace Practico.Negocios
             return tabla;
         }
 
+        public DataTable RecuperarEmpleadoPorVenta(string nroTicket)
+        {
+            string sql = "SELECT E.* FROM Empleados E INNER JOIN Ventas V ON (E.tipoDoc = V.tipoDocEmpleado) AND (E.nroDoc = V.nroDocEmpleado)" +
+                         " WHERE nroTicket LIKE '" + nroTicket.Trim() + "'";
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
+
     }
 }

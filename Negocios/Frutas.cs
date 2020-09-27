@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Practico.Formularios.Abm.Usuarios;
 using System.Data.SqlClient;
 using System.Net.Http.Headers;
+using System.Windows.Forms;
 
 namespace Practico.Negocios
 {
@@ -86,6 +87,7 @@ namespace Practico.Negocios
 			}
 			catch (SqlException exception)
 			{
+                MessageBox.Show(exception.ToString());
 				return Respuesta.validacionIncorrecta;
 			}
 		}
@@ -101,6 +103,7 @@ namespace Practico.Negocios
 			}
 			catch (SqlException exception)
 			{
+                MessageBox.Show(exception.ToString());
 				return Respuesta.validacionIncorrecta;
 			}
 		}

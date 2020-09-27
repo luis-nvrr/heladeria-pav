@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;  //Conector estandar cliente de SQL
 using System.Data;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace Practico.Clases
@@ -108,7 +109,6 @@ namespace Practico.Clases
                                                              + sql + "\n"
                                                              + "El mensaje es:" + "\n"
                                                              + e.Message);
-                throw e;
             }
 
             Desconectar();
@@ -131,7 +131,6 @@ namespace Practico.Clases
                                                              + sql + "\n"
                                                              + "El mensaje es:" + "\n"
                                                              + e.Message);
-                throw e;
             }
 
             if (sql.ToUpper().IndexOf("INSERT") >= 0)
@@ -150,7 +149,6 @@ namespace Practico.Clases
                                                                  + sql + "\n"
                                                                  + "El mensaje es:" + "\n"
                                                                  + e.Message);
-                    throw e;
                 }
                 Desconectar();
                 return tabla.Rows[0][0].ToString();
@@ -288,6 +286,15 @@ namespace Practico.Clases
 
             }
             return "";
+        }
+
+        public int nextAutoincrement(string tablaBuscada)
+        {
+            string sql = "SELECT IDENT_CURRENT('"+tablaBuscada+"')+1 AS proximoNumero";
+            DataTable tabla = new DataTable();
+            tabla = this.Consulta(sql);
+            string numero = tabla.Rows[0]["proximoNumero"].ToString();
+            return Int32.Parse(numero);
         }
     }
 }
