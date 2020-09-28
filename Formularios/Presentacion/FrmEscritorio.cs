@@ -9,8 +9,9 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using Practico.Formularios.Procesos;
+using Practico.Formularios.Procesos;
 using Practico.Negocios;
+using Practico.Formularios.Procesos.Compra;
 
 namespace Practico
 {
@@ -142,6 +143,12 @@ namespace Practico
             //FrmVenta venta = new FrmVenta();
             //venta.idUsuario = this.idUsuario.ToString();
             //AbrirFormulario(venta);
+        }
+
+        private void btnCompra_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmCompras());
+            OcultarSubMenu();
         }
     }
 }
