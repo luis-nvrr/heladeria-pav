@@ -236,7 +236,7 @@
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnBuscar.Image = global::Practico.Properties.Resources.magnifying_glass;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(161, 487);
+            this.btnBuscar.Location = new System.Drawing.Point(117, 376);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(103, 40);
@@ -323,6 +323,7 @@
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.Controls.Add(this.chkBuscarTodas);
             this.panel5.Controls.Add(this.cmbNroDocProveedor);
+            this.panel5.Controls.Add(this.btnBuscar);
             this.panel5.Controls.Add(this.lblTipoDocumento);
             this.panel5.Controls.Add(this.lblNroDocumento);
             this.panel5.Controls.Add(this.cmbRazonSocial);
@@ -339,7 +340,7 @@
             this.panel5.Location = new System.Drawing.Point(56, 98);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(332, 359);
+            this.panel5.Size = new System.Drawing.Size(332, 430);
             this.panel5.TabIndex = 88;
             // 
             // panel1
@@ -392,6 +393,7 @@
             this.btnNuevaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // FrmCompras
             // 
@@ -401,7 +403,6 @@
             this.ClientSize = new System.Drawing.Size(1024, 554);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEscritorio);
             this.Controls.Add(this.grdCompras);
             this.Controls.Add(this.lblNuevo);

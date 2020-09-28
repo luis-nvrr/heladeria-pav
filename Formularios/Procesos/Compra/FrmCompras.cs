@@ -245,6 +245,18 @@ namespace Practico.Formularios.Procesos.Compra
             CargarGrilla(tabla);
         }
 
-        
+        private void btnNuevaVenta_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FrmAltaCompras altaCompra = new FrmAltaCompras();
+                altaCompra.ShowDialog();
+
+                DataTable tabla = compras.RecuperarTodasLasCompras(); // ACTUALIZA GRILLA
+                CargarGrilla(tabla);
+                altaCompra.Close();
+            }
+        }
     }
 }
