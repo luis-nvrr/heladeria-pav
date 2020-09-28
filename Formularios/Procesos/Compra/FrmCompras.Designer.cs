@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCompras));
             this.lblNuevo = new System.Windows.Forms.Label();
             this.chkBuscarPorNroComprobante = new System.Windows.Forms.CheckBox();
@@ -43,7 +45,6 @@
             this.chkBuscarTodas = new System.Windows.Forms.CheckBox();
             this.btnEscritorio = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.grdCompras = new Practico.Clases.Grid01();
             this.cmbRazonSocial = new Practico.Clases.ComboBox01();
             this.cmbNroDocProveedor = new Practico.Clases.ComboBox01();
             this.cmbTipoDocProveedor = new Practico.Clases.ComboBox01();
@@ -52,9 +53,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevaVenta = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCompras)).BeginInit();
+            this.grdCompras = new Practico.Clases.Grid01();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCompras)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNuevo
@@ -245,15 +247,6 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // grdCompras
-            // 
-            this.grdCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdCompras.Location = new System.Drawing.Point(428, 120);
-            this.grdCompras.Name = "grdCompras";
-            this.grdCompras.Size = new System.Drawing.Size(509, 261);
-            this.grdCompras.TabIndex = 91;
-            this.grdCompras.tabla = null;
-            // 
             // cmbRazonSocial
             // 
             this.cmbRazonSocial.FormattingEnabled = true;
@@ -395,16 +388,51 @@
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
             this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
+            // grdCompras
+            // 
+            this.grdCompras.AllowUserToAddRows = false;
+            this.grdCompras.AllowUserToDeleteRows = false;
+            this.grdCompras.AllowUserToResizeColumns = false;
+            this.grdCompras.AllowUserToResizeRows = false;
+            this.grdCompras.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.grdCompras.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grdCompras.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdCompras.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grdCompras.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.grdCompras.Location = new System.Drawing.Point(428, 102);
+            this.grdCompras.Name = "grdCompras";
+            this.grdCompras.ReadOnly = true;
+            this.grdCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdCompras.Size = new System.Drawing.Size(509, 275);
+            this.grdCompras.TabIndex = 95;
+            this.grdCompras.tabla = null;
+            // 
             // FrmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(1024, 554);
+            this.Controls.Add(this.grdCompras);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnEscritorio);
-            this.Controls.Add(this.grdCompras);
             this.Controls.Add(this.lblNuevo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -412,10 +440,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gestión de Compras";
             this.Load += new System.EventHandler(this.FrmCompras_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grdCompras)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdCompras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,7 +466,6 @@
         private System.Windows.Forms.Label lblTipoDocumento;
         private System.Windows.Forms.Label lblNroDocumento;
         private System.Windows.Forms.CheckBox chkBuscarTodas;
-        private Clases.Grid01 grdCompras;
         private Clases.LabelText01 lbltxtNroComprobante;
         private System.Windows.Forms.Button btnEscritorio;
         private System.Windows.Forms.Button btnBuscar;
@@ -446,5 +473,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevaVenta;
+        private Clases.Grid01 grdCompras;
     }
 }

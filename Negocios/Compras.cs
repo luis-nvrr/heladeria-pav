@@ -5,16 +5,71 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Practico.Clases;
+using System.Windows.Forms;
 
 namespace Practico.Negocios
 {
     class Compras
     {
 		BaseDatos baseDatos = new BaseDatos();
-		
-		public DataTable RecuperarCompra(string nroComprobante)
+
+        public void InsertarCompra(string fecha, string tipoDocProveedor, string nroDocProveedor, Grid01 detalles)
+        {
+            baseDatos.IniciarTransaccion();
+
+            TratamientosEspeciales tratamientos = new TratamientosEspeciales();
+            int nroComprobante = baseDatos.nextAutoincrement("Compras");
+
+            string actualizarStock;
+
+            string insertCompra = "INSERT INTO Compras (fecha, tipoDocProveedor, nroDocProveedor) VALUES";
+            insertCompra += "(" + baseDatos.FormatearDato(fecha, "Date") + "," + tipoDocProveedor + ",'" + nroDocProveedor + "')";
+
+            baseDatos.Insertar(insertCompra);
+
+
+            string insertDetalle =
+                @"INSERT INTO DetallesCompras (nroComprobante, tipoDocProveedor, nroDocProveedor, idHelado, cantKilos) VALUES (";
+
+            for (int i = 0; i < detalles.Rows.Count; i++)
+            {
+                string idHelado = detalles.Rows[i].Cells[1].Value.ToString();
+                string cantKilos = detalles.Rows[i].Cells[4].Value.ToString();
+                
+                
+                string datosDetalle = nroComprobante.ToString();
+                datosDetalle += "," + tipoDocProveedor;
+                datosDetalle += "," + nroDocProveedor;
+                datosDetalle += "," + idHelado;
+                datosDetalle += "," + cantKilos;
+
+                actualizarStock = "UPDATE Helados " +
+                                  " SET cantidadStock += " + cantKilos +
+                                  " WHERE idHelado =" + idHelado;
+                baseDatos.Actualizar(actualizarStock);
+                   
+                datosDetalle += ")";
+
+                string insertFinal = insertDetalle + datosDetalle;
+                baseDatos.Insertar(insertFinal);
+            }
+
+            if (baseDatos.CerrarTransaccion() == BaseDatos.EstadoTransaccion.correcta)
+            {
+                MessageBox.Show("Transaccion realizada con exito!", "Informacion",
+                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error con la transaccion!", "Error",
+                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
+            }
+
+        }
+
+        public DataTable RecuperarCompra(string nroComprobante)
 		{
-			DataTable tabla = new DataTable();
+            DataTable tabla = new DataTable();
 			string sql = @"	SELECT nroComprobante, 
 			                    CONVERT(varchar, fecha, 101) as fecha,
 								tipoDocProveedor,

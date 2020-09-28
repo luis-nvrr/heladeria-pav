@@ -29,6 +29,32 @@ namespace Practico.Clases
                         }
                     }
                 }
+                if (item.GetType().Name == "ComboBox01")
+                {
+                    if (((ComboBox01)item).PpValidable == true)
+                    {
+                        if (((ComboBox01)item).Text == "")
+                        {
+                            MessageBox.Show(((ComboBox01)item).PpMensajeError, caption: "Atención",
+                                icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
+                            ((ComboBox01)item).Focus();
+                            return Validacion.incorrecta;
+                        }
+                    }
+                }
+                if (item.GetType().Name == "LabelText01")
+                {
+                    if (((LabelText01)item).PpValidable == true)
+                    {
+                        if (((LabelText01)item).PpText == "")
+                        {
+                            MessageBox.Show(((LabelText01)item).PpMensajeError, caption: "Atención",
+                                icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
+                            ((LabelText01)item).Focus();
+                            return Validacion.incorrecta;
+                        }
+                    }
+                }
             }
 
             return Validacion.correcta;
@@ -54,6 +80,16 @@ namespace Practico.Clases
                     if (((ComboBox01)item).PpValidable == true)
                     {
                         if (((ComboBox01)item).Text != "")
+                        {
+                            return Validacion.correcta;
+                        }
+                    }
+                }
+                if (item.GetType().Name == "LabelText01")
+                {
+                    if (((LabelText01)item).PpValidable == true)
+                    {
+                        if (((LabelText01)item).PpText != "")
                         {
                             return Validacion.correcta;
                         }

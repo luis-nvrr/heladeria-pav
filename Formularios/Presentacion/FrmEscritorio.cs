@@ -140,9 +140,9 @@ namespace Practico
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            //FrmVenta venta = new FrmVenta();
-            //venta.idUsuario = this.idUsuario.ToString();
-            //AbrirFormulario(venta);
+            FrmVenta venta = new FrmVenta();
+            venta.idUsuario = this.idUsuario.ToString();
+            AbrirFormulario(venta);
         }
 
         private void btnCompra_Click(object sender, EventArgs e)
