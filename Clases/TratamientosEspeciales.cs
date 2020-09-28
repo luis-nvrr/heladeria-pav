@@ -85,16 +85,6 @@ namespace Practico.Clases
                         }
                     }
                 }
-                if (item.GetType().Name == "LabelText01")
-                {
-                    if (((LabelText01)item).PpValidable == true)
-                    {
-                        if (((LabelText01)item).PpText != "")
-                        {
-                            return Validacion.correcta;
-                        }
-                    }
-                }
             }
             MessageBox.Show("Ingrese un parametro de busqueda!", caption: "Atención",
                 icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
