@@ -24,7 +24,7 @@ namespace Practico
         public string Password { get; set; }
         public string IdUsuario { get; set; }
 
-        
+
         public FrmEscritorio()
         {
             InitializeComponent();
@@ -40,17 +40,17 @@ namespace Practico
 
             if(login.Usuario == "" || login.Password == "")   // NO se logueo
             {
-                MessageBox.Show("Acceso Bloqueado", "Error", 
+                MessageBox.Show("Acceso Bloqueado", "Error",
                     buttons:MessageBoxButtons.OK, icon:MessageBoxIcon.Stop);
 
-                this.Close();   // cierra la aplicacion 
+                this.Close();   // cierra la aplicacion
             }
             else  // SI se logueo
             {
-                MessageBox.Show("Bienvenid@: " + login.Usuario, "Bienvenid@", 
+                MessageBox.Show("Bienvenid@: " + login.Usuario, "Bienvenid@",
                     buttons:MessageBoxButtons.OK, icon:MessageBoxIcon.Information);
 
-                this.usuario = login.Usuario;  // guarda datos 
+                this.usuario = login.Usuario;  // guarda datos
                 this.password = login.Password;
 
                 Usuarios user = new Usuarios();
@@ -67,7 +67,7 @@ namespace Practico
         {
             if (formularioActivo != null)     // cierra algun formulario abierto
                 formularioActivo.Close();
-            
+
             pnlEscritorio.Controls.Clear();
             formularioActivo = formularioHijo;
             formularioActivo.TopLevel = false;
@@ -125,7 +125,7 @@ namespace Practico
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
-        { 
+        {
             DialogResult opcion = MessageBox.Show(text: "¿Esta seguro que desea salir?", caption: "Atencion!",
                 buttons: MessageBoxButtons.YesNo, icon: MessageBoxIcon.Question);
 

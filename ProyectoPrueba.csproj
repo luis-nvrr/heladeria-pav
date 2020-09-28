@@ -492,6 +492,12 @@
     <Compile Include="Formularios\Procesos\Venta\FrmAltaVenta.Designer.cs">
       <DependentUpon>FrmAltaVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Procesos\Venta\FrmConsultarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Venta\FrmConsultarVenta.designer.cs">
+      <DependentUpon>FrmConsultarVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Procesos\Venta\FrmModificarVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -741,6 +747,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Procesos\Venta\FrmAltaVenta.resx">
       <DependentUpon>FrmAltaVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Venta\FrmConsultarVenta.resx">
+      <DependentUpon>FrmConsultarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Procesos\Venta\FrmModificarVenta.resx">
       <DependentUpon>FrmModificarVenta.cs</DependentUpon>

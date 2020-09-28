@@ -14,7 +14,7 @@ using Practico.Negocios;
 
 namespace Practico.Formularios.Procesos
 {
-    public partial class FrmModificarVenta : Form
+    public partial class FrmConsultarVenta : Form
     {
         private int nroItem = 0;
 
@@ -24,11 +24,11 @@ namespace Practico.Formularios.Procesos
         Empleados empleados = new Empleados();
         DetalleVentas detalleVentas = new DetalleVentas();
 
-  
+
         public string nroTicket { get; set; }
 
 
-        public FrmModificarVenta()
+        public FrmConsultarVenta()
         {
             InitializeComponent();
         }
@@ -57,7 +57,7 @@ namespace Practico.Formularios.Procesos
                     precioTotal += cantidad * precio;
                 }
 
-                
+
             }
 
             return precioTotal;
@@ -65,8 +65,8 @@ namespace Practico.Formularios.Procesos
 
         private void FrmVenta_Load(object sender, EventArgs e)
         {
-            cmbHelado.Cargar();
-            cmbEspecial.Cargar();
+            //cmbHelado.Cargar();
+            //cmbEspecial.Cargar();
             RecuperarEmpleado();
             grdDetalleHelado.Formatear("Item,45;Id,45;Helado,170;Precio,80;Cantidad,80;Unidad,65;Especial,0;Estado,0");
             grdDetalleHelado.Columns[6].Visible = false;
@@ -273,7 +273,7 @@ namespace Practico.Formularios.Procesos
             LimpiarCampos();
         }
 
-        private void button1_Click(object sender, EventArgs e) //MODIFICAR
+        private void button1_Click(object sender, EventArgs e) //Consultar
         {
             if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes)
@@ -302,7 +302,7 @@ namespace Practico.Formularios.Procesos
         }
 
 
-        private void grdDetalleHelado_CellEndEdit(object sender, DataGridViewCellEventArgs e) //MODIFICAR
+        private void grdDetalleHelado_CellEndEdit(object sender, DataGridViewCellEventArgs e) //Consultar
         {
             actualizarPrecio();
             int indiceFilaSeleccionada = grdDetalleHelado.SelectedRows[0].Index;
@@ -349,7 +349,7 @@ namespace Practico.Formularios.Procesos
         private void CargarGrilla()
         {
             grdDetalleHelado.Rows.Clear();
-            
+
             string nroItem;
             string id;
             string nombre;
@@ -393,6 +393,11 @@ namespace Practico.Formularios.Procesos
             }
 
 
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
