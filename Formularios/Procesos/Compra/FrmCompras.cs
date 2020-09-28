@@ -179,6 +179,14 @@ namespace Practico.Formularios.Procesos.Compra
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            if (pckDesde.Text.CompareTo(pckHasta.Text) > 0)
+            {
+                MessageBox.Show("La fecha desde es mayor que la fecha hasta", "Importante"
+                                , MessageBoxButtons.OK
+                                , MessageBoxIcon.Exclamation);
+                pckDesde.Focus();
+            }
+
             DataTable tabla = new DataTable();
             if (chkBuscarPorNroComprobante.Checked || chkBuscarPorFecha.Checked || chkBuscarPorProveedor.Checked)
             {

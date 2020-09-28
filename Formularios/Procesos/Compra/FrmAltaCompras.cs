@@ -111,6 +111,7 @@ namespace Practico.Formularios.Procesos.Compra
         private void btnAgregarHelado_Click(object sender, EventArgs e)
         {
             TratamientosEspeciales tratamientos = new TratamientosEspeciales();
+
             if (tratamientos.Validar(this.Controls) == TratamientosEspeciales.Validacion.correcta)
             {
                 if (verificarExistencia(cmbIdHelado.Text))
