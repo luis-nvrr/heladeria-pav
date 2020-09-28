@@ -45,7 +45,7 @@
             this.btn4 = new System.Windows.Forms.Button();
             this.btnEstadisticas = new System.Windows.Forms.Button();
             this.pnlProcesos = new System.Windows.Forms.Panel();
-            this.btn3 = new System.Windows.Forms.Button();
+            this.btnCompra = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.btnProcesos = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
@@ -343,7 +343,7 @@
             // pnlProcesos
             // 
             this.pnlProcesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.pnlProcesos.Controls.Add(this.btn3);
+            this.pnlProcesos.Controls.Add(this.btnCompra);
             this.pnlProcesos.Controls.Add(this.btnConsulta);
             this.pnlProcesos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlProcesos.Location = new System.Drawing.Point(0, 107);
@@ -351,25 +351,26 @@
             this.pnlProcesos.Size = new System.Drawing.Size(183, 96);
             this.pnlProcesos.TabIndex = 10;
             // 
-            // btn3
+            // btnCompra
             // 
-            this.btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.btn3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn3.FlatAppearance.BorderSize = 0;
-            this.btn3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn3.Location = new System.Drawing.Point(0, 40);
-            this.btn3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn3.Name = "btn3";
-            this.btn3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn3.Size = new System.Drawing.Size(183, 50);
-            this.btn3.TabIndex = 12;
-            this.btn3.Text = "Actualizar Stock";
-            this.btn3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn3.UseVisualStyleBackColor = false;
+            this.btnCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnCompra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCompra.FlatAppearance.BorderSize = 0;
+            this.btnCompra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompra.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompra.Location = new System.Drawing.Point(0, 40);
+            this.btnCompra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCompra.Name = "btnCompra";
+            this.btnCompra.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnCompra.Size = new System.Drawing.Size(183, 50);
+            this.btnCompra.TabIndex = 12;
+            this.btnCompra.Text = "Compra";
+            this.btnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompra.UseVisualStyleBackColor = false;
+            this.btnCompra.Click += new System.EventHandler(this.btnCompra_Click);
             // 
             // btnConsulta
             // 
@@ -605,7 +606,7 @@
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btnListados;
         private System.Windows.Forms.Button btnAdministracion;
-        private System.Windows.Forms.Button btn3;
+        private System.Windows.Forms.Button btnCompra;
         private System.Windows.Forms.Panel pnlEscritorio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblFechaHora;
