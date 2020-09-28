@@ -246,7 +246,37 @@ namespace Practico.Formularios.Procesos
                     FrmModificarVenta modificarVenta = new FrmModificarVenta();
                     modificarVenta.nroTicket = nroTicket;
                     modificarVenta.ShowDialog();
+
+                    DataTable tabla = ventas.RecuperarTodasLasVentas(); // ACTUALIZA GRILLA
+                    CargarGrilla(tabla);
                     modificarVenta.Close();
+                }
+                else
+                {
+                    return;
+
+                }
+            }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if (grdVentas.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int indiceFilaSeleccionada = grdVentas.SelectedRows[0].Index;
+                    string nroTicket = grdVentas[0, indiceFilaSeleccionada].Value.ToString();
+
+                    FrmConsultarVenta consultar = new FrmConsultarVenta();
+                    consultar.nroTicket = nroTicket;
+                    consultar.ShowDialog();
+                    consultar.Close();
                 }
                 else
                 {

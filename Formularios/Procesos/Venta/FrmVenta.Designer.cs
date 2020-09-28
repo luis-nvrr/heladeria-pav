@@ -53,6 +53,7 @@
             this.grdVentas = new Practico.Clases.Grid01();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.pnlBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdVentas)).BeginInit();
@@ -376,11 +377,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnNuevaVenta);
-            this.panel1.Location = new System.Drawing.Point(28, 668);
+            this.panel1.Location = new System.Drawing.Point(101, 668);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(657, 54);
+            this.panel1.Size = new System.Drawing.Size(522, 54);
             this.panel1.TabIndex = 83;
             // 
             // btnModificar
@@ -404,6 +406,28 @@
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnConsultar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnConsultar.Image = global::Practico.Properties.Resources.magnifying_glass;
+            this.btnConsultar.Location = new System.Drawing.Point(346, 10);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(163, 40);
+            this.btnConsultar.TabIndex = 84;
+            this.btnConsultar.Text = "Consultar Venta";
+            this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // FrmVenta
             // 
@@ -457,5 +481,6 @@
         private System.Windows.Forms.Button btnNuevaVenta;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnConsultar;
     }
 }
