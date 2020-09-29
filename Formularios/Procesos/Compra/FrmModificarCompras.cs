@@ -29,7 +29,6 @@ namespace Practico.Formularios.Procesos.Compra
         private void FrmAltaCompras_Load(object sender, EventArgs e)
         {
             CargarFecha();
-            MessageBox.Show(pckFechaCompra.Text);
             grdDetallesCompras.Formatear("NroItem,60;Id,50;Nombre,180;Precio,100;Kilos,100;SubTotal,100;Estado,0");
             grdDetallesCompras.Columns[6].Visible = false;
             CargarComboRazonSocial();
@@ -45,8 +44,6 @@ namespace Practico.Formularios.Procesos.Compra
             pckFechaCompra.MaxDate = DateTime.Parse(fecha);
             pckFechaCompra.Value = DateTime.Parse(fecha);
             pckFechaCompra.Format = DateTimePickerFormat.Short;
-            pckFechaCompra.Enabled = true;
-
         }
 
 
@@ -202,9 +199,18 @@ namespace Practico.Formularios.Procesos.Compra
 
             for (int i = 0; i < grdDetallesCompras.Rows.Count; i++)
             {
-                precio = float.Parse(grdDetallesCompras.Rows[i].Cells[3].Value.ToString());
-                cantidad = float.Parse(grdDetallesCompras.Rows[i].Cells[4].Value.ToString());
-                precioTotal += cantidad * precio;
+                if (grdDetallesCompras.Rows[i].Visible == false)
+                {
+                    precioTotal += 0;
+                }
+                else
+                {
+                    cantidad = float.Parse(grdDetallesCompras.Rows[i].Cells[4].Value.ToString());
+                    precio = float.Parse(grdDetallesCompras.Rows[i].Cells[3].Value.ToString());
+                    precioTotal += cantidad * precio;
+                }
+
+
             }
 
             return precioTotal;
@@ -348,11 +354,6 @@ namespace Practico.Formularios.Procesos.Compra
             actualizarPrecio();
             int indiceFilaSeleccionada = grdDetallesCompras.SelectedRows[0].Index;
             grdDetallesCompras[6, indiceFilaSeleccionada].Value = "modificado";
-        }
-
-        private void pckFechaCompra_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

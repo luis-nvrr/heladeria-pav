@@ -56,8 +56,6 @@ namespace Practico.Formularios.Procesos
                     precio = float.Parse(grdDetalleHelado.Rows[i].Cells[3].Value.ToString());
                     precioTotal += cantidad * precio;
                 }
-
-                
             }
 
             return precioTotal;

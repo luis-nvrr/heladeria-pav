@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAltaCompras));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNuevaCompra = new System.Windows.Forms.Label();
             this.pckFechaCompra = new System.Windows.Forms.DateTimePicker();
             this.lblFechaCompra = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@
             this.pckFechaCompra.MaxDate = new System.DateTime(2020, 9, 25, 0, 0, 0, 0);
             this.pckFechaCompra.Name = "pckFechaCompra";
             this.pckFechaCompra.Size = new System.Drawing.Size(121, 20);
-            this.pckFechaCompra.TabIndex = 76;
+            this.pckFechaCompra.TabIndex = 0;
             this.pckFechaCompra.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // lblFechaCompra
@@ -162,7 +162,7 @@
             this.btnFechaHoy.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnFechaHoy.Name = "btnFechaHoy";
             this.btnFechaHoy.Size = new System.Drawing.Size(43, 24);
-            this.btnFechaHoy.TabIndex = 91;
+            this.btnFechaHoy.TabIndex = 1;
             this.btnFechaHoy.Text = "Hoy";
             this.btnFechaHoy.UseVisualStyleBackColor = false;
             this.btnFechaHoy.Click += new System.EventHandler(this.btnFechaHoy_Click);
@@ -194,7 +194,7 @@
             this.btnAgregarHelado.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarHelado.Name = "btnAgregarHelado";
             this.btnAgregarHelado.Size = new System.Drawing.Size(156, 42);
-            this.btnAgregarHelado.TabIndex = 94;
+            this.btnAgregarHelado.TabIndex = 8;
             this.btnAgregarHelado.Text = "Agregar Helado";
             this.btnAgregarHelado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarHelado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -210,7 +210,7 @@
             this.panel3.Location = new System.Drawing.Point(753, 315);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(202, 200);
-            this.panel3.TabIndex = 95;
+            this.panel3.TabIndex = 9;
             // 
             // btnModificar
             // 
@@ -228,7 +228,7 @@
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(194, 40);
-            this.btnModificar.TabIndex = 3;
+            this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Habilitar Modificacion";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -251,7 +251,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(194, 40);
-            this.btnLimpiar.TabIndex = 2;
+            this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar Campos";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -369,23 +369,23 @@
             this.grdDetallesCompras.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.grdDetallesCompras.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdDetallesCompras.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDetallesCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDetallesCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdDetallesCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdDetallesCompras.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDetallesCompras.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdDetallesCompras.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.grdDetallesCompras.Location = new System.Drawing.Point(75, 375);
             this.grdDetallesCompras.Name = "grdDetallesCompras";
@@ -407,7 +407,7 @@
             this.txtPrecioHelado.PpNombreTabla = null;
             this.txtPrecioHelado.PpValidable = false;
             this.txtPrecioHelado.Size = new System.Drawing.Size(83, 20);
-            this.txtPrecioHelado.TabIndex = 92;
+            this.txtPrecioHelado.TabIndex = 6;
             // 
             // lbltxtKilos
             // 
@@ -424,7 +424,7 @@
             this.lbltxtKilos.PpText = "";
             this.lbltxtKilos.PpValidable = true;
             this.lbltxtKilos.Size = new System.Drawing.Size(208, 28);
-            this.lbltxtKilos.TabIndex = 90;
+            this.lbltxtKilos.TabIndex = 7;
             // 
             // cmbIdHelado
             // 
@@ -439,7 +439,7 @@
             this.cmbIdHelado.PpValidable = true;
             this.cmbIdHelado.PpValue = null;
             this.cmbIdHelado.Size = new System.Drawing.Size(98, 21);
-            this.cmbIdHelado.TabIndex = 88;
+            this.cmbIdHelado.TabIndex = 5;
             this.cmbIdHelado.SelectedIndexChanged += new System.EventHandler(this.cmbIdHelado_SelectedIndexChanged);
             // 
             // cmbNroDocProveedor
@@ -456,7 +456,7 @@
             this.cmbNroDocProveedor.PpValidable = true;
             this.cmbNroDocProveedor.PpValue = null;
             this.cmbNroDocProveedor.Size = new System.Drawing.Size(121, 21);
-            this.cmbNroDocProveedor.TabIndex = 81;
+            this.cmbNroDocProveedor.TabIndex = 4;
             this.cmbNroDocProveedor.SelectedIndexChanged += new System.EventHandler(this.cmbNroDocProveedor_SelectedIndexChanged);
             // 
             // cmbTipoDocProveedor
@@ -473,7 +473,7 @@
             this.cmbTipoDocProveedor.PpValidable = true;
             this.cmbTipoDocProveedor.PpValue = null;
             this.cmbTipoDocProveedor.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipoDocProveedor.TabIndex = 80;
+            this.cmbTipoDocProveedor.TabIndex = 3;
             this.cmbTipoDocProveedor.SelectedIndexChanged += new System.EventHandler(this.cmbTipoDocProveedor_SelectedIndexChanged);
             // 
             // cmbRazonSocial
@@ -489,7 +489,7 @@
             this.cmbRazonSocial.PpValidable = true;
             this.cmbRazonSocial.PpValue = null;
             this.cmbRazonSocial.Size = new System.Drawing.Size(121, 21);
-            this.cmbRazonSocial.TabIndex = 79;
+            this.cmbRazonSocial.TabIndex = 2;
             this.cmbRazonSocial.SelectedIndexChanged += new System.EventHandler(this.cmbRazonSocial_SelectedIndexChanged);
             // 
             // btnCerrar
@@ -506,7 +506,7 @@
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(71, 41);
-            this.btnCerrar.TabIndex = 98;
+            this.btnCerrar.TabIndex = 10;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);

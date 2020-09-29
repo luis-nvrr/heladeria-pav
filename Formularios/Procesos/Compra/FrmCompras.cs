@@ -152,6 +152,7 @@ namespace Practico.Formularios.Procesos.Compra
             BaseDatos baseDatos = new BaseDatos();
             string fecha = baseDatos.Fecha();
 
+            pckDesde.MaxDate = DateTime.Parse(fecha);
             pckHasta.MaxDate = DateTime.Parse(fecha);
             pckDesde.Format = DateTimePickerFormat.Short;
             pckHasta.Format = DateTimePickerFormat.Short;

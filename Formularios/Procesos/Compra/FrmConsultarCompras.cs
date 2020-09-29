@@ -28,6 +28,7 @@ namespace Practico.Formularios.Procesos.Compra
 
         private void FrmAltaCompras_Load(object sender, EventArgs e)
         {
+            CargarFecha();
             grdDetallesCompras.Formatear("NroItem,60;Id,50;Nombre,180;Precio,100;Kilos,100;SubTotal,100;Estado,0");
             grdDetallesCompras.Columns[6].Visible = false;
             CargarComboRazonSocial();
@@ -35,6 +36,15 @@ namespace Practico.Formularios.Procesos.Compra
             cmbIdHelado.SelectedIndex = -1;
             txtPrecioHelado.Text = "";
             actualizarPrecio();
+        }
+
+        private void CargarFecha()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string fecha = baseDatos.Fecha();
+            pckFechaCompra.MaxDate = DateTime.Parse(fecha);
+            pckFechaCompra.Value = DateTime.Parse(fecha);
+            pckFechaCompra.Format = DateTimePickerFormat.Short;
         }
 
         private void CargarComboRazonSocial()
@@ -295,7 +305,7 @@ namespace Practico.Formularios.Procesos.Compra
             razonSocial = tabla.Rows[0]["razonSocial"].ToString();
             tipoDocProvedor = tabla.Rows[0]["tipoDocProveedor"].ToString();
             nroDocProveedor = tabla.Rows[0]["nroDocProveedor"].ToString();
-            //pckFechaCompra.Text = fecha;
+            pckFechaCompra.Text = fecha;
             cmbRazonSocial.Text = razonSocial;
             cmbTipoDocProveedor.Text = nroDocProveedor;
             cmbNroDocProveedor.Text = tipoDocProvedor;
@@ -328,6 +338,11 @@ namespace Practico.Formularios.Procesos.Compra
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

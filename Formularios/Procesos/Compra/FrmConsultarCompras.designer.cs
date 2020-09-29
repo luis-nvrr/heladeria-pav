@@ -58,6 +58,7 @@
             this.cmbNroDocProveedor = new Practico.Clases.ComboBox01();
             this.cmbTipoDocProveedor = new Practico.Clases.ComboBox01();
             this.cmbRazonSocial = new Practico.Clases.ComboBox01();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -189,7 +190,7 @@
             this.panel3.Location = new System.Drawing.Point(753, 315);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(202, 200);
-            this.panel3.TabIndex = 95;
+            this.panel3.TabIndex = 0;
             // 
             // btnModificar
             // 
@@ -505,12 +506,32 @@
             this.cmbRazonSocial.TabIndex = 79;
             this.cmbRazonSocial.SelectedIndexChanged += new System.EventHandler(this.cmbRazonSocial_SelectedIndexChanged);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnCerrar.Location = new System.Drawing.Point(884, 14);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(71, 41);
+            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
+            // 
             // FrmConsultarCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(978, 527);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.grdDetallesCompras);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -578,5 +599,6 @@
         private System.Windows.Forms.Label lblSigno;
         private System.Windows.Forms.Label lblTxtTotal;
         private Clases.Grid01 grdDetallesCompras;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

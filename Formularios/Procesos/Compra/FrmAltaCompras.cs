@@ -25,8 +25,18 @@ namespace Practico.Formularios.Procesos.Compra
 
         private void FrmAltaCompras_Load(object sender, EventArgs e)
         {
+            CargarFecha();
             grdDetallesCompras.Formatear("NroItem,60;Id,50;Nombre,180;Precio,100;Kilos,100;SubTotal,100");
             CargarComboRazonSocial();
+        }
+
+        private void CargarFecha()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string fecha = baseDatos.Fecha();
+            pckFechaCompra.MaxDate = DateTime.Parse(fecha);
+            pckFechaCompra.Value = DateTime.Parse(fecha);
+            pckFechaCompra.Format = DateTimePickerFormat.Short;
         }
 
         private void CargarComboRazonSocial()
@@ -193,7 +203,7 @@ namespace Practico.Formularios.Procesos.Compra
         {
             pckFechaCompra.Enabled = true;
             cmbRazonSocial.Enabled = true;
-            pckFechaCompra.Value = DateTime.Parse(1 + "/" + 1 + "/" + 2020);
+            CargarFecha();
             cmbRazonSocial.SelectedIndex = -1;
             cmbTipoDocProveedor.SelectedIndex = -1;
             cmbNroDocProveedor.SelectedIndex = -1;

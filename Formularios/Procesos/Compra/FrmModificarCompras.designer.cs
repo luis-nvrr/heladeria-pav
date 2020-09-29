@@ -51,6 +51,7 @@
             this.lblSigno = new System.Windows.Forms.Label();
             this.lblTxtTotal = new System.Windows.Forms.Label();
             this.btnAgregarHelado = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.grdDetallesCompras = new Practico.Clases.Grid01();
             this.txtPrecioHelado = new Practico.Clases.TextBox01();
             this.lbltxtKilos = new Practico.Clases.LabelText01();
@@ -58,7 +59,6 @@
             this.cmbNroDocProveedor = new Practico.Clases.ComboBox01();
             this.cmbTipoDocProveedor = new Practico.Clases.ComboBox01();
             this.cmbRazonSocial = new Practico.Clases.ComboBox01();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -88,7 +88,6 @@
             this.pckFechaCompra.Size = new System.Drawing.Size(121, 20);
             this.pckFechaCompra.TabIndex = 76;
             this.pckFechaCompra.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.pckFechaCompra.ValueChanged += new System.EventHandler(this.pckFechaCompra_ValueChanged);
             // 
             // lblFechaCompra
             // 
@@ -191,12 +190,13 @@
             this.panel3.Location = new System.Drawing.Point(753, 315);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(202, 200);
-            this.panel3.TabIndex = 95;
+            this.panel3.TabIndex = 3;
             // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.Enabled = false;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
@@ -209,17 +209,19 @@
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(194, 40);
-            this.btnModificar.TabIndex = 3;
+            this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Habilitar Modificacion";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Visible = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiar.Enabled = false;
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
@@ -232,11 +234,12 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(194, 40);
-            this.btnLimpiar.TabIndex = 2;
+            this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar Campos";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Visible = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
@@ -356,12 +359,31 @@
             this.btnAgregarHelado.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarHelado.Name = "btnAgregarHelado";
             this.btnAgregarHelado.Size = new System.Drawing.Size(156, 42);
-            this.btnAgregarHelado.TabIndex = 94;
+            this.btnAgregarHelado.TabIndex = 2;
             this.btnAgregarHelado.Text = "Agregar Helado";
             this.btnAgregarHelado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarHelado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarHelado.UseVisualStyleBackColor = false;
             this.btnAgregarHelado.Click += new System.EventHandler(this.btnAgregarHelado_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnCerrar.Location = new System.Drawing.Point(884, 14);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(71, 41);
+            this.btnCerrar.TabIndex = 4;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // grdDetallesCompras
             // 
@@ -427,7 +449,7 @@
             this.lbltxtKilos.PpText = "";
             this.lbltxtKilos.PpValidable = true;
             this.lbltxtKilos.Size = new System.Drawing.Size(208, 28);
-            this.lbltxtKilos.TabIndex = 90;
+            this.lbltxtKilos.TabIndex = 1;
             // 
             // cmbIdHelado
             // 
@@ -442,7 +464,7 @@
             this.cmbIdHelado.PpValidable = true;
             this.cmbIdHelado.PpValue = null;
             this.cmbIdHelado.Size = new System.Drawing.Size(98, 21);
-            this.cmbIdHelado.TabIndex = 88;
+            this.cmbIdHelado.TabIndex = 0;
             this.cmbIdHelado.SelectedIndexChanged += new System.EventHandler(this.cmbIdHelado_SelectedIndexChanged);
             // 
             // cmbNroDocProveedor
@@ -495,25 +517,6 @@
             this.cmbRazonSocial.Size = new System.Drawing.Size(121, 21);
             this.cmbRazonSocial.TabIndex = 79;
             this.cmbRazonSocial.SelectedIndexChanged += new System.EventHandler(this.cmbRazonSocial_SelectedIndexChanged);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnCerrar.Location = new System.Drawing.Point(884, 14);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(71, 41);
-            this.btnCerrar.TabIndex = 98;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // FrmModificarCompras
             // 
