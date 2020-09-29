@@ -67,7 +67,5 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
             cmbNombre.DisplayMember = "razonSocial";
             cmbNombre.DataSource = baseDatos.Consulta(sql);
         }
-
-
     }
 }

@@ -338,6 +338,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnConfirmar
             // 
@@ -353,11 +354,12 @@
             this.btnConfirmar.Location = new System.Drawing.Point(340, 410);
             this.btnConfirmar.Margin = new System.Windows.Forms.Padding(5);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(103, 40);
+            this.btnConfirmar.Size = new System.Drawing.Size(118, 40);
             this.btnConfirmar.TabIndex = 39;
-            this.btnConfirmar.Text = "Aceptar";
+            this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // FrmEliminarProveedores
             // 

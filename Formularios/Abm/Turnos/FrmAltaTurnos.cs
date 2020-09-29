@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Practico.Formularios.Abm.Empleados;
 
 namespace Practico.Formularios.Abm.Turnos
 {
@@ -113,6 +114,13 @@ namespace Practico.Formularios.Abm.Turnos
             cmbNombre.ValueMember = "nombre";
             cmbNombre.DisplayMember = "nombre";
             cmbNombre.DataSource = baseDatos.Consulta(sql);
+        }
+
+        private void btnAgregarJefe_Click(object sender, EventArgs e)
+        {
+            FrmAltaEmpleados empleados = new FrmAltaEmpleados();
+            empleados.ShowDialog();
+            CargarComboNombre();
         }
     }
 }

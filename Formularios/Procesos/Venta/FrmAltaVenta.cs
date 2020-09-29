@@ -10,6 +10,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Clases;
+using Practico.Formularios.Abm.Helados;
+using Practico.Formularios.Abm.HeladosEspeciales;
 using Practico.Negocios;
 
 namespace Practico.Formularios.Procesos
@@ -82,6 +84,7 @@ namespace Practico.Formularios.Procesos
 
         private void btnHelado_Click(object sender, EventArgs e)
         {
+            pnlEspecial.SendToBack();
             pnlHelados.BringToFront();
             pnlEspecial.Visible = false;
             pnlHelados.Visible = true;
@@ -90,6 +93,7 @@ namespace Practico.Formularios.Procesos
 
         private void btnEspecial_Click(object sender, EventArgs e)
         {
+            pnlHelados.SendToBack();
             pnlEspecial.BringToFront();
             pnlHelados.Visible = false;
             pnlEspecial.Visible = true;
@@ -327,6 +331,21 @@ namespace Practico.Formularios.Procesos
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAgregarHelado_Click(object sender, EventArgs e)
+        {
+            FrmAltaHeladosEspeciales altaHeladosEspeciales = new FrmAltaHeladosEspeciales();
+            altaHeladosEspeciales.ShowDialog();
+            cmbEspecial.Cargar();
+
+        }
+
+        private void btnAgregarEspecial_Click(object sender, EventArgs e)
+        {
+            FrmAltaHelados altaHelados = new FrmAltaHelados();
+            altaHelados.ShowDialog();
+            cmbHelado.Cargar();
         }
     }
 }

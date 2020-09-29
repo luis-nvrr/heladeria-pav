@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Clases;
+using Practico.Formularios.Abm.Empleados;
 
 namespace Practico.Formularios.Abm.TelefonosEmpleados
 {
@@ -124,6 +125,13 @@ namespace Practico.Formularios.Abm.TelefonosEmpleados
         private void txtTelefono_Click(object sender, EventArgs e)
         {
             txtTelefono.Select(0,0);
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FrmAltaEmpleados altaEmpleados = new FrmAltaEmpleados();
+            altaEmpleados.ShowDialog();
+            CargarComboNombre();
         }
     }
 }

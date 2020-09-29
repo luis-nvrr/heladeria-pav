@@ -36,8 +36,11 @@ namespace Practico.Formularios.Procesos
             string fecha = baseDatos.Fecha();
 
             pckHasta.MaxDate = DateTime.Parse(fecha);
+            pckDesde.MaxDate = DateTime.Parse(fecha);
+
             pckDesde.Format = DateTimePickerFormat.Short;
             pckHasta.Format = DateTimePickerFormat.Short;
+
             pckDesde.Value = DateTime.Parse("01/01/" + DateTime.Now.Year);
             pckHasta.Value = DateTime.Parse(fecha);
 
@@ -170,16 +173,36 @@ namespace Practico.Formularios.Procesos
                         cmbNombre.SelectedValue.ToString());
                 }
 
+
                 if (chkFecha.Checked)
                 {
-                    tabla = ventas.RecuperarVenta(pckDesde.Text, pckHasta.Text);
+                    if (pckDesde.Value <= pckHasta.Value)
+                    {
+                        tabla = ventas.RecuperarVenta(pckDesde.Text, pckHasta.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fechas invalidas!", caption: "Atención",
+                            icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
+                        return;
+                    }
                 }
 
                 if (chkNombre.Checked && chkFecha.Checked)
                 {
-                    tabla = ventas.RecuperarVenta(cmbTipo.SelectedValue.ToString(),
-                        cmbDocumento.SelectedValue.ToString(),
-                        cmbNombre.SelectedValue.ToString(), pckDesde.Text, pckHasta.Text);
+                    if (pckDesde.Value <= pckHasta.Value)
+                    {
+                        tabla = ventas.RecuperarVenta(cmbTipo.SelectedValue.ToString(),
+                            cmbDocumento.SelectedValue.ToString(),
+                            cmbNombre.SelectedValue.ToString(), pckDesde.Text, pckHasta.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fechas invalidas!", caption: "Atención",
+                            icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
+                        return;
+                    }
+                    
                 }
 
             }
@@ -284,6 +307,11 @@ namespace Practico.Formularios.Procesos
 
                 }
             }
+        }
+
+        private void btnEscritorio_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
