@@ -94,12 +94,14 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnBuscar.Image = global::Practico.Properties.Resources.magnifying_glass;
             this.btnBuscar.Location = new System.Drawing.Point(357, 105);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(103, 40);
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -184,7 +186,7 @@
             this.panel1.Controls.Add(this.btnNuevo);
             this.panel1.Location = new System.Drawing.Point(445, 198);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 174);
+            this.panel1.Size = new System.Drawing.Size(283, 174);
             this.panel1.TabIndex = 17;
             // 
             // btnEliminar
@@ -197,12 +199,14 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEliminar.Image = global::Practico.Properties.Resources.remove;
             this.btnEliminar.Location = new System.Drawing.Point(24, 113);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(213, 40);
+            this.btnEliminar.Size = new System.Drawing.Size(234, 40);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar Tipo de Documento";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -216,12 +220,15 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnModificar.Image = global::Practico.Properties.Resources.iconfinder_website___pencil_3440848;
             this.btnModificar.Location = new System.Drawing.Point(24, 65);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(213, 40);
+            this.btnModificar.Size = new System.Drawing.Size(234, 40);
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar Tipo de Documento";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
@@ -235,12 +242,14 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnNuevo.Image = global::Practico.Properties.Resources.plus;
             this.btnNuevo.Location = new System.Drawing.Point(24, 17);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(213, 40);
+            this.btnNuevo.Size = new System.Drawing.Size(234, 40);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo Tipo de Documento";
+            this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 

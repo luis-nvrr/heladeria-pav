@@ -143,6 +143,7 @@ namespace Practico
             FrmVenta venta = new FrmVenta();
             venta.idUsuario = this.idUsuario.ToString();
             AbrirFormulario(venta);
+            OcultarSubMenu();
         }
 
         private void btnCompra_Click(object sender, EventArgs e)

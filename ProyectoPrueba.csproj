@@ -827,6 +827,7 @@
     <None Include="Resources\iconfinder_website_-_pencil_34408481.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\floppy-disk1.png" />
+    <None Include="Resources\eraser.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
   <ItemGroup />

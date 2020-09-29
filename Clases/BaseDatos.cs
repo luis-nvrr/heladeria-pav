@@ -72,7 +72,7 @@ namespace Practico.Clases
                     comando.Transaction = transaccion;
                 }
             }
-            
+
         }
 
 
@@ -82,7 +82,7 @@ namespace Practico.Clases
             {
                 conexion.Close();
             }
-            
+
         }
 
 
