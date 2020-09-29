@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Negocios;
 using Practico.Clases;
+using Practico.Formularios.Abm.Barrios;
+using Practico.Formularios.Abm.Localidades;
+using Practico.Formularios.Abm.TipoDocumento;
 
 namespace Practico.Formularios.Abm.Proveedores
 {
@@ -101,6 +104,20 @@ namespace Practico.Formularios.Abm.Proveedores
         private void txtNroCalle_Click(object sender, EventArgs e)
         {
             txtNroCalle.Select(0,0);
+        }
+
+        private void btnAgregar1_Click(object sender, EventArgs e)
+        {
+            FrmAltaTipoDocumento tipo = new FrmAltaTipoDocumento();
+            tipo.ShowDialog();
+            cmbTipoDoc.cargar(tipoDoc.EstrCombo());
+        }
+
+        private void btnAgregar2_Click(object sender, EventArgs e)
+        {
+            FrmAltaBarrios barrios = new FrmAltaBarrios();
+            barrios.ShowDialog();
+            cmbBarrio.cargar(barrio.EstrCombo());
         }
     }
 }

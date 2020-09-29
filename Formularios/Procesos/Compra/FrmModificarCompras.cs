@@ -12,22 +12,43 @@ using System.Windows.Forms;
 
 namespace Practico.Formularios.Procesos.Compra
 {
-    public partial class FrmAltaCompras : Form
+    public partial class FrmModificarCompras : Form
     {
         private int nroItem = 0;
         BaseDatos baseDatos = new BaseDatos();
         Compras compras = new Compras();
+        DetallesCompras detallesCompras = new DetallesCompras();
 
-        public FrmAltaCompras()
+        public string nroComprobante { get; set; }
+
+        public FrmModificarCompras()
         {
             InitializeComponent();
         }
 
         private void FrmAltaCompras_Load(object sender, EventArgs e)
         {
-            grdDetallesCompras.Formatear("NroItem,60;Id,50;Nombre,180;Precio,100;Kilos,100;SubTotal,100");
+            CargarFecha();
+            MessageBox.Show(pckFechaCompra.Text);
+            grdDetallesCompras.Formatear("NroItem,60;Id,50;Nombre,180;Precio,100;Kilos,100;SubTotal,100;Estado,0");
+            grdDetallesCompras.Columns[6].Visible = false;
             CargarComboRazonSocial();
+            CargarGrilla();
+            actualizarPrecio();
+            
         }
+
+        private void CargarFecha()
+        {
+            BaseDatos baseDatos = new BaseDatos();
+            string fecha = baseDatos.Fecha();
+            pckFechaCompra.MaxDate = DateTime.Parse(fecha);
+            pckFechaCompra.Value = DateTime.Parse(fecha);
+            pckFechaCompra.Format = DateTimePickerFormat.Short;
+            pckFechaCompra.Enabled = true;
+
+        }
+
 
         private void CargarComboRazonSocial()
         {
@@ -82,7 +103,6 @@ namespace Practico.Formularios.Procesos.Compra
         private void btnFechaHoy_Click(object sender, EventArgs e)
         {
             string fecha = baseDatos.Fecha();
-
             pckFechaCompra.MaxDate = DateTime.Parse(fecha);
             pckFechaCompra.Format = DateTimePickerFormat.Short;
             pckFechaCompra.Value = DateTime.Parse(DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year);
@@ -137,6 +157,7 @@ namespace Practico.Formularios.Procesos.Compra
                     grdDetallesCompras.Rows[ind].Cells[3].Value = txtPrecioHelado.Text;
                     grdDetallesCompras.Rows[ind].Cells[4].Value = lbltxtKilos.PpText;
                     grdDetallesCompras.Rows[ind].Cells[5].Value = calcularSubTotal(int.Parse(txtPrecioHelado.Text), int.Parse(lbltxtKilos.PpText)).ToString();
+                    grdDetallesCompras.Rows[ind].Cells[6].Value = "nuevo";
                     actualizarPrecio();
                 }
 
@@ -209,12 +230,11 @@ namespace Practico.Formularios.Procesos.Compra
         private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
-               MessageBoxIcon.Question) == DialogResult.Yes)
+                MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (grdDetallesCompras.Rows.Count > 0)
                 {
-                    compras.InsertarCompra(pckFechaCompra.Text, cmbTipoDocProveedor.SelectedValue.ToString(), cmbNroDocProveedor.SelectedValue.ToString(), grdDetallesCompras);
-                    LimpiarCampos();
+                    detallesCompras.ModificarDetalle(nroComprobante,cmbTipoDocProveedor.SelectedValue.ToString(), cmbNroDocProveedor.SelectedValue.ToString(), grdDetallesCompras);
                 }
                 else
                 {
@@ -234,7 +254,9 @@ namespace Practico.Formularios.Procesos.Compra
                 if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    grdDetallesCompras.Rows.Remove(grdDetallesCompras.CurrentRow);
+                    int indiceFilaSeleccionada = grdDetallesCompras.SelectedRows[0].Index;
+                    grdDetallesCompras[6, indiceFilaSeleccionada].Value = "eliminado";
+                    grdDetallesCompras.Rows[indiceFilaSeleccionada].Visible = false;
                     actualizarPrecio();
                 }
             }
@@ -250,7 +272,6 @@ namespace Practico.Formularios.Procesos.Compra
             if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
                 if (grdDetallesCompras.Rows.Count > 0)
                 {
                     grdDetallesCompras_KeyDown(sender, new KeyEventArgs(Keys.Enter));
@@ -274,9 +295,64 @@ namespace Practico.Formularios.Procesos.Compra
             grdDetallesCompras.BeginEdit(true);
         }
 
+        private void CargarGrilla()
+        {
+            grdDetallesCompras.Rows.Clear();
+
+            string fechaHoy;
+            string fecha;
+            string razonSocial;
+            string tipoDocProvedor;
+            string nroDocProveedor;
+            string nroItem;
+            string id;
+            string nombre;
+            string cantidad;
+            string precio;
+            string subTotal;
+            string estado = "no modificado";
+
+            DataTable tabla = detallesCompras.RecuperarDetalle(nroComprobante);
+
+            fecha = tabla.Rows[0]["fecha"].ToString();
+            razonSocial = tabla.Rows[0]["razonSocial"].ToString();
+            tipoDocProvedor = tabla.Rows[0]["tipoDocProveedor"].ToString();
+            nroDocProveedor = tabla.Rows[0]["nroDocProveedor"].ToString();
+            pckFechaCompra.Value = DateTime.Parse(fecha);
+            cmbRazonSocial.Text = razonSocial;
+            cmbTipoDocProveedor.Text = nroDocProveedor;
+            cmbNroDocProveedor.Text = tipoDocProvedor;
+            
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                grdDetallesCompras.Rows.Add();
+
+                nroItem = tabla.Rows[i]["nroItem"].ToString();
+                id = tabla.Rows[i]["idHelado"].ToString();
+                nombre = tabla.Rows[i]["nombre"].ToString();
+                cantidad = tabla.Rows[i]["cantidad"].ToString();
+                precio = tabla.Rows[i]["precio"].ToString();
+                subTotal = tabla.Rows[i]["subTotal"].ToString();
+                grdDetallesCompras.Rows[i].Cells[0].Value = nroItem;
+                grdDetallesCompras.Rows[i].Cells[1].Value = id;
+                grdDetallesCompras.Rows[i].Cells[2].Value = nombre;
+                grdDetallesCompras.Rows[i].Cells[3].Value = precio;
+                grdDetallesCompras.Rows[i].Cells[4].Value = cantidad;
+                grdDetallesCompras.Rows[i].Cells[5].Value = subTotal;
+                grdDetallesCompras.Rows[i].Cells[6].Value = estado;
+            }
+        }
+
         private void grdDetallesCompras_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             actualizarPrecio();
+            int indiceFilaSeleccionada = grdDetallesCompras.SelectedRows[0].Index;
+            grdDetallesCompras[6, indiceFilaSeleccionada].Value = "modificado";
+        }
+
+        private void pckFechaCompra_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

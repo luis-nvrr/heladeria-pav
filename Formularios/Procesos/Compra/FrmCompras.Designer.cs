@@ -45,15 +45,16 @@
             this.chkBuscarTodas = new System.Windows.Forms.CheckBox();
             this.btnEscritorio = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.cmbRazonSocial = new Practico.Clases.ComboBox01();
+            this.cmbNroDocProveedor = new Practico.Clases.ComboBox01();
+            this.cmbTipoDocProveedor = new Practico.Clases.ComboBox01();
+            this.lbltxtNroComprobante = new Practico.Clases.LabelText01();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevaVenta = new System.Windows.Forms.Button();
             this.grdCompras = new Practico.Clases.Grid01();
-            this.cmbNroDocProveedor = new Practico.Clases.ComboBox01();
-            this.cmbRazonSocial = new Practico.Clases.ComboBox01();
-            this.cmbTipoDocProveedor = new Practico.Clases.ComboBox01();
-            this.lbltxtNroComprobante = new Practico.Clases.LabelText01();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCompras)).BeginInit();
@@ -247,6 +248,70 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // cmbRazonSocial
+            // 
+            this.cmbRazonSocial.FormattingEnabled = true;
+            this.cmbRazonSocial.Location = new System.Drawing.Point(183, 219);
+            this.cmbRazonSocial.Name = "cmbRazonSocial";
+            this.cmbRazonSocial.PpDisplay = null;
+            this.cmbRazonSocial.PpMensajeError = null;
+            this.cmbRazonSocial.PpNombreCampo = null;
+            this.cmbRazonSocial.PpNombreTabla = null;
+            this.cmbRazonSocial.PpTabla = null;
+            this.cmbRazonSocial.PpValidable = false;
+            this.cmbRazonSocial.PpValue = null;
+            this.cmbRazonSocial.Size = new System.Drawing.Size(127, 21);
+            this.cmbRazonSocial.TabIndex = 80;
+            this.cmbRazonSocial.SelectedIndexChanged += new System.EventHandler(this.cmbRazonSocial_SelectedIndexChanged);
+            // 
+            // cmbNroDocProveedor
+            // 
+            this.cmbNroDocProveedor.FormattingEnabled = true;
+            this.cmbNroDocProveedor.Location = new System.Drawing.Point(183, 285);
+            this.cmbNroDocProveedor.Name = "cmbNroDocProveedor";
+            this.cmbNroDocProveedor.PpDisplay = null;
+            this.cmbNroDocProveedor.PpMensajeError = null;
+            this.cmbNroDocProveedor.PpNombreCampo = null;
+            this.cmbNroDocProveedor.PpNombreTabla = null;
+            this.cmbNroDocProveedor.PpTabla = null;
+            this.cmbNroDocProveedor.PpValidable = false;
+            this.cmbNroDocProveedor.PpValue = null;
+            this.cmbNroDocProveedor.Size = new System.Drawing.Size(127, 21);
+            this.cmbNroDocProveedor.TabIndex = 82;
+            // 
+            // cmbTipoDocProveedor
+            // 
+            this.cmbTipoDocProveedor.FormattingEnabled = true;
+            this.cmbTipoDocProveedor.Location = new System.Drawing.Point(183, 251);
+            this.cmbTipoDocProveedor.Name = "cmbTipoDocProveedor";
+            this.cmbTipoDocProveedor.PpDisplay = null;
+            this.cmbTipoDocProveedor.PpMensajeError = null;
+            this.cmbTipoDocProveedor.PpNombreCampo = null;
+            this.cmbTipoDocProveedor.PpNombreTabla = null;
+            this.cmbTipoDocProveedor.PpTabla = null;
+            this.cmbTipoDocProveedor.PpValidable = false;
+            this.cmbTipoDocProveedor.PpValue = null;
+            this.cmbTipoDocProveedor.Size = new System.Drawing.Size(127, 21);
+            this.cmbTipoDocProveedor.TabIndex = 81;
+            this.cmbTipoDocProveedor.SelectedIndexChanged += new System.EventHandler(this.cmbTipoDocProveedor_SelectedIndexChanged);
+            // 
+            // lbltxtNroComprobante
+            // 
+            this.lbltxtNroComprobante.BackColor = System.Drawing.Color.Transparent;
+            this.lbltxtNroComprobante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltxtNroComprobante.Location = new System.Drawing.Point(28, 31);
+            this.lbltxtNroComprobante.Margin = new System.Windows.Forms.Padding(4);
+            this.lbltxtNroComprobante.Name = "lbltxtNroComprobante";
+            this.lbltxtNroComprobante.PpEtiqueta = "Nro Comprobante:";
+            this.lbltxtNroComprobante.PpMask = "9999";
+            this.lbltxtNroComprobante.PpMensajeError = null;
+            this.lbltxtNroComprobante.PpNombreCampo = "NroComprobante";
+            this.lbltxtNroComprobante.PpNombreTabla = "Compras";
+            this.lbltxtNroComprobante.PpText = "";
+            this.lbltxtNroComprobante.PpValidable = false;
+            this.lbltxtNroComprobante.Size = new System.Drawing.Size(228, 28);
+            this.lbltxtNroComprobante.TabIndex = 30;
+            // 
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -266,19 +331,20 @@
             this.panel5.Controls.Add(this.chkBuscarPorFecha);
             this.panel5.Controls.Add(this.lbltxtNroComprobante);
             this.panel5.Controls.Add(this.chkBuscarPorNroComprobante);
-            this.panel5.Location = new System.Drawing.Point(56, 104);
+            this.panel5.Location = new System.Drawing.Point(56, 98);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(332, 468);
+            this.panel5.Size = new System.Drawing.Size(332, 430);
             this.panel5.TabIndex = 88;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnNuevaVenta);
-            this.panel1.Location = new System.Drawing.Point(556, 410);
+            this.panel1.Location = new System.Drawing.Point(428, 403);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(439, 54);
+            this.panel1.Size = new System.Drawing.Size(551, 54);
             this.panel1.TabIndex = 94;
             // 
             // btnModificar
@@ -301,6 +367,7 @@
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevaVenta
             // 
@@ -351,7 +418,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdCompras.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdCompras.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.grdCompras.Location = new System.Drawing.Point(486, 104);
+            this.grdCompras.Location = new System.Drawing.Point(428, 102);
             this.grdCompras.Name = "grdCompras";
             this.grdCompras.ReadOnly = true;
             this.grdCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -359,76 +426,34 @@
             this.grdCompras.TabIndex = 95;
             this.grdCompras.tabla = null;
             // 
-            // cmbNroDocProveedor
+            // btnConsultar
             // 
-            this.cmbNroDocProveedor.FormattingEnabled = true;
-            this.cmbNroDocProveedor.Location = new System.Drawing.Point(183, 285);
-            this.cmbNroDocProveedor.Name = "cmbNroDocProveedor";
-            this.cmbNroDocProveedor.PpDisplay = null;
-            this.cmbNroDocProveedor.PpMensajeError = null;
-            this.cmbNroDocProveedor.PpNombreCampo = null;
-            this.cmbNroDocProveedor.PpNombreTabla = null;
-            this.cmbNroDocProveedor.PpTabla = null;
-            this.cmbNroDocProveedor.PpValidable = false;
-            this.cmbNroDocProveedor.PpValue = null;
-            this.cmbNroDocProveedor.Size = new System.Drawing.Size(127, 21);
-            this.cmbNroDocProveedor.TabIndex = 82;
-            // 
-            // cmbRazonSocial
-            // 
-            this.cmbRazonSocial.FormattingEnabled = true;
-            this.cmbRazonSocial.Location = new System.Drawing.Point(183, 219);
-            this.cmbRazonSocial.Name = "cmbRazonSocial";
-            this.cmbRazonSocial.PpDisplay = null;
-            this.cmbRazonSocial.PpMensajeError = null;
-            this.cmbRazonSocial.PpNombreCampo = null;
-            this.cmbRazonSocial.PpNombreTabla = null;
-            this.cmbRazonSocial.PpTabla = null;
-            this.cmbRazonSocial.PpValidable = false;
-            this.cmbRazonSocial.PpValue = null;
-            this.cmbRazonSocial.Size = new System.Drawing.Size(127, 21);
-            this.cmbRazonSocial.TabIndex = 80;
-            this.cmbRazonSocial.SelectedIndexChanged += new System.EventHandler(this.cmbRazonSocial_SelectedIndexChanged);
-            // 
-            // cmbTipoDocProveedor
-            // 
-            this.cmbTipoDocProveedor.FormattingEnabled = true;
-            this.cmbTipoDocProveedor.Location = new System.Drawing.Point(183, 251);
-            this.cmbTipoDocProveedor.Name = "cmbTipoDocProveedor";
-            this.cmbTipoDocProveedor.PpDisplay = null;
-            this.cmbTipoDocProveedor.PpMensajeError = null;
-            this.cmbTipoDocProveedor.PpNombreCampo = null;
-            this.cmbTipoDocProveedor.PpNombreTabla = null;
-            this.cmbTipoDocProveedor.PpTabla = null;
-            this.cmbTipoDocProveedor.PpValidable = false;
-            this.cmbTipoDocProveedor.PpValue = null;
-            this.cmbTipoDocProveedor.Size = new System.Drawing.Size(127, 21);
-            this.cmbTipoDocProveedor.TabIndex = 81;
-            this.cmbTipoDocProveedor.SelectedIndexChanged += new System.EventHandler(this.cmbTipoDocProveedor_SelectedIndexChanged);
-            // 
-            // lbltxtNroComprobante
-            // 
-            this.lbltxtNroComprobante.BackColor = System.Drawing.Color.Transparent;
-            this.lbltxtNroComprobante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltxtNroComprobante.Location = new System.Drawing.Point(28, 31);
-            this.lbltxtNroComprobante.Margin = new System.Windows.Forms.Padding(4);
-            this.lbltxtNroComprobante.Name = "lbltxtNroComprobante";
-            this.lbltxtNroComprobante.PpEtiqueta = "Nro Comprobante:";
-            this.lbltxtNroComprobante.PpMask = "9999";
-            this.lbltxtNroComprobante.PpMensajeError = null;
-            this.lbltxtNroComprobante.PpNombreCampo = "NroComprobante";
-            this.lbltxtNroComprobante.PpNombreTabla = "Compras";
-            this.lbltxtNroComprobante.PpText = "";
-            this.lbltxtNroComprobante.PpValidable = false;
-            this.lbltxtNroComprobante.Size = new System.Drawing.Size(228, 28);
-            this.lbltxtNroComprobante.TabIndex = 30;
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnConsultar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnConsultar.Image = global::Practico.Properties.Resources.magnifying_glass;
+            this.btnConsultar.Location = new System.Drawing.Point(364, 10);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(179, 40);
+            this.btnConsultar.TabIndex = 96;
+            this.btnConsultar.Text = "Consultar Compra";
+            this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // FrmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(1119, 687);
+            this.ClientSize = new System.Drawing.Size(1024, 554);
             this.Controls.Add(this.grdCompras);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
@@ -474,5 +499,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevaVenta;
         private Clases.Grid01 grdCompras;
+        private System.Windows.Forms.Button btnConsultar;
     }
 }

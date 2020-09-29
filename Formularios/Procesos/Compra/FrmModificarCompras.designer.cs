@@ -1,6 +1,6 @@
 ﻿namespace Practico.Formularios.Procesos.Compra
 {
-    partial class FrmAltaCompras
+    partial class FrmModificarCompras
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAltaCompras));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarCompras));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNuevaCompra = new System.Windows.Forms.Label();
             this.pckFechaCompra = new System.Windows.Forms.DateTimePicker();
             this.lblFechaCompra = new System.Windows.Forms.Label();
@@ -40,7 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnFechaHoy = new System.Windows.Forms.Button();
             this.lblPrecioHelado = new System.Windows.Forms.Label();
-            this.btnAgregarHelado = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -51,6 +50,7 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblSigno = new System.Windows.Forms.Label();
             this.lblTxtTotal = new System.Windows.Forms.Label();
+            this.btnAgregarHelado = new System.Windows.Forms.Button();
             this.grdDetallesCompras = new Practico.Clases.Grid01();
             this.txtPrecioHelado = new Practico.Clases.TextBox01();
             this.lbltxtKilos = new Practico.Clases.LabelText01();
@@ -74,12 +74,13 @@
             this.lblNuevaCompra.Location = new System.Drawing.Point(47, 43);
             this.lblNuevaCompra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNuevaCompra.Name = "lblNuevaCompra";
-            this.lblNuevaCompra.Size = new System.Drawing.Size(165, 23);
+            this.lblNuevaCompra.Size = new System.Drawing.Size(187, 23);
             this.lblNuevaCompra.TabIndex = 22;
-            this.lblNuevaCompra.Text = "Nueva Compra";
+            this.lblNuevaCompra.Text = "Modificar Compra";
             // 
             // pckFechaCompra
             // 
+            this.pckFechaCompra.Enabled = false;
             this.pckFechaCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.pckFechaCompra.Location = new System.Drawing.Point(227, 102);
             this.pckFechaCompra.MaxDate = new System.DateTime(2020, 9, 25, 0, 0, 0, 0);
@@ -87,6 +88,7 @@
             this.pckFechaCompra.Size = new System.Drawing.Size(121, 20);
             this.pckFechaCompra.TabIndex = 76;
             this.pckFechaCompra.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.pckFechaCompra.ValueChanged += new System.EventHandler(this.pckFechaCompra_ValueChanged);
             // 
             // lblFechaCompra
             // 
@@ -152,6 +154,7 @@
             // 
             this.btnFechaHoy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnFechaHoy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechaHoy.Enabled = false;
             this.btnFechaHoy.FlatAppearance.BorderSize = 0;
             this.btnFechaHoy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.btnFechaHoy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
@@ -178,28 +181,6 @@
             this.lblPrecioHelado.Size = new System.Drawing.Size(55, 19);
             this.lblPrecioHelado.TabIndex = 93;
             this.lblPrecioHelado.Text = "Precio:";
-            // 
-            // btnAgregarHelado
-            // 
-            this.btnAgregarHelado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnAgregarHelado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgregarHelado.FlatAppearance.BorderSize = 0;
-            this.btnAgregarHelado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.btnAgregarHelado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnAgregarHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarHelado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarHelado.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAgregarHelado.Image = global::Practico.Properties.Resources.plus;
-            this.btnAgregarHelado.Location = new System.Drawing.Point(357, 282);
-            this.btnAgregarHelado.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgregarHelado.Name = "btnAgregarHelado";
-            this.btnAgregarHelado.Size = new System.Drawing.Size(156, 42);
-            this.btnAgregarHelado.TabIndex = 94;
-            this.btnAgregarHelado.Text = "Agregar Helado";
-            this.btnAgregarHelado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarHelado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregarHelado.UseVisualStyleBackColor = false;
-            this.btnAgregarHelado.Click += new System.EventHandler(this.btnAgregarHelado_Click);
             // 
             // panel3
             // 
@@ -298,7 +279,7 @@
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(194, 40);
             this.btnRegistrar.TabIndex = 0;
-            this.btnRegistrar.Text = "Registrar Compra";
+            this.btnRegistrar.Text = "Registrar Modificacion";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -360,6 +341,28 @@
             this.lblTxtTotal.TabIndex = 57;
             this.lblTxtTotal.Text = "Total:";
             // 
+            // btnAgregarHelado
+            // 
+            this.btnAgregarHelado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAgregarHelado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregarHelado.FlatAppearance.BorderSize = 0;
+            this.btnAgregarHelado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnAgregarHelado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnAgregarHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarHelado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarHelado.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAgregarHelado.Image = global::Practico.Properties.Resources.plus;
+            this.btnAgregarHelado.Location = new System.Drawing.Point(357, 282);
+            this.btnAgregarHelado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarHelado.Name = "btnAgregarHelado";
+            this.btnAgregarHelado.Size = new System.Drawing.Size(156, 42);
+            this.btnAgregarHelado.TabIndex = 94;
+            this.btnAgregarHelado.Text = "Agregar Helado";
+            this.btnAgregarHelado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarHelado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregarHelado.UseVisualStyleBackColor = false;
+            this.btnAgregarHelado.Click += new System.EventHandler(this.btnAgregarHelado_Click);
+            // 
             // grdDetallesCompras
             // 
             this.grdDetallesCompras.AllowUserToAddRows = false;
@@ -369,23 +372,23 @@
             this.grdDetallesCompras.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.grdDetallesCompras.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdDetallesCompras.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDetallesCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDetallesCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdDetallesCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdDetallesCompras.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDetallesCompras.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdDetallesCompras.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.grdDetallesCompras.Location = new System.Drawing.Point(75, 375);
             this.grdDetallesCompras.Name = "grdDetallesCompras";
@@ -478,6 +481,7 @@
             // 
             // cmbRazonSocial
             // 
+            this.cmbRazonSocial.Enabled = false;
             this.cmbRazonSocial.FormattingEnabled = true;
             this.cmbRazonSocial.Location = new System.Drawing.Point(227, 154);
             this.cmbRazonSocial.Name = "cmbRazonSocial";
@@ -511,7 +515,7 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // FrmAltaCompras
+            // FrmModificarCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -541,9 +545,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmAltaCompras";
+            this.Name = "FrmModificarCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nueva Compra";
+            this.Text = "Modificar Compra";
             this.Load += new System.EventHandler(this.FrmAltaCompras_Load);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
