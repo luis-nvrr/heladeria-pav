@@ -58,6 +58,7 @@
             this.cmbNroDocProveedor = new Practico.Clases.ComboBox01();
             this.cmbTipoDocProveedor = new Practico.Clases.ComboBox01();
             this.cmbRazonSocial = new Practico.Clases.ComboBox01();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,7 +85,7 @@
             this.pckFechaCompra.MaxDate = new System.DateTime(2020, 9, 25, 0, 0, 0, 0);
             this.pckFechaCompra.Name = "pckFechaCompra";
             this.pckFechaCompra.Size = new System.Drawing.Size(121, 20);
-            this.pckFechaCompra.TabIndex = 76;
+            this.pckFechaCompra.TabIndex = 0;
             this.pckFechaCompra.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // lblFechaCompra
@@ -161,7 +162,7 @@
             this.btnFechaHoy.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnFechaHoy.Name = "btnFechaHoy";
             this.btnFechaHoy.Size = new System.Drawing.Size(43, 24);
-            this.btnFechaHoy.TabIndex = 91;
+            this.btnFechaHoy.TabIndex = 1;
             this.btnFechaHoy.Text = "Hoy";
             this.btnFechaHoy.UseVisualStyleBackColor = false;
             this.btnFechaHoy.Click += new System.EventHandler(this.btnFechaHoy_Click);
@@ -193,7 +194,7 @@
             this.btnAgregarHelado.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarHelado.Name = "btnAgregarHelado";
             this.btnAgregarHelado.Size = new System.Drawing.Size(156, 42);
-            this.btnAgregarHelado.TabIndex = 94;
+            this.btnAgregarHelado.TabIndex = 8;
             this.btnAgregarHelado.Text = "Agregar Helado";
             this.btnAgregarHelado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarHelado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -209,7 +210,7 @@
             this.panel3.Location = new System.Drawing.Point(753, 315);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(202, 200);
-            this.panel3.TabIndex = 95;
+            this.panel3.TabIndex = 9;
             // 
             // btnModificar
             // 
@@ -227,7 +228,7 @@
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(194, 40);
-            this.btnModificar.TabIndex = 3;
+            this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Habilitar Modificacion";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -250,7 +251,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(194, 40);
-            this.btnLimpiar.TabIndex = 2;
+            this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar Campos";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -393,6 +394,7 @@
             this.grdDetallesCompras.Size = new System.Drawing.Size(656, 121);
             this.grdDetallesCompras.TabIndex = 97;
             this.grdDetallesCompras.tabla = null;
+            this.grdDetallesCompras.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDetallesCompras_CellEndEdit);
             this.grdDetallesCompras.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdDetallesCompras_KeyDown);
             // 
             // txtPrecioHelado
@@ -405,7 +407,7 @@
             this.txtPrecioHelado.PpNombreTabla = null;
             this.txtPrecioHelado.PpValidable = false;
             this.txtPrecioHelado.Size = new System.Drawing.Size(83, 20);
-            this.txtPrecioHelado.TabIndex = 92;
+            this.txtPrecioHelado.TabIndex = 6;
             // 
             // lbltxtKilos
             // 
@@ -422,7 +424,7 @@
             this.lbltxtKilos.PpText = "";
             this.lbltxtKilos.PpValidable = true;
             this.lbltxtKilos.Size = new System.Drawing.Size(208, 28);
-            this.lbltxtKilos.TabIndex = 90;
+            this.lbltxtKilos.TabIndex = 7;
             // 
             // cmbIdHelado
             // 
@@ -437,7 +439,7 @@
             this.cmbIdHelado.PpValidable = true;
             this.cmbIdHelado.PpValue = null;
             this.cmbIdHelado.Size = new System.Drawing.Size(98, 21);
-            this.cmbIdHelado.TabIndex = 88;
+            this.cmbIdHelado.TabIndex = 5;
             this.cmbIdHelado.SelectedIndexChanged += new System.EventHandler(this.cmbIdHelado_SelectedIndexChanged);
             // 
             // cmbNroDocProveedor
@@ -454,7 +456,7 @@
             this.cmbNroDocProveedor.PpValidable = true;
             this.cmbNroDocProveedor.PpValue = null;
             this.cmbNroDocProveedor.Size = new System.Drawing.Size(121, 21);
-            this.cmbNroDocProveedor.TabIndex = 81;
+            this.cmbNroDocProveedor.TabIndex = 4;
             this.cmbNroDocProveedor.SelectedIndexChanged += new System.EventHandler(this.cmbNroDocProveedor_SelectedIndexChanged);
             // 
             // cmbTipoDocProveedor
@@ -471,7 +473,7 @@
             this.cmbTipoDocProveedor.PpValidable = true;
             this.cmbTipoDocProveedor.PpValue = null;
             this.cmbTipoDocProveedor.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipoDocProveedor.TabIndex = 80;
+            this.cmbTipoDocProveedor.TabIndex = 3;
             this.cmbTipoDocProveedor.SelectedIndexChanged += new System.EventHandler(this.cmbTipoDocProveedor_SelectedIndexChanged);
             // 
             // cmbRazonSocial
@@ -487,8 +489,27 @@
             this.cmbRazonSocial.PpValidable = true;
             this.cmbRazonSocial.PpValue = null;
             this.cmbRazonSocial.Size = new System.Drawing.Size(121, 21);
-            this.cmbRazonSocial.TabIndex = 79;
+            this.cmbRazonSocial.TabIndex = 2;
             this.cmbRazonSocial.SelectedIndexChanged += new System.EventHandler(this.cmbRazonSocial_SelectedIndexChanged);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnCerrar.Location = new System.Drawing.Point(884, 14);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(71, 41);
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // FrmAltaCompras
             // 
@@ -496,6 +517,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(978, 527);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.grdDetallesCompras);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -563,5 +585,6 @@
         private System.Windows.Forms.Label lblSigno;
         private System.Windows.Forms.Label lblTxtTotal;
         private Clases.Grid01 grdDetallesCompras;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

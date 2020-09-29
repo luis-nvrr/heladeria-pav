@@ -58,6 +58,7 @@
             this.cmbNroDocProveedor = new Practico.Clases.ComboBox01();
             this.cmbTipoDocProveedor = new Practico.Clases.ComboBox01();
             this.cmbRazonSocial = new Practico.Clases.ComboBox01();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,6 +80,7 @@
             // 
             // pckFechaCompra
             // 
+            this.pckFechaCompra.Enabled = false;
             this.pckFechaCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.pckFechaCompra.Location = new System.Drawing.Point(227, 102);
             this.pckFechaCompra.MaxDate = new System.DateTime(2020, 9, 25, 0, 0, 0, 0);
@@ -151,6 +153,7 @@
             // 
             this.btnFechaHoy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnFechaHoy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechaHoy.Enabled = false;
             this.btnFechaHoy.FlatAppearance.BorderSize = 0;
             this.btnFechaHoy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.btnFechaHoy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
@@ -187,12 +190,13 @@
             this.panel3.Location = new System.Drawing.Point(753, 315);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(202, 200);
-            this.panel3.TabIndex = 95;
+            this.panel3.TabIndex = 0;
             // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.Enabled = false;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
@@ -210,12 +214,14 @@
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Visible = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiar.Enabled = false;
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
@@ -233,12 +239,14 @@
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Visible = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
@@ -256,6 +264,7 @@
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Visible = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnRegistrar
@@ -273,9 +282,9 @@
             this.btnRegistrar.Location = new System.Drawing.Point(4, 12);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(194, 40);
+            this.btnRegistrar.Size = new System.Drawing.Size(102, 40);
             this.btnRegistrar.TabIndex = 0;
-            this.btnRegistrar.Text = "Registrar Modificacion";
+            this.btnRegistrar.Text = "Aceptar";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -341,6 +350,7 @@
             // 
             this.btnAgregarHelado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnAgregarHelado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregarHelado.Enabled = false;
             this.btnAgregarHelado.FlatAppearance.BorderSize = 0;
             this.btnAgregarHelado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.btnAgregarHelado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
@@ -357,6 +367,7 @@
             this.btnAgregarHelado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarHelado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarHelado.UseVisualStyleBackColor = false;
+            this.btnAgregarHelado.Visible = false;
             this.btnAgregarHelado.Click += new System.EventHandler(this.btnAgregarHelado_Click);
             // 
             // grdDetallesCompras
@@ -385,6 +396,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdDetallesCompras.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grdDetallesCompras.Enabled = false;
             this.grdDetallesCompras.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.grdDetallesCompras.Location = new System.Drawing.Point(75, 375);
             this.grdDetallesCompras.Name = "grdDetallesCompras";
@@ -411,6 +423,7 @@
             // lbltxtKilos
             // 
             this.lbltxtKilos.BackColor = System.Drawing.Color.Transparent;
+            this.lbltxtKilos.Enabled = false;
             this.lbltxtKilos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltxtKilos.Location = new System.Drawing.Point(75, 318);
             this.lbltxtKilos.Margin = new System.Windows.Forms.Padding(4);
@@ -427,6 +440,7 @@
             // 
             // cmbIdHelado
             // 
+            this.cmbIdHelado.Enabled = false;
             this.cmbIdHelado.FormattingEnabled = true;
             this.cmbIdHelado.Location = new System.Drawing.Point(227, 267);
             this.cmbIdHelado.Name = "cmbIdHelado";
@@ -477,6 +491,7 @@
             // 
             // cmbRazonSocial
             // 
+            this.cmbRazonSocial.Enabled = false;
             this.cmbRazonSocial.FormattingEnabled = true;
             this.cmbRazonSocial.Location = new System.Drawing.Point(227, 154);
             this.cmbRazonSocial.Name = "cmbRazonSocial";
@@ -491,12 +506,32 @@
             this.cmbRazonSocial.TabIndex = 79;
             this.cmbRazonSocial.SelectedIndexChanged += new System.EventHandler(this.cmbRazonSocial_SelectedIndexChanged);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnCerrar.Location = new System.Drawing.Point(884, 14);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(71, 41);
+            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
+            // 
             // FrmConsultarCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(978, 527);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.grdDetallesCompras);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -564,5 +599,6 @@
         private System.Windows.Forms.Label lblSigno;
         private System.Windows.Forms.Label lblTxtTotal;
         private Clases.Grid01 grdDetallesCompras;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

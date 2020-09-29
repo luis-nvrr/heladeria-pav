@@ -51,6 +51,7 @@
             this.lbltxtNroComprobante = new Practico.Clases.LabelText01();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevaVenta = new System.Windows.Forms.Button();
             this.grdCompras = new Practico.Clases.Grid01();
@@ -80,7 +81,7 @@
             this.chkBuscarPorNroComprobante.Location = new System.Drawing.Point(12, 4);
             this.chkBuscarPorNroComprobante.Name = "chkBuscarPorNroComprobante";
             this.chkBuscarPorNroComprobante.Size = new System.Drawing.Size(244, 20);
-            this.chkBuscarPorNroComprobante.TabIndex = 31;
+            this.chkBuscarPorNroComprobante.TabIndex = 0;
             this.chkBuscarPorNroComprobante.Text = "Buscar por Número de Comprobante";
             this.chkBuscarPorNroComprobante.UseVisualStyleBackColor = true;
             this.chkBuscarPorNroComprobante.CheckedChanged += new System.EventHandler(this.chkBuscarPorNroComprobante_CheckedChanged);
@@ -94,7 +95,7 @@
             this.chkBuscarPorFecha.Location = new System.Drawing.Point(12, 79);
             this.chkBuscarPorFecha.Name = "chkBuscarPorFecha";
             this.chkBuscarPorFecha.Size = new System.Drawing.Size(130, 20);
-            this.chkBuscarPorFecha.TabIndex = 32;
+            this.chkBuscarPorFecha.TabIndex = 2;
             this.chkBuscarPorFecha.Text = "Buscar por Fecha";
             this.chkBuscarPorFecha.UseVisualStyleBackColor = true;
             this.chkBuscarPorFecha.CheckedChanged += new System.EventHandler(this.chkBuscarPorFecha_CheckedChanged);
@@ -106,7 +107,7 @@
             this.pckDesde.MaxDate = new System.DateTime(2020, 9, 25, 0, 0, 0, 0);
             this.pckDesde.Name = "pckDesde";
             this.pckDesde.Size = new System.Drawing.Size(112, 20);
-            this.pckDesde.TabIndex = 75;
+            this.pckDesde.TabIndex = 3;
             this.pckDesde.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // pckHasta
@@ -116,7 +117,7 @@
             this.pckHasta.MaxDate = new System.DateTime(2020, 9, 25, 0, 0, 0, 0);
             this.pckHasta.Name = "pckHasta";
             this.pckHasta.Size = new System.Drawing.Size(112, 20);
-            this.pckHasta.TabIndex = 76;
+            this.pckHasta.TabIndex = 4;
             this.pckHasta.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // lblDesde
@@ -152,7 +153,7 @@
             this.chkBuscarPorProveedor.Location = new System.Drawing.Point(12, 185);
             this.chkBuscarPorProveedor.Name = "chkBuscarPorProveedor";
             this.chkBuscarPorProveedor.Size = new System.Drawing.Size(156, 20);
-            this.chkBuscarPorProveedor.TabIndex = 79;
+            this.chkBuscarPorProveedor.TabIndex = 5;
             this.chkBuscarPorProveedor.Text = "Buscar por Proveedor";
             this.chkBuscarPorProveedor.UseVisualStyleBackColor = true;
             this.chkBuscarPorProveedor.CheckedChanged += new System.EventHandler(this.chkBuscarPorProveedor_CheckedChanged);
@@ -202,7 +203,7 @@
             this.chkBuscarTodas.Location = new System.Drawing.Point(12, 324);
             this.chkBuscarTodas.Name = "chkBuscarTodas";
             this.chkBuscarTodas.Size = new System.Drawing.Size(192, 20);
-            this.chkBuscarTodas.TabIndex = 86;
+            this.chkBuscarTodas.TabIndex = 9;
             this.chkBuscarTodas.Text = "Buscar Todas Las Compras";
             this.chkBuscarTodas.UseVisualStyleBackColor = true;
             this.chkBuscarTodas.CheckedChanged += new System.EventHandler(this.chkBuscarTodas_CheckedChanged);
@@ -221,7 +222,7 @@
             this.btnEscritorio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnEscritorio.Name = "btnEscritorio";
             this.btnEscritorio.Size = new System.Drawing.Size(166, 63);
-            this.btnEscritorio.TabIndex = 92;
+            this.btnEscritorio.TabIndex = 2;
             this.btnEscritorio.Text = "Volver Al Escritorio";
             this.btnEscritorio.UseVisualStyleBackColor = false;
             this.btnEscritorio.Click += new System.EventHandler(this.btnEscritorio_Click);
@@ -242,7 +243,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(103, 40);
-            this.btnBuscar.TabIndex = 93;
+            this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "       Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -260,7 +261,7 @@
             this.cmbRazonSocial.PpValidable = false;
             this.cmbRazonSocial.PpValue = null;
             this.cmbRazonSocial.Size = new System.Drawing.Size(127, 21);
-            this.cmbRazonSocial.TabIndex = 80;
+            this.cmbRazonSocial.TabIndex = 6;
             this.cmbRazonSocial.SelectedIndexChanged += new System.EventHandler(this.cmbRazonSocial_SelectedIndexChanged);
             // 
             // cmbNroDocProveedor
@@ -276,7 +277,7 @@
             this.cmbNroDocProveedor.PpValidable = false;
             this.cmbNroDocProveedor.PpValue = null;
             this.cmbNroDocProveedor.Size = new System.Drawing.Size(127, 21);
-            this.cmbNroDocProveedor.TabIndex = 82;
+            this.cmbNroDocProveedor.TabIndex = 8;
             // 
             // cmbTipoDocProveedor
             // 
@@ -291,7 +292,7 @@
             this.cmbTipoDocProveedor.PpValidable = false;
             this.cmbTipoDocProveedor.PpValue = null;
             this.cmbTipoDocProveedor.Size = new System.Drawing.Size(127, 21);
-            this.cmbTipoDocProveedor.TabIndex = 81;
+            this.cmbTipoDocProveedor.TabIndex = 7;
             this.cmbTipoDocProveedor.SelectedIndexChanged += new System.EventHandler(this.cmbTipoDocProveedor_SelectedIndexChanged);
             // 
             // lbltxtNroComprobante
@@ -309,7 +310,7 @@
             this.lbltxtNroComprobante.PpText = "";
             this.lbltxtNroComprobante.PpValidable = false;
             this.lbltxtNroComprobante.Size = new System.Drawing.Size(228, 28);
-            this.lbltxtNroComprobante.TabIndex = 30;
+            this.lbltxtNroComprobante.TabIndex = 1;
             // 
             // panel5
             // 
@@ -334,16 +335,39 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(332, 430);
-            this.panel5.TabIndex = 88;
+            this.panel5.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnNuevaVenta);
             this.panel1.Location = new System.Drawing.Point(428, 403);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(509, 54);
-            this.panel1.TabIndex = 94;
+            this.panel1.Size = new System.Drawing.Size(551, 54);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnConsultar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnConsultar.Image = global::Practico.Properties.Resources.magnifying_glass;
+            this.btnConsultar.Location = new System.Drawing.Point(364, 10);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(179, 40);
+            this.btnConsultar.TabIndex = 2;
+            this.btnConsultar.Text = "Consultar Compra";
+            this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnModificar
             // 
@@ -360,7 +384,7 @@
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(181, 40);
-            this.btnModificar.TabIndex = 83;
+            this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar Compra";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -382,7 +406,7 @@
             this.btnNuevaVenta.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevaVenta.Name = "btnNuevaVenta";
             this.btnNuevaVenta.Size = new System.Drawing.Size(163, 40);
-            this.btnNuevaVenta.TabIndex = 82;
+            this.btnNuevaVenta.TabIndex = 0;
             this.btnNuevaVenta.Text = "Nueva Compra";
             this.btnNuevaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -475,5 +499,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevaVenta;
         private Clases.Grid01 grdCompras;
+        private System.Windows.Forms.Button btnConsultar;
     }
 }

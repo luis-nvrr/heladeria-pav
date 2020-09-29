@@ -71,7 +71,7 @@ namespace Practico.Negocios
 		{
             DataTable tabla = new DataTable();
 			string sql = @"	SELECT nroComprobante, 
-			                    CONVERT(varchar, fecha, 101) as fecha,
+			                    CONVERT(varchar, fecha, 103) as fecha,
 								tipoDocProveedor,
 								nroDocProveedor,
 								razonSocial,
@@ -102,7 +102,7 @@ namespace Practico.Negocios
 		{
 			DataTable tabla = new DataTable();
 			string sql = @"	SELECT nroComprobante, 
-			                    CONVERT(varchar, fecha, 101) as fecha,
+			                    CONVERT(varchar, fecha, 103) as fecha,
 								tipoDocProveedor,
 								nroDocProveedor,
 								razonSocial,
@@ -134,7 +134,7 @@ namespace Practico.Negocios
 		{
 			DataTable tabla = new DataTable();
 			string sql = @"	SELECT nroComprobante, 
-			                    CONVERT(varchar, fecha, 101) as fecha,
+			                    CONVERT(varchar, fecha, 103) as fecha,
 								tipoDocProveedor,
 								nroDocProveedor,
 								razonSocial,
@@ -166,7 +166,7 @@ namespace Practico.Negocios
         {
             DataTable tabla = new DataTable();
             string sql = @"	SELECT nroComprobante, 
-			                    CONVERT(varchar, fecha, 101) as fecha,
+			                    CONVERT(varchar, fecha, 103) as fecha,
 								tipoDocProveedor,
 								nroDocProveedor,
 								razonSocial,
@@ -199,7 +199,7 @@ namespace Practico.Negocios
         {
             DataTable tabla = new DataTable();
             string sql = @"	SELECT nroComprobante, 
-        	                    CONVERT(varchar, fecha, 101) as fecha,
+        	                    CONVERT(varchar, fecha, 103) as fecha,
         						tipoDocProveedor,
         						nroDocProveedor,
         						razonSocial,
@@ -233,7 +233,7 @@ namespace Practico.Negocios
 		{
 			DataTable tabla = new DataTable();
 			string sql = @"	SELECT nroComprobante, 
-        	                    CONVERT(varchar, fecha, 101) as fecha,
+        	                    CONVERT(varchar, fecha, 103) as fecha,
         						tipoDocProveedor,
         						nroDocProveedor,
         						razonSocial,
@@ -266,7 +266,7 @@ namespace Practico.Negocios
 		{
 			DataTable tabla = new DataTable();
 			string sql = @"	SELECT nroComprobante, 
-        	                    CONVERT(varchar, fecha, 101) as fecha,
+        	                    CONVERT(varchar, fecha, 103) as fecha,
         						tipoDocProveedor,
         						nroDocProveedor,
         						razonSocial,
@@ -301,7 +301,7 @@ namespace Practico.Negocios
 		{
 			DataTable tabla = new DataTable();
 			string sql = @"	SELECT nroComprobante, 
-        	                    CONVERT(varchar, fecha, 101) as fecha,
+        	                    CONVERT(varchar, fecha, 103) as fecha,
         						tipoDocProveedor,
         						nroDocProveedor,
         						razonSocial,
