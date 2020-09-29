@@ -477,7 +477,7 @@
     <Compile Include="Formularios\Procesos\Compra\FrmAltaCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Procesos\Compra\FrmAltaCompras.Designer.cs">
+    <Compile Include="Formularios\Procesos\Compra\FrmAltaCompras.designer.cs">
       <DependentUpon>FrmAltaCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Procesos\Compra\FrmCompras.cs">
@@ -485,6 +485,18 @@
     </Compile>
     <Compile Include="Formularios\Procesos\Compra\FrmCompras.Designer.cs">
       <DependentUpon>FrmCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Compra\FrmConsultarCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Compra\FrmConsultarCompras.designer.cs">
+      <DependentUpon>FrmConsultarCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Compra\FrmModificarCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Compra\FrmModificarCompras.designer.cs">
+      <DependentUpon>FrmModificarCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Procesos\Venta\FrmAltaVenta.cs">
       <SubType>Form</SubType>
@@ -511,6 +523,7 @@
       <DependentUpon>FrmVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocios\Compras.cs" />
+    <Compile Include="Negocios\DetallesCompras.cs" />
     <Compile Include="Negocios\DetalleVentas.cs" />
     <Compile Include="Negocios\HeladosHeladosEspeciales.cs" />
     <Compile Include="Negocios\FrutasHeladosEspeciales.cs" />
@@ -744,6 +757,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Procesos\Compra\FrmCompras.resx">
       <DependentUpon>FrmCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Compra\FrmConsultarCompras.resx">
+      <DependentUpon>FrmConsultarCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Compra\FrmModificarCompras.resx">
+      <DependentUpon>FrmModificarCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Procesos\Venta\FrmAltaVenta.resx">
       <DependentUpon>FrmAltaVenta.cs</DependentUpon>
