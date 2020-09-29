@@ -26,6 +26,7 @@ namespace Practico.Formularios.Procesos.Compra
         private void FrmCompras_Load(object sender, EventArgs e)
         {
             grdCompras.Formatear("Comprobante,150;Fecha,180;Razón Social,180;Total,100");
+            CargarFecha();
         }
 
         private void CargarComboRazonSocial()
