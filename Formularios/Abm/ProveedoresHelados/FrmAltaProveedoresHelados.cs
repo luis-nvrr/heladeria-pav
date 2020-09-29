@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Negocios;
 using Practico.Clases;
+using Practico.Formularios.Abm.Helados;
+using Practico.Formularios.Abm.Proveedores;
 
 namespace Practico.Formularios.Abm.ProveedoresHelados
 {
@@ -103,6 +105,20 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
         private void cmbNombre_SelectedValueChanged(object sender, EventArgs e)
         {
             CargarComboTipo();
+        }
+
+        private void btnAgregarProveedor_Click(object sender, EventArgs e)
+        {
+            FrmAltaProveedores proveedores = new FrmAltaProveedores();
+            proveedores.ShowDialog();
+            CargarComboNombre();
+        }
+
+        private void btnAgregarHelado_Click(object sender, EventArgs e)
+        {
+            FrmAltaHelados altaHelados = new FrmAltaHelados();
+            altaHelados.ShowDialog();
+            cmbIdHelado.cargar(helados.EstrCombo());
         }
     }
 }

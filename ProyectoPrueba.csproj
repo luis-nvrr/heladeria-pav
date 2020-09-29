@@ -806,6 +806,8 @@
     <None Include="Resources\add-to-cart1.png" />
     <None Include="Resources\iconfinder_website_-_pencil_3440848.png" />
     <None Include="Resources\iconfinder_website_-_pencil_34408481.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\floppy-disk1.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
   <ItemGroup />
