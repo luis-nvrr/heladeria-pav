@@ -21,6 +21,15 @@ namespace Practico.Negocios
             validacionIncorrecta
         };
 
+        public EstructuraComboBox EstrCombo()
+        {
+            EstructuraComboBox ec = new EstructuraComboBox();
+            ec.Display = "nombreUsuario";
+            ec.Value = "idUsuario";
+            ec.Sql = "SELECT * FROM Usuarios";
+            ec.Tabla = baseDatos.Consulta(ec.Sql);
+            return ec;
+        }
 
         public Respuesta ValidarUsuario(string usuario, string password) // valida si el usuario existe
         {

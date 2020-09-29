@@ -21,6 +21,16 @@ namespace Practico.Negocios
             validacionIncorrecta
         }
 
+        public EstructuraComboBox EstrCombo()
+        {
+            EstructuraComboBox ec = new EstructuraComboBox();
+            ec.Display = "nombreProducto";
+            ec.Value = "idHeladoEspecial";
+            ec.Sql = "SELECT * FROM HeladosEspeciales";
+            ec.Tabla = baseDatos.Consulta(ec.Sql);
+            return ec;
+        }
+
         public DataTable TodosLosHeladosEspeciales()
         {
             string sql = "SELECT * FROM HeladosEspeciales P";

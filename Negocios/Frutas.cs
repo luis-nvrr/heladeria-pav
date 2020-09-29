@@ -20,6 +20,15 @@ namespace Practico.Negocios
 			validacionIncorrecta
 		};
 
+		public EstructuraComboBox EstrCombo()
+		{
+			EstructuraComboBox ec = new EstructuraComboBox();
+			ec.Display = "nombre";
+			ec.Value = "idFruta";
+			ec.Sql = "SELECT * FROM Frutas";
+			ec.Tabla = baseDatos.Consulta(ec.Sql);
+			return ec;
+		}
 		public Respuesta ValidarFruta(string nombreFruta)
         {
 			string sql = "SELECT * FROM Frutas WHERE nombre ='" + nombreFruta + "'";

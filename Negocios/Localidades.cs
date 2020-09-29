@@ -20,6 +20,17 @@ namespace Practico.Negocios
             validacionIncorrecta
         };
 
+		public EstructuraComboBox EstrCombo()
+		{
+			EstructuraComboBox ec = new EstructuraComboBox();
+			ec.Display = "nombre";
+			ec.Value = "idLocalidad";
+			ec.Sql = "SELECT * FROM Localidades";
+			ec.Tabla = baseDatos.Consulta(ec.Sql);
+			return ec;
+		}
+
+
 		public Respuesta ValidarLocalidad(string nombreLocalidad)
 		{
 			string sql = "SELECT * FROM Localidades WHERE nombre ='" + nombreLocalidad + "'";

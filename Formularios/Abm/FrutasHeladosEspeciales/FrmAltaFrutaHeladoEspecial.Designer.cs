@@ -37,6 +37,8 @@
             this.txtCantidad = new Practico.Clases.TextBox01();
             this.lblDocumento = new System.Windows.Forms.Label();
             this.lblNuevo = new System.Windows.Forms.Label();
+            this.btnAgregar1 = new System.Windows.Forms.Button();
+            this.btnAgregar2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbHeladoEspecial
@@ -44,7 +46,7 @@
             this.cmbHeladoEspecial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHeladoEspecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbHeladoEspecial.FormattingEnabled = true;
-            this.cmbHeladoEspecial.Location = new System.Drawing.Point(307, 92);
+            this.cmbHeladoEspecial.Location = new System.Drawing.Point(307, 93);
             this.cmbHeladoEspecial.Name = "cmbHeladoEspecial";
             this.cmbHeladoEspecial.PpDisplay = "nombreProducto";
             this.cmbHeladoEspecial.PpMensajeError = "Seleccione un tipo de documento!";
@@ -73,7 +75,7 @@
             this.cmbFruta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFruta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbFruta.FormattingEnabled = true;
-            this.cmbFruta.Location = new System.Drawing.Point(307, 123);
+            this.cmbFruta.Location = new System.Drawing.Point(307, 136);
             this.cmbFruta.Name = "cmbFruta";
             this.cmbFruta.PpDisplay = "nombre";
             this.cmbFruta.PpMensajeError = "Seleccione un numero de documento!";
@@ -91,7 +93,7 @@
             this.lblTelefono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblTelefono.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTelefono.Location = new System.Drawing.Point(143, 157);
+            this.lblTelefono.Location = new System.Drawing.Point(143, 179);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(158, 19);
             this.lblTelefono.TabIndex = 75;
@@ -108,12 +110,14 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(196, 197);
+            this.btnCancelar.Image = global::Practico.Properties.Resources.remove;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(180, 222);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(103, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(119, 40);
             this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "      Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnAceptar
@@ -126,19 +130,21 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAceptar.Location = new System.Drawing.Point(307, 197);
+            this.btnAceptar.Image = global::Practico.Properties.Resources.floppy_disk;
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.Location = new System.Drawing.Point(307, 222);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(103, 40);
+            this.btnAceptar.Size = new System.Drawing.Size(119, 40);
             this.btnAceptar.TabIndex = 3;
-            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.Text = "   Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtCantidad
             // 
             this.txtCantidad.BackColor = System.Drawing.Color.White;
-            this.txtCantidad.Location = new System.Drawing.Point(307, 154);
+            this.txtCantidad.Location = new System.Drawing.Point(307, 177);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.PpMensajeError = "Ingrese un numero de telefono!";
             this.txtCantidad.PpNombreCampo = null;
@@ -153,7 +159,7 @@
             this.lblDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblDocumento.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblDocumento.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDocumento.Location = new System.Drawing.Point(253, 129);
+            this.lblDocumento.Location = new System.Drawing.Point(253, 140);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(48, 19);
             this.lblDocumento.TabIndex = 74;
@@ -171,12 +177,58 @@
             this.lblNuevo.TabIndex = 72;
             this.lblNuevo.Text = "Nueva Fruta de Helado Especial";
             // 
+            // btnAgregar1
+            // 
+            this.btnAgregar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAgregar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregar1.FlatAppearance.BorderSize = 0;
+            this.btnAgregar1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnAgregar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnAgregar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar1.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAgregar1.Image = global::Practico.Properties.Resources.add;
+            this.btnAgregar1.Location = new System.Drawing.Point(481, 84);
+            this.btnAgregar1.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAgregar1.Name = "btnAgregar1";
+            this.btnAgregar1.Size = new System.Drawing.Size(60, 39);
+            this.btnAgregar1.TabIndex = 121;
+            this.btnAgregar1.Text = "...";
+            this.btnAgregar1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar1.UseVisualStyleBackColor = false;
+            this.btnAgregar1.Click += new System.EventHandler(this.btnAgregar1_Click);
+            // 
+            // btnAgregar2
+            // 
+            this.btnAgregar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAgregar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregar2.FlatAppearance.BorderSize = 0;
+            this.btnAgregar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnAgregar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnAgregar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar2.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAgregar2.Image = global::Practico.Properties.Resources.add;
+            this.btnAgregar2.Location = new System.Drawing.Point(481, 128);
+            this.btnAgregar2.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAgregar2.Name = "btnAgregar2";
+            this.btnAgregar2.Size = new System.Drawing.Size(60, 39);
+            this.btnAgregar2.TabIndex = 122;
+            this.btnAgregar2.Text = "...";
+            this.btnAgregar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar2.UseVisualStyleBackColor = false;
+            this.btnAgregar2.Click += new System.EventHandler(this.btnAgregar2_Click);
+            // 
             // FrmAltaFrutaHeladoEspecial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(575, 272);
+            this.ClientSize = new System.Drawing.Size(575, 287);
+            this.Controls.Add(this.btnAgregar2);
+            this.Controls.Add(this.btnAgregar1);
             this.Controls.Add(this.cmbHeladoEspecial);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbFruta);
@@ -211,5 +263,7 @@
         private Clases.TextBox01 txtCantidad;
         private System.Windows.Forms.Label lblDocumento;
         private System.Windows.Forms.Label lblNuevo;
+        private System.Windows.Forms.Button btnAgregar1;
+        private System.Windows.Forms.Button btnAgregar2;
     }
 }

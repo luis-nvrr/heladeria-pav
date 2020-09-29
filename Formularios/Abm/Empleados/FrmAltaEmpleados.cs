@@ -9,11 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Clases;
+using Practico.Negocios;
+using Practico.Formularios.Abm.TipoDocumento;
+using Practico.Formularios.Abm.Barrios;
+using Practico.Formularios.Abm.Usuarios;
+using Practico.Formularios.Abm.Turnos;
 
 namespace Practico.Formularios.Abm.Empleados
 {
     public partial class FrmAltaEmpleados : Form
     {
+        Negocios.TipoDocumento tipoDoc = new Negocios.TipoDocumento();
+        Negocios.Barrios barrio = new Negocios.Barrios();
+        Negocios.Usuarios usuario = new Negocios.Usuarios();
+        Negocios.Turnos turno = new Negocios.Turnos();
+
         public FrmAltaEmpleados()
         {
             InitializeComponent();
@@ -91,6 +101,34 @@ namespace Practico.Formularios.Abm.Empleados
         private void txtNumero_Click(object sender, EventArgs e)
         {
             txtNumero.Select(0, 0);
+        }
+
+        private void btnAgregar1_Click(object sender, EventArgs e)
+        {
+            FrmAltaTipoDocumento tipoDocumento = new FrmAltaTipoDocumento();
+            tipoDocumento.ShowDialog();
+            cmbTipo.cargar(tipoDoc.EstrCombo());
+        }
+
+        private void btnAgregar2_Click(object sender, EventArgs e)
+        {
+            FrmAltaBarrios barrios = new FrmAltaBarrios();
+            barrios.ShowDialog();
+            cmbBarrio.cargar(barrio.EstrCombo());
+        }
+
+        private void btnAgregar3_Click(object sender, EventArgs e)
+        {
+            FrmAltaUsuarios usuarios = new FrmAltaUsuarios();
+            usuarios.ShowDialog();
+            cmbUsuario.cargar(usuario.EstrCombo());
+        }
+
+        private void btnAgregar4_Click(object sender, EventArgs e)
+        {
+            FrmAltaTurnos turnos = new FrmAltaTurnos();
+            turnos.ShowDialog();
+            cmbTurno.cargar(turno.EstrCombo());
         }
     }
 }

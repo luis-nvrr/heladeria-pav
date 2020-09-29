@@ -9,11 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Clases;
+using Practico.Formularios.Abm.HeladosEspeciales;
+using Practico.Formularios.Abm.Frutas;
+using Practico.Negocios;
 
 namespace Practico.Formularios.Abm.FrutasHeladosEspeciales
 {
     public partial class FrmAltaFrutaHeladoEspecial : Form
     {
+        Negocios.HeladosEspeciales heladoEspecial = new Negocios.HeladosEspeciales();
+        Negocios.Frutas fruta = new Negocios.Frutas();
 
         public FrmAltaFrutaHeladoEspecial()
         {
@@ -56,6 +61,20 @@ namespace Practico.Formularios.Abm.FrutasHeladosEspeciales
             cmbFruta.SelectedIndex = -1;
             cmbHeladoEspecial.SelectedIndex = -1;
             txtCantidad.Text = "";
+        }
+
+        private void btnAgregar1_Click(object sender, EventArgs e)
+        {
+            FrmAltaHeladosEspeciales heladosEspeciales = new FrmAltaHeladosEspeciales();
+            heladosEspeciales.ShowDialog();
+            cmbHeladoEspecial.cargar(heladoEspecial.EstrCombo());
+        }
+
+        private void btnAgregar2_Click(object sender, EventArgs e)
+        {
+            FrmAltaFrutas frutas = new FrmAltaFrutas();
+            frutas.ShowDialog();
+            cmbFruta.cargar(fruta.EstrCombo());
         }
     }
 }

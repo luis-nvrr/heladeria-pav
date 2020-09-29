@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Practico.Negocios;
+using Practico.Formularios.Abm.Localidades;
 
 namespace Practico.Formularios.Abm.Barrios
 {
     public partial class FrmAltaBarrios : Form
     {
+        Negocios.Localidades localidad = new Negocios.Localidades();
         public FrmAltaBarrios()
         {
             InitializeComponent();
@@ -58,6 +61,13 @@ namespace Practico.Formularios.Abm.Barrios
                     MessageBox.Show("Ha ocurrido un error...", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnAgregar1_Click(object sender, EventArgs e)
+        {
+            FrmAltaLocalidades localidades = new FrmAltaLocalidades();
+            localidades.ShowDialog();
+            cmbLocalidad.cargar(localidad.EstrCombo());
         }
     }
 }

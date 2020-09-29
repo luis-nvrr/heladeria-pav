@@ -21,6 +21,16 @@ namespace Practico.Negocios
             validacionIncorrecta
         }
 
+        public EstructuraComboBox EstrCombo()
+        {
+            EstructuraComboBox ec = new EstructuraComboBox();
+            ec.Display = "nombre";
+            ec.Value = "idTurno";
+            ec.Sql = "SELECT * FROM Turnos";
+            ec.Tabla = baseDatos.Consulta(ec.Sql);
+            return ec;
+        }
+
         public DataTable TodosLosTurnos()
         {
             string sql = "SELECT T.*, CONVERT(time,T.horaInicio,108) as horaInicioT" +

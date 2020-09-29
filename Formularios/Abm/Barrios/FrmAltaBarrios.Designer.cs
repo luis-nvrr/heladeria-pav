@@ -35,6 +35,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.cmbLocalidad = new Practico.Clases.ComboBox01();
             this.lblLocalidad = new System.Windows.Forms.Label();
+            this.btnAgregar1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNuevo
@@ -61,12 +62,14 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Image = global::Practico.Properties.Resources.remove;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(122, 199);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(137, 52);
             this.btnCancelar.TabIndex = 22;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "   Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -80,6 +83,8 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAceptar.Image = global::Practico.Properties.Resources.floppy_disk;
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.Location = new System.Drawing.Point(270, 199);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(5);
             this.btnAceptar.Name = "btnAceptar";
@@ -146,12 +151,35 @@
             this.lblLocalidad.TabIndex = 49;
             this.lblLocalidad.Text = "Localidad:";
             // 
+            // btnAgregar1
+            // 
+            this.btnAgregar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAgregar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregar1.FlatAppearance.BorderSize = 0;
+            this.btnAgregar1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnAgregar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnAgregar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar1.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAgregar1.Image = global::Practico.Properties.Resources.add;
+            this.btnAgregar1.Location = new System.Drawing.Point(416, 125);
+            this.btnAgregar1.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAgregar1.Name = "btnAgregar1";
+            this.btnAgregar1.Size = new System.Drawing.Size(60, 39);
+            this.btnAgregar1.TabIndex = 119;
+            this.btnAgregar1.Text = "...";
+            this.btnAgregar1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar1.UseVisualStyleBackColor = false;
+            this.btnAgregar1.Click += new System.EventHandler(this.btnAgregar1_Click);
+            // 
             // FrmAltaBarrios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(523, 287);
+            this.Controls.Add(this.btnAgregar1);
             this.Controls.Add(this.cmbLocalidad);
             this.Controls.Add(this.lblLocalidad);
             this.Controls.Add(this.txtNombre);
@@ -179,5 +207,6 @@
         private System.Windows.Forms.Label lblNombre;
         private Clases.ComboBox01 cmbLocalidad;
         private System.Windows.Forms.Label lblLocalidad;
+        private System.Windows.Forms.Button btnAgregar1;
     }
 }
