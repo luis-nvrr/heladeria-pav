@@ -284,13 +284,40 @@ namespace Practico.Formularios.Procesos.Compra
                     int indiceFilaSeleccionada = grdCompras.SelectedRows[0].Index;
                     string nroComprobante = grdCompras[0, indiceFilaSeleccionada].Value.ToString();
 
-                    FrmConsultarCompras modificarCompras = new FrmConsultarCompras();
+                    FrmModificarCompras modificarCompras = new FrmModificarCompras();
                     modificarCompras.nroComprobante = nroComprobante;
                     modificarCompras.ShowDialog();
 
                     DataTable tabla = compras.RecuperarTodasLasCompras(); // ACTUALIZA GRILLA
                     CargarGrilla(tabla);
                     modificarCompras.Close();
+                }
+                else
+                {
+                    return;
+
+                }
+            }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if (grdCompras.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione UNA fila!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int indiceFilaSeleccionada = grdCompras.SelectedRows[0].Index;
+                    string nroComprobante = grdCompras[0, indiceFilaSeleccionada].Value.ToString();
+
+                    FrmConsultarCompras consultar = new FrmConsultarCompras();
+                    consultar.nroComprobante = nroComprobante;
+                    consultar.ShowDialog();
+                    consultar.Close();
                 }
                 else
                 {

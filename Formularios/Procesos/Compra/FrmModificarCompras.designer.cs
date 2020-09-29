@@ -58,6 +58,7 @@
             this.cmbNroDocProveedor = new Practico.Clases.ComboBox01();
             this.cmbTipoDocProveedor = new Practico.Clases.ComboBox01();
             this.cmbRazonSocial = new Practico.Clases.ComboBox01();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,6 +80,7 @@
             // 
             // pckFechaCompra
             // 
+            this.pckFechaCompra.Enabled = false;
             this.pckFechaCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.pckFechaCompra.Location = new System.Drawing.Point(227, 102);
             this.pckFechaCompra.MaxDate = new System.DateTime(2020, 9, 25, 0, 0, 0, 0);
@@ -86,6 +88,7 @@
             this.pckFechaCompra.Size = new System.Drawing.Size(121, 20);
             this.pckFechaCompra.TabIndex = 76;
             this.pckFechaCompra.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.pckFechaCompra.ValueChanged += new System.EventHandler(this.pckFechaCompra_ValueChanged);
             // 
             // lblFechaCompra
             // 
@@ -151,6 +154,7 @@
             // 
             this.btnFechaHoy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnFechaHoy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechaHoy.Enabled = false;
             this.btnFechaHoy.FlatAppearance.BorderSize = 0;
             this.btnFechaHoy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.btnFechaHoy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
@@ -477,6 +481,7 @@
             // 
             // cmbRazonSocial
             // 
+            this.cmbRazonSocial.Enabled = false;
             this.cmbRazonSocial.FormattingEnabled = true;
             this.cmbRazonSocial.Location = new System.Drawing.Point(227, 154);
             this.cmbRazonSocial.Name = "cmbRazonSocial";
@@ -491,12 +496,32 @@
             this.cmbRazonSocial.TabIndex = 79;
             this.cmbRazonSocial.SelectedIndexChanged += new System.EventHandler(this.cmbRazonSocial_SelectedIndexChanged);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(122)))), ((int)(((byte)(127)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnCerrar.Location = new System.Drawing.Point(884, 14);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(71, 41);
+            this.btnCerrar.TabIndex = 98;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // FrmModificarCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(978, 527);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.grdDetallesCompras);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -564,5 +589,6 @@
         private System.Windows.Forms.Label lblSigno;
         private System.Windows.Forms.Label lblTxtTotal;
         private Clases.Grid01 grdDetallesCompras;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

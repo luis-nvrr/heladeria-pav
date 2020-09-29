@@ -273,5 +273,15 @@ namespace Practico.Formularios.Procesos.Compra
             grdDetallesCompras.CurrentCell = grdDetallesCompras.CurrentRow.Cells[4];
             grdDetallesCompras.BeginEdit(true);
         }
+
+        private void grdDetallesCompras_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            actualizarPrecio();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

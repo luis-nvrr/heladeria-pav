@@ -32,6 +32,7 @@ namespace Practico.Formularios.Procesos.Compra
             grdDetallesCompras.Columns[6].Visible = false;
             CargarComboRazonSocial();
             CargarGrilla();
+            actualizarPrecio();
         }
 
         private void CargarComboRazonSocial()
@@ -333,6 +334,16 @@ namespace Practico.Formularios.Procesos.Compra
             actualizarPrecio();
             int indiceFilaSeleccionada = grdDetallesCompras.SelectedRows[0].Index;
             grdDetallesCompras[6, indiceFilaSeleccionada].Value = "modificado";
+        }
+
+        private void pckFechaCompra_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

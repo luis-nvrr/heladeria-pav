@@ -32,6 +32,9 @@ namespace Practico.Formularios.Procesos.Compra
             grdDetallesCompras.Columns[6].Visible = false;
             CargarComboRazonSocial();
             CargarGrilla();
+            cmbIdHelado.SelectedIndex = -1;
+            txtPrecioHelado.Text = "";
+            actualizarPrecio();
         }
 
         private void CargarComboRazonSocial()
@@ -214,18 +217,7 @@ namespace Practico.Formularios.Procesos.Compra
 
         private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Seguro que desea continuar?", "Importante", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                if (grdDetallesCompras.Rows.Count > 0)
-                {
-                    detallesCompras.ModificarDetalle(nroComprobante,cmbTipoDocProveedor.SelectedValue.ToString(), cmbNroDocProveedor.SelectedValue.ToString(), grdDetallesCompras);
-                }
-                else
-                {
-                    MessageBox.Show("No hay datos en la grilla!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            this.Close();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -333,6 +325,11 @@ namespace Practico.Formularios.Procesos.Compra
             actualizarPrecio();
             int indiceFilaSeleccionada = grdDetallesCompras.SelectedRows[0].Index;
             grdDetallesCompras[6, indiceFilaSeleccionada].Value = "modificado";
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
