@@ -93,9 +93,9 @@ namespace Practico.Formularios.Procesos
 
         private void btnEspecial_Click(object sender, EventArgs e)
         {
+            pnlHelados.Visible = false;
             pnlHelados.SendToBack();
             pnlEspecial.BringToFront();
-            pnlHelados.Visible = false;
             pnlEspecial.Visible = true;
         }
 

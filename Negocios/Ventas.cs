@@ -120,7 +120,7 @@
                 string sql = @"	SELECT nroTicket, 
 			                    nroDocEmpleado,
 			                    tipoDocEmpleado,
-			                    CONVERT(varchar, fecha, 101) as fecha,
+			                    CONVERT(varchar, fecha, 103) as fecha,
 			                    nombre,
 			                    SUM(Total) as SumTotal
 	                            FROM (
@@ -164,7 +164,7 @@
                 string sql = @"	SELECT nroTicket, 
 			                    nroDocEmpleado,
 			                    tipoDocEmpleado,
-			                    CONVERT(varchar, fecha, 101) as fecha,
+			                    CONVERT(varchar, fecha, 103) as fecha,
 			                    nombre,
 			                    SUM(Total) as SumTotal
 	                            FROM (
@@ -208,7 +208,7 @@
 			    string sql = @"	SELECT nroTicket, 
 			                        nroDocEmpleado,
 			                        tipoDocEmpleado,
-			                        CONVERT(varchar, fecha, 101) as fecha,
+			                        CONVERT(varchar, fecha, 103) as fecha,
 			                        nombre,
 			                        SUM(Total) as SumTotal
 	                                FROM (
@@ -254,7 +254,7 @@
 			    string sql = @"	SELECT nroTicket, 
 			                            nroDocEmpleado,
 			                            tipoDocEmpleado,
-			                            CONVERT(varchar, fecha, 101) as fecha,
+			                            CONVERT(varchar, fecha, 103) as fecha,
 			                            nombre,
 			                            SUM(Total) as SumTotal
 	                                    FROM (

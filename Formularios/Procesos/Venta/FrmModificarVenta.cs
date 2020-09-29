@@ -95,6 +95,7 @@ namespace Practico.Formularios.Procesos
 
         private void btnHelado_Click(object sender, EventArgs e)
         {
+            pnlEspecial.SendToBack();
             pnlHelados.BringToFront();
             pnlEspecial.Visible = false;
             pnlHelados.Visible = true;
@@ -103,8 +104,9 @@ namespace Practico.Formularios.Procesos
 
         private void btnEspecial_Click(object sender, EventArgs e)
         {
-            pnlEspecial.BringToFront();
             pnlHelados.Visible = false;
+            pnlHelados.SendToBack();
+            pnlEspecial.BringToFront();
             pnlEspecial.Visible = true;
         }
 
