@@ -98,8 +98,9 @@
             this.btnHeladosEspeciales.Name = "btnHeladosEspeciales";
             this.btnHeladosEspeciales.Size = new System.Drawing.Size(166, 63);
             this.btnHeladosEspeciales.TabIndex = 17;
-            this.btnHeladosEspeciales.Text = "Composicion de Helados Especiales";
+            this.btnHeladosEspeciales.Text = "Helados";
             this.btnHeladosEspeciales.UseVisualStyleBackColor = false;
+            this.btnHeladosEspeciales.Click += new System.EventHandler(this.btnHeladosEspeciales_Click);
             // 
             // FrmListados
             // 

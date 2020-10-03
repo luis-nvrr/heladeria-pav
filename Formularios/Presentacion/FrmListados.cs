@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Formularios.Listados;
+using Practico.Formularios.Listados.Helados;
 
 namespace Practico.Formularios.Presentacion
 {
@@ -33,6 +34,11 @@ namespace Practico.Formularios.Presentacion
             formulario.Show();
             this.Close();
 
+        }
+
+        private void btnHeladosEspeciales_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmListadoHelados());
         }
     }
 }

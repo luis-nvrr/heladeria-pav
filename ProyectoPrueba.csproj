@@ -480,6 +480,12 @@
     <Compile Include="Formularios\Listados\Empleados\FrmListadoEmpleados.Designer.cs">
       <DependentUpon>FrmListadoEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Listados\Helados\FrmListadoHelados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Helados\FrmListadoHelados.Designer.cs">
+      <DependentUpon>FrmListadoHelados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Presentacion\FrmAdministracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -789,6 +795,10 @@
       <DependentUpon>FrmListadoEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\Empleados\ListadoEmpleados.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Helados\FrmListadoHelados.resx">
+      <DependentUpon>FrmListadoHelados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Helados\ListadoHelados.rdlc" />
     <EmbeddedResource Include="Formularios\Presentacion\FrmAdministracion.resx">
       <DependentUpon>FrmAdministracion.cs</DependentUpon>
     </EmbeddedResource>
