@@ -9,6 +9,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Practico.Formularios.Presentacion;
 using Practico.Formularios.Procesos;
 using Practico.Negocios;
 using Practico.Formularios.Procesos.Compra;
@@ -84,10 +85,6 @@ namespace Practico
         {
             if (pnlProcesos.Visible)
                 pnlProcesos.Visible = false;
-            if (pnlEstadisticas.Visible)
-                pnlEstadisticas.Visible = false;
-            if (pnlListados.Visible)
-                pnlListados.Visible = false;
         }
 
 
@@ -110,12 +107,14 @@ namespace Practico
 
         private void btnEstadisticas_Click(object sender, EventArgs e)
         {
-            MostrarSubMenu(pnlEstadisticas);
+            AbrirFormulario(new FrmEstadisticas());
+            OcultarSubMenu();
         }
 
         private void btnListados_Click(object sender, EventArgs e)
         {
-            MostrarSubMenu(pnlListados);
+            AbrirFormulario(new FrmListados());
+            OcultarSubMenu();
         }
 
         private void btnAdministracion_Click(object sender, EventArgs e)
