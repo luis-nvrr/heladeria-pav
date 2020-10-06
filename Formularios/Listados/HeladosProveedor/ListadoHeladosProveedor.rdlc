@@ -20,8 +20,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.86394cm</Top>
-        <Left>4.49791cm</Left>
+        <Top>0.82867cm</Top>
+        <Left>4.00812cm</Left>
         <Height>1.12917cm</Height>
         <Width>6.83916cm</Width>
         <Style>
@@ -37,7 +37,7 @@
       <Line Name="Line1">
         <Top>2.13423cm</Top>
         <Height>0cm</Height>
-        <Width>15.43749cm</Width>
+        <Width>15.00062cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -405,7 +405,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.07775in</Width>
+  <Width>5.90575in</Width>
   <Page>
     <PageFooter>
       <Height>2.54cm</Height>
@@ -428,7 +428,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox33</rd:DefaultName>
           <Top>1.39912cm</Top>
-          <Left>12.48516cm</Left>
+          <Left>12.03791cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>

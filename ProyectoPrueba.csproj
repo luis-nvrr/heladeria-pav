@@ -474,17 +474,17 @@
     <Compile Include="Formularios\Abm\Usuarios\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\Empleados\FrmListadoEmpleados.cs">
+    <Compile Include="Formularios\Listados\EmpleadosTurno\FrmListadoEmpleadosTurno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Listados\Empleados\FrmListadoEmpleados.Designer.cs">
-      <DependentUpon>FrmListadoEmpleados.cs</DependentUpon>
+    <Compile Include="Formularios\Listados\EmpleadosTurno\FrmListadoEmpleadosTurno.Designer.cs">
+      <DependentUpon>FrmListadoEmpleadosTurno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\Helados\FrmListadoHelados.cs">
+    <Compile Include="Formularios\Listados\HeladosProveedor\FrmListadoHeladosProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Listados\Helados\FrmListadoHelados.Designer.cs">
-      <DependentUpon>FrmListadoHelados.cs</DependentUpon>
+    <Compile Include="Formularios\Listados\HeladosProveedor\FrmListadoHeladosProveedor.Designer.cs">
+      <DependentUpon>FrmListadoHeladosProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Presentacion\FrmAdministracion.cs">
       <SubType>Form</SubType>
@@ -791,14 +791,14 @@
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listados\Empleados\FrmListadoEmpleados.resx">
-      <DependentUpon>FrmListadoEmpleados.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Listados\EmpleadosTurno\FrmListadoEmpleadosTurno.resx">
+      <DependentUpon>FrmListadoEmpleadosTurno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listados\Empleados\ListadoEmpleados.rdlc" />
-    <EmbeddedResource Include="Formularios\Listados\Helados\FrmListadoHelados.resx">
-      <DependentUpon>FrmListadoHelados.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Listados\EmpleadosTurno\ListadoEmpleadosTurno.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\HeladosProveedor\FrmListadoHeladosProveedor.resx">
+      <DependentUpon>FrmListadoHeladosProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listados\Helados\ListadoHelados.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\HeladosProveedor\ListadoHeladosProveedor.rdlc" />
     <EmbeddedResource Include="Formularios\Presentacion\FrmAdministracion.resx">
       <DependentUpon>FrmAdministracion.cs</DependentUpon>
     </EmbeddedResource>

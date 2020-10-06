@@ -79,7 +79,7 @@
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(166, 63);
             this.btnEmpleados.TabIndex = 17;
-            this.btnEmpleados.Text = "Empleados";
+            this.btnEmpleados.Text = "Empleados por Turnos";
             this.btnEmpleados.UseVisualStyleBackColor = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
@@ -98,7 +98,7 @@
             this.btnHeladosEspeciales.Name = "btnHeladosEspeciales";
             this.btnHeladosEspeciales.Size = new System.Drawing.Size(166, 63);
             this.btnHeladosEspeciales.TabIndex = 17;
-            this.btnHeladosEspeciales.Text = "Helados";
+            this.btnHeladosEspeciales.Text = "Helados por Proveedores";
             this.btnHeladosEspeciales.UseVisualStyleBackColor = false;
             this.btnHeladosEspeciales.Click += new System.EventHandler(this.btnHeladosEspeciales_Click);
             // 

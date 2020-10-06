@@ -107,5 +107,23 @@ namespace Practico.Negocios
             return tabla;
         }
 
+
+        public DataTable ListadoHeladosProveedor(String razonSocial)
+        {
+            string sql = @"SELECT	H.idHelado,
+		                            H.nombre,
+		                            H.precio,
+                                    H.cantidadStock,
+		                            P.razonSocial
+                            FROM Helados H
+	                            INNER JOIN ProveedoresHelados HP ON (H.idHelado = HP.idHelado)
+	                            INNER JOIN Proveedores P ON (P.nroDocumento = HP.nroDocProveedor)
+				                            AND (P.tipoDocumento = HP.tipoDocProveedor)
+                            WHERE P.razonSocial LIKE '"+razonSocial+"'";
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
+
     }
 }

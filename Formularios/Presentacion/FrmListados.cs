@@ -38,7 +38,7 @@ namespace Practico.Formularios.Presentacion
 
         private void btnHeladosEspeciales_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new FrmListadoHelados());
+            abrirFormulario(new FrmListadoHeladosProveedor());
         }
     }
 }

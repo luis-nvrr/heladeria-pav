@@ -221,5 +221,10 @@ namespace Practico.Formularios.Abm.Empleados
 
             }
         }
+
+        private void cmbTurno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -169,7 +169,7 @@ namespace Practico.Negocios
         }
 
 
-        public DataTable ListadoEmpleados()
+        public DataTable ListadoEmpleadosTurno(String turno)
         {
             string sql = @"SELECT	TD.descripcion AS tipoDoc,
 		                            nroDoc,
@@ -186,7 +186,8 @@ namespace Practico.Negocios
                              INNER JOIN TiposDocumento TD ON (E.tipodOC = TD.tipoDocumento)
                              INNER JOIN Barrios B ON (E.idBarrio = B.idBarrio)
                              INNER JOIN Usuarios U ON(E.idUsuario = U.idUsuario)
-                             INNER JOIN Turnos T ON (E.idTurno = T.idTurno)";
+                             INNER JOIN Turnos T ON (E.idTurno = T.idTurno)
+                            WHERE E.idTurno =" + turno;
 
                          DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
