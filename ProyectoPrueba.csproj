@@ -312,6 +312,12 @@
     <Compile Include="Formularios\Abm\ProveedoresHelados\FrmEliminarProveedoresHelados.Designer.cs">
       <DependentUpon>FrmEliminarProveedoresHelados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Abm\ProveedoresHelados\FrmModificarProveedoresHelados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Abm\ProveedoresHelados\FrmModificarProveedoresHelados.Designer.cs">
+      <DependentUpon>FrmModificarProveedoresHelados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\ProveedoresHelados\FrmProveedoresHelados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -670,6 +676,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\ProveedoresHelados\FrmEliminarProveedoresHelados.resx">
       <DependentUpon>FrmEliminarProveedoresHelados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Abm\ProveedoresHelados\FrmModificarProveedoresHelados.resx">
+      <DependentUpon>FrmModificarProveedoresHelados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Abm\ProveedoresHelados\FrmProveedoresHelados.resx">
       <DependentUpon>FrmProveedoresHelados.cs</DependentUpon>

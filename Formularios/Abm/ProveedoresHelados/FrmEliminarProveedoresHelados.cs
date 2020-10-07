@@ -23,6 +23,7 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
         public string nroDocumento { get; set; }
         public string idHelado { get; set; }
         public string razonSocial { get; set; }
+        public string precio { get; set; }
 
         public FrmEliminarProveedoresHelados()
         {
@@ -34,6 +35,7 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
             cmbTipoDoc.cargar(tipoDoc.EstrCombo());
             cmbNroDoc.cargar(proveedores.EstrCombo());
             cmbIdHelado.cargar(helados.EstrCombo());
+            lblPrecio.TabStop = false;
             CargarCampos();
         }
 
@@ -57,9 +59,12 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
             DataTable tabla = new DataTable();
             tabla = proveedoresHelados.RecuperarProoveedorHelado(tipoDocumento, nroDocumento, idHelado);
 
+            precio = tabla.Rows[0]["precio"].ToString();
+
             cmbTipoDoc.SelectedIndex = cmbTipoDoc.FindStringExact(tipoDocumento);
             cmbNroDoc.SelectedValue = nroDocumento;
             cmbIdHelado.SelectedIndex = cmbIdHelado.FindStringExact(idHelado);
+            txtPrecio.Text = precio;
             CargarComboNombre();
         }
         private void btnCancelar_Click(object sender, EventArgs e)

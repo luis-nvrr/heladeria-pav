@@ -29,6 +29,7 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
         private void FrmAltaProveedoresHelados_Load(object sender, EventArgs e)
         {
             cmbIdHelado.cargar(helados.EstrCombo());
+            lblPrecio.TabStop = false;
             CargarComboNombre();
         }
 
@@ -60,6 +61,8 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
             cmbNroDoc.SelectedIndex = -1;
             cmbIdHelado.SelectedIndex = -1;
             cmbNombre.SelectedIndex = -1;
+            lblPrecio.Text = "";
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

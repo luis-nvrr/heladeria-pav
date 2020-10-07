@@ -49,6 +49,8 @@
             this.lblRazonSocial = new System.Windows.Forms.Label();
             this.txtNombreHelado = new Practico.Clases.TextBox01();
             this.pnlBuscar = new System.Windows.Forms.Panel();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdProveedoresHelados)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlBuscar.SuspendLayout();
@@ -77,7 +79,7 @@
             this.btnEscritorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEscritorio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscritorio.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEscritorio.Location = new System.Drawing.Point(616, 17);
+            this.btnEscritorio.Location = new System.Drawing.Point(774, 34);
             this.btnEscritorio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnEscritorio.Name = "btnEscritorio";
             this.btnEscritorio.Size = new System.Drawing.Size(166, 63);
@@ -171,7 +173,8 @@
             this.Id,
             this.Nombre,
             this.Column1,
-            this.Column2});
+            this.Column2,
+            this.Column3});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -186,7 +189,7 @@
             this.grdProveedoresHelados.Name = "grdProveedoresHelados";
             this.grdProveedoresHelados.ReadOnly = true;
             this.grdProveedoresHelados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdProveedoresHelados.Size = new System.Drawing.Size(567, 319);
+            this.grdProveedoresHelados.Size = new System.Drawing.Size(643, 319);
             this.grdProveedoresHelados.TabIndex = 24;
             // 
             // Id
@@ -223,11 +226,12 @@
             // 
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnConsultar);
+            this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnNuevo);
-            this.panel1.Location = new System.Drawing.Point(567, 226);
+            this.panel1.Location = new System.Drawing.Point(713, 226);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(227, 226);
+            this.panel1.Size = new System.Drawing.Size(227, 278);
             this.panel1.TabIndex = 1;
             // 
             // btnEliminar
@@ -241,7 +245,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.Image = global::Practico.Properties.Resources.remove;
-            this.btnEliminar.Location = new System.Drawing.Point(14, 134);
+            this.btnEliminar.Location = new System.Drawing.Point(14, 197);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(185, 55);
@@ -332,12 +336,39 @@
             this.pnlBuscar.Size = new System.Drawing.Size(495, 122);
             this.pnlBuscar.TabIndex = 0;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnModificar.Image = global::Practico.Properties.Resources.iconfinder_website___pencil_3440848;
+            this.btnModificar.Location = new System.Drawing.Point(14, 133);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(185, 55);
+            this.btnModificar.TabIndex = 25;
+            this.btnModificar.Text = "Modificar Proveedor De Helado";
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Precio";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
             // FrmProveedoresHelados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(807, 606);
+            this.ClientSize = new System.Drawing.Size(984, 606);
             this.Controls.Add(this.pnlBuscar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grdProveedoresHelados);
@@ -379,5 +410,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Panel pnlBuscar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

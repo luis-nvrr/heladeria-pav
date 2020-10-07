@@ -42,6 +42,8 @@
             this.btnAgregarHelado = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.txtPrecio = new Practico.Clases.TextBox02();
+            this.lblPrecio = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNuevoProveedor
@@ -237,7 +239,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.Image = global::Practico.Properties.Resources.remove;
-            this.btnCancelar.Location = new System.Drawing.Point(230, 246);
+            this.btnCancelar.Location = new System.Drawing.Point(219, 307);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(113, 40);
@@ -258,7 +260,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAceptar.Image = global::Practico.Properties.Resources.floppy_disk1;
-            this.btnAceptar.Location = new System.Drawing.Point(353, 246);
+            this.btnAceptar.Location = new System.Drawing.Point(342, 307);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(5);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(103, 40);
@@ -268,12 +270,41 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.BackColor = System.Drawing.Color.White;
+            this.txtPrecio.Location = new System.Drawing.Point(252, 232);
+            this.txtPrecio.Mask = "0000000";
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.PpMensajeError = "Ingrese una cantidad!";
+            this.txtPrecio.PpNombreCampo = "precio";
+            this.txtPrecio.PpNombreTabla = "ProveedoresHelados";
+            this.txtPrecio.PpValidable = true;
+            this.txtPrecio.PromptChar = ' ';
+            this.txtPrecio.Size = new System.Drawing.Size(103, 24);
+            this.txtPrecio.TabIndex = 124;
+            this.txtPrecio.ValidatingType = typeof(int);
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblPrecio.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblPrecio.Location = new System.Drawing.Point(191, 232);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(55, 19);
+            this.lblPrecio.TabIndex = 123;
+            this.lblPrecio.Text = "Precio:";
+            // 
             // FrmAltaProveedoresHelados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(585, 319);
+            this.ClientSize = new System.Drawing.Size(585, 361);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnAgregarHelado);
@@ -317,5 +348,7 @@
         private System.Windows.Forms.Button btnAgregarHelado;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
+        private Clases.TextBox02 txtPrecio;
+        private System.Windows.Forms.Label lblPrecio;
     }
 }

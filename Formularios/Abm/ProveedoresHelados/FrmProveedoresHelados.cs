@@ -116,12 +116,14 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
                     string nroDocumento = grdProveedoresHelados[1, indiceFilaSeleccionada].Value.ToString();
                     string razonSocial = grdProveedoresHelados[2, indiceFilaSeleccionada].Value.ToString();
                     string idHelado = grdProveedoresHelados[3, indiceFilaSeleccionada].Value.ToString();
+                    string precio = grdProveedoresHelados[4, indiceFilaSeleccionada].Value.ToString();
 
                     FrmConsultarProveedoresHelados consultarProveedoresHelados = new FrmConsultarProveedoresHelados();
                     consultarProveedoresHelados.tipoDocumento = tipoDocumento;
                     consultarProveedoresHelados.nroDocumento = nroDocumento;
                     consultarProveedoresHelados.razonSocial = razonSocial;
                     consultarProveedoresHelados.idHelado = idHelado;
+                    consultarProveedoresHelados.precio = precio;
                     consultarProveedoresHelados.ShowDialog();
 
                     DataTable tabla = proveedoresHelados.TodosLosProveedoresHelados();
@@ -151,12 +153,14 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
                     string nroDocumento = grdProveedoresHelados[1, indiceFilaSeleccionada].Value.ToString();
                     string razonSocial = grdProveedoresHelados[2, indiceFilaSeleccionada].Value.ToString();
                     string idHelado = grdProveedoresHelados[3, indiceFilaSeleccionada].Value.ToString();
+                    string precio = grdProveedoresHelados[4, indiceFilaSeleccionada].Value.ToString();
 
                     FrmEliminarProveedoresHelados eliminarProveedoresHelados = new FrmEliminarProveedoresHelados();
                     eliminarProveedoresHelados.tipoDocumento = tipoDocumento;
                     eliminarProveedoresHelados.nroDocumento = nroDocumento;
                     eliminarProveedoresHelados.razonSocial = razonSocial;
                     eliminarProveedoresHelados.idHelado = idHelado;
+                    eliminarProveedoresHelados.precio = precio;
                     eliminarProveedoresHelados.ShowDialog();
 
                     DataTable tabla = proveedoresHelados.TodosLosProveedoresHelados();
@@ -169,6 +173,12 @@ namespace Practico.Formularios.Abm.ProveedoresHelados
                 }
 
             }
+        }
+
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
