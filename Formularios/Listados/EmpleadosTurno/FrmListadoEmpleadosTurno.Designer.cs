@@ -39,7 +39,7 @@
             // 
             this.reportViewer1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.reportViewer1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Practico.Formularios.Listados.Empleados.ListadoEmpleadosTurno.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Practico.Formularios.Listados.EmpleadosTurno.ListadoEmpleadosTurno.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 122);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -84,7 +84,7 @@
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnBuscar.Image = global::Practico.Properties.Resources.magnifying_glass;
             this.btnBuscar.Location = new System.Drawing.Point(452, 56);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(123, 40);
             this.btnBuscar.TabIndex = 82;
