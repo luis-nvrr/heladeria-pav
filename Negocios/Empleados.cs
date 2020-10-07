@@ -168,5 +168,30 @@ namespace Practico.Negocios
             return tabla;
         }
 
+
+        public DataTable ListadoEmpleadosTurno(String turno)
+        {
+            string sql = @"SELECT	TD.descripcion AS tipoDoc,
+		                            nroDoc,
+		                            E.nombre AS nombre,
+		                            apellido,
+		                            calle,
+		                            nroCalle,
+		                            B.nombre AS idBarrio,
+		                            CONVERT(VARCHAR, E.fechaNacimiento, 103) AS fechaNacimiento,
+		                            CONVERT(VARCHAR, E.fechaIngreso, 103) AS fechaIngreso,
+		                            U.nombreUsuario AS idUsuario,
+		                            T.nombre AS idTurno
+                            FROM Empleados E
+                             INNER JOIN TiposDocumento TD ON (E.tipodOC = TD.tipoDocumento)
+                             INNER JOIN Barrios B ON (E.idBarrio = B.idBarrio)
+                             INNER JOIN Usuarios U ON(E.idUsuario = U.idUsuario)
+                             INNER JOIN Turnos T ON (E.idTurno = T.idTurno)
+                            WHERE E.idTurno =" + turno;
+
+                         DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
     }
 }

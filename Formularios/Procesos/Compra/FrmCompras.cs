@@ -202,7 +202,16 @@ namespace Practico.Formularios.Procesos.Compra
 
                 if (chkBuscarPorFecha.Checked)
                 {
-                    tabla = compras.RecuperarCompra(pckDesde.Text, pckHasta.Text);
+                    if (pckDesde.Value <= pckHasta.Value)
+                    {
+                        tabla = compras.RecuperarCompra(pckDesde.Text, pckHasta.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fechas invalidas!", caption: "Atención",
+                            icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
+                        return;
+                    }
                 }
 
                 if(chkBuscarPorProveedor.Checked)
@@ -214,14 +223,32 @@ namespace Practico.Formularios.Procesos.Compra
 
                 if (chkBuscarPorNroComprobante.Checked && chkBuscarPorFecha.Checked)
                 {
-                    tabla = compras.RecuperarCompra1(lbltxtNroComprobante.PpText, pckDesde.Text, pckHasta.Text);
+                    if (pckDesde.Value <= pckHasta.Value)
+                    {
+                        tabla = compras.RecuperarCompra1(lbltxtNroComprobante.PpText, pckDesde.Text, pckHasta.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fechas invalidas!", caption: "Atención",
+                            icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
+                        return;
+                    }   
                 }
 
                 if (chkBuscarPorProveedor.Checked && chkBuscarPorFecha.Checked)
                 {
-                    tabla = compras.RecuperarCompra2(cmbTipoDocProveedor.SelectedValue.ToString(),
+                    if (pckDesde.Value <= pckHasta.Value)
+                    {
+                        tabla = tabla = compras.RecuperarCompra2(cmbTipoDocProveedor.SelectedValue.ToString(),
                         cmbNroDocProveedor.SelectedValue.ToString(),
                         cmbRazonSocial.SelectedValue.ToString(), pckDesde.Text, pckHasta.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fechas invalidas!", caption: "Atención",
+                            icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
+                        return;
+                    }  
                 }
 
                 if (chkBuscarPorNroComprobante.Checked && chkBuscarPorProveedor.Checked)
@@ -234,10 +261,19 @@ namespace Practico.Formularios.Procesos.Compra
 
                 if (chkBuscarPorNroComprobante.Checked && chkBuscarPorFecha.Checked && chkBuscarPorProveedor.Checked)
                 {
-                    tabla = compras.RecuperarCompra4(lbltxtNroComprobante.PpText, pckDesde.Text, pckHasta.Text,
+                    if (pckDesde.Value <= pckHasta.Value)
+                    {
+                        tabla = compras.RecuperarCompra4(lbltxtNroComprobante.PpText, pckDesde.Text, pckHasta.Text,
                         cmbTipoDocProveedor.SelectedValue.ToString(),
                         cmbNroDocProveedor.SelectedValue.ToString(),
                         cmbRazonSocial.SelectedValue.ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fechas invalidas!", caption: "Atención",
+                            icon: MessageBoxIcon.Exclamation, buttons: MessageBoxButtons.OK);
+                        return;
+                    }
                 }
 
             }

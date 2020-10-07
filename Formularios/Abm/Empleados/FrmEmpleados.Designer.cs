@@ -426,6 +426,7 @@
             this.cmbTurno.PpValue = "idTurno";
             this.cmbTurno.Size = new System.Drawing.Size(123, 25);
             this.cmbTurno.TabIndex = 3;
+            this.cmbTurno.SelectedIndexChanged += new System.EventHandler(this.cmbTurno_SelectedIndexChanged);
             // 
             // btnLimpiarTurno
             // 
