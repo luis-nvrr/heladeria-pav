@@ -32,6 +32,8 @@
             this.btnEscritorio = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnHeladosEspeciales = new System.Windows.Forms.Button();
+            this.btnProveedoresBarrio = new System.Windows.Forms.Button();
+            this.btnEmpleadosLocalidad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblListados
@@ -102,6 +104,44 @@
             this.btnHeladosEspeciales.UseVisualStyleBackColor = false;
             this.btnHeladosEspeciales.Click += new System.EventHandler(this.btnHeladosEspeciales_Click);
             // 
+            // btnProveedoresBarrio
+            // 
+            this.btnProveedoresBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnProveedoresBarrio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProveedoresBarrio.FlatAppearance.BorderSize = 0;
+            this.btnProveedoresBarrio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnProveedoresBarrio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnProveedoresBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedoresBarrio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedoresBarrio.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnProveedoresBarrio.Location = new System.Drawing.Point(59, 190);
+            this.btnProveedoresBarrio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnProveedoresBarrio.Name = "btnProveedoresBarrio";
+            this.btnProveedoresBarrio.Size = new System.Drawing.Size(166, 63);
+            this.btnProveedoresBarrio.TabIndex = 18;
+            this.btnProveedoresBarrio.Text = "Proveedores por Barrio";
+            this.btnProveedoresBarrio.UseVisualStyleBackColor = false;
+            this.btnProveedoresBarrio.Click += new System.EventHandler(this.btnProveedoresBarrio_Click);
+            // 
+            // btnEmpleadosLocalidad
+            // 
+            this.btnEmpleadosLocalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnEmpleadosLocalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEmpleadosLocalidad.FlatAppearance.BorderSize = 0;
+            this.btnEmpleadosLocalidad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnEmpleadosLocalidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnEmpleadosLocalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpleadosLocalidad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleadosLocalidad.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnEmpleadosLocalidad.Location = new System.Drawing.Point(237, 190);
+            this.btnEmpleadosLocalidad.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnEmpleadosLocalidad.Name = "btnEmpleadosLocalidad";
+            this.btnEmpleadosLocalidad.Size = new System.Drawing.Size(166, 63);
+            this.btnEmpleadosLocalidad.TabIndex = 19;
+            this.btnEmpleadosLocalidad.Text = "Empleados por Localidad";
+            this.btnEmpleadosLocalidad.UseVisualStyleBackColor = false;
+            this.btnEmpleadosLocalidad.Click += new System.EventHandler(this.btnEmpleadosLocalidad_Click);
+            // 
             // FrmListados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -109,6 +149,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(909, 606);
+            this.Controls.Add(this.btnEmpleadosLocalidad);
+            this.Controls.Add(this.btnProveedoresBarrio);
             this.Controls.Add(this.btnHeladosEspeciales);
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.btnEscritorio);
@@ -128,5 +170,7 @@
         private System.Windows.Forms.Button btnEscritorio;
         private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Button btnHeladosEspeciales;
+        private System.Windows.Forms.Button btnProveedoresBarrio;
+        private System.Windows.Forms.Button btnEmpleadosLocalidad;
     }
 }

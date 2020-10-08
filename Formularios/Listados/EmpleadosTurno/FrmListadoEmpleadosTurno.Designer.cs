@@ -31,8 +31,8 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.lblEmpleados = new System.Windows.Forms.Label();
             this.lblTurno = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.cmbTurno = new Practico.Clases.ComboBox01();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -72,6 +72,23 @@
             this.lblTurno.TabIndex = 50;
             this.lblTurno.Text = "Turno:";
             // 
+            // cmbTurno
+            // 
+            this.cmbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTurno.FormattingEnabled = true;
+            this.cmbTurno.Location = new System.Drawing.Point(322, 68);
+            this.cmbTurno.Name = "cmbTurno";
+            this.cmbTurno.PpDisplay = "nombre";
+            this.cmbTurno.PpMensajeError = null;
+            this.cmbTurno.PpNombreCampo = null;
+            this.cmbTurno.PpNombreTabla = null;
+            this.cmbTurno.PpTabla = "Turnos";
+            this.cmbTurno.PpValidable = true;
+            this.cmbTurno.PpValue = "idTurno";
+            this.cmbTurno.Size = new System.Drawing.Size(123, 21);
+            this.cmbTurno.TabIndex = 83;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -93,23 +110,6 @@
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // cmbTurno
-            // 
-            this.cmbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTurno.FormattingEnabled = true;
-            this.cmbTurno.Location = new System.Drawing.Point(322, 68);
-            this.cmbTurno.Name = "cmbTurno";
-            this.cmbTurno.PpDisplay = "nombre";
-            this.cmbTurno.PpMensajeError = null;
-            this.cmbTurno.PpNombreCampo = null;
-            this.cmbTurno.PpNombreTabla = null;
-            this.cmbTurno.PpTabla = "Turnos";
-            this.cmbTurno.PpValidable = true;
-            this.cmbTurno.PpValue = "idTurno";
-            this.cmbTurno.Size = new System.Drawing.Size(123, 21);
-            this.cmbTurno.TabIndex = 83;
             // 
             // FrmListadoEmpleados
             // 

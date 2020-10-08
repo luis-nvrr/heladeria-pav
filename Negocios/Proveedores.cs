@@ -105,6 +105,27 @@ namespace Practico.Negocios
 
         }
 
+        public DataTable ListadoProveedoresBarrio(String barrio)
+        {
+            string sql = @"SELECT	TD.descripcion AS tipoDocumento,
+		                            P.nroDocumento,
+		                            P.razonSocial,
+		                            P.mail,
+		                            P.telCelular,
+		                            P.telFijo,
+                                    P.calle,
+                                    P.nroCalle,
+		                            B.nombre AS idBarrio		                           
+                            FROM Proveedores P
+                             INNER JOIN TiposDocumento TD ON (P.tipoDocumento = TD.tipoDocumento)
+                             INNER JOIN Barrios B ON (P.idBarrio = B.idBarrio)
+                            WHERE P.idBarrio =" + barrio;
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
+
 
 
     }

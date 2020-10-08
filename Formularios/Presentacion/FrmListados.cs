@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Formularios.Listados;
 using Practico.Formularios.Listados.Helados;
+using Practico.Formularios.Listados.ProveedoresBarrio;
+using Practico.Formularios.Listados.EmpleadosLocalidad;
 
 namespace Practico.Formularios.Presentacion
 {
@@ -39,6 +41,16 @@ namespace Practico.Formularios.Presentacion
         private void btnHeladosEspeciales_Click(object sender, EventArgs e)
         {
             abrirFormulario(new FrmListadoHeladosProveedor());
+        }
+
+        private void btnProveedoresBarrio_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmListadoProveedoresBarrio());
+        }
+
+        private void btnEmpleadosLocalidad_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmListadoEmpleadosLocalidad());
         }
     }
 }

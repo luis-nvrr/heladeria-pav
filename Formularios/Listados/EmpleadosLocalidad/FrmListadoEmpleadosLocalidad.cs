@@ -11,32 +11,31 @@ using Microsoft.Reporting.WinForms;
 using Practico.Clases;
 using Practico.Negocios;
 
-namespace Practico.Formularios.Listados
+namespace Practico.Formularios.Listados.EmpleadosLocalidad
 {
-    public partial class FrmListadoEmpleados : Form
+    public partial class FrmListadoEmpleadosLocalidad : Form
     {
-        public FrmListadoEmpleados()
+        public FrmListadoEmpleadosLocalidad()
         {
             InitializeComponent();
         }
 
-        private void FrmListadoEmpleados_Load(object sender, EventArgs e)
+        private void FrmListadoEmpleadosLocalidad_Load(object sender, EventArgs e)
         {
             this.reportViewer1.RefreshReport();
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            cmbTurno.Cargar();
+            cmbLocalidad.Cargar();
             cargarListado();
-
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (cmbTurno.SelectedIndex != -1)
+            if (cmbLocalidad.SelectedIndex != -1)
             {
-               cargarListado();
+                cargarListado();
             }
             else
             {
@@ -48,7 +47,7 @@ namespace Practico.Formularios.Listados
         {
             DataTable tabla = new DataTable();
             Empleados empleados = new Empleados();
-            tabla = empleados.ListadoEmpleadosTurno(cmbTurno.SelectedValue.ToString());
+            tabla = empleados.ListadoEmpleadosLocalidad(cmbLocalidad.SelectedValue.ToString());
 
             ReportDataSource data = new ReportDataSource("DatosEmpleados", tabla);
             reportViewer1.LocalReport.DataSources.Clear();
@@ -56,6 +55,5 @@ namespace Practico.Formularios.Listados
             reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
         }
-
     }
 }
