@@ -109,19 +109,6 @@ namespace Practico.Negocios
 
         }
 
-        public DataTable ListadoHeladosEspecialesPrecio(string precio)
-        {
-            string sql = @"SELECT	H.idHeladoEspecial,
-		                            H.nombreProducto,
-		                            H.precio,
-                                    H.cantidadStock
-                            FROM HeladosEspeciales H
-                            WHERE H.precio > " + precio;
-            DataTable tabla = new DataTable();
-            tabla = baseDatos.Consulta(sql);
-            return tabla;
-        }
-
 
     }
 }
