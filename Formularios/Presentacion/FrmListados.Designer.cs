@@ -34,6 +34,7 @@
             this.btnHeladosEspeciales = new System.Windows.Forms.Button();
             this.btnProveedoresBarrio = new System.Windows.Forms.Button();
             this.btnEmpleadosLocalidad = new System.Windows.Forms.Button();
+            this.btn_listadoHelxPrec = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblListados
@@ -142,6 +143,22 @@
             this.btnEmpleadosLocalidad.UseVisualStyleBackColor = false;
             this.btnEmpleadosLocalidad.Click += new System.EventHandler(this.btnEmpleadosLocalidad_Click);
             // 
+            // btn_listadoHelxPrec
+            // 
+            this.btn_listadoHelxPrec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btn_listadoHelxPrec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_listadoHelxPrec.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_listadoHelxPrec.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btn_listadoHelxPrec.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btn_listadoHelxPrec.Location = new System.Drawing.Point(59, 262);
+            this.btn_listadoHelxPrec.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btn_listadoHelxPrec.Name = "btn_listadoHelxPrec";
+            this.btn_listadoHelxPrec.Size = new System.Drawing.Size(166, 63);
+            this.btn_listadoHelxPrec.TabIndex = 20;
+            this.btn_listadoHelxPrec.Text = "Helados por Precio";
+            this.btn_listadoHelxPrec.UseVisualStyleBackColor = false;
+            this.btn_listadoHelxPrec.Click += new System.EventHandler(this.btn_listadoHelxPrec_Click);
+            // 
             // FrmListados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -149,6 +166,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(909, 606);
+            this.Controls.Add(this.btn_listadoHelxPrec);
             this.Controls.Add(this.btnEmpleadosLocalidad);
             this.Controls.Add(this.btnProveedoresBarrio);
             this.Controls.Add(this.btnHeladosEspeciales);
@@ -172,5 +190,6 @@
         private System.Windows.Forms.Button btnHeladosEspeciales;
         private System.Windows.Forms.Button btnProveedoresBarrio;
         private System.Windows.Forms.Button btnEmpleadosLocalidad;
+        private System.Windows.Forms.Button btn_listadoHelxPrec;
     }
 }

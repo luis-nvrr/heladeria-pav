@@ -125,5 +125,24 @@ namespace Practico.Negocios
             return tabla;
         }
 
+        public DataTable ListadoHeladosPrecio(string Precio)
+        {
+            string sql = @"SELECT	idHelado, nombre, precio
+                           FROM Helados
+                           WHERE precio <= " +Precio;
+                           
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            //for (int i = 0; i < tabla.Rows.Count; i++)
+            //{
+            //    if (double.Parse(tabla.Rows[i][2].ToString()) > double.Parse(Precio))
+            //    {
+            //        tabla.Rows[i].Delete();
+            //    }
+
+            //}
+            return tabla;
+        }
     }
 }

@@ -11,6 +11,7 @@ using Practico.Formularios.Listados;
 using Practico.Formularios.Listados.Helados;
 using Practico.Formularios.Listados.ProveedoresBarrio;
 using Practico.Formularios.Listados.EmpleadosLocalidad;
+using Practico.Formularios.Listados.Helados;
 
 namespace Practico.Formularios.Presentacion
 {
@@ -51,6 +52,11 @@ namespace Practico.Formularios.Presentacion
         private void btnEmpleadosLocalidad_Click(object sender, EventArgs e)
         {
             abrirFormulario(new FrmListadoEmpleadosLocalidad());
+        }
+
+        private void btn_listadoHelxPrec_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new Frm_listadoHeladosPrecio());
         }
     }
 }
