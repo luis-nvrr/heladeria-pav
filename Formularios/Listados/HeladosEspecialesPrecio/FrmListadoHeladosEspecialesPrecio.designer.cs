@@ -98,7 +98,7 @@
             // txtPrecioMaximo
             // 
             this.txtPrecioMaximo.BackColor = System.Drawing.Color.White;
-            this.txtPrecioMaximo.Location = new System.Drawing.Point(367, 70);
+            this.txtPrecioMaximo.Location = new System.Drawing.Point(447, 70);
             this.txtPrecioMaximo.Name = "txtPrecioMaximo";
             this.txtPrecioMaximo.PpMensajeError = "No ingresó Precio!";
             this.txtPrecioMaximo.PpNombreCampo = null;
