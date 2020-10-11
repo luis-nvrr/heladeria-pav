@@ -219,5 +219,19 @@ namespace Practico.Negocios
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
+
+        public DataTable ListadoEmpleadosEdad(string edad)
+        {
+            string sql = @"SELECT	E.tipoDoc,
+		                            E.nroDoc,
+		                            E.nombre,
+                                    E.apellido,
+                                    E.fechaNacimiento
+                            FROM Empleados E
+                            WHERE (SELECT (cast(datediff(dd,E.fechaNacimiento,GETDATE()) / 365.25 as int))) > " + edad;
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
     }
 }
