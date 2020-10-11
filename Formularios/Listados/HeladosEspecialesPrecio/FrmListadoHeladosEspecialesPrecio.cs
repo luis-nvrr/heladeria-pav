@@ -18,11 +18,9 @@ namespace Practico.Formularios.Listados.HeladosEspecialesPrecio
             InitializeComponent();
         }
 
-        //DEBERIA SER UN TEXTBOX
+
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            //cmbPrecio.Cargar();
-            //cargarListado();
 
         }
 
@@ -47,11 +45,7 @@ namespace Practico.Formularios.Listados.HeladosEspecialesPrecio
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //if (cmbPrecio.SelectedIndex != -1)
-            //{
-                cargarListado();
-            //}
-
+            cargarListado();
         }
     }
 }

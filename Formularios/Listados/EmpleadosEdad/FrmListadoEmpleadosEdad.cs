@@ -21,9 +21,6 @@ namespace Practico.Formularios.Listados.EmpleadosEdad
         
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            //cmbPrecio.Cargar();
-            //cargarListado();
-
         }
 
         private void FrmListadoEmpleadosEdad_Load(object sender, EventArgs e)
@@ -47,10 +44,7 @@ namespace Practico.Formularios.Listados.EmpleadosEdad
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //if (cmbPrecio.SelectedIndex != -1)
-            //{
-                cargarListado();
-            //}
+            cargarListado();
 
         }
     }
