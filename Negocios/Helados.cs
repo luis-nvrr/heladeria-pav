@@ -134,14 +134,6 @@ namespace Practico.Negocios
 
             DataTable tabla = new DataTable();
             tabla = baseDatos.Consulta(sql);
-            //for (int i = 0; i < tabla.Rows.Count; i++)
-            //{
-            //    if (double.Parse(tabla.Rows[i][2].ToString()) > double.Parse(Precio))
-            //    {
-            //        tabla.Rows[i].Delete();
-            //    }
-
-            //}
             return tabla;
         }
     }

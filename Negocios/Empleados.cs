@@ -219,5 +219,19 @@ namespace Practico.Negocios
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
+
+        public DataTable ListadoEmpleadosFecha(string year, string month, string day)
+        {
+            string sql = @"SELECT   *
+                           FROM Empleados
+                           WHERE fechaIngreso <= " + "'" + year + "-" + month + "-" + day + "'";
+
+
+
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
     }
 }

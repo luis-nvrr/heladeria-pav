@@ -73,11 +73,11 @@
             this.lblPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblPrecio.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPrecio.Location = new System.Drawing.Point(267, 68);
+            this.lblPrecio.Location = new System.Drawing.Point(206, 67);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(55, 19);
+            this.lblPrecio.Size = new System.Drawing.Size(117, 19);
             this.lblPrecio.TabIndex = 84;
-            this.lblPrecio.Text = "Precio:";
+            this.lblPrecio.Text = "Precio menor a:";
             // 
             // lblHeladosPrecio
             // 
@@ -114,7 +114,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.reportViewerHeladosPrecio);
             this.Name = "Frm_listadoHeladosPrecio";
-            this.Text = "FrmListadoHeladosPrecio";
+            this.Text = "Helados por Precio";
             this.Load += new System.EventHandler(this.Frm_listadoHeladosPrecio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

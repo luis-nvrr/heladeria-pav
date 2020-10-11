@@ -474,6 +474,12 @@
     <Compile Include="Formularios\Abm\Usuarios\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Listados\EmpleadosFecha\Frm_listadoEmpleadosFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\EmpleadosFecha\Frm_listadoEmpleadosFecha.Designer.cs">
+      <DependentUpon>Frm_listadoEmpleadosFecha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Listados\EmpleadosLocalidad\FrmListadoEmpleadosLocalidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -809,6 +815,10 @@
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\EmpleadosFecha\Frm_listadoEmpleadosFecha.resx">
+      <DependentUpon>Frm_listadoEmpleadosFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\EmpleadosFecha\ReporteListadoEmpleadosFecha.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\EmpleadosLocalidad\FrmListadoEmpleadosLocalidad.resx">
       <DependentUpon>FrmListadoEmpleadosLocalidad.cs</DependentUpon>
     </EmbeddedResource>

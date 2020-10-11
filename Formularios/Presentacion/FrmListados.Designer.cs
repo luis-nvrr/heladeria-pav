@@ -35,6 +35,7 @@
             this.btnProveedoresBarrio = new System.Windows.Forms.Button();
             this.btnEmpleadosLocalidad = new System.Windows.Forms.Button();
             this.btn_listadoHelxPrec = new System.Windows.Forms.Button();
+            this.btn_EmpleadosFecha = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblListados
@@ -159,6 +160,20 @@
             this.btn_listadoHelxPrec.UseVisualStyleBackColor = false;
             this.btn_listadoHelxPrec.Click += new System.EventHandler(this.btn_listadoHelxPrec_Click);
             // 
+            // btn_EmpleadosFecha
+            // 
+            this.btn_EmpleadosFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btn_EmpleadosFecha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_EmpleadosFecha.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btn_EmpleadosFecha.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btn_EmpleadosFecha.Location = new System.Drawing.Point(237, 262);
+            this.btn_EmpleadosFecha.Name = "btn_EmpleadosFecha";
+            this.btn_EmpleadosFecha.Size = new System.Drawing.Size(166, 63);
+            this.btn_EmpleadosFecha.TabIndex = 21;
+            this.btn_EmpleadosFecha.Text = "Empleados por Fecha";
+            this.btn_EmpleadosFecha.UseVisualStyleBackColor = false;
+            this.btn_EmpleadosFecha.Click += new System.EventHandler(this.btn_EmpleadosFecha_Click);
+            // 
             // FrmListados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -166,6 +181,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(909, 606);
+            this.Controls.Add(this.btn_EmpleadosFecha);
             this.Controls.Add(this.btn_listadoHelxPrec);
             this.Controls.Add(this.btnEmpleadosLocalidad);
             this.Controls.Add(this.btnProveedoresBarrio);
@@ -191,5 +207,6 @@
         private System.Windows.Forms.Button btnProveedoresBarrio;
         private System.Windows.Forms.Button btnEmpleadosLocalidad;
         private System.Windows.Forms.Button btn_listadoHelxPrec;
+        private System.Windows.Forms.Button btn_EmpleadosFecha;
     }
 }

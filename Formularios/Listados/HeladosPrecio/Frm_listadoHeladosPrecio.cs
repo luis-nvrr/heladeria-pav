@@ -29,7 +29,10 @@ namespace Practico.Formularios.Listados.Helados
             }
             else
             {
-                MessageBox.Show("Seleccione un item!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                MessageBox.Show("Ingrese un Precio!", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Precio = "100000";
+                CargarListadoHeladoPrecio();
             }
         }
 
