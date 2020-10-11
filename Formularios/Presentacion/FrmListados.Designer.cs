@@ -35,7 +35,8 @@
             this.btnProveedoresBarrio = new System.Windows.Forms.Button();
             this.btnEmpleadosLocalidad = new System.Windows.Forms.Button();
             this.btn_listadoHelxPrec = new System.Windows.Forms.Button();
-            this.btn_EmpleadosFecha = new System.Windows.Forms.Button();
+            this.btnHeladosEspPrecio = new System.Windows.Forms.Button();
+            this.btnEmpleadosEdad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblListados
@@ -160,19 +161,43 @@
             this.btn_listadoHelxPrec.UseVisualStyleBackColor = false;
             this.btn_listadoHelxPrec.Click += new System.EventHandler(this.btn_listadoHelxPrec_Click);
             // 
-            // btn_EmpleadosFecha
+            // btnHeladosEspPrecio
             // 
-            this.btn_EmpleadosFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btn_EmpleadosFecha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_EmpleadosFecha.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btn_EmpleadosFecha.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btn_EmpleadosFecha.Location = new System.Drawing.Point(237, 262);
-            this.btn_EmpleadosFecha.Name = "btn_EmpleadosFecha";
-            this.btn_EmpleadosFecha.Size = new System.Drawing.Size(166, 63);
-            this.btn_EmpleadosFecha.TabIndex = 21;
-            this.btn_EmpleadosFecha.Text = "Empleados por Fecha";
-            this.btn_EmpleadosFecha.UseVisualStyleBackColor = false;
-            this.btn_EmpleadosFecha.Click += new System.EventHandler(this.btn_EmpleadosFecha_Click);
+            this.btnHeladosEspPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnHeladosEspPrecio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHeladosEspPrecio.FlatAppearance.BorderSize = 0;
+            this.btnHeladosEspPrecio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnHeladosEspPrecio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnHeladosEspPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeladosEspPrecio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeladosEspPrecio.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnHeladosEspPrecio.Location = new System.Drawing.Point(237, 262);
+            this.btnHeladosEspPrecio.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnHeladosEspPrecio.Name = "btnHeladosEspPrecio";
+            this.btnHeladosEspPrecio.Size = new System.Drawing.Size(166, 63);
+            this.btnHeladosEspPrecio.TabIndex = 21;
+            this.btnHeladosEspPrecio.Text = "Helados Especiales por Precio";
+            this.btnHeladosEspPrecio.UseVisualStyleBackColor = false;
+            this.btnHeladosEspPrecio.Click += new System.EventHandler(this.btnHeladosEspPrecio_Click);
+            // 
+            // btnEmpleadosEdad
+            // 
+            this.btnEmpleadosEdad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnEmpleadosEdad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEmpleadosEdad.FlatAppearance.BorderSize = 0;
+            this.btnEmpleadosEdad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnEmpleadosEdad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnEmpleadosEdad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpleadosEdad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleadosEdad.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnEmpleadosEdad.Location = new System.Drawing.Point(59, 335);
+            this.btnEmpleadosEdad.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnEmpleadosEdad.Name = "btnEmpleadosEdad";
+            this.btnEmpleadosEdad.Size = new System.Drawing.Size(166, 63);
+            this.btnEmpleadosEdad.TabIndex = 22;
+            this.btnEmpleadosEdad.Text = "Empleados por Edad";
+            this.btnEmpleadosEdad.UseVisualStyleBackColor = false;
+            this.btnEmpleadosEdad.Click += new System.EventHandler(this.btnEmpleadosEdad_Click);
             // 
             // FrmListados
             // 
@@ -181,7 +206,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(909, 606);
-            this.Controls.Add(this.btn_EmpleadosFecha);
+            this.Controls.Add(this.btnEmpleadosEdad);
+            this.Controls.Add(this.btnHeladosEspPrecio);
             this.Controls.Add(this.btn_listadoHelxPrec);
             this.Controls.Add(this.btnEmpleadosLocalidad);
             this.Controls.Add(this.btnProveedoresBarrio);
@@ -207,6 +233,7 @@
         private System.Windows.Forms.Button btnProveedoresBarrio;
         private System.Windows.Forms.Button btnEmpleadosLocalidad;
         private System.Windows.Forms.Button btn_listadoHelxPrec;
-        private System.Windows.Forms.Button btn_EmpleadosFecha;
+        private System.Windows.Forms.Button btnHeladosEspPrecio;
+        private System.Windows.Forms.Button btnEmpleadosEdad;
     }
 }

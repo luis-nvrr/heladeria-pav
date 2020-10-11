@@ -12,7 +12,8 @@ using Practico.Formularios.Listados.Helados;
 using Practico.Formularios.Listados.ProveedoresBarrio;
 using Practico.Formularios.Listados.EmpleadosLocalidad;
 using Practico.Formularios.Listados.Helados;
-using Practico.Formularios.Listados.EmpleadosFecha;
+using Practico.Formularios.Listados.HeladosEspecialesPrecio;
+using Practico.Formularios.Listados.EmpleadosEdad;
 
 namespace Practico.Formularios.Presentacion
 {
@@ -60,9 +61,14 @@ namespace Practico.Formularios.Presentacion
             abrirFormulario(new Frm_listadoHeladosPrecio());
         }
 
-        private void btn_EmpleadosFecha_Click(object sender, EventArgs e)
+        private void btnHeladosEspPrecio_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new Frm_listadoEmpleadosFecha());
+            abrirFormulario(new FrmListadoHeladosEspecialesPrecio());
+        }
+
+        private void btnEmpleadosEdad_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmListadoEmpleadosEdad());
         }
     }
 }

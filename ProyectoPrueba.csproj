@@ -49,7 +49,7 @@
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -474,11 +474,11 @@
     <Compile Include="Formularios\Abm\Usuarios\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\EmpleadosFecha\Frm_listadoEmpleadosFecha.cs">
+    <Compile Include="Formularios\Listados\EmpleadosEdad\FrmListadoEmpleadosEdad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Listados\EmpleadosFecha\Frm_listadoEmpleadosFecha.Designer.cs">
-      <DependentUpon>Frm_listadoEmpleadosFecha.cs</DependentUpon>
+    <Compile Include="Formularios\Listados\EmpleadosEdad\FrmListadoEmpleadosEdad.designer.cs">
+      <DependentUpon>FrmListadoEmpleadosEdad.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Listados\EmpleadosLocalidad\FrmListadoEmpleadosLocalidad.cs">
       <SubType>Form</SubType>
@@ -491,6 +491,12 @@
     </Compile>
     <Compile Include="Formularios\Listados\EmpleadosTurno\FrmListadoEmpleadosTurno.Designer.cs">
       <DependentUpon>FrmListadoEmpleadosTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\HeladosEspecialesPrecio\FrmListadoHeladosEspecialesPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\HeladosEspecialesPrecio\FrmListadoHeladosEspecialesPrecio.designer.cs">
+      <DependentUpon>FrmListadoHeladosEspecialesPrecio.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Listados\HeladosPrecio\Frm_listadoHeladosPrecio.cs">
       <SubType>Form</SubType>
@@ -815,10 +821,10 @@
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listados\EmpleadosFecha\Frm_listadoEmpleadosFecha.resx">
-      <DependentUpon>Frm_listadoEmpleadosFecha.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Listados\EmpleadosEdad\FrmListadoEmpleadosEdad.resx">
+      <DependentUpon>FrmListadoEmpleadosEdad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listados\EmpleadosFecha\ReporteListadoEmpleadosFecha.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\EmpleadosEdad\ListadoEmpleadosEdad.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\EmpleadosLocalidad\FrmListadoEmpleadosLocalidad.resx">
       <DependentUpon>FrmListadoEmpleadosLocalidad.cs</DependentUpon>
     </EmbeddedResource>
@@ -827,6 +833,10 @@
       <DependentUpon>FrmListadoEmpleadosTurno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\EmpleadosTurno\ListadoEmpleadosTurno.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\HeladosEspecialesPrecio\FrmListadoHeladosEspecialesPrecio.resx">
+      <DependentUpon>FrmListadoHeladosEspecialesPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\HeladosEspecialesPrecio\ListadoHeladosEspeciales.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\HeladosPrecio\Frm_listadoHeladosPrecio.resx">
       <DependentUpon>Frm_listadoHeladosPrecio.cs</DependentUpon>
     </EmbeddedResource>
