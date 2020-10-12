@@ -11,32 +11,31 @@ using Microsoft.Reporting.WinForms;
 using Practico.Clases;
 using Practico.Negocios;
 
-namespace Practico.Formularios.Listados
+namespace Practico.Formularios.Listados.ProveedoresBarrio
 {
-    public partial class FrmListadoEmpleados : Form
+    public partial class FrmListadoProveedoresBarrio : Form
     {
-        public FrmListadoEmpleados()
+        public FrmListadoProveedoresBarrio()
         {
             InitializeComponent();
         }
 
-        private void FrmListadoEmpleados_Load(object sender, EventArgs e)
+        private void FrmListadoProveedoresBarrio_Load(object sender, EventArgs e)
         {
             this.reportViewer1.RefreshReport();
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            cmbTurno.Cargar();
+            cmbBarrio.Cargar();
             cargarListado();
-
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (cmbTurno.SelectedIndex != -1)
+            if (cmbBarrio.SelectedIndex != -1)
             {
-               cargarListado();
+                cargarListado();
             }
             else
             {
@@ -47,15 +46,14 @@ namespace Practico.Formularios.Listados
         private void cargarListado()
         {
             DataTable tabla = new DataTable();
-            Empleados empleados = new Empleados();
-            tabla = empleados.ListadoEmpleadosTurno(cmbTurno.SelectedValue.ToString());
+            Proveedores proveedores = new Proveedores();
+            tabla = proveedores.ListadoProveedoresBarrio(cmbBarrio.SelectedValue.ToString());
 
-            ReportDataSource data = new ReportDataSource("DatosEmpleados", tabla);
+            ReportDataSource data = new ReportDataSource("DatosProveedores", tabla);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(data);
             reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
         }
-
     }
 }

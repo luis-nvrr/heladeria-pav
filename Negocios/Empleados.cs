@@ -193,5 +193,59 @@ namespace Practico.Negocios
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
+
+        public DataTable ListadoEmpleadosLocalidad(String localidad)
+        {
+            string sql = @"SELECT	TD.descripcion AS tipoDoc,
+		                            nroDoc,
+		                            E.nombre AS nombre,
+		                            apellido,
+		                            calle,
+		                            nroCalle,
+		                            B.nombre AS idBarrio,
+		                            CONVERT(VARCHAR, E.fechaNacimiento, 103) AS fechaNacimiento,
+		                            CONVERT(VARCHAR, E.fechaIngreso, 103) AS fechaIngreso,
+		                            U.nombreUsuario AS idUsuario,
+		                            T.nombre AS idTurno
+                            FROM Empleados E
+                             INNER JOIN TiposDocumento TD ON (E.tipodOC = TD.tipoDocumento)
+                             INNER JOIN Barrios B ON (E.idBarrio = B.idBarrio)
+                             INNER JOIN Localidades L ON (B.idLocalidad = L.idLocalidad)
+                             INNER JOIN Usuarios U ON(E.idUsuario = U.idUsuario)
+                             INNER JOIN Turnos T ON (E.idTurno = T.idTurno)
+                            WHERE B.idLocalidad =" + localidad;
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
+
+        public DataTable ListadoEmpleadosFecha(string year, string month, string day)
+        {
+            string sql = @"SELECT   *
+                           FROM Empleados
+                           WHERE fechaIngreso <= " + "'" + year + "-" + month + "-" + day + "'";
+
+
+
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
+
+        public DataTable ListadoEmpleadosEdad(string edad)
+        {
+            string sql = @"SELECT	E.tipoDoc,
+		                            E.nroDoc,
+		                            E.nombre,
+                                    E.apellido,
+                                    E.fechaNacimiento
+                            FROM Empleados E
+                            WHERE (SELECT (cast(datediff(dd,E.fechaNacimiento,GETDATE()) / 365.25 as int))) > " + edad;
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
     }
 }

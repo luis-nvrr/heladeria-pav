@@ -113,7 +113,7 @@ namespace Practico
 
         private void btnListados_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FrmListados());
+            AbrirFormulario(new btnHeladosEspPrecio());
             OcultarSubMenu();
         }
 

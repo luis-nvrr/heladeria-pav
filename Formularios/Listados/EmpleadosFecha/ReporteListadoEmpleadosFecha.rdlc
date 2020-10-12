@@ -20,10 +20,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.41988cm</Top>
-        <Left>12.35604cm</Left>
+        <Top>0.44083cm</Top>
+        <Left>11.08412cm</Left>
         <Height>1.12917cm</Height>
-        <Width>8.34729cm</Width>
+        <Width>8.16208cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -34,47 +34,35 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Line Name="Line1">
-        <Top>1.69016cm</Top>
-        <Height>0cm</Height>
-        <Width>34.60697cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Color>#226666</Color>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.0698cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.10854cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.89687cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.14729cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.89688cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.75917cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.42604cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.7225cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.67771cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -85,18 +73,18 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.76746cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox2">
+                    <Textbox Name="Textbox3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tipo</Value>
+                              <Value>tipo Doc</Value>
                               <Style>
                                 <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -110,7 +98,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -127,14 +115,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox4">
+                    <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nro Doc</Value>
+                              <Value>nro Doc</Value>
                               <Style>
                                 <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -148,7 +136,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -165,14 +153,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox6">
+                    <Textbox Name="Textbox9">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nombre</Value>
+                              <Value>nombre</Value>
                               <Style>
                                 <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -186,7 +174,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox6</rd:DefaultName>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -203,14 +191,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox8">
+                    <Textbox Name="Textbox11">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Apellido</Value>
+                              <Value>apellido</Value>
                               <Style>
                                 <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -224,7 +212,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -241,14 +229,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox12">
+                    <Textbox Name="Textbox13">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Calle</Value>
+                              <Value>calle</Value>
                               <Style>
                                 <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -262,7 +250,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox12</rd:DefaultName>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -279,14 +267,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox10">
+                    <Textbox Name="Textbox17">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nro</Value>
+                              <Value>nro Calle</Value>
                               <Style>
                                 <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -300,7 +288,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <rd:DefaultName>Textbox17</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -317,14 +305,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox20">
+                    <Textbox Name="Textbox19">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Barrio</Value>
+                              <Value>id Barrio</Value>
                               <Style>
                                 <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -338,7 +326,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox20</rd:DefaultName>
+                      <rd:DefaultName>Textbox19</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -355,14 +343,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox22">
+                    <Textbox Name="Textbox15">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha de Nacimiento</Value>
+                              <Value>fecha Nacimiento</Value>
                               <Style>
                                 <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -376,7 +364,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox22</rd:DefaultName>
+                      <rd:DefaultName>Textbox15</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -393,14 +381,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox18">
+                    <Textbox Name="Textbox23">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha de Ingreso</Value>
+                              <Value>fecha Ingreso</Value>
                               <Style>
                                 <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -414,7 +402,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox18</rd:DefaultName>
+                      <rd:DefaultName>Textbox23</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -431,14 +419,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox14">
+                    <Textbox Name="Textbox21">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Usuario</Value>
+                              <Value>id Usuario</Value>
                               <Style>
                                 <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -452,7 +440,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <rd:DefaultName>Textbox21</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -469,14 +457,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox16">
+                    <Textbox Name="Textbox7">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Turno</Value>
+                              <Value>id Turno</Value>
                               <Style>
                                 <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -490,7 +478,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -508,7 +496,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.70583cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -520,11 +508,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!tipoDoc.Value</Value>
-                              <Style>
-                                <FontFamily>Century Gothic</FontFamily>
-                                <FontSize>13pt</FontSize>
-                                <FontWeight>Light</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -538,7 +522,6 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>= Iif(RowNumber("DatosEmpleados") Mod 2 = 0, "#669999", "White")</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -557,11 +540,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!nroDoc.Value</Value>
-                              <Style>
-                                <FontFamily>Century Gothic</FontFamily>
-                                <FontSize>13pt</FontSize>
-                                <FontWeight>Light</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -575,7 +554,6 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>= Iif(RowNumber("DatosEmpleados") Mod 2 = 0, "#669999", "White")</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -594,11 +572,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!nombre.Value</Value>
-                              <Style>
-                                <FontFamily>Century Gothic</FontFamily>
-                                <FontSize>13pt</FontSize>
-                                <FontWeight>Light</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -612,7 +586,6 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>= Iif(RowNumber("DatosEmpleados") Mod 2 = 0, "#669999", "White")</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -631,11 +604,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!apellido.Value</Value>
-                              <Style>
-                                <FontFamily>Century Gothic</FontFamily>
-                                <FontSize>13pt</FontSize>
-                                <FontWeight>Light</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -649,7 +618,6 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>= Iif(RowNumber("DatosEmpleados") Mod 2 = 0, "#669999", "White")</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -668,11 +636,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!calle.Value</Value>
-                              <Style>
-                                <FontFamily>Century Gothic</FontFamily>
-                                <FontSize>13pt</FontSize>
-                                <FontWeight>Light</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -686,7 +650,6 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>= Iif(RowNumber("DatosEmpleados") Mod 2 = 0, "#669999", "White")</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -705,11 +668,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!nroCalle.Value</Value>
-                              <Style>
-                                <FontFamily>Century Gothic</FontFamily>
-                                <FontSize>13pt</FontSize>
-                                <FontWeight>Light</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -723,7 +682,6 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>= Iif(RowNumber("DatosEmpleados") Mod 2 = 0, "#669999", "White")</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -742,11 +700,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!idBarrio.Value</Value>
-                              <Style>
-                                <FontFamily>Century Gothic</FontFamily>
-                                <FontSize>13pt</FontSize>
-                                <FontWeight>Light</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -760,7 +714,6 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>= Iif(RowNumber("DatosEmpleados") Mod 2 = 0, "#669999", "White")</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -779,11 +732,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!fechaNacimiento.Value</Value>
-                              <Style>
-                                <FontFamily>Century Gothic</FontFamily>
-                                <FontSize>13pt</FontSize>
-                                <FontWeight>Light</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -797,7 +746,6 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>= Iif(RowNumber("DatosEmpleados") Mod 2 = 0, "#669999", "White")</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -816,11 +764,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!fechaIngreso.Value</Value>
-                              <Style>
-                                <FontFamily>Century Gothic</FontFamily>
-                                <FontSize>13pt</FontSize>
-                                <FontWeight>Light</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -834,7 +778,6 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>= Iif(RowNumber("DatosEmpleados") Mod 2 = 0, "#669999", "White")</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -853,11 +796,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!idUsuario.Value</Value>
-                              <Style>
-                                <FontFamily>Century Gothic</FontFamily>
-                                <FontSize>13pt</FontSize>
-                                <FontWeight>Light</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -871,7 +810,6 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>= Iif(RowNumber("DatosEmpleados") Mod 2 = 0, "#669999", "White")</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -890,11 +828,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!idTurno.Value</Value>
-                              <Style>
-                                <FontFamily>Century Gothic</FontFamily>
-                                <FontSize>13pt</FontSize>
-                                <FontWeight>Light</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -908,7 +842,6 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>= Iif(RowNumber("DatosEmpleados") Mod 2 = 0, "#669999", "White")</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -942,31 +875,38 @@
               <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
-              <Group Name="Details" />
-              <TablixMembers>
-                <TablixMember />
-              </TablixMembers>
+              <Group Name="Detalles" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DatosEmpleados</DataSetName>
-        <Top>2.2987cm</Top>
-        <Left>0.13354cm</Left>
-        <Height>1.47329cm</Height>
-        <Width>33.7048cm</Width>
-        <ZIndex>2</ZIndex>
+        <DataSetName>DatosIngreso</DataSetName>
+        <Top>2.90724cm</Top>
+        <Left>1.7462cm</Left>
+        <Height>1.2cm</Height>
+        <Width>27.5cm</Width>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
-          <FontFamily>Century Gothic</FontFamily>
         </Style>
       </Tablix>
+      <Line Name="Line1">
+        <Top>1.86986cm</Top>
+        <Height>0cm</Height>
+        <Width>30.24187cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
-    <Height>2.66667in</Height>
+    <Height>2in</Height>
     <Style />
   </Body>
-  <Width>13.62479in</Width>
+  <Width>11.90625in</Width>
   <Page>
     <PageFooter>
       <Height>2.54cm</Height>
@@ -988,9 +928,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>1.55787cm</Top>
-          <Left>29.94959cm</Left>
-          <Height>0.70583cm</Height>
+          <Top>1.31974cm</Top>
+          <Left>26.37578cm</Left>
+          <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
             <Border>
@@ -1025,11 +965,11 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>0bd34b0c-877d-496b-8ca7-42a4cc1c9b1d</rd:DataSourceID>
+      <rd:DataSourceID>4571e71a-2fe0-4e01-928a-e027a6f19222</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DatosEmpleados">
+    <DataSet Name="DatosIngreso">
       <Query>
         <DataSourceName>HeladeriaPAVDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -1082,7 +1022,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>HeladeriaPAVDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Luis Navarro\Source\Repos\luisfnvrr\ProyectoPrueba\HeladeriaPAVDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\cruzg\Source\Repos\luisfnvrr\ProyectoPrueba\HeladeriaPAVDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Empleados</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -1091,5 +1031,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>b95d29d7-9297-433d-b99d-ef296b6bc0ea</rd:ReportID>
+  <rd:ReportID>18ed50af-6043-412a-854d-00f9f36031a6</rd:ReportID>
 </Report>

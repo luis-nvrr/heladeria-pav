@@ -9,12 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Formularios.Listados;
 using Practico.Formularios.Listados.Helados;
+using Practico.Formularios.Listados.ProveedoresBarrio;
+using Practico.Formularios.Listados.EmpleadosLocalidad;
+using Practico.Formularios.Listados.Helados;
+using Practico.Formularios.Listados.EmpleadosFecha;
+using Practico.Formularios.Listados.HeladosEspecialesPrecio;
+using Practico.Formularios.Listados.EmpleadosEdad;
 
 namespace Practico.Formularios.Presentacion
 {
-    public partial class FrmListados : Form
+    public partial class btnHeladosEspPrecio : Form
     {
-        public FrmListados()
+        public btnHeladosEspPrecio()
         {
             InitializeComponent();
         }
@@ -39,6 +45,36 @@ namespace Practico.Formularios.Presentacion
         private void btnHeladosEspeciales_Click(object sender, EventArgs e)
         {
             abrirFormulario(new FrmListadoHeladosProveedor());
+        }
+
+        private void btnProveedoresBarrio_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmListadoProveedoresBarrio());
+        }
+
+        private void btnEmpleadosLocalidad_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmListadoEmpleadosLocalidad());
+        }
+
+        private void btn_listadoHelxPrec_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new Frm_listadoHeladosPrecio());
+        }
+
+        private void btn_EmpleadosFecha_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new Frm_listadoEmpleadosFecha());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmListadoHeladosEspecialesPrecio());
+        }
+
+        private void btnEmpleadosPorEdad_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmListadoEmpleadosEdad());
         }
     }
 }
