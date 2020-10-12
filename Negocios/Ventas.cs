@@ -248,6 +248,17 @@
 
 		    }
 
+		public DataTable listadoVentasEmpleado(string nombre)
+        {
+			string sql = @" SELECT * FROM Ventas V
+						    INNER JOIN Empleados E ON (V.nroDocEmpleado = E.nroDoc) AND (V.tipoDocEmpleado = E.tipoDoc) 
+							WHERE E.nombre LIKE '" + nombre + "'" ;
+			DataTable tabla = new DataTable();
+			tabla = baseDatos.Consulta(sql);
+			return tabla;
+        }
+
+
             public DataTable RecuperarTodasLasVentas()
             {
 			    DataTable tabla = new DataTable();
@@ -287,7 +298,9 @@
 			    tabla = baseDatos.Consulta(sql);
                 return tabla;
             }
+
         }
+		
     
     }
 
