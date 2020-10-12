@@ -97,7 +97,7 @@
             // txtEdadMaxima
             // 
             this.txtEdadMaxima.BackColor = System.Drawing.Color.White;
-            this.txtEdadMaxima.Location = new System.Drawing.Point(389, 68);
+            this.txtEdadMaxima.Location = new System.Drawing.Point(322, 68);
             this.txtEdadMaxima.Name = "txtEdadMaxima";
             this.txtEdadMaxima.PpMensajeError = "No ingresó Precio!";
             this.txtEdadMaxima.PpNombreCampo = null;
