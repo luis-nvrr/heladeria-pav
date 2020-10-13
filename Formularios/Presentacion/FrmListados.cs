@@ -15,6 +15,8 @@ using Practico.Formularios.Listados.Helados;
 using Practico.Formularios.Listados.EmpleadosFecha;
 using Practico.Formularios.Listados.HeladosEspecialesPrecio;
 using Practico.Formularios.Listados.EmpleadosEdad;
+using Practico.Formularios.Listados.Ventas;
+using Practico.Formularios.Listados.Frutas;
 
 namespace Practico.Formularios.Presentacion
 {
@@ -75,6 +77,16 @@ namespace Practico.Formularios.Presentacion
         private void btnEmpleadosPorEdad_Click(object sender, EventArgs e)
         {
             abrirFormulario(new FrmListadoEmpleadosEdad());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmListadoVentasEmpleado());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmListadoFrutas());
         }
     }
 }
