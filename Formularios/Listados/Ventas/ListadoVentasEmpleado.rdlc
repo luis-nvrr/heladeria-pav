@@ -30,8 +30,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.26141cm</Top>
-        <Left>5.05037cm</Left>
+        <Top>0.29669cm</Top>
+        <Left>6.94245cm</Left>
         <Height>1.02333cm</Height>
         <Width>6.46875cm</Width>
         <Style>
@@ -47,7 +47,7 @@
       <Line Name="Line1">
         <Top>1.46113cm</Top>
         <Height>0cm</Height>
-        <Width>16.51cm</Width>
+        <Width>21.9075cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -59,21 +59,21 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.90349cm</Width>
+              <Width>4.5439cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.90349cm</Width>
+              <Width>4.5439cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.90349cm</Width>
+              <Width>4.5439cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.90349cm</Width>
+              <Width>4.5439cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.31438cm</Height>
+              <Height>1.35407cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -214,7 +214,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.31438cm</Height>
+              <Height>1.35407cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -359,10 +359,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DatosVentas</DataSetName>
-        <Top>1.82245cm</Top>
-        <Left>2.80865cm</Left>
-        <Height>2.62875cm</Height>
-        <Width>11.61396cm</Width>
+        <Top>2.51036cm</Top>
+        <Left>1.88261cm</Left>
+        <Height>2.70814cm</Height>
+        <Width>18.17562cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -371,11 +371,52 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>2.80208in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>8.625in</Width>
   <Page>
+    <PageFooter>
+      <Height>2.54cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="PageNumber">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>PageNumber</rd:DefaultName>
+          <Top>1.0287cm</Top>
+          <Left>18.14724cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>

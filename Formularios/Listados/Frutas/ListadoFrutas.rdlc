@@ -32,7 +32,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Left>4.07141cm</Left>
+        <Top>0.18176cm</Top>
+        <Left>6.16162cm</Left>
         <Height>1.47312cm</Height>
         <Width>6.04542cm</Width>
         <Style>
@@ -48,7 +49,7 @@
       <Line Name="Line1">
         <Top>1.79599cm</Top>
         <Height>0cm</Height>
-        <Width>14.2875cm</Width>
+        <Width>18.81187cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -60,10 +61,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>5.42365cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>5.42365cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -231,9 +232,9 @@
         </TablixRowHierarchy>
         <DataSetName>DatosFrutas</DataSetName>
         <Top>2.37808cm</Top>
-        <Left>4.36245cm</Left>
+        <Left>4.07141cm</Left>
         <Height>1.2cm</Height>
-        <Width>5cm</Width>
+        <Width>10.84729cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -245,7 +246,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>5.625in</Width>
+  <Width>7.40625in</Width>
   <Page>
     <PageFooter>
       <Height>2.54cm</Height>
@@ -267,8 +268,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>1.10808cm</Top>
-          <Left>7.61683cm</Left>
+          <Top>1.39912cm</Top>
+          <Left>15.47496cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>

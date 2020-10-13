@@ -71,6 +71,7 @@
             this.btnEscritorio.TabIndex = 16;
             this.btnEscritorio.Text = "Volver Al Escritorio";
             this.btnEscritorio.UseVisualStyleBackColor = false;
+            this.btnEscritorio.Click += new System.EventHandler(this.btnEscritorio_Click);
             // 
             // btnEmpleados
             // 

@@ -88,5 +88,10 @@ namespace Practico.Formularios.Presentacion
         {
             abrirFormulario(new FrmListadoFrutas());
         }
+
+        private void btnEscritorio_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
