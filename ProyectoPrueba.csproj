@@ -84,6 +84,14 @@
     <Compile Include="Clases\TextBox01.cs" />
     <Compile Include="Clases\TextBox02.cs" />
     <Compile Include="Clases\TratamientosEspeciales.cs" />
+    <Compile Include="DatosEstadisticas\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosEstadisticas\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Barrios\FrmAltaBarrios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -480,6 +488,18 @@
     <Compile Include="Formularios\Abm\Usuarios\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\CantidadVentasEmpleados\FrmEstadisticaCantidadVentasEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\CantidadVentasEmpleados\FrmEstadisticaCantidadVentasEmpleados.Designer.cs">
+      <DependentUpon>FrmEstadisticaCantidadVentasEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\VentasPorHeladosPeriodo\FrmEstadisticaVentasPorHeladosPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\VentasPorHeladosPeriodo\FrmEstadisticaVentasPorHeladosPeriodo.Designer.cs">
+      <DependentUpon>FrmEstadisticaVentasPorHeladosPeriodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Listados\EmpleadosEdad\FrmListadoEmpleadosEdad.cs" />
     <Compile Include="Formularios\Listados\EmpleadosEdad\FrmListadoEmpleadosEdad.designer.cs">
       <DependentUpon>FrmListadoEmpleadosEdad.cs</DependentUpon>
@@ -840,6 +860,14 @@
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\CantidadVentasEmpleados\FrmEstadisticaCantidadVentasEmpleados.resx">
+      <DependentUpon>FrmEstadisticaCantidadVentasEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\CantidadVentasEmpleados\CantidadVentasEmpleados.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\VentasPorHeladosPeriodo\FrmEstadisticaVentasPorHeladosPeriodo.resx">
+      <DependentUpon>FrmEstadisticaVentasPorHeladosPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\VentasPorHeladosPeriodo\EstadisticaTotalesPorHelados.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\EmpleadosEdad\FrmListadoEmpleadosEdad.resx">
       <DependentUpon>FrmListadoEmpleadosEdad.cs</DependentUpon>
     </EmbeddedResource>
@@ -924,6 +952,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DatosEstadisticas\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstadisticas\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosEstadisticas\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="HeladeriaPAVDataSet.xsc">
       <DependentUpon>HeladeriaPAVDataSet.xsd</DependentUpon>
     </None>
@@ -998,8 +1037,6 @@
     <None Include="Resources\eraser.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formularios\Estadisticas\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

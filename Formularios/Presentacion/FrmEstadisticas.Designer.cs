@@ -31,6 +31,7 @@
             this.lblEstadisticas = new System.Windows.Forms.Label();
             this.btnEscritorio = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
+            this.btnVentasPorEmpleados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEstadisticas
@@ -76,10 +77,30 @@
             this.btnEmpleados.Location = new System.Drawing.Point(54, 131);
             this.btnEmpleados.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(166, 63);
+            this.btnEmpleados.Size = new System.Drawing.Size(348, 63);
             this.btnEmpleados.TabIndex = 17;
-            this.btnEmpleados.Text = "Empleados";
+            this.btnEmpleados.Text = "Montos totales de helados vendidos en un periodo";
             this.btnEmpleados.UseVisualStyleBackColor = false;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
+            // 
+            // btnVentasPorEmpleados
+            // 
+            this.btnVentasPorEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnVentasPorEmpleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVentasPorEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnVentasPorEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.btnVentasPorEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnVentasPorEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentasPorEmpleados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentasPorEmpleados.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnVentasPorEmpleados.Location = new System.Drawing.Point(54, 204);
+            this.btnVentasPorEmpleados.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnVentasPorEmpleados.Name = "btnVentasPorEmpleados";
+            this.btnVentasPorEmpleados.Size = new System.Drawing.Size(348, 63);
+            this.btnVentasPorEmpleados.TabIndex = 18;
+            this.btnVentasPorEmpleados.Text = "Cantidad de ventas por empleados";
+            this.btnVentasPorEmpleados.UseVisualStyleBackColor = false;
+            this.btnVentasPorEmpleados.Click += new System.EventHandler(this.btnVentasPorEmpleados_Click);
             // 
             // FrmEstadisticas
             // 
@@ -88,11 +109,12 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(909, 606);
+            this.Controls.Add(this.btnVentasPorEmpleados);
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.btnEscritorio);
             this.Controls.Add(this.lblEstadisticas);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmEstadisticas";
             this.Text = "FrmEstadisticas";
             this.ResumeLayout(false);
@@ -105,5 +127,6 @@
         private System.Windows.Forms.Label lblEstadisticas;
         private System.Windows.Forms.Button btnEscritorio;
         private System.Windows.Forms.Button btnEmpleados;
+        private System.Windows.Forms.Button btnVentasPorEmpleados;
     }
 }

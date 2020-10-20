@@ -165,7 +165,7 @@
             this.pnlBuscar.Controls.Add(this.label1);
             this.pnlBuscar.Controls.Add(this.cmbTipo);
             this.pnlBuscar.Controls.Add(this.cmbDocumento);
-            this.pnlBuscar.Location = new System.Drawing.Point(151, 101);
+            this.pnlBuscar.Location = new System.Drawing.Point(151, 98);
             this.pnlBuscar.Name = "pnlBuscar";
             this.pnlBuscar.Size = new System.Drawing.Size(421, 347);
             this.pnlBuscar.TabIndex = 75;

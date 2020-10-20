@@ -23,10 +23,10 @@ namespace Practico.Clases
         public TipoConexion controlConexion { get; set; } = TipoConexion.simple;
         public EstadoTransaccion controlTransaccion { get; set; } = EstadoTransaccion.correcta;
 
-        //string cadenaConexion = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; // LUIS
+        string cadenaConexion = "Data Source=DESKTOP-6V98254\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; // LUIS
         //string cadenaConexion = "Data Source = DESKTOP-DT487OK\\SQLEXPRESS;Initial Catalog = HeladeriaPAV; Integrated Security = True"; //NICO
         //string cadenaConexion = "Data Source=DESKTOP-49CNN6T\\SQLEXPRESS;Initial Catalog=HeladeriaPAV;Integrated Security=True"; //MARCOS
-        string cadenaConexion = "Data Source=DESKTOP-5U8R5O6\\SQLEXPRESS; Initial Catalog=HeladeriaPAV;Integrated Security=True"; //GASTÓN
+        //string cadenaConexion = "Data Source=DESKTOP-5U8R5O6\\SQLEXPRESS; Initial Catalog=HeladeriaPAV;Integrated Security=True"; //GASTÓN
         //string cadenaConexion = "Data Source=DESKTOP-UOQ5CGK;Initial Catalog=HeladeriaPAV;Integrated Security=True"; // Bruno
 
         public void IniciarTransaccion()

@@ -43,27 +43,28 @@
                     string nombreHelado = detalles.Rows[i].Cells[2].Value.ToString();
 
 
-				string datosDetalle = nroTicket.ToString();
+                    string datosDetalle = nroTicket.ToString();
 
 
                     if (esEspecial == "false")
                     {
                         datosDetalle += "," + idHeladoSimple;
                         datosDetalle += "," + cantKilos;
-					    if (tratamientos.ValidarStock("Helados",
-                            cantKilos,idHeladoSimple) == TratamientosEspeciales.Validacion.correcta)
+                        if (tratamientos.ValidarStock("Helados",
+                            cantKilos, idHeladoSimple) == TratamientosEspeciales.Validacion.correcta)
                         {
                             actualizarStock = "UPDATE Helados " +
-                                              " SET cantidadStock -= "+cantKilos+
-                                              " WHERE idHelado ="+idHeladoSimple;
+                                              " SET cantidadStock -= " + cantKilos +
+                                              " WHERE idHelado =" + idHeladoSimple;
                             baseDatos.Actualizar(actualizarStock);
                         }
                         else
                         {
                             baseDatos.controlTransaccion = BaseDatos.EstadoTransaccion.error;
-                            MessageBox.Show("No hay stock suficiente de " + nombreHelado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No hay stock suficiente de " + nombreHelado, "Error", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
                         }
-                        
+
                     }
                     else
                     {
@@ -75,7 +76,7 @@
                     {
                         datosDetalle += "," + idHeladoEspecial;
                         datosDetalle += "," + cantItems;
-					    if (tratamientos.ValidarStock("HeladosEspeciales",
+                        if (tratamientos.ValidarStock("HeladosEspeciales",
                             cantItems, idHeladoEspecial) == TratamientosEspeciales.Validacion.correcta)
                         {
                             actualizarStock = "UPDATE HeladosEspeciales " +
@@ -86,7 +87,8 @@
                         else
                         {
                             baseDatos.controlTransaccion = BaseDatos.EstadoTransaccion.error;
-						    MessageBox.Show("No hay stock suficiente de " + nombreHelado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No hay stock suficiente de " + nombreHelado, "Error", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
                         }
                     }
                     else
@@ -103,12 +105,12 @@
 
                 if (baseDatos.CerrarTransaccion() == BaseDatos.EstadoTransaccion.correcta)
                 {
-				    MessageBox.Show("Transaccion realizada con exito!", "Informacion", 
+                    MessageBox.Show("Transaccion realizada con exito!", "Informacion",
                         buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-			    }
+                }
                 else
                 {
-				    MessageBox.Show("Ha ocurrido un error con la transaccion!", "Error", 
+                    MessageBox.Show("Ha ocurrido un error con la transaccion!", "Error",
                         buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
                 }
 
@@ -194,7 +196,7 @@
 		                                ) AS Resultado
 	                                WHERE ";
                 sql += " fecha BETWEEN CONVERT(date,'" + fechaDesde +
-                   "',103) AND CONVERT(date,'" + fechaHasta + "',103)";
+                       "',103) AND CONVERT(date,'" + fechaHasta + "',103)";
                 sql += " GROUP BY nroTicket, nroDocEmpleado, tipoDocEmpleado, fecha, nombre";
 
                 tabla = baseDatos.Consulta(sql);
@@ -204,8 +206,8 @@
             public DataTable RecuperarVenta(string tipoDoc, string nroDoc, string nombre, string fechaDesde,
                 string fechaHasta)
             {
-			    DataTable tabla = new DataTable();
-			    string sql = @"	SELECT nroTicket, 
+                DataTable tabla = new DataTable();
+                string sql = @"	SELECT nroTicket, 
 			                        nroDocEmpleado,
 			                        tipoDocEmpleado,
 			                        CONVERT(varchar, fecha, 103) as fecha,
@@ -238,31 +240,31 @@
 		                                    ) AS Resultado
 	                                    WHERE ";
                 sql += "tipoDocEmpleado =" + tipoDoc + " AND nroDocEmpleado LIKE '" + nroDoc + "'" +
-                      " AND nombre LIKE '" + nombre + "'";
+                       " AND nombre LIKE '" + nombre + "'";
                 sql += " AND fecha BETWEEN CONVERT(date,'" + fechaDesde +
                        "',103) AND CONVERT(date,'" + fechaHasta + "',103)";
-			    sql += " GROUP BY nroTicket, nroDocEmpleado, tipoDocEmpleado, fecha, nombre";
+                sql += " GROUP BY nroTicket, nroDocEmpleado, tipoDocEmpleado, fecha, nombre";
 
                 tabla = baseDatos.Consulta(sql);
                 return tabla;
 
-		    }
+            }
 
-		public DataTable listadoVentasEmpleado(string nombre)
-        {
-			string sql = @" SELECT * FROM Ventas V
+            public DataTable listadoVentasEmpleado(string nombre)
+            {
+                string sql = @" SELECT * FROM Ventas V
 						    INNER JOIN Empleados E ON (V.nroDocEmpleado = E.nroDoc) AND (V.tipoDocEmpleado = E.tipoDoc) 
-							WHERE E.nombre LIKE '" + nombre + "'" ;
-			DataTable tabla = new DataTable();
-			tabla = baseDatos.Consulta(sql);
-			return tabla;
-        }
+							WHERE E.nombre LIKE '" + nombre + "'";
+                DataTable tabla = new DataTable();
+                tabla = baseDatos.Consulta(sql);
+                return tabla;
+            }
 
 
             public DataTable RecuperarTodasLasVentas()
             {
-			    DataTable tabla = new DataTable();
-			    string sql = @"	SELECT nroTicket, 
+                DataTable tabla = new DataTable();
+                string sql = @"	SELECT nroTicket, 
 			                            nroDocEmpleado,
 			                            tipoDocEmpleado,
 			                            CONVERT(varchar, fecha, 103) as fecha,
@@ -295,12 +297,78 @@
 		                                        ) AS Resultado ";
                 sql += " GROUP BY nroTicket, nroDocEmpleado, tipoDocEmpleado, fecha, nombre";
 
-			    tabla = baseDatos.Consulta(sql);
+                tabla = baseDatos.Consulta(sql);
                 return tabla;
             }
 
+            public DataTable EstadisticaTotalesHeladosPeriodo(DateTime fechaDesde, DateTime fechaHasta)
+            {
+                string sql = @"SELECT H.nombre as Helado, SUM(DV.cantKilos * H.precio) as 'Total'
+                                FROM Ventas V
+                                INNER JOIN DetalleVentas DV ON (V.nroTicket = DV.nroTicket)
+                                INNER JOIN Helados H ON (DV.idHeladoSimple = H.idHelado)
+                                WHERE V.fecha BETWEEN CONVERT(datetime, '" + fechaDesde.Date.ToShortDateString() + "', 103) AND CONVERT(datetime, '" + fechaHasta.Date + "', 103)" +
+                                @"GROUP BY H.nombre
+                                UNION
+                                SELECT HE.nombreProducto as Helado, SUM(DV.cantItems * HE.precio) as 'Total'
+                                FROM Ventas V
+                                INNER JOIN DetalleVentas DV ON (V.nroTicket = DV.nroTicket)
+                                INNER JOIN HeladosEspeciales HE ON (DV.idHeladoEspecial = HE.idHeladoEspecial)
+                                WHERE V.fecha BETWEEN CONVERT(datetime, '" + fechaDesde.Date.ToLongDateString() + "', 103) AND CONVERT(datetime, '" + fechaHasta.Date + "', 103)" +
+                                "GROUP BY HE.nombreProducto";
+
+                DataTable tabla = new DataTable();
+                tabla = baseDatos.Consulta(sql);
+                return tabla;
+            }
+
+
+            public DataTable EstadisticaTotalesHelados()
+            {
+                string sql = @"SELECT H.nombre as Helado, SUM(DV.cantKilos * H.precio) as 'Total'
+                                FROM Ventas V
+                                INNER JOIN DetalleVentas DV ON (V.nroTicket = DV.nroTicket)
+                                INNER JOIN Helados H ON (DV.idHeladoSimple = H.idHelado)
+                                GROUP BY H.nombre
+                                UNION
+                                SELECT HE.nombreProducto as Helado, SUM(DV.cantItems * HE.precio) as 'Total'
+                                FROM Ventas V
+                                INNER JOIN DetalleVentas DV ON (V.nroTicket = DV.nroTicket)
+                                INNER JOIN HeladosEspeciales HE ON (DV.idHeladoEspecial = HE.idHeladoEspecial)
+                                 GROUP BY HE.nombreProducto";
+
+                DataTable tabla = new DataTable();
+                tabla = baseDatos.Consulta(sql);
+                return tabla;
+            }
+
+
+
+            public DataTable EstadisticaCantidadVentasEmpleados()
+            {
+                string sql = @"SELECT E.nombre as Nombre, E.apellido as Apellido, COUNT(*) AS Cantidad
+                                FROM	Ventas V
+                                INNER JOIN Empleados E ON (V.tipoDocEmpleado = E.tipoDoc) AND (E.nroDoc = V.nroDocEmpleado)
+                                GROUP BY E.nombre, E.apellido";
+
+                DataTable tabla = new DataTable();
+                tabla = baseDatos.Consulta(sql);
+                return tabla;
+            }
+            public DataTable EstadisticaCantidadVentasEmpleadosPeriodo(DateTime fechaDesde, DateTime fechaHasta)
+            {
+                string sql = @"SELECT E.nombre as Nombre, E.apellido as Apellido, COUNT(*) AS Cantidad
+                                FROM	Ventas V
+                                INNER JOIN Empleados E ON (V.tipoDocEmpleado = E.tipoDoc) AND (E.nroDoc = V.nroDocEmpleado)
+                               WHERE V.fecha BETWEEN CONVERT(datetime, '"+fechaDesde.ToShortDateString()+"', 103) AND CONVERT(datetime, '"+ fechaHasta.ToShortDateString()+"', 103)"+
+                                "GROUP BY E.nombre, E.apellido";
+
+            DataTable tabla = new DataTable();
+                tabla = baseDatos.Consulta(sql);
+                return tabla;
+            }
         }
-		
-    
+
     }
+
 
