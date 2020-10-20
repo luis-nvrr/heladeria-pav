@@ -32,6 +32,8 @@
             this.btnEscritorio = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnVentasPorEmpleados = new System.Windows.Forms.Button();
+            this.btn_ProveedoresLocalidad = new System.Windows.Forms.Button();
+            this.btn_VentasTurno = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEstadisticas
@@ -102,6 +104,34 @@
             this.btnVentasPorEmpleados.UseVisualStyleBackColor = false;
             this.btnVentasPorEmpleados.Click += new System.EventHandler(this.btnVentasPorEmpleados_Click);
             // 
+            // btn_ProveedoresLocalidad
+            // 
+            this.btn_ProveedoresLocalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btn_ProveedoresLocalidad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_ProveedoresLocalidad.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btn_ProveedoresLocalidad.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btn_ProveedoresLocalidad.Location = new System.Drawing.Point(54, 275);
+            this.btn_ProveedoresLocalidad.Name = "btn_ProveedoresLocalidad";
+            this.btn_ProveedoresLocalidad.Size = new System.Drawing.Size(348, 63);
+            this.btn_ProveedoresLocalidad.TabIndex = 19;
+            this.btn_ProveedoresLocalidad.Text = "Proveedores por Localidad";
+            this.btn_ProveedoresLocalidad.UseVisualStyleBackColor = false;
+            this.btn_ProveedoresLocalidad.Click += new System.EventHandler(this.btn_ProveedoresLocalidad_Click);
+            // 
+            // btn_VentasTurno
+            // 
+            this.btn_VentasTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btn_VentasTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_VentasTurno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btn_VentasTurno.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btn_VentasTurno.Location = new System.Drawing.Point(54, 344);
+            this.btn_VentasTurno.Name = "btn_VentasTurno";
+            this.btn_VentasTurno.Size = new System.Drawing.Size(348, 63);
+            this.btn_VentasTurno.TabIndex = 20;
+            this.btn_VentasTurno.Text = "Cantidad de Ventas por Turno";
+            this.btn_VentasTurno.UseVisualStyleBackColor = false;
+            this.btn_VentasTurno.Click += new System.EventHandler(this.btn_VentasTurno_Click);
+            // 
             // FrmEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -109,6 +139,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(909, 606);
+            this.Controls.Add(this.btn_VentasTurno);
+            this.Controls.Add(this.btn_ProveedoresLocalidad);
             this.Controls.Add(this.btnVentasPorEmpleados);
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.btnEscritorio);
@@ -128,5 +160,7 @@
         private System.Windows.Forms.Button btnEscritorio;
         private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Button btnVentasPorEmpleados;
+        private System.Windows.Forms.Button btn_ProveedoresLocalidad;
+        private System.Windows.Forms.Button btn_VentasTurno;
     }
 }

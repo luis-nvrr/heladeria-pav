@@ -92,6 +92,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.cs">
+      <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Barrios\FrmAltaBarrios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -494,13 +502,27 @@
     <Compile Include="Formularios\Estadisticas\CantidadVentasEmpleados\FrmEstadisticaCantidadVentasEmpleados.Designer.cs">
       <DependentUpon>FrmEstadisticaCantidadVentasEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\ProveedoresXLocalidad\FrmEstadisticaProveedoresLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\ProveedoresXLocalidad\FrmEstadisticaProveedoresLocalidad.Designer.cs">
+      <DependentUpon>FrmEstadisticaProveedoresLocalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\VentasPorHeladosPeriodo\FrmEstadisticaVentasPorHeladosPeriodo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Estadisticas\VentasPorHeladosPeriodo\FrmEstadisticaVentasPorHeladosPeriodo.Designer.cs">
       <DependentUpon>FrmEstadisticaVentasPorHeladosPeriodo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\EmpleadosEdad\FrmListadoEmpleadosEdad.cs" />
+    <Compile Include="Formularios\Estadisticas\VentasXTurno\FrmEstadisticaVentasTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\VentasXTurno\FrmEstadisticaVentasTurno.Designer.cs">
+      <DependentUpon>FrmEstadisticaVentasTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\EmpleadosEdad\FrmListadoEmpleadosEdad.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Listados\EmpleadosEdad\FrmListadoEmpleadosEdad.designer.cs">
       <DependentUpon>FrmListadoEmpleadosEdad.cs</DependentUpon>
     </Compile>
@@ -522,11 +544,15 @@
     <Compile Include="Formularios\Listados\EmpleadosTurno\FrmListadoEmpleadosTurno.Designer.cs">
       <DependentUpon>FrmListadoEmpleadosTurno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\Frutas\FrmListadoFrutas.cs" />
+    <Compile Include="Formularios\Listados\Frutas\FrmListadoFrutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Listados\Frutas\FrmListadoFrutas.Designer.cs">
       <DependentUpon>FrmListadoFrutas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\HeladosEspecialesPrecio\FrmListadoHeladosEspecialesPrecio.cs" />
+    <Compile Include="Formularios\Listados\HeladosEspecialesPrecio\FrmListadoHeladosEspecialesPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Listados\HeladosEspecialesPrecio\FrmListadoHeladosEspecialesPrecio.designer.cs">
       <DependentUpon>FrmListadoHeladosEspecialesPrecio.cs</DependentUpon>
     </Compile>
@@ -548,7 +574,9 @@
     <Compile Include="Formularios\Listados\ProveedoresBarrio\FrmListadoProveedoresBarrio.Designer.cs">
       <DependentUpon>FrmListadoProveedoresBarrio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\Ventas\FrmListadoVentasEmpleado.cs" />
+    <Compile Include="Formularios\Listados\Ventas\FrmListadoVentasEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Listados\Ventas\FrmListadoVentasEmpleado.Designer.cs">
       <DependentUpon>FrmListadoVentasEmpleado.cs</DependentUpon>
     </Compile>
@@ -864,10 +892,17 @@
       <DependentUpon>FrmEstadisticaCantidadVentasEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\CantidadVentasEmpleados\CantidadVentasEmpleados.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\ProveedoresXLocalidad\EstadisticaProveedoresLocalidad.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\ProveedoresXLocalidad\FrmEstadisticaProveedoresLocalidad.resx">
+      <DependentUpon>FrmEstadisticaProveedoresLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\VentasPorHeladosPeriodo\FrmEstadisticaVentasPorHeladosPeriodo.resx">
       <DependentUpon>FrmEstadisticaVentasPorHeladosPeriodo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\VentasPorHeladosPeriodo\EstadisticaTotalesPorHelados.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\VentasXTurno\FrmEstadisticaVentasTurno.resx">
+      <DependentUpon>FrmEstadisticaVentasTurno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\EmpleadosEdad\FrmListadoEmpleadosEdad.resx">
       <DependentUpon>FrmListadoEmpleadosEdad.cs</DependentUpon>
     </EmbeddedResource>
@@ -962,6 +997,17 @@
     </None>
     <None Include="DatosEstadisticas\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.xsc">
+      <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosEstadisticosProveedoresLocalidadxsd.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.xss">
+      <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
     </None>
     <None Include="HeladeriaPAVDataSet.xsc">
       <DependentUpon>HeladeriaPAVDataSet.xsd</DependentUpon>

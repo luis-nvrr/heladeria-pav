@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practico.Formularios.Estadisticas.CantidadVentasEmpleados;
+using Practico.Formularios.Estadisticas.ProveedoresXLocalidad;
 using Practico.Formularios.Estadisticas.VentasPorHeladosPeriodo;
+using Practico.Formularios.Estadisticas.VentasXTurno;
 
 namespace Practico.Formularios.Presentacion
 {
@@ -39,6 +41,16 @@ namespace Practico.Formularios.Presentacion
         private void btnVentasPorEmpleados_Click(object sender, EventArgs e)
         {
             abrirFormulario(new FrmEstadisticaCantidadVentasEmpleados());
+        }
+
+        private void btn_ProveedoresLocalidad_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmEstadisticaProveedoresLocalidad());
+        }
+
+        private void btn_VentasTurno_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmEstadisticaVentasTurno());
         }
     }
 }
