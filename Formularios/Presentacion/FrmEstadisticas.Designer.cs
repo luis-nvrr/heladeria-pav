@@ -35,6 +35,7 @@
             this.btn_ProveedoresLocalidad = new System.Windows.Forms.Button();
             this.btn_VentasTurno = new System.Windows.Forms.Button();
             this.btnComprasProveedorPeriodo = new System.Windows.Forms.Button();
+            this.btnEmpleadosPorTurno = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEstadisticas
@@ -147,6 +148,20 @@
             this.btnComprasProveedorPeriodo.UseVisualStyleBackColor = false;
             this.btnComprasProveedorPeriodo.Click += new System.EventHandler(this.btnComprasProveedorPeriodo_Click);
             // 
+            // btnEmpleadosPorTurno
+            // 
+            this.btnEmpleadosPorTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnEmpleadosPorTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEmpleadosPorTurno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnEmpleadosPorTurno.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnEmpleadosPorTurno.Location = new System.Drawing.Point(54, 482);
+            this.btnEmpleadosPorTurno.Name = "btnEmpleadosPorTurno";
+            this.btnEmpleadosPorTurno.Size = new System.Drawing.Size(359, 63);
+            this.btnEmpleadosPorTurno.TabIndex = 22;
+            this.btnEmpleadosPorTurno.Text = "Cantidad de empleados por turno";
+            this.btnEmpleadosPorTurno.UseVisualStyleBackColor = false;
+            this.btnEmpleadosPorTurno.Click += new System.EventHandler(this.btnEmpleadosPorTurno_Click);
+            // 
             // FrmEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -154,6 +169,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(909, 606);
+            this.Controls.Add(this.btnEmpleadosPorTurno);
             this.Controls.Add(this.btnComprasProveedorPeriodo);
             this.Controls.Add(this.btn_VentasTurno);
             this.Controls.Add(this.btn_ProveedoresLocalidad);
@@ -179,5 +195,6 @@
         private System.Windows.Forms.Button btn_ProveedoresLocalidad;
         private System.Windows.Forms.Button btn_VentasTurno;
         private System.Windows.Forms.Button btnComprasProveedorPeriodo;
+        private System.Windows.Forms.Button btnEmpleadosPorTurno;
     }
 }

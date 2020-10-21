@@ -516,6 +516,11 @@
     <Compile Include="Formularios\Estadisticas\CantidadVentasEmpleados\FrmEstadisticaCantidadVentasEmpleados.Designer.cs">
       <DependentUpon>FrmEstadisticaCantidadVentasEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\EmpleadosPorTurno\Ds_Empleados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_Empleados.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\EmpleadosPorTurno\FrmEmpleadosPorTurno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1047,6 +1052,17 @@
     </None>
     <None Include="Formularios\Estadisticas\CantidadComprasProveedores\Ds_Compras.xss">
       <DependentUpon>Ds_Compras.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\EmpleadosPorTurno\Ds_Empleados.xsc">
+      <DependentUpon>Ds_Empleados.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\EmpleadosPorTurno\Ds_Empleados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_Empleados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\EmpleadosPorTurno\Ds_Empleados.xss">
+      <DependentUpon>Ds_Empleados.xsd</DependentUpon>
     </None>
     <None Include="HeladeriaPAVDataSet.xsc">
       <DependentUpon>HeladeriaPAVDataSet.xsd</DependentUpon>

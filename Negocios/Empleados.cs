@@ -247,5 +247,17 @@ namespace Practico.Negocios
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
+
+        public DataTable EstadisticaEmpleadosPorTurno()
+        {
+            string sql = @"SELECT T.nombre as Turno, COUNT(*) AS Cantidad
+                                FROM Empleados E
+                                INNER JOIN Turnos T ON (E.idTurno = T.idTurno)
+                                GROUP BY T.nombre";
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
     }
 }

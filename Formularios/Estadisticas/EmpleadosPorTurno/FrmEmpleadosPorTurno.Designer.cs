@@ -46,12 +46,11 @@
             // 
             // rpvw
             // 
-            this.rpvw.LocalReport.ReportEmbeddedResource = "Practico.Formularios.Estadisticas.CantidadComprasProveedores.CantidadComprasProve" +
-    "edores.rdlc";
-            this.rpvw.Location = new System.Drawing.Point(12, 100);
+            this.rpvw.LocalReport.ReportEmbeddedResource = "Practico.Formularios.Estadisticas.EmpleadosPorTurno.EmpleadosPorTurno.rdlc";
+            this.rpvw.Location = new System.Drawing.Point(12, 95);
             this.rpvw.Name = "rpvw";
             this.rpvw.ServerReport.BearerToken = null;
-            this.rpvw.Size = new System.Drawing.Size(776, 388);
+            this.rpvw.Size = new System.Drawing.Size(493, 388);
             this.rpvw.TabIndex = 94;
             // 
             // FrmEmpleadosPorTurno
@@ -59,11 +58,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(800, 521);
+            this.ClientSize = new System.Drawing.Size(514, 495);
             this.Controls.Add(this.rpvw);
             this.Controls.Add(this.lblEmpleadosFecha);
             this.Name = "FrmEmpleadosPorTurno";
             this.Text = "Estadística de Empleados por Turno";
+            this.Load += new System.EventHandler(this.FrmEmpleadosPorTurno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
