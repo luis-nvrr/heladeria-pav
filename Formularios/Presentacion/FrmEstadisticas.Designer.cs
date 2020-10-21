@@ -34,6 +34,7 @@
             this.btnVentasPorEmpleados = new System.Windows.Forms.Button();
             this.btn_ProveedoresLocalidad = new System.Windows.Forms.Button();
             this.btn_VentasTurno = new System.Windows.Forms.Button();
+            this.btnComprasProveedorPeriodo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEstadisticas
@@ -79,7 +80,7 @@
             this.btnEmpleados.Location = new System.Drawing.Point(54, 131);
             this.btnEmpleados.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(348, 63);
+            this.btnEmpleados.Size = new System.Drawing.Size(359, 63);
             this.btnEmpleados.TabIndex = 17;
             this.btnEmpleados.Text = "Montos totales de helados vendidos en un periodo";
             this.btnEmpleados.UseVisualStyleBackColor = false;
@@ -98,7 +99,7 @@
             this.btnVentasPorEmpleados.Location = new System.Drawing.Point(54, 204);
             this.btnVentasPorEmpleados.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnVentasPorEmpleados.Name = "btnVentasPorEmpleados";
-            this.btnVentasPorEmpleados.Size = new System.Drawing.Size(348, 63);
+            this.btnVentasPorEmpleados.Size = new System.Drawing.Size(359, 63);
             this.btnVentasPorEmpleados.TabIndex = 18;
             this.btnVentasPorEmpleados.Text = "Cantidad de ventas por empleados";
             this.btnVentasPorEmpleados.UseVisualStyleBackColor = false;
@@ -112,7 +113,7 @@
             this.btn_ProveedoresLocalidad.ForeColor = System.Drawing.SystemColors.Menu;
             this.btn_ProveedoresLocalidad.Location = new System.Drawing.Point(54, 275);
             this.btn_ProveedoresLocalidad.Name = "btn_ProveedoresLocalidad";
-            this.btn_ProveedoresLocalidad.Size = new System.Drawing.Size(348, 63);
+            this.btn_ProveedoresLocalidad.Size = new System.Drawing.Size(359, 63);
             this.btn_ProveedoresLocalidad.TabIndex = 19;
             this.btn_ProveedoresLocalidad.Text = "Proveedores por Localidad";
             this.btn_ProveedoresLocalidad.UseVisualStyleBackColor = false;
@@ -126,11 +127,25 @@
             this.btn_VentasTurno.ForeColor = System.Drawing.SystemColors.Menu;
             this.btn_VentasTurno.Location = new System.Drawing.Point(54, 344);
             this.btn_VentasTurno.Name = "btn_VentasTurno";
-            this.btn_VentasTurno.Size = new System.Drawing.Size(348, 63);
+            this.btn_VentasTurno.Size = new System.Drawing.Size(359, 63);
             this.btn_VentasTurno.TabIndex = 20;
             this.btn_VentasTurno.Text = "Cantidad de Ventas por Turno";
             this.btn_VentasTurno.UseVisualStyleBackColor = false;
             this.btn_VentasTurno.Click += new System.EventHandler(this.btn_VentasTurno_Click);
+            // 
+            // btnComprasProveedorPeriodo
+            // 
+            this.btnComprasProveedorPeriodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnComprasProveedorPeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnComprasProveedorPeriodo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnComprasProveedorPeriodo.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnComprasProveedorPeriodo.Location = new System.Drawing.Point(54, 413);
+            this.btnComprasProveedorPeriodo.Name = "btnComprasProveedorPeriodo";
+            this.btnComprasProveedorPeriodo.Size = new System.Drawing.Size(359, 63);
+            this.btnComprasProveedorPeriodo.TabIndex = 21;
+            this.btnComprasProveedorPeriodo.Text = "Cantidad de compras por proveedor en un periodo";
+            this.btnComprasProveedorPeriodo.UseVisualStyleBackColor = false;
+            this.btnComprasProveedorPeriodo.Click += new System.EventHandler(this.btnComprasProveedorPeriodo_Click);
             // 
             // FrmEstadisticas
             // 
@@ -139,6 +154,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(909, 606);
+            this.Controls.Add(this.btnComprasProveedorPeriodo);
             this.Controls.Add(this.btn_VentasTurno);
             this.Controls.Add(this.btn_ProveedoresLocalidad);
             this.Controls.Add(this.btnVentasPorEmpleados);
@@ -162,5 +178,6 @@
         private System.Windows.Forms.Button btnVentasPorEmpleados;
         private System.Windows.Forms.Button btn_ProveedoresLocalidad;
         private System.Windows.Forms.Button btn_VentasTurno;
+        private System.Windows.Forms.Button btnComprasProveedorPeriodo;
     }
 }

@@ -325,5 +325,30 @@ namespace Practico.Negocios
 			tabla = baseDatos.Consulta(sql);
 			return tabla;
 		}
+
+         public DataTable EstadisticaCantidadComprasProveedor()
+            {
+                string sql = @"SELECT P.razonSocial as RazonSocial, COUNT(*) AS Cantidad
+                                FROM Compras C
+                                INNER JOIN Proveedores P ON (C.tipoDocProveedor = P.tipoDocumento) AND (C.nroDocProveedor = P.nroDocumento)
+                                GROUP BY P.razonSocial";
+
+                DataTable tabla = new DataTable();
+                tabla = baseDatos.Consulta(sql);
+                return tabla;
+            }
+         public DataTable EstadisticaCantidadComprasProveedorPeriodo(DateTime fechaDesde, DateTime fechaHasta)
+            {
+                string sql = @"SELECT P.razonSocial as RazonSocial, COUNT(*) AS Cantidad
+                                FROM Compras C
+                                INNER JOIN Proveedores P ON (C.tipoDocProveedor = P.tipoDocumento) AND (C.nroDocProveedor = P.nroDocumento)
+                               WHERE C.fecha BETWEEN CONVERT(datetime, '" + fechaDesde.ToShortDateString()+"', 103) AND CONVERT(datetime, '"+ fechaHasta.ToShortDateString()+"', 103)"+
+                              " GROUP BY P.razonSocial";
+
+            DataTable tabla = new DataTable();
+                tabla = baseDatos.Consulta(sql);
+                return tabla;
+            }
+
 	}
 }

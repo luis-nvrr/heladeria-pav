@@ -496,11 +496,31 @@
     <Compile Include="Formularios\Abm\Usuarios\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\CantidadComprasProveedores\FrmCantidadComprasProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\CantidadComprasProveedores\FrmCantidadComprasProveedores.Designer.cs">
+      <DependentUpon>FrmCantidadComprasProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\CantidadComprasProveedores\Ds_Compras.cs">
+      <DependentUpon>Ds_Compras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\CantidadComprasProveedores\Ds_Compras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_Compras.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\CantidadVentasEmpleados\FrmEstadisticaCantidadVentasEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Estadisticas\CantidadVentasEmpleados\FrmEstadisticaCantidadVentasEmpleados.Designer.cs">
       <DependentUpon>FrmEstadisticaCantidadVentasEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\EmpleadosPorTurno\FrmEmpleadosPorTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\EmpleadosPorTurno\FrmEmpleadosPorTurno.Designer.cs">
+      <DependentUpon>FrmEmpleadosPorTurno.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Estadisticas\ProveedoresXLocalidad\FrmEstadisticaProveedoresLocalidad.cs">
       <SubType>Form</SubType>
@@ -888,10 +908,18 @@
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\CantidadComprasProveedores\CantidadComprasProveedores.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\CantidadComprasProveedores\FrmCantidadComprasProveedores.resx">
+      <DependentUpon>FrmCantidadComprasProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\CantidadVentasEmpleados\FrmEstadisticaCantidadVentasEmpleados.resx">
       <DependentUpon>FrmEstadisticaCantidadVentasEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\CantidadVentasEmpleados\CantidadVentasEmpleados.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\EmpleadosPorTurno\EmpleadosPorTurno.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\EmpleadosPorTurno\FrmEmpleadosPorTurno.resx">
+      <DependentUpon>FrmEmpleadosPorTurno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\ProveedoresXLocalidad\EstadisticaProveedoresLocalidad.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\ProveedoresXLocalidad\FrmEstadisticaProveedoresLocalidad.resx">
       <DependentUpon>FrmEstadisticaProveedoresLocalidad.cs</DependentUpon>
@@ -1008,6 +1036,17 @@
     </None>
     <None Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.xss">
       <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\CantidadComprasProveedores\Ds_Compras.xsc">
+      <DependentUpon>Ds_Compras.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\CantidadComprasProveedores\Ds_Compras.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_Compras.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\CantidadComprasProveedores\Ds_Compras.xss">
+      <DependentUpon>Ds_Compras.xsd</DependentUpon>
     </None>
     <None Include="HeladeriaPAVDataSet.xsc">
       <DependentUpon>HeladeriaPAVDataSet.xsd</DependentUpon>
