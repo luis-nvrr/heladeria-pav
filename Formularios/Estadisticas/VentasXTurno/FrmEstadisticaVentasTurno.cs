@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 namespace Practico.Formularios.Estadisticas.VentasXTurno
 {
@@ -20,7 +21,20 @@ namespace Practico.Formularios.Estadisticas.VentasXTurno
         private void FrmEstadisticaVentasTurno_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+            this.reportViewerVentasTurno.RefreshReport();
+        }
+
+        private void reportViewerVentasTurno_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            Negocios.Ventas ventas = new Negocios.Ventas();
+            tabla = ventas.EstadisticaVentasXTurno();
+
+            ReportDataSource ds = new ReportDataSource("EstadisticaVT", tabla);
+            reportViewerVentasTurno.LocalReport.DataSources.Clear();
+            reportViewerVentasTurno.LocalReport.DataSources.Add(ds);
+            reportViewerVentasTurno.LocalReport.Refresh();
+            this.reportViewerVentasTurno.RefreshReport();
         }
     }
 }

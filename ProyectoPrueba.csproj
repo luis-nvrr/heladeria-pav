@@ -100,6 +100,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatosEstadisticas\DatosEstadisticosVentasTurno.cs">
+      <DependentUpon>DatosEstadisticosVentasTurno.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosEstadisticas\DatosEstadisticosVentasTurno.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosEstadisticosVentasTurno.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Abm\Barrios\FrmAltaBarrios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -936,6 +944,7 @@
     <EmbeddedResource Include="Formularios\Estadisticas\VentasXTurno\FrmEstadisticaVentasTurno.resx">
       <DependentUpon>FrmEstadisticaVentasTurno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\VentasXTurno\EstadisticaVentasTurno.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\EmpleadosEdad\FrmListadoEmpleadosEdad.resx">
       <DependentUpon>FrmListadoEmpleadosEdad.cs</DependentUpon>
     </EmbeddedResource>
@@ -1041,6 +1050,17 @@
     </None>
     <None Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.xss">
       <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosVentasTurno.xsc">
+      <DependentUpon>DatosEstadisticosVentasTurno.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosVentasTurno.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosEstadisticosVentasTurno.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosVentasTurno.xss">
+      <DependentUpon>DatosEstadisticosVentasTurno.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Estadisticas\CantidadComprasProveedores\Ds_Compras.xsc">
       <DependentUpon>Ds_Compras.xsd</DependentUpon>

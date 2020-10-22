@@ -28,25 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewerVentasTurno = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // reportViewerVentasTurno
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(-2, 93);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(802, 359);
-            this.reportViewer1.TabIndex = 0;
+            this.reportViewerVentasTurno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewerVentasTurno.LocalReport.ReportEmbeddedResource = "Practico.Formularios.Estadisticas.VentasXTurno.EstadisticaVentasTurno.rdlc";
+            this.reportViewerVentasTurno.Location = new System.Drawing.Point(0, 0);
+            this.reportViewerVentasTurno.Name = "reportViewerVentasTurno";
+            this.reportViewerVentasTurno.ServerReport.BearerToken = null;
+            this.reportViewerVentasTurno.Size = new System.Drawing.Size(800, 450);
+            this.reportViewerVentasTurno.TabIndex = 0;
+            this.reportViewerVentasTurno.Load += new System.EventHandler(this.reportViewerVentasTurno_Load);
             // 
             // FrmEstadisticaVentasTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.reportViewerVentasTurno);
             this.Name = "FrmEstadisticaVentasTurno";
-            this.Text = "FrmEstadisticaVentasTurno";
+            this.Text = "Estadísticas de Ventas por Turno";
             this.Load += new System.EventHandler(this.FrmEstadisticaVentasTurno_Load);
             this.ResumeLayout(false);
 
@@ -54,6 +58,6 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerVentasTurno;
     }
 }

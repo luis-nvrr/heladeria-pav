@@ -367,8 +367,18 @@
                 tabla = baseDatos.Consulta(sql);
                 return tabla;
             }
-        }
 
+            public DataTable EstadisticaVentasXTurno()
+            {
+                    string sql = @"select E.idTurno, count(E.nroDoc) as CantidadVentas
+		                from Ventas V join Empleados E on V.nroDocEmpleado = E.nroDoc
+		                group by E.idTurno";
+
+                DataTable tabla = new DataTable();
+                tabla = baseDatos.Consulta(sql);
+                return tabla;
+            }
+        }
     }
 
 
