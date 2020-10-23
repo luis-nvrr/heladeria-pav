@@ -36,6 +36,8 @@
             this.btn_VentasTurno = new System.Windows.Forms.Button();
             this.btnComprasProveedorPeriodo = new System.Windows.Forms.Button();
             this.btnEmpleadosPorTurno = new System.Windows.Forms.Button();
+            this.btnBarrioLocalidad = new System.Windows.Forms.Button();
+            this.btnEmpleadosXBarrio = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEstadisticas
@@ -154,13 +156,41 @@
             this.btnEmpleadosPorTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEmpleadosPorTurno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.btnEmpleadosPorTurno.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnEmpleadosPorTurno.Location = new System.Drawing.Point(54, 482);
+            this.btnEmpleadosPorTurno.Location = new System.Drawing.Point(419, 413);
             this.btnEmpleadosPorTurno.Name = "btnEmpleadosPorTurno";
             this.btnEmpleadosPorTurno.Size = new System.Drawing.Size(359, 63);
             this.btnEmpleadosPorTurno.TabIndex = 22;
             this.btnEmpleadosPorTurno.Text = "Cantidad de empleados por turno";
             this.btnEmpleadosPorTurno.UseVisualStyleBackColor = false;
             this.btnEmpleadosPorTurno.Click += new System.EventHandler(this.btnEmpleadosPorTurno_Click);
+            // 
+            // btnBarrioLocalidad
+            // 
+            this.btnBarrioLocalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnBarrioLocalidad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBarrioLocalidad.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnBarrioLocalidad.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnBarrioLocalidad.Location = new System.Drawing.Point(419, 344);
+            this.btnBarrioLocalidad.Name = "btnBarrioLocalidad";
+            this.btnBarrioLocalidad.Size = new System.Drawing.Size(359, 63);
+            this.btnBarrioLocalidad.TabIndex = 23;
+            this.btnBarrioLocalidad.Text = "Cantidad de barrio por localidad";
+            this.btnBarrioLocalidad.UseVisualStyleBackColor = false;
+            this.btnBarrioLocalidad.Click += new System.EventHandler(this.btnBarrioLocalidad_Click);
+            // 
+            // btnEmpleadosXBarrio
+            // 
+            this.btnEmpleadosXBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnEmpleadosXBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEmpleadosXBarrio.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnEmpleadosXBarrio.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnEmpleadosXBarrio.Location = new System.Drawing.Point(419, 275);
+            this.btnEmpleadosXBarrio.Name = "btnEmpleadosXBarrio";
+            this.btnEmpleadosXBarrio.Size = new System.Drawing.Size(359, 63);
+            this.btnEmpleadosXBarrio.TabIndex = 24;
+            this.btnEmpleadosXBarrio.Text = "Cantidad de empleados por barrio";
+            this.btnEmpleadosXBarrio.UseVisualStyleBackColor = false;
+            this.btnEmpleadosXBarrio.Click += new System.EventHandler(this.btnEmpleadosXBarrio_Click);
             // 
             // FrmEstadisticas
             // 
@@ -169,6 +199,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(909, 606);
+            this.Controls.Add(this.btnEmpleadosXBarrio);
+            this.Controls.Add(this.btnBarrioLocalidad);
             this.Controls.Add(this.btnEmpleadosPorTurno);
             this.Controls.Add(this.btnComprasProveedorPeriodo);
             this.Controls.Add(this.btn_VentasTurno);
@@ -196,5 +228,7 @@
         private System.Windows.Forms.Button btn_VentasTurno;
         private System.Windows.Forms.Button btnComprasProveedorPeriodo;
         private System.Windows.Forms.Button btnEmpleadosPorTurno;
+        private System.Windows.Forms.Button btnBarrioLocalidad;
+        private System.Windows.Forms.Button btnEmpleadosXBarrio;
     }
 }

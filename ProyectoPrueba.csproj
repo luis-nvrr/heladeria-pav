@@ -92,6 +92,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatosEstadisticas\DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.cs">
       <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
     </Compile>
@@ -504,6 +509,12 @@
     <Compile Include="Formularios\Abm\Usuarios\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\CantidadBarriosLocalidad\FrmEstadisticaCantidadBarriosLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\CantidadBarriosLocalidad\FrmEstadisticaCantidadBarriosLocalidad.Designer.cs">
+      <DependentUpon>FrmEstadisticaCantidadBarriosLocalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\CantidadComprasProveedores\FrmCantidadComprasProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -517,6 +528,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Ds_Compras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\CantidadEmpleadosBarrio\FrmEstadisticaCantidadEmpleadosBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\CantidadEmpleadosBarrio\FrmEstadisticaCantidadEmpleadosBarrio.Designer.cs">
+      <DependentUpon>FrmEstadisticaCantidadEmpleadosBarrio.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Estadisticas\CantidadVentasEmpleados\FrmEstadisticaCantidadVentasEmpleados.cs">
       <SubType>Form</SubType>
@@ -921,9 +938,17 @@
     <EmbeddedResource Include="Formularios\Abm\Usuarios\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\CantidadBarriosLocalidad\CantidadBarriosLocalidad.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\CantidadBarriosLocalidad\FrmEstadisticaCantidadBarriosLocalidad.resx">
+      <DependentUpon>FrmEstadisticaCantidadBarriosLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\CantidadComprasProveedores\CantidadComprasProveedores.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\CantidadComprasProveedores\FrmCantidadComprasProveedores.resx">
       <DependentUpon>FrmCantidadComprasProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\CantidadEmpleadosBarrio\CantidadEmpleadosBarrio.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\CantidadEmpleadosBarrio\FrmEstadisticaCantidadEmpleadosBarrio.resx">
+      <DependentUpon>FrmEstadisticaCantidadEmpleadosBarrio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\CantidadVentasEmpleados\FrmEstadisticaCantidadVentasEmpleados.resx">
       <DependentUpon>FrmEstadisticaCantidadVentasEmpleados.cs</DependentUpon>
@@ -1039,6 +1064,17 @@
     </None>
     <None Include="DatosEstadisticas\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstadisticas\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstadisticas\DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosEstadisticas\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
     <None Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.xsc">
       <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>

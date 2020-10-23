@@ -13,6 +13,8 @@ using Practico.Formularios.Estadisticas.VentasPorHeladosPeriodo;
 using Practico.Formularios.Estadisticas.VentasXTurno;
 using Practico.Formularios.Estadisticas.CantidadComprasProveedores;
 using Practico.Formularios.Estadisticas.EmpleadosPorTurno;
+using Practico.Formularios.Estadisticas.CantidadBarriosLocalidad;
+using Practico.Formularios.Estadisticas.CantidadEmpleadosBarrio;
 
 namespace Practico.Formularios.Presentacion
 {
@@ -63,6 +65,16 @@ namespace Practico.Formularios.Presentacion
         private void btnEmpleadosPorTurno_Click(object sender, EventArgs e)
         {
             abrirFormulario(new FrmEmpleadosPorTurno());
+        }
+
+        private void btnBarrioLocalidad_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmEstadisticaCantidadBarriosLocalidad());
+        }
+
+        private void btnEmpleadosXBarrio_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new FrmEstadisticaCantidadEmpleadosBarrio());
         }
     }
 }

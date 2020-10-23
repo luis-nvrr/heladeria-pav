@@ -105,5 +105,16 @@ namespace Practico.Negocios
                 return Respuesta.validacionIncorrecta;
             }
         }
+
+        public DataTable EstadisticaBarrioXLocalidad()
+        {
+            string sql = @"SELECT l.nombre as Localidad, count(l.nombre) as Cantidad 
+                            FROM Barrios b JOIN Localidades l on b.idLocalidad = l.idLocalidad
+                            GROUP BY l.nombre";
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
     }
 }

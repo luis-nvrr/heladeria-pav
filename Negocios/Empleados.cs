@@ -259,5 +259,16 @@ namespace Practico.Negocios
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
+
+        public DataTable EstadisticaEmpleadosXBarrio()
+        {
+            string sql = @"SELECT b.nombre as Barrio, count(b.nombre) as Cantidad 
+                            FROM Empleados e JOIN Barrios b on e.idBarrio = b.idBarrio
+                            GROUP BY b.nombre";
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
     }
 }
