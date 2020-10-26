@@ -307,14 +307,14 @@
                                 FROM Ventas V
                                 INNER JOIN DetalleVentas DV ON (V.nroTicket = DV.nroTicket)
                                 INNER JOIN Helados H ON (DV.idHeladoSimple = H.idHelado)
-                                WHERE V.fecha BETWEEN CONVERT(datetime, '" + fechaDesde.Date.ToShortDateString() + "', 103) AND CONVERT(datetime, '" + fechaHasta.Date + "', 103)" +
+                                WHERE V.fecha BETWEEN CONVERT(datetime, '" + fechaDesde.Date.ToShortDateString() + "', 103) AND CONVERT(datetime, '" + fechaHasta.Date.ToShortDateString() + "', 103)" +
                                 @"GROUP BY H.nombre
                                 UNION
                                 SELECT HE.nombreProducto as Helado, SUM(DV.cantItems * HE.precio) as 'Total'
                                 FROM Ventas V
                                 INNER JOIN DetalleVentas DV ON (V.nroTicket = DV.nroTicket)
                                 INNER JOIN HeladosEspeciales HE ON (DV.idHeladoEspecial = HE.idHeladoEspecial)
-                                WHERE V.fecha BETWEEN CONVERT(datetime, '" + fechaDesde.Date.ToLongDateString() + "', 103) AND CONVERT(datetime, '" + fechaHasta.Date + "', 103)" +
+                                WHERE V.fecha BETWEEN CONVERT(datetime, '" + fechaDesde.Date.ToShortDateString() + "', 103) AND CONVERT(datetime, '" + fechaHasta.Date.ToShortDateString() + "', 103)" +
                                 "GROUP BY HE.nombreProducto";
 
                 DataTable tabla = new DataTable();
