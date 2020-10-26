@@ -122,5 +122,13 @@ namespace Practico.Negocios
             return tabla;
         }
 
+        public DataTable EstadisticasStockHeladosEspeciales()
+        {
+            string sql = "SELECT nombreProducto, cantidadStock FROM HeladosEspeciales";
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
     }
 }

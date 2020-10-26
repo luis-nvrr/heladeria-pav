@@ -38,6 +38,8 @@
             this.btnEmpleadosPorTurno = new System.Windows.Forms.Button();
             this.btnBarrioLocalidad = new System.Windows.Forms.Button();
             this.btnEmpleadosXBarrio = new System.Windows.Forms.Button();
+            this.btnPreciosHelados = new System.Windows.Forms.Button();
+            this.btnStockHeladosEspeciales = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEstadisticas
@@ -192,6 +194,34 @@
             this.btnEmpleadosXBarrio.UseVisualStyleBackColor = false;
             this.btnEmpleadosXBarrio.Click += new System.EventHandler(this.btnEmpleadosXBarrio_Click);
             // 
+            // btnPreciosHelados
+            // 
+            this.btnPreciosHelados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnPreciosHelados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPreciosHelados.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnPreciosHelados.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnPreciosHelados.Location = new System.Drawing.Point(419, 204);
+            this.btnPreciosHelados.Name = "btnPreciosHelados";
+            this.btnPreciosHelados.Size = new System.Drawing.Size(359, 63);
+            this.btnPreciosHelados.TabIndex = 25;
+            this.btnPreciosHelados.Text = "Precios Por Helado";
+            this.btnPreciosHelados.UseVisualStyleBackColor = false;
+            this.btnPreciosHelados.Click += new System.EventHandler(this.btnPreciosHelados_Click);
+            // 
+            // btnStockHeladosEspeciales
+            // 
+            this.btnStockHeladosEspeciales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnStockHeladosEspeciales.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStockHeladosEspeciales.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnStockHeladosEspeciales.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnStockHeladosEspeciales.Location = new System.Drawing.Point(419, 131);
+            this.btnStockHeladosEspeciales.Name = "btnStockHeladosEspeciales";
+            this.btnStockHeladosEspeciales.Size = new System.Drawing.Size(359, 63);
+            this.btnStockHeladosEspeciales.TabIndex = 26;
+            this.btnStockHeladosEspeciales.Text = "Stock De Helados Especiales";
+            this.btnStockHeladosEspeciales.UseVisualStyleBackColor = false;
+            this.btnStockHeladosEspeciales.Click += new System.EventHandler(this.btnStockHeladosEspeciales_Click);
+            // 
             // FrmEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -199,6 +229,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(909, 606);
+            this.Controls.Add(this.btnStockHeladosEspeciales);
+            this.Controls.Add(this.btnPreciosHelados);
             this.Controls.Add(this.btnEmpleadosXBarrio);
             this.Controls.Add(this.btnBarrioLocalidad);
             this.Controls.Add(this.btnEmpleadosPorTurno);
@@ -230,5 +262,7 @@
         private System.Windows.Forms.Button btnEmpleadosPorTurno;
         private System.Windows.Forms.Button btnBarrioLocalidad;
         private System.Windows.Forms.Button btnEmpleadosXBarrio;
+        private System.Windows.Forms.Button btnPreciosHelados;
+        private System.Windows.Forms.Button btnStockHeladosEspeciales;
     }
 }

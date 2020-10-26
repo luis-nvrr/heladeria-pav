@@ -97,6 +97,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatosEstadisticas\DatosEstadisticosPreciosHelados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosEstadisticosPreciosHelados.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.cs">
       <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
     </Compile>
@@ -104,6 +109,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosEstadisticas\DatosEstadisticosStockHeladosEspeciales.cs">
+      <DependentUpon>DatosEstadisticosStockHeladosEspeciales.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosEstadisticas\DatosEstadisticosStockHeladosEspeciales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosEstadisticosStockHeladosEspeciales.xsd</DependentUpon>
     </Compile>
     <Compile Include="DatosEstadisticas\DatosEstadisticosVentasTurno.cs">
       <DependentUpon>DatosEstadisticosVentasTurno.xsd</DependentUpon>
@@ -552,11 +565,23 @@
     <Compile Include="Formularios\Estadisticas\EmpleadosPorTurno\FrmEmpleadosPorTurno.Designer.cs">
       <DependentUpon>FrmEmpleadosPorTurno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\PrecioHelados\FrmEstadisticasPreciosHelados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\PrecioHelados\FrmEstadisticasPreciosHelados.Designer.cs">
+      <DependentUpon>FrmEstadisticasPreciosHelados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\ProveedoresXLocalidad\FrmEstadisticaProveedoresLocalidad.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Estadisticas\ProveedoresXLocalidad\FrmEstadisticaProveedoresLocalidad.Designer.cs">
       <DependentUpon>FrmEstadisticaProveedoresLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\StockHeladosEspeciales\FrmEstadisticasStockHeladosEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\StockHeladosEspeciales\FrmEstadisticasStockHeladosEspeciales.Designer.cs">
+      <DependentUpon>FrmEstadisticasStockHeladosEspeciales.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Estadisticas\VentasPorHeladosPeriodo\FrmEstadisticaVentasPorHeladosPeriodo.cs">
       <SubType>Form</SubType>
@@ -958,9 +983,17 @@
     <EmbeddedResource Include="Formularios\Estadisticas\EmpleadosPorTurno\FrmEmpleadosPorTurno.resx">
       <DependentUpon>FrmEmpleadosPorTurno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\PrecioHelados\EstadisticasPreciosHelados.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\PrecioHelados\FrmEstadisticasPreciosHelados.resx">
+      <DependentUpon>FrmEstadisticasPreciosHelados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\ProveedoresXLocalidad\EstadisticaProveedoresLocalidad.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\ProveedoresXLocalidad\FrmEstadisticaProveedoresLocalidad.resx">
       <DependentUpon>FrmEstadisticaProveedoresLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\StockHeladosEspeciales\EstadisticasStockHeladosEspeciales.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\StockHeladosEspeciales\FrmEstadisticasStockHeladosEspeciales.resx">
+      <DependentUpon>FrmEstadisticasStockHeladosEspeciales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\VentasPorHeladosPeriodo\FrmEstadisticaVentasPorHeladosPeriodo.resx">
       <DependentUpon>FrmEstadisticaVentasPorHeladosPeriodo.cs</DependentUpon>
@@ -1076,6 +1109,17 @@
     <None Include="DatosEstadisticas\DataSet2.xss">
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosPreciosHelados.xsc">
+      <DependentUpon>DatosEstadisticosPreciosHelados.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosPreciosHelados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosEstadisticosPreciosHelados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosPreciosHelados.xss">
+      <DependentUpon>DatosEstadisticosPreciosHelados.xsd</DependentUpon>
+    </None>
     <None Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.xsc">
       <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
     </None>
@@ -1086,6 +1130,17 @@
     </None>
     <None Include="DatosEstadisticas\DatosEstadisticosProveedoresLocalidadxsd.xss">
       <DependentUpon>DatosEstadisticosProveedoresLocalidadxsd.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosStockHeladosEspeciales.xsc">
+      <DependentUpon>DatosEstadisticosStockHeladosEspeciales.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosStockHeladosEspeciales.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosEstadisticosStockHeladosEspeciales.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosEstadisticas\DatosEstadisticosStockHeladosEspeciales.xss">
+      <DependentUpon>DatosEstadisticosStockHeladosEspeciales.xsd</DependentUpon>
     </None>
     <None Include="DatosEstadisticas\DatosEstadisticosVentasTurno.xsc">
       <DependentUpon>DatosEstadisticosVentasTurno.xsd</DependentUpon>

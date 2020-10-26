@@ -136,5 +136,14 @@ namespace Practico.Negocios
             tabla = baseDatos.Consulta(sql);
             return tabla;
         }
+
+        public DataTable EstadisticasPreciosHelados()
+        {
+            string sql = "SELECT nombre, precio FROM Helados";
+
+            DataTable tabla = new DataTable();
+            tabla = baseDatos.Consulta(sql);
+            return tabla;
+        }
     }
 }
